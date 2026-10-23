@@ -1,0 +1,17 @@
+lang:es_es
+guiScale:3
+renderDistance:10
+simulationDistance:8
+fov:0.0
+maxFps:120
+enableVsync:false
+graphicsMode:1
+particles:0
+entityShadows:true
+soundCategory_music:0.5
+soundCategory_master:1.0
+narrator:0
+tutorialStep:none
+skipMultiplayerWarning:true
+joinedFirstServer:true
+onboardAccessibility:false

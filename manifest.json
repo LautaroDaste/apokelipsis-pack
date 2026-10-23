@@ -1,16 +1,35 @@
 {
   "packVersion": "1.0.0",
   "minecraft": "1.21.1",
-  "fabricLoader": "0.16.14",
+  "fabricLoader": "0.19.5",
   "server": {
-    "name": "Apokelipsis",
+    "name": "APOKÉLIPSIS SMP",
     "address": ""
+  },
+  "defaultOptions": {
+    "lang": "es_es",
+    "guiScale": "3",
+    "renderDistance": "10",
+    "simulationDistance": "8",
+    "fov": "0.0",
+    "maxFps": "120",
+    "enableVsync": "false",
+    "graphicsMode": "1",
+    "particles": "0",
+    "entityShadows": "true",
+    "soundCategory_music": "0.5",
+    "soundCategory_master": "1.0",
+    "narrator": "0",
+    "tutorialStep": "none",
+    "skipMultiplayerWarning": "true",
+    "joinedFirstServer": "true",
+    "onboardAccessibility": "false"
   },
   "mods": [
     {
       "file": "apokelipsis-menu-1.0.0.jar",
-      "sha1": "2d7f1b565e7df8c8d83e52ed41e3cd665f69bf1c",
-      "size": 16166,
+      "sha1": "24276d770b5e6e50100a75ecb067c0e2f4128334",
+      "size": 12270714,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar"
     },
     {
@@ -58,10 +77,10 @@
       "requires": [
         "sodium"
       ],
-      "file": "iris-fabric-1.8.8+mc1.21.1.jar",
-      "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/zsoi0dso/iris-fabric-1.8.8%2Bmc1.21.1.jar",
-      "sha1": "4e0df4011503b4b36ba69877ea7247c1a47fea00",
-      "size": 2690177
+      "file": "iris-fabric-1.8.14-beta.1+mc1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/bAo1Qhte/iris-fabric-1.8.14-beta.1%2Bmc1.21.1.jar",
+      "sha1": "6776c0340845887477bfa463acc736ce7fcb6de5",
+      "size": 2791343
     },
     {
       "id": "continuity",

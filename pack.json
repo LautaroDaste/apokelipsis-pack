@@ -1,9 +1,9 @@
 {
   "packVersion": "1.0.0",
   "minecraft": "1.21.1",
-  "fabricLoader": "0.16.14",
+  "fabricLoader": "0.19.5",
   "server": {
-    "name": "Apokelipsis",
+    "name": "APOKÉLIPSIS SMP",
     "address": ""
   },
   "clientMods": ["fabric-api", "customskinloader"],

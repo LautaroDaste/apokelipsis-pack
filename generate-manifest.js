@@ -66,7 +66,9 @@ async function resolveModrinth(slug, pack) {
     game_versions: JSON.stringify([pack.minecraft])
   });
   const versions = await api(`${MODRINTH}/project/${slug}/version?${params}`);
-  const version = versions.find((v) => v.version_type === 'release') || versions[0];
+  // Siempre la más nueva (aunque sea beta): así las versiones de mods relacionados
+  // (por ejemplo Iris y Sodium) coinciden entre sí.
+  const version = versions[0];
   if (!version) throw new Error(`"${slug}" no tiene versión para Fabric ${pack.minecraft}`);
   const file = version.files.find((f) => f.primary) || version.files[0];
   return {
@@ -120,12 +122,23 @@ async function main() {
     }
   }
 
+  // Opciones de Minecraft que vienen por defecto (mismo formato que options.txt).
+  const optionsFile = path.join(ROOT, 'opciones-predeterminadas.txt');
+  const defaultOptions = {};
+  if (fs.existsSync(optionsFile)) {
+    for (const line of fs.readFileSync(optionsFile, 'utf8').replace(/^﻿/, '').split(/\r?\n/)) {
+      const i = line.indexOf(':');
+      if (i > 0) defaultOptions[line.slice(0, i).trim()] = line.slice(i + 1).trim();
+    }
+  }
+
   const clean = ({ projectId, deps, modrinth, ...rest }) => rest;
   const manifest = {
     packVersion: pack.packVersion,
     minecraft: pack.minecraft,
     fabricLoader: pack.fabricLoader,
     server: pack.server,
+    defaultOptions,
     mods: mods.map(clean),
     optional: optional.map(clean)
   };
