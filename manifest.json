@@ -759,8 +759,8 @@
     },
     {
       "file": "apokelipsis-menu-1.0.0.jar",
-      "sha1": "10a4067520d400789914fa0a074c4ae2142fdd67",
-      "size": 36314,
+      "sha1": "56ee88138105cf64323cc13d88210df505135bb5",
+      "size": 36464,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar",
       "info": {
         "id": "apokelipsis",
@@ -2241,7 +2241,7 @@
     {
       "id": "advancementplaques",
       "name": "Advancement Plaques",
-      "description": "Replace those boring advancement popups with something flashier.",
+      "description": "Cambia los avisos de logros por unas placas más vistosas.",
       "default": true,
       "requires": [],
       "file": "AdvancementPlaques-1.21.1-fabric-1.6.8.jar",
@@ -2252,7 +2252,7 @@
     {
       "id": "ambientenvironment",
       "name": "Ambient Environment",
-      "description": "Adds more ambiance to a Minecraft world",
+      "description": "Le da más ambiente al mundo: colores de biomas y detalles más naturales.",
       "default": true,
       "requires": [],
       "file": "AmbientEnvironment-fabric-1.21.1-18.0.0.2.jar",
@@ -2263,7 +2263,7 @@
     {
       "id": "badoptimizations",
       "name": "BadOptimizations",
-      "description": "Optimization mod that focuses on things other than rendering",
+      "description": "Optimizaciones extra que mejoran el rendimiento fuera del renderizado.",
       "default": true,
       "requires": [],
       "file": "BadOptimizations-2.4.1-1.21.1.jar",
@@ -2274,7 +2274,7 @@
     {
       "id": "betterpingdisplay",
       "name": "Better Ping Display [Fabric]",
-      "description": "Adds a configurable numerical ping display to the player list",
+      "description": "Muestra el ping en números en la lista de jugadores (Tab).",
       "default": true,
       "requires": [],
       "file": "BetterPingDisplay-Fabric-1.21.1-1.1.1.jar",
@@ -2285,7 +2285,7 @@
     {
       "id": "biomeparticleweather",
       "name": "Biome Particle Weather",
-      "description": "Replaces the old weather rendering with particles while spicing it up by adding new effects!",
+      "description": "Reemplaza la lluvia y la nieve por partículas con efectos nuevos según el bioma.",
       "default": true,
       "requires": [],
       "file": "BiomeParticleWeather-5.3.1.jar",
@@ -2296,7 +2296,7 @@
     {
       "id": "chat_heads",
       "name": "Chat Heads",
-      "description": "See who you're chatting with!",
+      "description": "Muestra la cabeza de cada jugador al lado de sus mensajes en el chat.",
       "default": true,
       "requires": [],
       "file": "chat_heads-0.15.7-fabric-1.21.jar",
@@ -2307,7 +2307,7 @@
     {
       "id": "catchrate-display",
       "name": "Cobblemon Catch Rate Display",
-      "description": "Real-time catch rate calculator for Cobblemon. Shows live percentages, ball comparisons, and status effects. 100% cli...",
+      "description": "Calcula en tiempo real la probabilidad de captura y compara Pokéballs.",
       "default": true,
       "requires": [],
       "file": "catchrate-display-fabric-2.12.3.jar",
@@ -2318,7 +2318,7 @@
     {
       "id": "cobbledex-rei-emi-jei",
       "name": "Cobblemon Info for REI / JEI / EMI",
-      "description": "Cobblemon Info for REI turns REI, JEI, or EMI into a full in-game Cobblemon reference.\n\nClick a Pokemon and inspect i...",
+      "description": "Convierte JEI en una Pokédex completa: dónde aparece cada Pokémon, evoluciones y más.",
       "default": true,
       "requires": [],
       "file": "cobbledex-rei-emi-jei-fabric-2.29.0.jar",
@@ -2329,7 +2329,7 @@
     {
       "id": "cullleaves",
       "name": "Cull Leaves",
-      "description": "Adds culling to leaf blocks, providing a huge performance boost over vanilla.",
+      "description": "Deja de dibujar las hojas ocultas dentro de los árboles. Más FPS.",
       "default": true,
       "requires": [],
       "file": "cullleaves-fabric-4.1.1+1.21.1.jar",
@@ -2340,7 +2340,7 @@
     {
       "id": "dynamic_fps",
       "name": "Dynamic FPS",
-      "description": "Reduce resource usage while Minecraft is in the background, idle, or on battery.",
+      "description": "Baja el consumo cuando el juego está en segundo plano o minimizado.",
       "default": true,
       "requires": [],
       "file": "dynamic-fps-3.11.4+minecraft-1.21.0-fabric.jar",
@@ -2351,7 +2351,7 @@
     {
       "id": "enhancedblockentities",
       "name": "Enhanced Block Entities",
-      "description": "Reduce block entity FPS lag with almost no compromises, and improve their visuals",
+      "description": "Cofres, camas y carteles más livianos y con mejor aspecto. Más FPS.",
       "default": true,
       "requires": [],
       "file": "enhancedblockentities-0.10.2+1.21.jar",
@@ -2362,7 +2362,7 @@
     {
       "id": "entityculling",
       "name": "Entity Culling",
-      "description": "Using async path-tracing to hide Block-/Entities that are not visible",
+      "description": "No dibuja las entidades que no estás viendo. Más FPS.",
       "default": true,
       "requires": [],
       "file": "entityculling-fabric-1.11.3-mc1.21.1.jar",
@@ -2371,20 +2371,9 @@
       "size": 1519243
     },
     {
-      "id": "essential-container",
-      "name": "Essential Mod",
-      "description": "Enhance your Minecraft with one simple mod. Host worlds for free, chat with friends, and so much more!",
-      "default": true,
-      "requires": [],
-      "file": "Essential_1-5-0-1_fabric_1-21-1.jar",
-      "url": "https://cdn.modrinth.com/data/k2ZPuTBm/versions/Z9lbcWp2/Essential_1-5-0-1_fabric_1-21-1.jar",
-      "sha1": "391b8f81d667a8d0e65f6a64681e738236ed248d",
-      "size": 52732419
-    },
-    {
       "id": "explosiveenhancement",
       "name": "Explosive Enhancement",
-      "description": "Makes the explosion animation look cooler.",
+      "description": "Explosiones con una animación más espectacular.",
       "default": true,
       "requires": [],
       "file": "explosive-enhancement-1.3.2-1.21-1.21.1.jar",
@@ -2395,7 +2384,7 @@
     {
       "id": "fallingleaves",
       "name": "Falling Leaves",
-      "description": "Adds a neat little particle effect to leaf blocks",
+      "description": "Las hojas de los árboles caen con un efecto de partículas.",
       "default": true,
       "requires": [],
       "file": "fallingleaves-1.17.1+1.21.1.jar",
@@ -2406,7 +2395,7 @@
     {
       "id": "fpsreducer",
       "name": "FPS Reducer",
-      "description": "Reduce GPU and CPU usage automatically when no user operation exists.",
+      "description": "Baja los FPS automáticamente cuando no estás tocando nada, para ahorrar recursos.",
       "default": true,
       "requires": [],
       "file": "FpsReducer2-fabric-1.21-2.9.jar",
@@ -2417,7 +2406,7 @@
     {
       "id": "gymbadges",
       "name": "Gym Badges",
-      "description": "Adds Gym Badges for Cobblemon! There are 18 badges, and an extra \"Master Badge\"",
+      "description": "Agrega las medallas de gimnasio de Cobblemon (18 medallas y una Medalla Maestra).",
       "default": true,
       "requires": [],
       "file": "GymBadges-1.1.jar",
@@ -2428,7 +2417,7 @@
     {
       "id": "immediatelyfast",
       "name": "ImmediatelyFast",
-      "description": "Speed up immediate mode rendering in Minecraft",
+      "description": "Acelera el dibujado de la interfaz, textos y entidades. Más FPS.",
       "default": true,
       "requires": [],
       "file": "ImmediatelyFast-Fabric-1.6.14+1.21.1.jar",
@@ -2439,7 +2428,7 @@
     {
       "id": "indium",
       "name": "Indium",
-      "description": "Sodium addon providing support for the Fabric Rendering API, based on Indigo",
+      "description": "Complemento de Sodium para que funcionen bien los mods con modelos especiales.",
       "default": true,
       "requires": [
         "sodium"
@@ -2452,7 +2441,7 @@
     {
       "id": "iris",
       "name": "Iris Shaders",
-      "description": "A modern shader pack loader for Minecraft intended to be compatible with existing OptiFine shader packs",
+      "description": "Permite usar shaders (efectos de luz, sombras y agua realistas).",
       "default": true,
       "requires": [
         "sodium"
@@ -2465,7 +2454,7 @@
     {
       "id": "justzoom",
       "name": "Just Zoom",
-      "description": "Lots of new features and improvements for the Spyglass, plus a standalone zooming mode!",
+      "description": "Agrega zoom con una tecla y mejoras al catalejo.",
       "default": true,
       "requires": [],
       "file": "justzoom_fabric_3.0.1_MC_1.21.1.jar",
@@ -2476,7 +2465,7 @@
     {
       "id": "litematica",
       "name": "Litematica",
-      "description": "A client-side schematic mod with extra features for creative mode work",
+      "description": "Muestra planos (schematics) de construcciones para copiarlas bloque a bloque.",
       "default": true,
       "requires": [
         "malilib"
@@ -2489,7 +2478,7 @@
     {
       "id": "malilib",
       "name": "MaLiLib",
-      "description": "A library mod for client-side mods. Contains most of the common/shared code of masa's client mods, and adds some inte...",
+      "description": "Librería necesaria para Litematica.",
       "default": true,
       "requires": [],
       "file": "malilib-fabric-1.21-0.21.10.jar",
@@ -2500,7 +2489,7 @@
     {
       "id": "modmenu",
       "name": "Mod Menu",
-      "description": "Adds a mod menu to view the list of mods you have installed.",
+      "description": "Agrega un menú para ver y configurar los mods instalados.",
       "default": true,
       "requires": [],
       "file": "modmenu-11.0.5.jar",
@@ -2511,7 +2500,7 @@
     {
       "id": "mousetweaks",
       "name": "Mouse Tweaks",
-      "description": "Enhances inventory management by adding various functions to the mouse buttons.",
+      "description": "Mejora el manejo del inventario con el mouse (arrastrar, mover rápido, etc.).",
       "default": true,
       "requires": [],
       "file": "MouseTweaks-fabric-mc1.21-2.26.jar",
@@ -2522,7 +2511,7 @@
     {
       "id": "punchy",
       "name": "Punchy!",
-      "description": "A mod that adds various first person animations and visible hands with held items!",
+      "description": "Animaciones en primera persona y manos visibles con los objetos que llevas.",
       "default": true,
       "requires": [],
       "file": "punchy-2.8e-fabric-1.21.1.jar",
@@ -2533,7 +2522,7 @@
     {
       "id": "reeses-sodium-options",
       "name": "Reese's Sodium Options",
-      "description": "Alternative Options Menu for Sodium",
+      "description": "Menú de opciones de video más cómodo para Sodium.",
       "default": true,
       "requires": [
         "sodium"
@@ -2546,7 +2535,7 @@
     {
       "id": "sodium",
       "name": "Sodium",
-      "description": "A high-performance rendering engine replacement for Minecraft, which greatly improves frame rates and reduces micro-s...",
+      "description": "Motor de gráficos mucho más rápido. Mejora muchísimo los FPS.",
       "default": true,
       "requires": [],
       "file": "sodium-fabric-0.8.13+mc1.21.1.jar",
@@ -2557,7 +2546,7 @@
     {
       "id": "sodium-extra",
       "name": "Sodium Extra",
-      "description": "A Sodium addon that adds features that shouldn't be in Sodium.",
+      "description": "Opciones gráficas extra para Sodium (niebla, partículas, animaciones...).",
       "default": true,
       "requires": [
         "sodium"
@@ -2570,7 +2559,7 @@
     {
       "id": "tidal",
       "name": "Tidal",
-      "description": "Adds ambient tidal waves to beaches and oceans!",
+      "description": "Agrega olas en playas y océanos.",
       "default": true,
       "requires": [],
       "file": "tidal-0.0.2-beta.jar",
@@ -2581,7 +2570,7 @@
     {
       "id": "too_many_entities",
       "name": "Too Many Entities",
-      "description": "Hide extra entities in order to reduce lag, especially with mob farms. The mobs still exist in the world, they are ju...",
+      "description": "Oculta entidades de más cuando hay muchas juntas, para reducir el lag.",
       "default": true,
       "requires": [],
       "file": "Too Many Entities 1.21.1 Fabric v1.2.0.jar",
@@ -2592,7 +2581,7 @@
     {
       "id": "wakes",
       "name": "Wakes",
-      "description": "Adds splashes and wakes while traveling on water",
+      "description": "Salpicaduras y estelas en el agua al nadar o navegar.",
       "default": true,
       "requires": [],
       "file": "wakes-0.4.1+1.21.1.jar",

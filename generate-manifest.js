@@ -140,11 +140,13 @@ async function main() {
     if (!mods.some((m) => m.projectId === info.projectId)) mods.push(info);
     console.log(`  ${slug} (cliente): ${info.file}`);
   }
+  // Descripciones en español (descripciones.json, por id del mod). Si falta, se usa la original.
+  const spanish = fs.existsSync(path.join(ROOT, 'descripciones.json')) ? readJson('descripciones.json') : {};
   const optional = optionalMods
     .map((m) => ({
       id: optionalId(m),
       name: m.title,
-      description: m.text.length > 120 ? m.text.slice(0, 117) + '...' : m.text,
+      description: spanish[optionalId(m)] || (m.text.length > 120 ? m.text.slice(0, 117) + '...' : m.text),
       default: true,
       requires: depsOf(m).filter((d) => optionalMods.includes(d)).map(optionalId),
       file: m.file,
@@ -158,6 +160,10 @@ async function main() {
   console.log(`  ${mods.length} obligatorios, ${optional.length} opcionales (solo cliente), ${skipped.length} solo servidor (no se instalan)`);
   console.log('  Solo servidor: ' + skipped.map((m) => m.title).join(', '));
   console.log('  Opcionales: ' + optional.map((m) => m.name).join(', '));
+  const untranslated = optional.filter((o) => !spanish[o.id]);
+  if (untranslated.length) {
+    console.warn('  AVISO: sin descripción en español (agrégalas en descripciones.json): ' + untranslated.map((o) => o.id).join(', '));
+  }
 
   // Mods opcionales extra fuera del modpack (optional.json); normalmente vacío.
   const localOptional = new Map((await describeLocal('optional', baseUrl)).map((e) => [e.file, e]));
