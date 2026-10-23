@@ -7,36 +7,1083 @@
     "address": ""
   },
   "defaultOptions": {
-    "lang": "es_es",
-    "guiScale": "3",
-    "renderDistance": "10",
-    "simulationDistance": "8",
-    "fov": "0.0",
-    "maxFps": "120",
-    "enableVsync": "false",
-    "graphicsMode": "1",
-    "particles": "0",
+    "ao": "true",
+    "biomeBlendRadius": "2",
+    "enableVsync": "true",
+    "entityDistanceScaling": "1.0",
     "entityShadows": "true",
-    "soundCategory_music": "0.5",
-    "soundCategory_master": "1.0",
+    "forceUnicodeFont": "false",
+    "japaneseGlyphVariants": "false",
+    "fov": "0.5",
+    "fovEffectScale": "1.0",
+    "darknessEffectScale": "1.0",
+    "glintSpeed": "0.5",
+    "glintStrength": "0.75",
+    "prioritizeChunkUpdates": "0",
+    "gamma": "1.0",
+    "graphicsMode": "1",
+    "guiScale": "2",
+    "maxFps": "260",
+    "mipmapLevels": "4",
     "narrator": "0",
+    "particles": "0",
+    "reducedDebugInfo": "false",
+    "renderClouds": "\"true\"",
+    "renderDistance": "7",
+    "simulationDistance": "5",
+    "screenEffectScale": "1.0",
+    "autoJump": "false",
+    "operatorItemsTab": "false",
+    "autoSuggestions": "true",
+    "chatColors": "true",
+    "chatLinks": "true",
+    "chatLinksPrompt": "true",
+    "discrete_mouse_scroll": "false",
+    "invertYMouse": "false",
+    "realmsNotifications": "true",
+    "showSubtitles": "false",
+    "directionalAudio": "false",
+    "touchscreen": "false",
+    "bobView": "true",
+    "toggleCrouch": "false",
+    "toggleSprint": "false",
+    "darkMojangStudiosBackground": "false",
+    "hideLightningFlashes": "false",
+    "hideSplashTexts": "false",
+    "mouseSensitivity": "0.5",
+    "damageTiltStrength": "1.0",
+    "highContrast": "false",
+    "narratorHotkey": "true",
+    "resourcePacks": "[\"vanilla\",\"cobbreeding:pasturefix\",\"fabric\",\"moonlight:merged_pack\",\"file/[Chilli´s] punchy! cobblemon.zip\",\"file/pokopia-1.1.zip\",\"file/fresh_waystones.zip\",\"punchy:punchy\",\"file/Better-Leaves-9.6.zip\",\"file/E19 Cobblemon Minimap Icons.zip\",\"cobblemon:gyaradosjump\",\"cobblemon:regionbiasforms\",\"cobblemon:uniqueshinyforms\",\"cobbreeding:coloredeggs\",\"file/Better Caps! [v1.2].zip\",\"file/CobbleSounds[Complete]_v1.4.1.zip\",\"file/CobblemonCosplay.zip\",\"file/Cobblemotion_v1.5.1.zip\",\"file/FireFitsforFireCats.v.13.zip\",\"file/PokeCostume v.3.3.zip\",\"file/StylesUponStyles.v.1.6.1.zip\",\"file/Wood Cosmetic Rillaboom.zip\",\"file/muddiescosmetics (4).zip\"]",
+    "incompatibleResourcePacks": "[\"aci\",\"ali\",\"ambientenvironment\",\"backpacked\",\"badoptimizations\",\"balm\",\"comforts\",\"connectivity\",\"cullleaves\",\"easy_npc\",\"easy_npc_config_ui\",\"essential\",\"framework\",\"jade\",\"jadeaddons\",\"konkrete\",\"ksyxis\",\"modernfix\",\"pokegambling\",\"polymorph\",\"punchy\",\"smoothchunk\",\"spark\",\"spectrelib\",\"trashslot\",\"waystones\",\"xaerolib\",\"xaerominimap\",\"xaeroworldmap\",\"yet_another_config_lib_v3\"]",
+    "lang": "es_ar",
+    "chatVisibility": "0",
+    "chatOpacity": "1.0",
+    "chatLineSpacing": "0.0",
+    "textBackgroundOpacity": "0.5",
+    "backgroundForChatOnly": "true",
+    "hideServerAddress": "false",
+    "advancedItemTooltips": "true",
+    "pauseOnLostFocus": "true",
+    "chatHeightFocused": "1.0",
+    "chatDelay": "0.0",
+    "chatHeightUnfocused": "0.4375",
+    "chatScale": "1.0",
+    "chatWidth": "1.0",
+    "notificationDisplayTime": "1.0",
+    "useNativeTransport": "true",
+    "mainHand": "\"right\"",
+    "attackIndicator": "1",
     "tutorialStep": "none",
+    "mouseWheelSensitivity": "1.0",
+    "rawMouseInput": "true",
     "skipMultiplayerWarning": "true",
+    "hideMatchedNames": "true",
     "joinedFirstServer": "true",
+    "hideBundleTutorial": "false",
+    "syncChunkWrites": "true",
+    "showAutosaveIndicator": "true",
+    "allowServerListing": "true",
+    "onlyShowSecureChat": "false",
+    "panoramaScrollSpeed": "1.0",
+    "debugifyTelemetry": "0",
+    "telemetryOptInExtra": "false",
+    "menuBackgroundBlurriness": "5",
+    "key_key.attack": "key.mouse.left",
+    "key_key.use": "key.mouse.right",
+    "key_key.forward": "key.keyboard.w",
+    "key_key.left": "key.keyboard.a",
+    "key_key.back": "key.keyboard.s",
+    "key_key.right": "key.keyboard.d",
+    "key_key.jump": "key.keyboard.space",
+    "key_key.sneak": "key.keyboard.left.shift",
+    "key_key.sprint": "key.keyboard.left.control",
+    "key_key.drop": "key.keyboard.q",
+    "key_key.inventory": "key.keyboard.e",
+    "key_key.chat": "key.keyboard.t",
+    "key_key.playerlist": "key.keyboard.tab",
+    "key_key.pickItem": "key.mouse.middle",
+    "key_key.command": "key.keyboard.slash",
+    "key_key.socialInteractions": "key.keyboard.p",
+    "key_key.screenshot": "key.keyboard.f2",
+    "key_key.togglePerspective": "key.keyboard.f5",
+    "key_key.smoothCamera": "key.keyboard.unknown",
+    "key_key.fullscreen": "key.keyboard.f11",
+    "key_key.spectatorOutlines": "key.keyboard.unknown",
+    "key_key.swapOffhand": "key.keyboard.f",
+    "key_key.saveToolbarActivator": "key.keyboard.unknown",
+    "key_key.loadToolbarActivator": "key.keyboard.x",
+    "key_key.advancements": "key.keyboard.l",
+    "key_key.hotbar.1": "key.keyboard.1",
+    "key_key.hotbar.2": "key.keyboard.2",
+    "key_key.hotbar.3": "key.keyboard.3",
+    "key_key.hotbar.4": "key.keyboard.4",
+    "key_key.hotbar.5": "key.keyboard.5",
+    "key_key.hotbar.6": "key.keyboard.6",
+    "key_key.hotbar.7": "key.keyboard.7",
+    "key_key.hotbar.8": "key.keyboard.8",
+    "key_key.hotbar.9": "key.keyboard.9",
+    "key_key.dynamic_fps.toggle_forced": "key.keyboard.unknown",
+    "key_key.dynamic_fps.toggle_disabled": "key.keyboard.unknown",
+    "key_justzoom.keybinds.keybind.zoom": "key.keyboard.unknown",
+    "key_justzoom.keybinds.keybind.zoom_in": "key.mouse.9",
+    "key_justzoom.keybinds.keybind.zoom_out": "key.mouse.10",
+    "key_justzoom.keybinds.keybind.open_options": "key.keyboard.unknown",
+    "key_key.biomeparticleweather.config": "key.keyboard.unknown",
+    "key_key.catchrate.toggle_hud": "key.keyboard.unknown",
+    "key_key.catchrate.show_comparison": "key.keyboard.unknown",
+    "key_key.catchrate.reset_position": "key.keyboard.unknown",
+    "key_key.catchrate.move_up": "key.keyboard.unknown",
+    "key_key.catchrate.move_down": "key.keyboard.unknown",
+    "key_key.catchrate.move_left": "key.keyboard.unknown",
+    "key_key.catchrate.move_right": "key.keyboard.unknown",
+    "key_key.catchrate.cycle_anchor": "key.keyboard.unknown",
+    "key_key.cobblemon.hideparty": "key.keyboard.o",
+    "key_key.cobblemon.summary": "key.keyboard.n",
+    "key_key.cobblemon.downshiftparty": "key.keyboard.down",
+    "key_key.cobblemon.upshiftparty": "key.keyboard.up",
+    "key_key.cobblemon.throwpartypokemon": "key.keyboard.r",
+    "key_key.cobblemon.ridingfreelook": "key.keyboard.left.alt",
+    "key_key.cobblemon-battle-extras.battle_logs": "key.keyboard.keypad.decimal",
+    "key_key.configured.open_mod_list": "key.keyboard.unknown",
+    "key_key.emotecraft.fastchoose": "key.keyboard.keypad.add",
+    "key_key.emotecraft.stop": "key.keyboard.unknown",
+    "key_key.entityculling.toggle": "key.keyboard.unknown",
+    "key_fpsreducer.key.openGui": "key.keyboard.end",
+    "key_fpsreducer.key.forceIdle": "key.keyboard.pause",
+    "key_key.jade.config": "key.keyboard.keypad.0",
+    "key_key.jade.show_overlay": "key.keyboard.keypad.1",
+    "key_key.jade.toggle_liquid": "key.keyboard.keypad.2",
+    "key_key.jade.show_recipes": "key.keyboard.keypad.3",
+    "key_key.jade.show_uses": "key.keyboard.keypad.4",
+    "key_key.jade.narrate": "key.keyboard.keypad.5",
+    "key_key.jade.show_details_alternative": "key.keyboard.unknown",
+    "key_key.jei.toggleOverlay": "key.keyboard.unknown",
+    "key_key.jei.focusSearch": "key.keyboard.unknown",
+    "key_key.jei.previousPage": "key.keyboard.unknown",
+    "key_key.jei.nextPage": "key.keyboard.unknown",
+    "key_key.jei.toggleBookmarkOverlay": "key.keyboard.unknown",
+    "key_key.jei.bookmark": "key.keyboard.unknown",
+    "key_key.jei.showRecipe": "key.mouse.left",
+    "key_key.jei.showRecipe2": "key.keyboard.unknown",
+    "key_key.jei.showUses": "key.mouse.right",
+    "key_key.jei.showUses2": "key.keyboard.unknown",
+    "key_key.jei.transferRecipeBookmark": "key.keyboard.unknown",
+    "key_key.jei.maxTransferRecipeBookmark": "key.keyboard.unknown",
+    "key_key.jei.transferRecipeGui": "key.keyboard.unknown",
+    "key_key.jei.maxTransferRecipeGui": "key.keyboard.unknown",
+    "key_key.jei.quickMove": "key.keyboard.unknown",
+    "key_key.jei.shareToChat": "key.keyboard.unknown",
+    "key_key.jei.clearSearchBar": "key.keyboard.unknown",
+    "key_key.jei.previousSearch": "key.keyboard.unknown",
+    "key_key.jei.nextSearch": "key.keyboard.unknown",
+    "key_key.jei.toggleCheatMode": "key.keyboard.unknown",
+    "key_key.jei.cheatOneItem": "key.keyboard.unknown",
+    "key_key.jei.cheatOneItem2": "key.keyboard.unknown",
+    "key_key.jei.cheatItemStack": "key.keyboard.unknown",
+    "key_key.jei.cheatItemStack2": "key.keyboard.unknown",
+    "key_key.jei.toggleCheatModeConfigButton": "key.keyboard.unknown",
+    "key_key.jei.toggleEditMode": "key.keyboard.unknown",
+    "key_key.jei.toggleHideIngredient": "key.keyboard.unknown",
+    "key_key.jei.toggleWildcardHideIngredient": "key.keyboard.unknown",
+    "key_key.jei.recipeBack": "key.keyboard.backspace",
+    "key_key.jei.recipeForward": "key.keyboard.unknown",
+    "key_key.jei.previousRecipePage": "key.keyboard.page.up",
+    "key_key.jei.nextRecipePage": "key.keyboard.page.down",
+    "key_key.jei.pauseRecipeCycling": "key.keyboard.unknown",
+    "key_key.jei.previousCategory": "key.keyboard.unknown",
+    "key_key.jei.nextCategory": "key.keyboard.unknown",
+    "key_key.jei.closeRecipeGui": "key.keyboard.escape",
+    "key_key.jei.copy.recipe.id": "key.keyboard.unknown",
+    "key_key.modmenu.open_menu": "key.keyboard.unknown",
+    "key_key.tutorialflechas.panel": "key.keyboard.g",
+    "key_key.nexuscodex.open": "key.keyboard.k",
+    "key_key.proteccion.menu": "key.keyboard.z",
+    "key_key.punchy.open_main_menu": "key.keyboard.f8",
+    "key_key.punchy.inspect": "key.keyboard.i",
+    "key_key.too_many_entities.toggle_mod": "key.keyboard.unknown",
+    "key_key.trashslot.toggle": "key.keyboard.unknown",
+    "key_key.trashslot.toggle_lock": "key.keyboard.unknown",
+    "key_key.trashslot.delete": "key.keyboard.delete",
+    "key_key.push_to_talk": "key.keyboard.v",
+    "key_key.whisper": "key.keyboard.unknown",
+    "key_key.mute_microphone": "key.keyboard.unknown",
+    "key_key.disable_voice_chat": "key.keyboard.unknown",
+    "key_key.hide_icons": "key.keyboard.h",
+    "key_key.voice_chat": "key.keyboard.home",
+    "key_key.voice_chat_settings": "key.keyboard.unknown",
+    "key_key.voice_chat_group": "key.keyboard.g",
+    "key_key.voice_chat_toggle_recording": "key.keyboard.unknown",
+    "key_key.voice_chat_adjust_volumes": "key.keyboard.unknown",
+    "key_gui.xaero_minimap_settings": "key.keyboard.y",
+    "key_gui.xaero_minimap_server_profiles": "key.keyboard.unknown",
+    "key_gui.xaero_zoom_in": "key.keyboard.unknown",
+    "key_gui.xaero_zoom_out": "key.keyboard.unknown",
+    "key_gui.xaero_new_waypoint": "key.keyboard.keypad.enter",
+    "key_gui.xaero_waypoints_key": "key.keyboard.u",
+    "key_gui.xaero_enlarge_map": "key.keyboard.unknown",
+    "key_gui.xaero_toggle_map": "key.keyboard.unknown",
+    "key_gui.xaero_toggle_waypoints": "key.keyboard.unknown",
+    "key_gui.xaero_toggle_map_waypoints": "key.keyboard.unknown",
+    "key_gui.xaero_toggle_slime": "key.keyboard.unknown",
+    "key_gui.xaero_toggle_grid": "key.keyboard.unknown",
+    "key_gui.xaero_instant_waypoint": "key.keyboard.unknown",
+    "key_gui.xaero_switch_waypoint_set": "key.keyboard.unknown",
+    "key_gui.xaero_display_all_sets": "key.keyboard.unknown",
+    "key_gui.xaero_toggle_light_overlay": "key.keyboard.unknown",
+    "key_gui.xaero_toggle_entity_radar": "key.keyboard.unknown",
+    "key_gui.xaero_reverse_entity_radar": "key.keyboard.unknown",
+    "key_gui.xaero_toggle_manual_cave_mode": "key.keyboard.unknown",
+    "key_gui.xaero_alternative_list_players": "key.keyboard.unknown",
+    "key_gui.xaero_toggle_tracked_players_on_map": "key.keyboard.unknown",
+    "key_gui.xaero_toggle_tracked_players_in_world": "key.keyboard.unknown",
+    "key_gui.xaero_toggle_pac_chunk_claims": "key.keyboard.unknown",
+    "key_gui.xaero_open_map": "key.keyboard.m",
+    "key_gui.xaero_open_settings": "key.keyboard.right.bracket",
+    "key_gui.xaero_world_map_server_settings": "key.keyboard.unknown",
+    "key_gui.xaero_map_zoom_in": "key.keyboard.unknown",
+    "key_gui.xaero_map_zoom_out": "key.keyboard.unknown",
+    "key_gui.xaero_quick_confirm": "key.keyboard.right.shift",
+    "key_gui.xaero_toggle_dimension": "key.keyboard.unknown",
+    "key_key.backpacked.open_backpack": "key.keyboard.b",
+    "key_key.backpacked.open_management": "key.keyboard.unknown",
+    "key_iris.keybind.reload": "key.keyboard.equal",
+    "key_iris.keybind.toggleShaders": "key.keyboard.keypad.multiply",
+    "key_iris.keybind.shaderPackSelection": "key.keyboard.unknown",
+    "key_iris.keybind.wireframe": "key.keyboard.unknown",
+    "key_keybind.name.ESSENTIAL_FRIENDS": "key.keyboard.unknown",
+    "key_keybind.name.COSMETIC_STUDIO": "key.keyboard.unknown",
+    "key_keybind.name.SCREENSHOT_MANAGER": "key.keyboard.unknown",
+    "key_keybind.name.COSMETICS_VISIBILITY_TOGGLE": "key.keyboard.unknown",
+    "key_keybind.name.CHAT_PEEK": "key.keyboard.unknown",
+    "key_keybind.name.INVITE_FRIENDS": "key.keyboard.unknown",
+    "key_keybind.name.MENU_ACCESS": "key.keyboard.unknown",
+    "key_keybind.name.EMOTE_WHEEL": "key.keyboard.unknown",
+    "key_keybind.name.EMOTE_SLOT_1": "key.keyboard.unknown",
+    "key_keybind.name.EMOTE_SLOT_2": "key.keyboard.unknown",
+    "key_keybind.name.EMOTE_SLOT_3": "key.keyboard.unknown",
+    "key_keybind.name.EMOTE_SLOT_4": "key.keyboard.unknown",
+    "key_keybind.name.EMOTE_SLOT_5": "key.keyboard.unknown",
+    "key_keybind.name.EMOTE_SLOT_6": "key.keyboard.unknown",
+    "key_keybind.name.EMOTE_SLOT_7": "key.keyboard.unknown",
+    "key_keybind.name.EMOTE_SLOT_8": "key.keyboard.unknown",
+    "key_keybind.name.ZOOM": "key.keyboard.c",
+    "key_key.punchy.triggerable.punchy_sword_inspect_old": "key.keyboard.j",
+    "key_key.punchy.triggerable.punchy_sword_inspect_rework": "key.keyboard.world.2",
+    "soundCategory_master": "0.7367549668874173",
+    "soundCategory_music": "0.03169014084507042",
+    "soundCategory_record": "1.0",
+    "soundCategory_weather": "1.0",
+    "soundCategory_block": "1.0",
+    "soundCategory_hostile": "1.0",
+    "soundCategory_neutral": "1.0",
+    "soundCategory_player": "1.0",
+    "soundCategory_ambient": "1.0",
+    "soundCategory_voice": "1.0",
+    "modelPart_cape": "true",
+    "modelPart_jacket": "true",
+    "modelPart_left_sleeve": "true",
+    "modelPart_right_sleeve": "true",
+    "modelPart_left_pants_leg": "true",
+    "modelPart_right_pants_leg": "true",
+    "modelPart_hat": "true",
+    "key_key.verity.throw": "key.keyboard.g",
+    "key_key.verity.microphone": "key.keyboard.m",
+    "key_key.verity.ptt": "key.keyboard.v",
     "onboardAccessibility": "false"
   },
   "mods": [
     {
+      "file": "AdvancedCoreInfo-fabric-1.21.1-1.4.0.jar",
+      "sha1": "7701eb10be08c9ef113b9b723cc04e118e0cd4e0",
+      "size": 263282,
+      "url": "https://cdn.modrinth.com/data/BaR4ijFC/versions/3ijXb7RE/AdvancedCoreInfo-fabric-1.21.1-1.4.0.jar"
+    },
+    {
+      "file": "AdvancedLootInfo-fabric-1.21.1-2.4.0.jar",
+      "sha1": "1aac7cde7b87498b30494eb50d7ac7f774bf1ed3",
+      "size": 643295,
+      "url": "https://cdn.modrinth.com/data/PEPVViac/versions/A7HsVFQ1/AdvancedLootInfo-fabric-1.21.1-2.4.0.jar"
+    },
+    {
+      "file": "AdvancementPlaques-1.21.1-fabric-1.6.8.jar",
+      "sha1": "e3a5a514bbcc18e2c4e3bc251eb9f48e64217405",
+      "size": 195505,
+      "url": "https://cdn.modrinth.com/data/9NM0dXub/versions/g0SNjiMq/AdvancementPlaques-1.21.1-fabric-1.6.8.jar"
+    },
+    {
+      "file": "Almanac-1.21.1-2-fabric-1.5.2.jar",
+      "sha1": "f259ee1c7b7e4d9c4abd59cc38e200cb1766ef3b",
+      "size": 1039789,
+      "url": "https://cdn.modrinth.com/data/Gi02250Z/versions/hUgNmeCO/Almanac-1.21.1-2-fabric-1.5.2.jar"
+    },
+    {
+      "file": "AmbientEnvironment-fabric-1.21.1-18.0.0.2.jar",
+      "sha1": "51d00c5342ac128dbab28f7efbf428e1fe2519d5",
+      "size": 52331,
+      "url": "https://cdn.modrinth.com/data/DyTvM1dv/versions/TsLZwxGv/AmbientEnvironment-fabric-1.21.1-18.0.0.2.jar"
+    },
+    {
+      "file": "BadOptimizations-2.4.1-1.21.1.jar",
+      "sha1": "1461d8e46391efd32a3085150e86094c9f6f5c9d",
+      "size": 283566,
+      "url": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/S2qthD5S/BadOptimizations-2.4.1-1.21.1.jar"
+    },
+    {
+      "file": "BetterPingDisplay-Fabric-1.21.1-1.1.1.jar",
+      "sha1": "534ba30ec8a7ea23048a507d02a651b6ddcaf523",
+      "size": 14850,
+      "url": "https://cdn.modrinth.com/data/MS1ZMyR7/versions/xCWQ8iLW/BetterPingDisplay-Fabric-1.21.1-1.1.1.jar"
+    },
+    {
+      "file": "BiomeParticleWeather-5.3.1.jar",
+      "sha1": "7ae636b7422d0a68c40ba46afbdffc9e4a38162a",
+      "size": 278669,
+      "url": "https://cdn.modrinth.com/data/XH09j5fH/versions/ISWQQ16Y/BiomeParticleWeather-5.3.1.jar"
+    },
+    {
+      "file": "Clumps-fabric-1.21.1-19.0.0.1.jar",
+      "sha1": "14628ba309d876cfefc4cef864a66ef12812066c",
+      "size": 20723,
+      "url": "https://cdn.modrinth.com/data/Wnxd13zP/versions/3ene3W1l/Clumps-fabric-1.21.1-19.0.0.1.jar"
+    },
+    {
+      "file": "CobbleFurnies-fabric-1.2.jar",
+      "sha1": "a71f20907c3350680a11054584cf96963f5875e5",
+      "size": 2337235,
+      "url": "https://cdn.modrinth.com/data/AXY1OO9m/versions/54k31lEX/CobbleFurnies-fabric-1.2.jar"
+    },
+    {
+      "file": "CobbleImport-1.0.1.jar",
+      "sha1": "7624150fc19339a056668def5c02e6ab786a211d",
+      "size": 52440,
+      "url": "https://cdn.modrinth.com/data/9LDbcXjt/versions/UjZi4QeH/CobbleImport-1.0.1.jar"
+    },
+    {
+      "file": "Cobblemon-fabric-1.8.2+1.21.1.jar",
+      "sha1": "1a8ec812b2e7b392ac60801c910d3128d0bbb432",
+      "size": 139317851,
+      "url": "https://cdn.modrinth.com/data/MdwFAVRL/versions/GJ2a1b8O/Cobblemon-fabric-1.8.2%2B1.21.1.jar"
+    },
+    {
+      "file": "CobblemonRepel-1.8-1.4.jar",
+      "sha1": "99554456ee36b2ae3d4c4b96a36e5eb41fab7b54",
+      "size": 703183,
+      "url": "https://cdn.modrinth.com/data/u8TYP2M6/versions/ctV59pOE/CobblemonRepel-1.8-1.4.jar"
+    },
+    {
+      "file": "Cobbreeding-fabric-2.4.1.jar",
+      "sha1": "4de6e86541ab2d94b1327ce68a26771e8f33f030",
+      "size": 477771,
+      "url": "https://cdn.modrinth.com/data/ItmVb4zY/versions/QEX1BKMf/Cobbreeding-fabric-2.4.1.jar"
+    },
+    {
+      "file": "DEUF_Refabricated-MC1.21-1.1.0.jar",
+      "sha1": "c50ec14a69f6ee95dfdee722033ce16c5ca15f2f",
+      "size": 8071,
+      "url": "https://cdn.modrinth.com/data/US6QuKdU/versions/J8DbEbsW/DEUF_Refabricated-MC1.21-1.1.0.jar"
+    },
+    {
+      "file": "Debugify-1.21.1+1.1.jar",
+      "sha1": "3388ba4c0f973f0a73a68a42048fe902bb2b14ea",
+      "size": 289699,
+      "url": "https://cdn.modrinth.com/data/QwxR6Gcd/versions/pyIdu3f1/Debugify-1.21.1%2B1.1.jar"
+    },
+    {
+      "file": "EasyAnvils-v21.1.0-1.21.1-Fabric.jar",
+      "sha1": "c07d01e04a29d4adcee8ffeb14eb3290a279627e",
+      "size": 148736,
+      "url": "https://cdn.modrinth.com/data/OZBR5JT5/versions/znaWBlgU/EasyAnvils-v21.1.0-1.21.1-Fabric.jar"
+    },
+    {
+      "file": "EasyMagic-v21.1.4-1.21.1-Fabric.jar",
+      "sha1": "2131b964eafe376ff7e565cdae330a585e42d2e1",
+      "size": 140897,
+      "url": "https://cdn.modrinth.com/data/9hx3AbJM/versions/LLLfoeWJ/EasyMagic-v21.1.4-1.21.1-Fabric.jar"
+    },
+    {
+      "file": "Essential_1-5-0-1_fabric_1-21-1.jar",
+      "sha1": "391b8f81d667a8d0e65f6a64681e738236ed248d",
+      "size": 52732419,
+      "url": "https://cdn.modrinth.com/data/k2ZPuTBm/versions/Z9lbcWp2/Essential_1-5-0-1_fabric_1-21-1.jar"
+    },
+    {
+      "file": "ExplorersCompass-1.21.1-2.6.0-fabric.jar",
+      "sha1": "cc3cf49a0ddb726e28af58d186145b027ea0adb5",
+      "size": 177481,
+      "url": "https://cdn.modrinth.com/data/RV1qfVQ8/versions/qSRKiE4D/ExplorersCompass-1.21.1-2.6.0-fabric.jar"
+    },
+    {
+      "file": "ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar",
+      "sha1": "18bf1f21cd2db6dcd4e42db85eae54e2a49a48ee",
+      "size": 633065,
+      "url": "https://cdn.modrinth.com/data/ohNO6lps/versions/N5qzq0XV/ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar"
+    },
+    {
+      "file": "FpsReducer2-fabric-1.21-2.9.jar",
+      "sha1": "9219d7f657f4adb61315cd15023265d1070d24ca",
+      "size": 124879,
+      "url": "https://cdn.modrinth.com/data/iZ10HXDj/versions/9ewqcOwy/FpsReducer2-fabric-1.21-2.9.jar"
+    },
+    {
+      "file": "Geophilic v3.7.mod.jar",
+      "sha1": "4d668978e18b450c030ed4be096fce52d3a9ceca",
+      "size": 1115993,
+      "url": "https://cdn.modrinth.com/data/hl5OLM95/versions/5kFV8CEz/Geophilic%20v3.7.mod.jar"
+    },
+    {
+      "file": "GymBadges-1.1.jar",
+      "sha1": "2d4befdd51f8b205668e50dceafaf5e2aae287b5",
+      "size": 77360,
+      "url": "https://cdn.modrinth.com/data/HnePtkev/versions/NQZTUhfS/GymBadges-1.1.jar"
+    },
+    {
+      "file": "Iceberg-1.21.1-fabric-1.3.2.jar",
+      "sha1": "170e30bf93ccba6d80dd481eedddae16cb549d29",
+      "size": 413302,
+      "url": "https://cdn.modrinth.com/data/5faXoLqX/versions/7ITFAyW8/Iceberg-1.21.1-fabric-1.3.2.jar"
+    },
+    {
+      "file": "ImmediatelyFast-Fabric-1.6.14+1.21.1.jar",
+      "sha1": "023805be7d701b9769e987449d217c557de5f848",
+      "size": 340166,
+      "url": "https://cdn.modrinth.com/data/5ZwdcRci/versions/7XKnsIC8/ImmediatelyFast-Fabric-1.6.14%2B1.21.1.jar"
+    },
+    {
+      "file": "Item_Obliterator-Fabric_Quilt-MC_1.21-3.1.1.jar",
+      "sha1": "42202c67ef7166ffb5255ada7370b36c9d50110c",
+      "size": 29943,
+      "url": "https://cdn.modrinth.com/data/3ESR84kR/versions/OqMP9ZL0/Item_Obliterator-Fabric_Quilt-MC_1.21-3.1.1.jar"
+    },
+    {
+      "file": "Jade-1.21.1-Fabric-15.10.6.jar",
+      "sha1": "bed67c605cbc991f474b270581cfa04ed48228df",
+      "size": 740746,
+      "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/adpNvTZS/Jade-1.21.1-Fabric-15.10.6.jar"
+    },
+    {
+      "file": "JadeAddons-1.21.1-Fabric-6.0.3.jar",
+      "sha1": "2da733519a0e9c7b79cc4b4194a3b0fe5f42f5bf",
+      "size": 39917,
+      "url": "https://cdn.modrinth.com/data/fThnVRli/versions/xtWiiv5X/JadeAddons-1.21.1-Fabric-6.0.3.jar"
+    },
+    {
+      "file": "Ksyxis-1.4.6.jar",
+      "sha1": "6de6271329e0c83e3ccc0512a0d3cfcc3e790d3f",
+      "size": 23873,
+      "url": "https://cdn.modrinth.com/data/2ecVyZ49/versions/kzLBJQLn/Ksyxis-1.4.6.jar"
+    },
+    {
+      "file": "LeavesBeGone-v21.1.1-1.21.1-Fabric.jar",
+      "sha1": "b0f60368cb0e06dc4b0b4d465a6f04b1ec421c18",
+      "size": 55826,
+      "url": "https://cdn.modrinth.com/data/AVq17PqV/versions/hYZEEekT/LeavesBeGone-v21.1.1-1.21.1-Fabric.jar"
+    },
+    {
+      "file": "MobsBeGone-0.0.9.jar",
+      "sha1": "5fd48e10f329c8a526565a9073e395f36c23b5b5",
+      "size": 10563,
+      "url": "https://cdn.modrinth.com/data/hXvXSxxg/versions/ZGbHcluC/MobsBeGone-0.0.9.jar"
+    },
+    {
+      "file": "MouseTweaks-fabric-mc1.21-2.26.jar",
+      "sha1": "ee81af33a5606ef2cd057e075833d7c69836c210",
+      "size": 75984,
+      "url": "https://cdn.modrinth.com/data/aC3cM3Vq/versions/ylmBQ38A/MouseTweaks-fabric-mc1.21-2.26.jar"
+    },
+    {
+      "file": "NaturesCompass-1.21.1-2.6.0-fabric.jar",
+      "sha1": "15bb7a4f27eaa13b755edac496c1c9d502843827",
+      "size": 233392,
+      "url": "https://cdn.modrinth.com/data/fPetb5Kh/versions/dtrDpgsF/NaturesCompass-1.21.1-2.6.0-fabric.jar"
+    },
+    {
+      "file": "Necronomicon-Fabric-1.6.0+1.21.jar",
+      "sha1": "b6ac70d9ecac570f56e75db81d8281976fea1357",
+      "size": 37055,
+      "url": "https://cdn.modrinth.com/data/P1Kv5EAO/versions/O6odCETu/Necronomicon-Fabric-1.6.0%2B1.21.jar"
+    },
+    {
+      "file": "Not Enough Recipe Book-FABRIC-0.4.3+1.21.jar",
+      "sha1": "f7fcc3d8969f0838e32bf8dd0ed17ef46c07a655",
+      "size": 23652,
+      "url": "https://cdn.modrinth.com/data/bQh7xzFq/versions/IdupyNOK/Not%20Enough%20Recipe%20Book-FABRIC-0.4.3%2B1.21.jar"
+    },
+    {
+      "file": "OctoLib-FABRIC-0.6.2+1.21.jar",
+      "sha1": "e18bf47209c43d2eff882fd906f2cafd887b7378",
+      "size": 543254,
+      "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/Sj6w7O0I/OctoLib-FABRIC-0.6.2%2B1.21.jar"
+    },
+    {
+      "file": "PokeMisiones.jar",
+      "sha1": "208817b9347fda8ff7fe134df72ca05c49356567",
+      "size": 657944,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones.jar"
+    },
+    {
+      "file": "Too Many Entities 1.21.1 Fabric v1.2.0.jar",
+      "sha1": "499880e7c9186995d0c3839ab7b5d8a20e92354d",
+      "size": 73633,
+      "url": "https://cdn.modrinth.com/data/BvnRxzIF/versions/LIr36rRw/Too%20Many%20Entities%201.21.1%20Fabric%20v1.2.0.jar"
+    },
+    {
+      "file": "alternate-current-mc1.21-1.9.0.jar",
+      "sha1": "b3dbc4fc4acfd98f3f6b62bbb4e641ed4df915e8",
+      "size": 51836,
+      "url": "https://cdn.modrinth.com/data/r0v8vy1s/versions/78P98rac/alternate-current-mc1.21-1.9.0.jar"
+    },
+    {
       "file": "apokelipsis-menu-1.0.0.jar",
-      "sha1": "4f50b1bf155abbbccc09cf7c533f561c51b9cbb8",
-      "size": 22970,
+      "sha1": "cc7953303ed6fc3ddf03394bad4fd687a5d59626",
+      "size": 25794,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar"
     },
     {
+      "file": "aps_trophies-1.21.1-fabric-1.2.0.jar",
+      "sha1": "cc89cf9ddc8f13a9cfbbb5ecfa20201bf7a9e13c",
+      "size": 341339,
+      "url": "https://cdn.modrinth.com/data/ZmP6jlh0/versions/B1xcWIqn/aps_trophies-1.21.1-fabric-1.2.0.jar"
+    },
+    {
+      "file": "architectury-13.0.11-fabric.jar",
+      "sha1": "18200609d4c3571c4237b50884966f6fd82431ea",
+      "size": 600921,
+      "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/Pzc2FP5K/architectury-13.0.11-fabric.jar"
+    },
+    {
+      "file": "athena-fabric-1.21.1-4.0.6.jar",
+      "sha1": "92534d85cad33ab1fee598068443c685f4bb06e0",
+      "size": 88425,
+      "url": "https://cdn.modrinth.com/data/b1ZV3DIJ/versions/JfyYsWKP/athena-fabric-1.21.1-4.0.6.jar"
+    },
+    {
+      "file": "backpacked-fabric-1.21.1-3.0.5.jar",
+      "sha1": "3600ef5726eb7c5d79613ed1c34b39980224482e",
+      "size": 1285683,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/backpacked-fabric-1.21.1-3.0.5.jar"
+    },
+    {
+      "file": "badgebox-fabric-1.3.0.jar",
+      "sha1": "627a4b2a43082a90e38438f6611affdec78ff4c5",
+      "size": 74534,
+      "url": "https://cdn.modrinth.com/data/8J7TR166/versions/1iJ9oDN4/badgebox-fabric-1.3.0.jar"
+    },
+    {
+      "file": "balm-fabric-1.21.1-21.0.66.jar",
+      "sha1": "37266aadaed39205f4a3844930e76d2eebb866a4",
+      "size": 805265,
+      "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/EghJxg4h/balm-fabric-1.21.1-21.0.66.jar"
+    },
+    {
+      "file": "catchrate-display-fabric-2.12.3.jar",
+      "sha1": "03b4ac960b70b0ad33ef9cf942fe7ff504f0a00a",
+      "size": 293930,
+      "url": "https://cdn.modrinth.com/data/vADO40xp/versions/rh5xmGEe/catchrate-display-fabric-2.12.3.jar"
+    },
+    {
+      "file": "chat_heads-0.15.7-fabric-1.21.jar",
+      "sha1": "5f37d428e0cc5ff08ed73a21ee11af0dde4105c2",
+      "size": 86944,
+      "url": "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/5t3tM2L3/chat_heads-0.15.7-fabric-1.21.jar"
+    },
+    {
+      "file": "cloth-config-15.0.140-fabric.jar",
+      "sha1": "5d82342a2df53fd6df712bfdd583a811572918a4",
+      "size": 1157166,
+      "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/HpMb5wGb/cloth-config-15.0.140-fabric.jar"
+    },
+    {
+      "file": "cobble-caf-forms-5.1.jar",
+      "sha1": "762001529715ce0916067cb4c863d889fe81a05e",
+      "size": 3717526,
+      "url": "https://cdn.modrinth.com/data/469QXqgC/versions/1R3Fvu7O/cobble-caf-forms-5.1.jar"
+    },
+    {
+      "file": "cobbledex-rei-emi-jei-fabric-2.29.0.jar",
+      "sha1": "16975f551413520c39ded7e21e483b6a5d578741",
+      "size": 5418984,
+      "url": "https://cdn.modrinth.com/data/qekxLrOP/versions/c03nfIwP/cobbledex-rei-emi-jei-fabric-2.29.0.jar"
+    },
+    {
+      "file": "cobblemon-battle-extras-fabric-1.13.45.jar",
+      "sha1": "8d56d3e943d20f9d22be32e9a9dee5851eb7f654",
+      "size": 1515972,
+      "url": "https://cdn.modrinth.com/data/2iY8VFqL/versions/Sf5W9mRS/cobblemon-battle-extras-fabric-1.13.45.jar"
+    },
+    {
+      "file": "cobblemonfence-1.0.3.jar",
+      "sha1": "1e9d94c87cb1d4f7297821b30144ed0a354e8646",
+      "size": 167581,
+      "url": "https://cdn.modrinth.com/data/aCQFwusS/versions/I5fyoqLb/cobblemonfence-1.0.3.jar"
+    },
+    {
+      "file": "cobblemonintegrations-fabric-1.21.1-1.1.8.jar",
+      "sha1": "b7d37c92ab4958e720657018c58960535ff1335b",
+      "size": 385418,
+      "url": "https://cdn.modrinth.com/data/NPCfuUI4/versions/gy1AJCQB/cobblemonintegrations-fabric-1.21.1-1.1.8.jar"
+    },
+    {
+      "file": "cobblemonresearchtasks-2.0.jar",
+      "sha1": "a9768e7b8b25325f75b65c919b66bc8d7911d743",
+      "size": 1345922,
+      "url": "https://cdn.modrinth.com/data/zoP5qy7S/versions/BMbNXB3F/cobblemonresearchtasks-2.0.jar"
+    },
+    {
+      "file": "cobweb-fabric-1.21-1.4.0.jar",
+      "sha1": "d744244463b0bc0dc53137da28a89fea7474f82c",
+      "size": 418604,
+      "url": "https://cdn.modrinth.com/data/dQcfqGbl/versions/RDHSnisj/cobweb-fabric-1.21-1.4.0.jar"
+    },
+    {
+      "file": "comforts-fabric-9.0.5+1.21.1.jar",
+      "sha1": "e47d6c2f0213abed8865dfa51ee05dea86c1baa9",
+      "size": 914494,
+      "url": "https://cdn.modrinth.com/data/SaCpeal4/versions/LUPOTXbk/comforts-fabric-9.0.5%2B1.21.1.jar"
+    },
+    {
+      "file": "configured-fabric-1.21.1-2.6.3.jar",
+      "sha1": "7d1f43eb143c528e2431d8dcaf2e3007837ddf08",
+      "size": 400642,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/configured-fabric-1.21.1-2.6.3.jar"
+    },
+    {
+      "file": "connectedglass-1.1.14-fabric-mc1.21.jar",
+      "sha1": "dc2a646fce4691b2f4f73faa8bedcfa52d543bee",
+      "size": 848250,
+      "url": "https://cdn.modrinth.com/data/DghO0R02/versions/NnQWcI9h/connectedglass-1.1.14-fabric-mc1.21.jar"
+    },
+    {
+      "file": "connectivity-fabric-1.21-7.6.jar",
+      "sha1": "62501d615a3d5192cc1675293fa78f6f11b5e7e9",
+      "size": 198109,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/connectivity-fabric-1.21-7.6.jar"
+    },
+    {
+      "file": "cullleaves-fabric-4.1.1+1.21.1.jar",
+      "sha1": "e1f494684b6ee9d3c8e50a34002c32331b3ffd0a",
+      "size": 92108,
+      "url": "https://cdn.modrinth.com/data/GNxdLCoP/versions/b3VxU7eO/cullleaves-fabric-4.1.1%2B1.21.1.jar"
+    },
+    {
+      "file": "cupboard-fabric-1.21.1-4.1.jar",
+      "sha1": "7fc35dc4f683229e1bb2e6c6f71b98b9a666b1c8",
+      "size": 27371,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/cupboard-fabric-1.21.1-4.1.jar"
+    },
+    {
+      "file": "dynamic-fps-3.11.4+minecraft-1.21.0-fabric.jar",
+      "sha1": "c0ee92c6d8a48e077aa9b02f3470619eab17d59c",
+      "size": 217532,
+      "url": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/GBH14HiF/dynamic-fps-3.11.4%2Bminecraft-1.21.0-fabric.jar"
+    },
+    {
+      "file": "easy_npc-fabric-1.21.1-7.15.0.jar",
+      "sha1": "691ee7226d2f20c89efd0b67da4f9d32dae71cfc",
+      "size": 3207174,
+      "url": "https://cdn.modrinth.com/data/Epm6R3P2/versions/Kp1krim8/easy_npc-fabric-1.21.1-7.15.0.jar"
+    },
+    {
+      "file": "easy_npc_bundle-fabric-1.21.1-7.15.0.jar",
+      "sha1": "5857fedd3bf5bd3402a89b66c8d4e5580a296cfd",
+      "size": 25261,
+      "url": "https://cdn.modrinth.com/data/CgGEe1h3/versions/hBaCIEAp/easy_npc_bundle-fabric-1.21.1-7.15.0.jar"
+    },
+    {
+      "file": "easy_npc_config_ui-fabric-1.21.1-7.15.0.jar",
+      "sha1": "dbc5d4513f2e5ed3999955977651836f48a2199a",
+      "size": 1197196,
+      "url": "https://cdn.modrinth.com/data/uTGjf7vA/versions/n8rFK1Yv/easy_npc_config_ui-fabric-1.21.1-7.15.0.jar"
+    },
+    {
+      "file": "elevatorid-fabric-1.21-1.11.1.jar",
+      "sha1": "3f34470781f4b5cbeb1e83a259cceae616077b67",
+      "size": 185086,
+      "url": "https://cdn.modrinth.com/data/hi2dSXTu/versions/IYcefR0v/elevatorid-fabric-1.21-1.11.1.jar"
+    },
+    {
+      "file": "emotecraft-for-MC1.21.1-2.4.12-fabric.jar",
+      "sha1": "9be2a237e27f20d2d00f0036a8be53d7d66c5df5",
+      "size": 863362,
+      "url": "https://cdn.modrinth.com/data/pZ2wrerK/versions/daqt5qcK/emotecraft-for-MC1.21.1-2.4.12-fabric.jar"
+    },
+    {
+      "file": "enhancedblockentities-0.10.2+1.21.jar",
+      "sha1": "d81359d77fc7c5437f3e83e519dc2f869300f0cd",
+      "size": 201157,
+      "url": "https://cdn.modrinth.com/data/OVuFYfre/versions/HBZAPs3u/enhancedblockentities-0.10.2%2B1.21.jar"
+    },
+    {
+      "file": "entityculling-fabric-1.11.3-mc1.21.1.jar",
+      "sha1": "5a65a3944e32cc57b73b0f208d15d16fe9df4ed1",
+      "size": 1519243,
+      "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/yllJFBpU/entityculling-fabric-1.11.3-mc1.21.1.jar"
+    },
+    {
+      "file": "entrenadores-pokemon-1.0.0.jar",
+      "sha1": "7b3f42e17e7357fdbe15aa333f318e9e5332af58",
+      "size": 209320,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/entrenadores-pokemon-1.0.0.jar"
+    },
+    {
+      "file": "explosive-enhancement-1.3.2-1.21-1.21.1.jar",
+      "sha1": "07725f58e05d46e1a3d9bb774e6b96c6fbe5dcb5",
+      "size": 114621,
+      "url": "https://cdn.modrinth.com/data/OSQ8mw2r/versions/LEeJnb8j/explosive-enhancement-1.3.2-1.21-1.21.1.jar"
+    },
+    {
       "file": "fabric-api-0.116.17+1.21.1.jar",
-      "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/Mys3P7lK/fabric-api-0.116.17%2B1.21.1.jar",
       "sha1": "810b2b0195371a012906241d8b85a32a1d6de53c",
-      "size": 2452735
+      "size": 2452735,
+      "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/Mys3P7lK/fabric-api-0.116.17%2B1.21.1.jar"
+    },
+    {
+      "file": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "sha1": "f1d4ab6ecd54d9782521333a87eb50724ecb03e0",
+      "size": 8142878,
+      "url": "https://cdn.modrinth.com/data/Ha28R6CL/versions/SKW1BTL3/fabric-language-kotlin-1.14.2%2Bkotlin.2.4.21.jar"
+    },
+    {
+      "file": "fallingleaves-1.17.1+1.21.1.jar",
+      "sha1": "5210b4cb359a95c53580b1399f98e51ab0967cc5",
+      "size": 170056,
+      "url": "https://cdn.modrinth.com/data/WhbRG4iK/versions/Y0zS16Bk/fallingleaves-1.17.1%2B1.21.1.jar"
+    },
+    {
+      "file": "farsight-fabric-1.21-4.5.jar",
+      "sha1": "3d7ebb35ac03724ed2c73d399392228d1de40159",
+      "size": 371550,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/farsight-fabric-1.21-4.5.jar"
+    },
+    {
+      "file": "fastpaintings-1.21-1.3.1-fabric.jar",
+      "sha1": "cc94ed7feefa15b43ce58612b6826632ba92cbe3",
+      "size": 156680,
+      "url": "https://cdn.modrinth.com/data/z3TzcquW/versions/8xe5ZhgX/fastpaintings-1.21-1.3.1-fabric.jar"
+    },
+    {
+      "file": "ferritecore-7.0.3-fabric.jar",
+      "sha1": "a8a6a34fcda177da2828cedef44e0e538cf78aad",
+      "size": 123450,
+      "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/sOzRw3CG/ferritecore-7.0.3-fabric.jar"
+    },
+    {
+      "file": "framework-fabric-1.21.1-0.13.11.jar",
+      "sha1": "87ce6c5c312da043e823e9407a04d307b5974d06",
+      "size": 1647903,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/framework-fabric-1.21.1-0.13.11.jar"
+    },
+    {
+      "file": "fusion-1.3.16-fabric-mc1.21.jar",
+      "sha1": "ce69d9c427e17d15ce99b43a2c5cffc4cd5dfa30",
+      "size": 913396,
+      "url": "https://cdn.modrinth.com/data/p19vrgc2/versions/LQSMRNBf/fusion-1.3.16-fabric-mc1.21.jar"
+    },
+    {
+      "file": "geckolib-fabric-1.21.1-4.9.3.jar",
+      "sha1": "b3a6aff6ffff34d20ffde1faa640bcf17ff4b646",
+      "size": 664463,
+      "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/tmxM7U4W/geckolib-fabric-1.21.1-4.9.3.jar"
+    },
+    {
+      "file": "graves-3.4.4+1.21.jar",
+      "sha1": "e289663f13de87ed871fccb8837c5d69cc3bb2e6",
+      "size": 1709158,
+      "url": "https://cdn.modrinth.com/data/yn9u3ypm/versions/Fg64B87Y/graves-3.4.4%2B1.21.jar"
+    },
+    {
+      "file": "guia-flechas-1.0.0.jar",
+      "sha1": "9dee20fc5b61806a2d5a476a866dd022482dba14",
+      "size": 48944,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/guia-flechas-1.0.0.jar"
+    },
+    {
+      "file": "harvest-with-ease-fabric-1.21-9.4.0.jar",
+      "sha1": "b7683765b711b51e9afb1ab2a1f77d29492f3bbd",
+      "size": 487623,
+      "url": "https://cdn.modrinth.com/data/W4Ajthd2/versions/O0kLmcVG/harvest-with-ease-fabric-1.21-9.4.0.jar"
+    },
+    {
+      "file": "indium-1.0.35+mc1.21.jar",
+      "sha1": "1bf4b5db91f4e6d7a4f94fe2e96525d22df1cacb",
+      "size": 105000,
+      "url": "https://cdn.modrinth.com/data/Orvt0mRa/versions/Z8VpxxGh/indium-1.0.35%2Bmc1.21.jar"
+    },
+    {
+      "file": "iris-fabric-1.8.14-beta.1+mc1.21.1.jar",
+      "sha1": "6776c0340845887477bfa463acc736ce7fcb6de5",
+      "size": 2791343,
+      "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/bAo1Qhte/iris-fabric-1.8.14-beta.1%2Bmc1.21.1.jar"
+    },
+    {
+      "file": "jei-1.21.1-fabric-19.64.0.453.jar",
+      "sha1": "d292061f9a55e6e88193549009ef9718c021cd57",
+      "size": 2415684,
+      "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/3eOKpuhg/jei-1.21.1-fabric-19.64.0.453.jar"
+    },
+    {
+      "file": "justzoom_fabric_3.0.1_MC_1.21.1.jar",
+      "sha1": "a47500421f7328bc4cc8f2ef80fabe76c9d680bd",
+      "size": 336135,
+      "url": "https://cdn.modrinth.com/data/iAiqcykM/versions/zW9agw05/justzoom_fabric_3.0.1_MC_1.21.1.jar"
+    },
+    {
+      "file": "konkrete_fabric_1.9.9_MC_1.21.jar",
+      "sha1": "c521e23a8be17a941f4f95a76feba9df5e3de5d0",
+      "size": 786695,
+      "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/Qvrc7DuG/konkrete_fabric_1.9.9_MC_1.21.jar"
+    },
+    {
+      "file": "krypton-0.2.8.jar",
+      "sha1": "73e792eb5f120787becda4b87b6ff18b26caea50",
+      "size": 161045,
+      "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/Acz3ttTp/krypton-0.2.8.jar"
+    },
+    {
+      "file": "letmedespawn-1.21.x-fabric-1.5.0.jar",
+      "sha1": "e88e3167ea203fae1b084360fc8242bdfff63128",
+      "size": 14791,
+      "url": "https://cdn.modrinth.com/data/vE2FN5qn/versions/Wb7jqi55/letmedespawn-1.21.x-fabric-1.5.0.jar"
+    },
+    {
+      "file": "litematica-fabric-1.21-0.19.61.jar",
+      "sha1": "efce2dd7118b1e61c8aa461bd8cc9902907dd863",
+      "size": 1642590,
+      "url": "https://cdn.modrinth.com/data/bEpr0Arc/versions/o7i8oi1Z/litematica-fabric-1.21-0.19.61.jar"
+    },
+    {
+      "file": "lithium-fabric-0.15.4+mc1.21.1.jar",
+      "sha1": "7d82a004403b7780d4443d8e40361a55cfd0ae63",
+      "size": 797454,
+      "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/N08Z8wog/lithium-fabric-0.15.4%2Bmc1.21.1.jar"
+    },
+    {
+      "file": "lootr-fabric-1.21.1-1.11.38.127.jar",
+      "sha1": "6671786d4c36a33dcefff85d757022c2a8ed535f",
+      "size": 1111591,
+      "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/nar56EsW/lootr-fabric-1.21.1-1.11.38.127.jar"
+    },
+    {
+      "file": "malilib-fabric-1.21-0.21.10.jar",
+      "sha1": "e2699ef71618c54fc03c6c8b28e336603596dcef",
+      "size": 1411200,
+      "url": "https://cdn.modrinth.com/data/GcWjdA9I/versions/C99LEy6r/malilib-fabric-1.21-0.21.10.jar"
+    },
+    {
+      "file": "mezz_config-1.21.1-fabric-0.6.8.jar",
+      "sha1": "e9351cf60199e3a2db427342f33a18949c0dc67e",
+      "size": 372634,
+      "url": "https://cdn.modrinth.com/data/7tEfOcA7/versions/Q5Yns1Qe/mezz_config-1.21.1-fabric-0.6.8.jar"
+    },
+    {
+      "file": "midnightlib-fabric-1.9.3+1.21.1.jar",
+      "sha1": "6595a90351e827b99b36fa2c6ef1dde1a4c8fdf1",
+      "size": 58781,
+      "url": "https://cdn.modrinth.com/data/codAaoxh/versions/as2ZKoB1/midnightlib-fabric-1.9.3%2B1.21.1.jar"
+    },
+    {
+      "file": "modernfix-fabric-5.25.1+mc1.21.1.jar",
+      "sha1": "4ab39e9c736e7204146792c545ec5b29fc0a3872",
+      "size": 471258,
+      "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/NnNX8LBn/modernfix-fabric-5.25.1%2Bmc1.21.1.jar"
+    },
+    {
+      "file": "modmenu-11.0.5.jar",
+      "sha1": "2321d890a25b5985eba576d7cd8fe9a9c136e33d",
+      "size": 975846,
+      "url": "https://cdn.modrinth.com/data/mOgUt4GM/versions/6lgOkclV/modmenu-11.0.5.jar"
+    },
+    {
+      "file": "moonlight-1.21.1-3.7.2-fabric.jar",
+      "sha1": "7db7c0999fb29579790edae83292622cee933e20",
+      "size": 2325731,
+      "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/fWlk6YEB/moonlight-1.21.1-3.7.2-fabric.jar"
+    },
+    {
+      "file": "owo-lib-0.13.0-alpha.15+1.21.jar",
+      "sha1": "5042f3b15df7cdbb058436bb105aedf826f39d3c",
+      "size": 1963544,
+      "url": "https://cdn.modrinth.com/data/ccKDOlHs/versions/m3XmDd8j/owo-lib-0.13.0-alpha.15%2B1.21.jar"
+    },
+    {
+      "file": "placeholder-api-2.4.2+1.21.jar",
+      "sha1": "aa1b9a49f9f190dfe4825c502b150817dd2998c3",
+      "size": 232325,
+      "url": "https://cdn.modrinth.com/data/eXts2L7r/versions/U5bhVym2/placeholder-api-2.4.2%2B1.21.jar"
+    },
+    {
+      "file": "poke-clothing-1.2.2.jar",
+      "sha1": "195201a8ddb31f21b7224cb68cb3ca9893e8e34a",
+      "size": 325615,
+      "url": "https://cdn.modrinth.com/data/enyi2m8u/versions/bmLnQ5iN/poke-clothing-1.2.2.jar"
+    },
+    {
+      "file": "pokeblocks-1.5.0-1.21.1.jar",
+      "sha1": "a767426171b3085775b57bfd53b66fe7fa6edd88",
+      "size": 1775159,
+      "url": "https://cdn.modrinth.com/data/hnOfcjSq/versions/qlp66lU8/pokeblocks-1.5.0-1.21.1.jar"
+    },
+    {
+      "file": "pokegambling-1.0.0.jar",
+      "sha1": "3f7e763b36b142b7c645b210830af5bfb57137ed",
+      "size": 2375700,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokegambling-1.0.0.jar"
+    },
+    {
+      "file": "polymer-bundled-0.9.19+1.21.1.jar",
+      "sha1": "15a58f43a672ed486bee4f7983ae8ff566a6b5e7",
+      "size": 1705944,
+      "url": "https://cdn.modrinth.com/data/xGdtZczs/versions/xqZ9fctS/polymer-bundled-0.9.19%2B1.21.1.jar"
+    },
+    {
+      "file": "polymorph-fabric-1.1.0+1.21.1.jar",
+      "sha1": "e4f9ec40058c07f263d19b21e438b5204ea4dc22",
+      "size": 320928,
+      "url": "https://cdn.modrinth.com/data/tagwiZkJ/versions/Ng5Y6KVo/polymorph-fabric-1.1.0%2B1.21.1.jar"
+    },
+    {
+      "file": "proteccion-zonas-1.0.0.jar",
+      "sha1": "54ec24244f8e7d9c3e57af2847fe58f2f8defd6c",
+      "size": 111340,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.0.jar"
+    },
+    {
+      "file": "punchy-2.8e-fabric-1.21.1.jar",
+      "sha1": "f522517bd53d9e936069634756963b304e6469f7",
+      "size": 1878473,
+      "url": "https://cdn.modrinth.com/data/8aoMKplv/versions/vQFe6AaG/punchy-2.8e-fabric-1.21.1.jar"
+    },
+    {
+      "file": "puzzleslib-v21.1.64-mc1.21.1+fabric.jar",
+      "sha1": "3ba4d1f1be35673b0e2be1961350c378db461923",
+      "size": 1507546,
+      "url": "https://cdn.modrinth.com/data/QAGBst4M/versions/SOu6522s/puzzleslib-v21.1.64-mc1.21.1%2Bfabric.jar"
+    },
+    {
+      "file": "rctapi-fabric-1.21.1-0.16.2-beta.jar",
+      "sha1": "3514532fea28e2e1160894428302eb1000af8459",
+      "size": 267864,
+      "url": "https://cdn.modrinth.com/data/CBfM2yw7/versions/DoQNDXAU/rctapi-fabric-1.21.1-0.16.2-beta.jar"
+    },
+    {
+      "file": "reeses-sodium-options-fabric-2.2.4+mc1.21.1.jar",
+      "sha1": "552c80c3113ad346c3abcdf7c5c6cc3a02a5fb62",
+      "size": 257229,
+      "url": "https://cdn.modrinth.com/data/Bh37bMuy/versions/XtuPOKUN/reeses-sodium-options-fabric-2.2.4%2Bmc1.21.1.jar"
+    },
+    {
+      "file": "securetrade-fabric-1.3.0-1.21.1.jar",
+      "sha1": "0da131d3ebbc47ff2a3827afea8616aaa4d58816",
+      "size": 323297,
+      "url": "https://cdn.modrinth.com/data/ptgA3PQG/versions/hz8618ME/securetrade-fabric-1.3.0-1.21.1.jar"
+    },
+    {
+      "file": "smoothchunk-fabric-1.21-4.1.jar",
+      "sha1": "b367bd9aa8709c09bb26662aeefd0d8bc871d3f5",
+      "size": 13769,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/smoothchunk-fabric-1.21-4.1.jar"
+    },
+    {
+      "file": "sodium-extra-fabric-0.9.4+mc1.21.1.jar",
+      "sha1": "628487b330c9589d26cada5c4a51ac457af80a1f",
+      "size": 472019,
+      "url": "https://cdn.modrinth.com/data/PtjYWJkn/versions/YEWu6red/sodium-extra-fabric-0.9.4%2Bmc1.21.1.jar"
+    },
+    {
+      "file": "sodium-fabric-0.8.13+mc1.21.1.jar",
+      "sha1": "003c114c85ca88ef3362e018deb6aca0c682d6a1",
+      "size": 1574609,
+      "url": "https://cdn.modrinth.com/data/AANobbMI/versions/SMxNOGZ6/sodium-fabric-0.8.13%2Bmc1.21.1.jar"
+    },
+    {
+      "file": "sootychimneys-fabric-1.3.5.jar",
+      "sha1": "f7ffb5d252f712b2de831d255cf11ef23acbaed9",
+      "size": 166938,
+      "url": "https://cdn.modrinth.com/data/b3w1XM9H/versions/sUuTA9z2/sootychimneys-fabric-1.3.5.jar"
+    },
+    {
+      "file": "spark-1.10.109-fabric.jar",
+      "sha1": "eff42cbeee6fe9a7f3c57031c23200256366dcd1",
+      "size": 3609981,
+      "url": "https://cdn.modrinth.com/data/l6YH9Als/versions/cALUj9l1/spark-1.10.109-fabric.jar"
+    },
+    {
+      "file": "spuds-shops-1.21.1-1.9.0.jar",
+      "sha1": "fc52428ee2055519eb23fde20fa7a75c2ac269a5",
+      "size": 1037914,
+      "url": "https://cdn.modrinth.com/data/sHFbDnFN/versions/E9OkDfuk/spuds-shops-1.21.1-1.9.0.jar"
+    },
+    {
+      "file": "structurify-fabric-2.0.43+mc1.21.1.jar",
+      "sha1": "322de784f5719927132f87e09c1eb0d2a2a20a39",
+      "size": 539339,
+      "url": "https://cdn.modrinth.com/data/yz7AM2zx/versions/KAN9hrFX/structurify-fabric-2.0.43%2Bmc1.21.1.jar"
+    },
+    {
+      "file": "supermartijn642corelib-1.1.25-fabric-mc1.21.jar",
+      "sha1": "3339afb26de57eb3b83aed326e6cab5c1af1e490",
+      "size": 622551,
+      "url": "https://cdn.modrinth.com/data/rOUBggPv/versions/ImY2F2fz/supermartijn642corelib-1.1.25-fabric-mc1.21.jar"
+    },
+    {
+      "file": "tidal-0.0.2-beta.jar",
+      "sha1": "1099fa3055eee8ab6c503d40001682fa83c07e04",
+      "size": 198920,
+      "url": "https://cdn.modrinth.com/data/QsiPPta0/versions/Rh86Cb7C/tidal-0.0.2-beta.jar"
+    },
+    {
+      "file": "trashslot-fabric-1.21.1-21.1.11.jar",
+      "sha1": "1e58a95ebfd9c2078fcba4100f1afa80512c9f94",
+      "size": 78842,
+      "url": "https://cdn.modrinth.com/data/vRYk0bv7/versions/apJG54CW/trashslot-fabric-1.21.1-21.1.11.jar"
+    },
+    {
+      "file": "voicechat-fabric-1.21.1-2.6.24.jar",
+      "sha1": "5abe8af0b85acc94506caa0a36ccc59836956dd2",
+      "size": 5386871,
+      "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/6PKCVne5/voicechat-fabric-1.21.1-2.6.24.jar"
+    },
+    {
+      "file": "wakes-0.4.1+1.21.1.jar",
+      "sha1": "c4f4d09a4b9362bcc952f370ce8c8b44d662dc42",
+      "size": 268435,
+      "url": "https://cdn.modrinth.com/data/dlNu0RQY/versions/WuY7eJX9/wakes-0.4.1%2B1.21.1.jar"
+    },
+    {
+      "file": "waystones-fabric-1.21.1-21.1.46.jar",
+      "sha1": "2ef078e0e3409e3a97ec3fdc0cfd7db7ca34bc40",
+      "size": 1248666,
+      "url": "https://cdn.modrinth.com/data/LOpKHB2A/versions/nSAwjAk4/waystones-fabric-1.21.1-21.1.46.jar"
+    },
+    {
+      "file": "xaerominimap-fabric-1.21.1-26.6.0.jar",
+      "sha1": "5fbb03dd3f22c0c3d5466d1366222d7d277a8df3",
+      "size": 2234556,
+      "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/W4dcLcUs/xaerominimap-fabric-1.21.1-26.6.0.jar"
+    },
+    {
+      "file": "xaeroworldmap-fabric-1.21.1-1.47.0.jar",
+      "sha1": "db7ad23fe512dbc13a8286844fd9277c08a7ef5a",
+      "size": 1456162,
+      "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/XIR7GzC3/xaeroworldmap-fabric-1.21.1-1.47.0.jar"
+    },
+    {
+      "file": "yet_another_config_lib_v3-3.8.2+1.21.1-fabric.jar",
+      "sha1": "e075503382f70715ab9fc6f66d603397a86eb3e0",
+      "size": 1131265,
+      "url": "https://cdn.modrinth.com/data/1eAoo2KR/versions/o3cDn8Vp/yet_another_config_lib_v3-3.8.2%2B1.21.1-fabric.jar"
+    },
+    {
+      "file": "zconfig-1.0.0+1.21.x.jar",
+      "sha1": "cb9fe03e6f64b900317d7edf305c1d7d43412a60",
+      "size": 405552,
+      "url": "https://cdn.modrinth.com/data/4qmvXRB9/versions/yD19P1nG/zconfig-1.0.0%2B1.21.x.jar"
+    },
+    {
+      "file": "zfastnoise-1.0.14+1.21.jar",
+      "sha1": "7e9ce65d3e1e92940449fcab815563cb1e7ca1a8",
+      "size": 36201,
+      "url": "https://cdn.modrinth.com/data/OnlVIpq5/versions/73DMCY3S/zfastnoise-1.0.14%2B1.21.jar"
     },
     {
       "file": "CustomSkinLoader_Universal-15.1.jar",
@@ -46,42 +1093,6 @@
     }
   ],
   "optional": [
-    {
-      "id": "sodium",
-      "name": "Sodium",
-      "description": "Mejora muchísimo los FPS.",
-      "category": "Rendimiento",
-      "default": true,
-      "file": "sodium-fabric-0.8.13+mc1.21.1.jar",
-      "url": "https://cdn.modrinth.com/data/AANobbMI/versions/SMxNOGZ6/sodium-fabric-0.8.13%2Bmc1.21.1.jar",
-      "sha1": "003c114c85ca88ef3362e018deb6aca0c682d6a1",
-      "size": 1574609
-    },
-    {
-      "id": "entityculling",
-      "name": "Entity Culling",
-      "description": "No dibuja entidades que no ves. Más FPS con muchos Pokémon cerca.",
-      "category": "Rendimiento",
-      "default": true,
-      "file": "entityculling-fabric-1.11.3-mc1.21.1.jar",
-      "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/yllJFBpU/entityculling-fabric-1.11.3-mc1.21.1.jar",
-      "sha1": "5a65a3944e32cc57b73b0f208d15d16fe9df4ed1",
-      "size": 1519243
-    },
-    {
-      "id": "iris",
-      "name": "Iris Shaders",
-      "description": "Permite usar shaders (pon los packs en la carpeta shaderpacks).",
-      "category": "Visual",
-      "default": false,
-      "requires": [
-        "sodium"
-      ],
-      "file": "iris-fabric-1.8.14-beta.1+mc1.21.1.jar",
-      "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/bAo1Qhte/iris-fabric-1.8.14-beta.1%2Bmc1.21.1.jar",
-      "sha1": "6776c0340845887477bfa463acc736ce7fcb6de5",
-      "size": 2791343
-    },
     {
       "id": "continuity",
       "name": "Continuity",
@@ -105,17 +1116,6 @@
       "size": 2023375
     },
     {
-      "id": "xaerominimap",
-      "name": "Xaero's Minimap",
-      "description": "Minimapa en una esquina de la pantalla.",
-      "category": "Utilidades",
-      "default": false,
-      "file": "xaerominimap-fabric-1.21.1-26.6.0.jar",
-      "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/W4dcLcUs/xaerominimap-fabric-1.21.1-26.6.0.jar",
-      "sha1": "5fbb03dd3f22c0c3d5466d1366222d7d277a8df3",
-      "size": 2234556
-    },
-    {
       "id": "appleskin",
       "name": "AppleSkin",
       "description": "Muestra la saturación y lo que alimenta cada comida.",
@@ -131,38 +1131,139 @@
     {
       "path": "config/apokelipsis/panorama_0.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_0.png",
-      "sha1": "5d36bbb16487d122a6f625e999e23a4d9322f0f6",
-      "size": 2109570
+      "sha1": "d2f05f73625b40ab29b8d25b34e3e665e3807c12",
+      "size": 693730
     },
     {
       "path": "config/apokelipsis/panorama_1.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_1.png",
-      "sha1": "4652a6472c8157540556f589aa94c21ad859a037",
-      "size": 2356075
+      "sha1": "55f0bd9d1b9ca985198fa294bf895be6b4f3a9b9",
+      "size": 622514
     },
     {
       "path": "config/apokelipsis/panorama_2.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_2.png",
-      "sha1": "54488b81959d8218c73b02ab34d9ff247987cc2e",
-      "size": 2225736
+      "sha1": "e913578e58857a27934ef7b2c3adf8cf68bb15c5",
+      "size": 878727
     },
     {
       "path": "config/apokelipsis/panorama_3.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_3.png",
-      "sha1": "27847b2fe18b502a7c23b98491d71fcc09356929",
-      "size": 2129943
+      "sha1": "dc98c050c81400c3cfabf474407413c1a285777b",
+      "size": 698693
     },
     {
       "path": "config/apokelipsis/panorama_4.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_4.png",
-      "sha1": "a94639396e5b79404cdc02a15eb73881afb10c8c",
-      "size": 1973379
+      "sha1": "aad246e32eb01dc2d094b60f0e32922d93544ba1",
+      "size": 493991
     },
     {
       "path": "config/apokelipsis/panorama_5.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_5.png",
-      "sha1": "b97ab114c818f5db3167539223a82423aaba7a57",
-      "size": 1777244
+      "sha1": "42fe1e63ffdff8d448b6bb7463fd99020569f163",
+      "size": 176396
+    },
+    {
+      "path": "resourcepacks/Better Caps! [v1.2].zip",
+      "url": "https://cdn.modrinth.com/data/mbndKTrW/versions/H3DxdTkA/Better%20Caps%21%20%5Bv1.2%5D.zip",
+      "sha1": "0adf1ee3f876b3dd22b3e3b7115db6268b879c4b",
+      "size": 125177
+    },
+    {
+      "path": "resourcepacks/Better-Leaves-9.6.zip",
+      "url": "https://cdn.modrinth.com/data/uvpymuxq/versions/w4ReEpuG/Better-Leaves-9.6.zip",
+      "sha1": "fa3a961b82a9f15a4e80b1f7f021bc121649f073",
+      "size": 1977146
+    },
+    {
+      "path": "resourcepacks/CobblemonCosplay.zip",
+      "url": "https://cdn.modrinth.com/data/5cow1bP4/versions/hpBzUlro/CobblemonCosplay.zip",
+      "sha1": "b80fbeec80f7c1430bf79b9012e9f95d68478ef2",
+      "size": 253362
+    },
+    {
+      "path": "resourcepacks/CobblemonLoadingBackgrounds-[1.0.2].zip",
+      "url": "https://cdn.modrinth.com/data/KS8ThZBC/versions/uRsiSRtw/CobblemonLoadingBackgrounds-%5B1.0.2%5D.zip",
+      "sha1": "1976eab776d8280e062bd5136b24bdc4dfa1a049",
+      "size": 25725321
+    },
+    {
+      "path": "resourcepacks/Cobblemotion_v1.5.1.zip",
+      "url": "https://cdn.modrinth.com/data/lIDAJAby/versions/sPztKDIi/Cobblemotion_v1.5.1.zip",
+      "sha1": "b683791ddfbbde25c0450133f789ebc6fa9f2c7d",
+      "size": 3148542
+    },
+    {
+      "path": "resourcepacks/CobbleSounds[Complete]_v1.4.1.zip",
+      "url": "https://cdn.modrinth.com/data/yIgJQt6H/versions/ryII9cwu/CobbleSounds%5BComplete%5D_v1.4.1.zip",
+      "sha1": "d542873ffbb0427d4cb4bc374a37419d4d93a216",
+      "size": 511473929
+    },
+    {
+      "path": "resourcepacks/E19 Cobblemon Minimap Icons.zip",
+      "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/MAumPyhV/E19%20Cobblemon%20Minimap%20Icons.zip",
+      "sha1": "77813d38002b43c9c243d694728479bd3879cf86",
+      "size": 23270833
+    },
+    {
+      "path": "resourcepacks/FireFitsforFireCats.v.13.zip",
+      "url": "https://cdn.modrinth.com/data/MyBgiUdg/versions/i0kTh4oX/FireFitsforFireCats.v.13.zip",
+      "sha1": "08802a1865016d509ed54ce5add430d2a22c4bc4",
+      "size": 1167802
+    },
+    {
+      "path": "resourcepacks/fresh_waystones.zip",
+      "url": "https://cdn.modrinth.com/data/BcyGAwlg/versions/LvhBQERi/fresh_waystones.zip",
+      "sha1": "a2134b1bd5eeef9dde00bf637f43539d428739c0",
+      "size": 321969
+    },
+    {
+      "path": "resourcepacks/muddiescosmetics (4).zip",
+      "url": "https://cdn.modrinth.com/data/ADiTmgKC/versions/1Qwsicxb/muddiescosmetics%20%284%29.zip",
+      "sha1": "cdb82aa1174a33dc639acb89cd213ef2d8815f38",
+      "size": 310311
+    },
+    {
+      "path": "resourcepacks/PokeCostume v.3.3.zip",
+      "url": "https://cdn.modrinth.com/data/k1X1bPvt/versions/DEtvGMQW/PokeCostume%20v.3.3.zip",
+      "sha1": "a46d9dc61d4e911d83ca737320db1d88cb3380e4",
+      "size": 210597
+    },
+    {
+      "path": "resourcepacks/pokopia-1.1.zip",
+      "url": "https://cdn.modrinth.com/data/7bGbiPV6/versions/vMTfqbRo/pokopia-1.1.zip",
+      "sha1": "572a341a84652f611586cb889c486f667bb9a825",
+      "size": 109784
+    },
+    {
+      "path": "resourcepacks/StylesUponStyles.v.1.6.1.zip",
+      "url": "https://cdn.modrinth.com/data/LizLsGI4/versions/h4Tv9pCv/StylesUponStyles.v.1.6.1.zip",
+      "sha1": "1ab4e757f618dbc299a46bc4b042b8a64485d231",
+      "size": 1917520
+    },
+    {
+      "path": "resourcepacks/Wood Cosmetic Rillaboom.zip",
+      "url": "https://cdn.modrinth.com/data/eThFuBO4/versions/RPZco1mt/Wood%20Cosmetic%20Rillaboom.zip",
+      "sha1": "96e8d9949fa22469e8f236e9094998b99eb4fd41",
+      "size": 137766
+    },
+    {
+      "path": "resourcepacks/[Chilli´s] punchy! cobblemon.zip",
+      "url": "https://cdn.modrinth.com/data/5sRSLTlC/versions/ibKS2oz3/%5BChilli%C2%B4s%5D%20punchy%21%20cobblemon.zip",
+      "sha1": "41a1a04713d15f5c15be1445128678a6f3f8a021",
+      "size": 2666928
+    },
+    {
+      "path": "shaderpacks/Visual-Vibrance-v0.3.5a.zip",
+      "url": "https://cdn.modrinth.com/data/l6Uqs2fS/versions/zGC385Y8/Visual-Vibrance-v0.3.5a.zip",
+      "sha1": "e60e5c1ea1243bf93798ddd34b4a70202781cab8",
+      "size": 4571188
     }
-  ]
+  ],
+  "initial": {
+    "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/inicial.zip",
+    "sha1": "d66b17e1840d9af2274d548286470f48c5efe70c",
+    "size": 2358930
+  }
 }

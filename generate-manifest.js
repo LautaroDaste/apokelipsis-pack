@@ -104,6 +104,11 @@ async function main() {
     if (def.modrinth) info = await resolveModrinth(def.modrinth, pack);
     else if (def.file && localOptional.has(def.file)) info = localOptional.get(def.file);
     else throw new Error(`El opcional "${def.id}" necesita "modrinth" o un "file" existente en optional/`);
+    // Si el modpack ya lo trae como obligatorio, no tiene sentido ofrecerlo como opcional.
+    if (mods.some((m) => (info.projectId && m.projectId === info.projectId) || m.file === info.file)) {
+      console.log(`  ${def.name || def.id}: ya está en los obligatorios, se omite`);
+      continue;
+    }
     optional.push({ ...def, ...info });
     console.log(`  ${def.name || def.id}: ${info.file}`);
   }
@@ -133,7 +138,9 @@ async function main() {
   }
 
   // Archivos extra: todo lo que haya en files/ se copia a la carpeta del juego con la misma ruta
-  // (por ejemplo files/config/apokelipsis/panorama_0.png -> config/apokelipsis/panorama_0.png).
+  // (por ejemplo files/resourcepacks/x.zip -> resourcepacks/x.zip). Los que estén en Modrinth
+  // (packs de texturas, shaders) se descargan desde allí.
+  console.log('Analizando archivos extra...');
   const files = [];
   const walk = (dir, rel) => {
     if (!fs.existsSync(dir)) return;
@@ -141,7 +148,7 @@ async function main() {
       const full = path.join(dir, entry.name);
       const relPath = rel ? `${rel}/${entry.name}` : entry.name;
       if (entry.isDirectory()) walk(full, relPath);
-      else {
+      else if (!entry.name.endsWith('.txt')) {
         files.push({
           path: relPath,
           url: `${baseUrl}/files/${relPath.split('/').map(encodeURIComponent).join('/')}`,
@@ -152,6 +159,24 @@ async function main() {
     }
   };
   walk(path.join(ROOT, 'files'), '');
+  if (files.length) {
+    const found = await api(`${MODRINTH}/version_files`, {
+      method: 'POST',
+      body: JSON.stringify({ hashes: files.map((f) => f.sha1), algorithm: 'sha1' })
+    });
+    for (const f of files) {
+      const remote = found[f.sha1]?.files.find((x) => x.hashes.sha1 === f.sha1);
+      if (remote) f.url = remote.url;
+    }
+  }
+
+  // Configuración inicial: inicial.zip se descomprime en la carpeta del juego la primera vez
+  // (solo crea los archivos que falten; nunca pisa lo que el jugador ya tiene).
+  let initial = null;
+  const initialFile = path.join(ROOT, 'inicial.zip');
+  if (fs.existsSync(initialFile)) {
+    initial = { url: `${baseUrl}/inicial.zip`, sha1: sha1(initialFile), size: fs.statSync(initialFile).size };
+  }
 
   const clean = ({ projectId, deps, modrinth, ...rest }) => rest;
   const manifest = {
@@ -162,15 +187,16 @@ async function main() {
     defaultOptions,
     mods: mods.map(clean),
     optional: optional.map(clean),
-    files
+    files,
+    initial
   };
   fs.writeFileSync(path.join(ROOT, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
 
-  const hosted = [...mods, ...optional].filter((m) => m.url.startsWith(baseUrl));
-  console.log(`\nmanifest.json generado: ${mods.length} obligatorios, ${optional.length} opcionales.`);
+  const hosted = [...mods, ...optional, ...files, ...(initial ? [initial] : [])].filter((m) => m.url.startsWith(baseUrl));
+  console.log(`\nmanifest.json generado: ${mods.length} obligatorios, ${optional.length} opcionales, ${files.length} archivos extra.`);
   if (hosted.length) {
     console.log('Estos archivos no están en Modrinth y deben subirse al repo junto al manifest:');
-    hosted.forEach((m) => console.log(`  - ${m.url.slice(baseUrl.length + 1)}`));
+    hosted.forEach((m) => console.log(`  - ${decodeURIComponent(m.url.slice(baseUrl.length + 1))}  (${(m.size / 1048576).toFixed(1)} MB)`));
   }
 }
 
