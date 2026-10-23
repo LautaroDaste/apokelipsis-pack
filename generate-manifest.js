@@ -2,9 +2,12 @@
 // Genera manifest.json a partir de:
 //   pack.json      -> versión de Minecraft/Fabric, datos del servidor, URL base del repo
 //                     y "clientMods": slugs de Modrinth obligatorios solo en el cliente
-//   mods/          -> mods obligatorios (copia aquí la carpeta mods del servidor + los de cliente)
-//   optional.json  -> mods opcionales (por slug de Modrinth o por archivo en optional/)
-//   optional/      -> jars de mods opcionales que no estén en Modrinth
+//   mods/          -> los mods del modpack. Se clasifican solos:
+//                       - solo servidor  -> no se instalan en los jugadores
+//                       - solo cliente   -> opcionales (el jugador puede apagarlos), salvo que
+//                                           un mod obligatorio los necesite o estén en "requiredClient"
+//                       - ambos lados    -> obligatorios
+//   optional.json  -> mods opcionales extra fuera del modpack (normalmente vacío)
 //
 // Los mods que existen en Modrinth se descargan desde Modrinth; el resto desde tu repo (baseUrl).
 // Uso: node generate-manifest.js
@@ -12,6 +15,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { modInfo } = require('./modinfo');
 
 const ROOT = __dirname;
 const UA = 'apokelipsis-pack-tool/1.0';
@@ -88,17 +92,75 @@ async function main() {
   const baseUrl = pack.baseUrl.replace(/\/$/, '');
   const optionalDefs = fs.existsSync(path.join(ROOT, 'optional.json')) ? readJson('optional.json') : [];
 
-  console.log('Analizando mods obligatorios...');
-  const mods = await describeLocal('mods', baseUrl);
+  console.log('Analizando los mods del modpack...');
+  const local = await describeLocal('mods', baseUrl);
+
+  // Lado de cada mod: el fabric.mod.json manda; si dice "*", se usa lo que indica Modrinth.
+  const projectIds = [...new Set(local.map((m) => m.projectId).filter(Boolean))];
+  const projects = projectIds.length
+    ? await api(`${MODRINTH}/projects?ids=${encodeURIComponent(JSON.stringify(projectIds))}`)
+    : [];
+  const projectById = new Map(projects.map((p) => [p.id, p]));
+  const provider = new Map();
+  for (const m of local) {
+    m.info = modInfo(path.join(ROOT, 'mods', m.file));
+    const p = projectById.get(m.projectId);
+    const env = m.info?.environment || '*';
+    m.side = env === 'client' ? 'client'
+      : env === 'server' ? 'server'
+      : p?.client_side === 'unsupported' ? 'server'
+      : p?.server_side === 'unsupported' ? 'client'
+      : 'both';
+    m.title = p?.title || m.info?.name || m.file;
+    m.text = (p?.description || m.info?.description || '').trim();
+    if (m.info) [m.info.id, ...m.info.provides].forEach((id) => provider.set(id, m));
+  }
+  const depsOf = (m) => (m.info?.depends || []).map((id) => provider.get(id)).filter((d) => d && d !== m);
+  const forced = new Set(pack.requiredClient || []);
+
+  // 1) Los mods solo de servidor no se instalan, salvo que un mod del cliente los necesite.
+  const kept = new Set(local.filter((m) => m.side !== 'server'));
+  for (let changed = true; changed; ) {
+    changed = false;
+    for (const m of [...kept]) for (const d of depsOf(m)) if (!kept.has(d)) { kept.add(d); changed = true; }
+  }
+  // 2) Obligatorios: los de ambos lados (y los forzados en pack.json), más lo que ellos necesiten.
+  const required = new Set([...kept].filter((m) => m.side !== 'client' || forced.has(m.info?.id)));
+  for (let changed = true; changed; ) {
+    changed = false;
+    for (const m of [...required]) for (const d of depsOf(m)) if (!required.has(d)) { required.add(d); changed = true; }
+  }
+  // 3) Opcionales: los mods solo de cliente que nadie obligatorio necesita (por ejemplo Punchy).
+  const optionalMods = [...kept].filter((m) => !required.has(m));
+  const optionalId = (m) => m.info?.id || m.file;
+
+  const mods = local.filter((m) => required.has(m));
   for (const slug of pack.clientMods || []) {
     const info = await resolveModrinth(slug, pack);
     if (!mods.some((m) => m.projectId === info.projectId)) mods.push(info);
     console.log(`  ${slug} (cliente): ${info.file}`);
   }
+  const optional = optionalMods
+    .map((m) => ({
+      id: optionalId(m),
+      name: m.title,
+      description: m.text.length > 120 ? m.text.slice(0, 117) + '...' : m.text,
+      default: true,
+      requires: depsOf(m).filter((d) => optionalMods.includes(d)).map(optionalId),
+      file: m.file,
+      url: m.url,
+      sha1: m.sha1,
+      size: m.size
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
 
-  console.log('Resolviendo mods opcionales...');
+  const skipped = local.filter((m) => !kept.has(m));
+  console.log(`  ${mods.length} obligatorios, ${optional.length} opcionales (solo cliente), ${skipped.length} solo servidor (no se instalan)`);
+  console.log('  Solo servidor: ' + skipped.map((m) => m.title).join(', '));
+  console.log('  Opcionales: ' + optional.map((m) => m.name).join(', '));
+
+  // Mods opcionales extra fuera del modpack (optional.json); normalmente vacío.
   const localOptional = new Map((await describeLocal('optional', baseUrl)).map((e) => [e.file, e]));
-  const optional = [];
   for (const def of optionalDefs) {
     let info;
     if (def.modrinth) info = await resolveModrinth(def.modrinth, pack);

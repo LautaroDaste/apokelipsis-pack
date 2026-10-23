@@ -7,5 +7,6 @@
     "address": ""
   },
   "clientMods": ["fabric-api", "customskinloader"],
+  "requiredClient": ["apokelipsis", "customskinloader"],
   "baseUrl":"https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main"
 }
