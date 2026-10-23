@@ -132,6 +132,27 @@ async function main() {
     }
   }
 
+  // Archivos extra: todo lo que haya en files/ se copia a la carpeta del juego con la misma ruta
+  // (por ejemplo files/config/apokelipsis/panorama_0.png -> config/apokelipsis/panorama_0.png).
+  const files = [];
+  const walk = (dir, rel) => {
+    if (!fs.existsSync(dir)) return;
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      const relPath = rel ? `${rel}/${entry.name}` : entry.name;
+      if (entry.isDirectory()) walk(full, relPath);
+      else {
+        files.push({
+          path: relPath,
+          url: `${baseUrl}/files/${relPath.split('/').map(encodeURIComponent).join('/')}`,
+          sha1: sha1(full),
+          size: fs.statSync(full).size
+        });
+      }
+    }
+  };
+  walk(path.join(ROOT, 'files'), '');
+
   const clean = ({ projectId, deps, modrinth, ...rest }) => rest;
   const manifest = {
     packVersion: pack.packVersion,
@@ -140,7 +161,8 @@ async function main() {
     server: pack.server,
     defaultOptions,
     mods: mods.map(clean),
-    optional: optional.map(clean)
+    optional: optional.map(clean),
+    files
   };
   fs.writeFileSync(path.join(ROOT, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
 

@@ -28,8 +28,8 @@
   "mods": [
     {
       "file": "apokelipsis-menu-1.0.0.jar",
-      "sha1": "24276d770b5e6e50100a75ecb067c0e2f4128334",
-      "size": 12270714,
+      "sha1": "4f50b1bf155abbbccc09cf7c533f561c51b9cbb8",
+      "size": 22970,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar"
     },
     {
@@ -125,6 +125,44 @@
       "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/b5ZiCjAr/appleskin-fabric-mc1.21-3.0.6.jar",
       "sha1": "97452cfadfde1f8f8c67838643019eabafa58fbb",
       "size": 1082585
+    }
+  ],
+  "files": [
+    {
+      "path": "config/apokelipsis/panorama_0.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_0.png",
+      "sha1": "5d36bbb16487d122a6f625e999e23a4d9322f0f6",
+      "size": 2109570
+    },
+    {
+      "path": "config/apokelipsis/panorama_1.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_1.png",
+      "sha1": "4652a6472c8157540556f589aa94c21ad859a037",
+      "size": 2356075
+    },
+    {
+      "path": "config/apokelipsis/panorama_2.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_2.png",
+      "sha1": "54488b81959d8218c73b02ab34d9ff247987cc2e",
+      "size": 2225736
+    },
+    {
+      "path": "config/apokelipsis/panorama_3.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_3.png",
+      "sha1": "27847b2fe18b502a7c23b98491d71fcc09356929",
+      "size": 2129943
+    },
+    {
+      "path": "config/apokelipsis/panorama_4.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_4.png",
+      "sha1": "a94639396e5b79404cdc02a15eb73881afb10c8c",
+      "size": 1973379
+    },
+    {
+      "path": "config/apokelipsis/panorama_5.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_5.png",
+      "sha1": "b97ab114c818f5db3167539223a82423aaba7a57",
+      "size": 1777244
     }
   ]
 }
