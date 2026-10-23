@@ -1,0 +1,145 @@
+#!/usr/bin/env node
+// Genera manifest.json a partir de:
+//   pack.json      -> versión de Minecraft/Fabric, datos del servidor, URL base del repo
+//                     y "clientMods": slugs de Modrinth obligatorios solo en el cliente
+//   mods/          -> mods obligatorios (copia aquí la carpeta mods del servidor + los de cliente)
+//   optional.json  -> mods opcionales (por slug de Modrinth o por archivo en optional/)
+//   optional/      -> jars de mods opcionales que no estén en Modrinth
+//
+// Los mods que existen en Modrinth se descargan desde Modrinth; el resto desde tu repo (baseUrl).
+// Uso: node generate-manifest.js
+
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+
+const ROOT = __dirname;
+const UA = 'apokelipsis-pack-tool/1.0';
+const MODRINTH = 'https://api.modrinth.com/v2';
+
+const readJson = (file) => JSON.parse(fs.readFileSync(path.join(ROOT, file), 'utf8').replace(/^﻿/, ''));
+const sha1 = (file) => crypto.createHash('sha1').update(fs.readFileSync(file)).digest('hex');
+const jarsIn = (dir) =>
+  fs.existsSync(path.join(ROOT, dir))
+    ? fs.readdirSync(path.join(ROOT, dir)).filter((f) => f.endsWith('.jar')).sort()
+    : [];
+
+async function api(url, options = {}) {
+  const res = await fetch(url, {
+    ...options,
+    headers: { 'User-Agent': UA, 'Content-Type': 'application/json', ...(options.headers || {}) }
+  });
+  if (!res.ok) throw new Error(`Modrinth respondió ${res.status} para ${url}`);
+  return res.json();
+}
+
+// Describe jars locales y busca en Modrinth cuáles están publicados allí (por sha1).
+async function describeLocal(dir, baseUrl) {
+  const entries = jarsIn(dir).map((file) => {
+    const full = path.join(ROOT, dir, file);
+    return { file, sha1: sha1(full), size: fs.statSync(full).size };
+  });
+  let found = {};
+  if (entries.length) {
+    found = await api(`${MODRINTH}/version_files`, {
+      method: 'POST',
+      body: JSON.stringify({ hashes: entries.map((e) => e.sha1), algorithm: 'sha1' })
+    });
+  }
+  return entries.map((e) => {
+    const version = found[e.sha1];
+    const remote = version?.files.find((f) => f.hashes.sha1 === e.sha1);
+    return {
+      ...e,
+      url: remote ? remote.url : `${baseUrl}/${dir}/${encodeURIComponent(e.file)}`,
+      projectId: version?.project_id,
+      deps: (version?.dependencies || [])
+        .filter((d) => d.dependency_type === 'required' && d.project_id)
+        .map((d) => d.project_id)
+    };
+  });
+}
+
+async function resolveModrinth(slug, pack) {
+  const params = new URLSearchParams({
+    loaders: JSON.stringify(['fabric']),
+    game_versions: JSON.stringify([pack.minecraft])
+  });
+  const versions = await api(`${MODRINTH}/project/${slug}/version?${params}`);
+  const version = versions.find((v) => v.version_type === 'release') || versions[0];
+  if (!version) throw new Error(`"${slug}" no tiene versión para Fabric ${pack.minecraft}`);
+  const file = version.files.find((f) => f.primary) || version.files[0];
+  return {
+    file: file.filename,
+    url: file.url,
+    sha1: file.hashes.sha1,
+    size: file.size,
+    projectId: version.project_id,
+    deps: version.dependencies
+      .filter((d) => d.dependency_type === 'required' && d.project_id)
+      .map((d) => d.project_id)
+  };
+}
+
+async function main() {
+  const pack = readJson('pack.json');
+  const baseUrl = pack.baseUrl.replace(/\/$/, '');
+  const optionalDefs = fs.existsSync(path.join(ROOT, 'optional.json')) ? readJson('optional.json') : [];
+
+  console.log('Analizando mods obligatorios...');
+  const mods = await describeLocal('mods', baseUrl);
+  for (const slug of pack.clientMods || []) {
+    const info = await resolveModrinth(slug, pack);
+    if (!mods.some((m) => m.projectId === info.projectId)) mods.push(info);
+    console.log(`  ${slug} (cliente): ${info.file}`);
+  }
+
+  console.log('Resolviendo mods opcionales...');
+  const localOptional = new Map((await describeLocal('optional', baseUrl)).map((e) => [e.file, e]));
+  const optional = [];
+  for (const def of optionalDefs) {
+    let info;
+    if (def.modrinth) info = await resolveModrinth(def.modrinth, pack);
+    else if (def.file && localOptional.has(def.file)) info = localOptional.get(def.file);
+    else throw new Error(`El opcional "${def.id}" necesita "modrinth" o un "file" existente en optional/`);
+    optional.push({ ...def, ...info });
+    console.log(`  ${def.name || def.id}: ${info.file}`);
+  }
+
+  // Avisa de dependencias que no estén en el pack.
+  const present = new Set([...mods, ...optional].map((m) => m.projectId).filter(Boolean));
+  const missingDeps = [...mods, ...optional].flatMap((mod) =>
+    (mod.deps || []).filter((dep) => !present.has(dep)).map((dep) => ({ mod, dep }))
+  );
+  if (missingDeps.length) {
+    const ids = [...new Set(missingDeps.map((m) => m.dep))];
+    const projects = await api(`${MODRINTH}/projects?ids=${encodeURIComponent(JSON.stringify(ids))}`);
+    const names = new Map(projects.map((p) => [p.id, p.title]));
+    for (const { mod, dep } of missingDeps) {
+      console.warn(`  AVISO: ${mod.file} necesita "${names.get(dep) || dep}", que no está en el pack`);
+    }
+  }
+
+  const clean = ({ projectId, deps, modrinth, ...rest }) => rest;
+  const manifest = {
+    packVersion: pack.packVersion,
+    minecraft: pack.minecraft,
+    fabricLoader: pack.fabricLoader,
+    server: pack.server,
+    mods: mods.map(clean),
+    optional: optional.map(clean)
+  };
+  fs.writeFileSync(path.join(ROOT, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
+
+  const hosted = [...mods, ...optional].filter((m) => m.url.startsWith(baseUrl));
+  console.log(`\nmanifest.json generado: ${mods.length} obligatorios, ${optional.length} opcionales.`);
+  if (hosted.length) {
+    console.log('Estos archivos no están en Modrinth y deben subirse al repo junto al manifest:');
+    hosted.forEach((m) => console.log(`  - ${m.url.slice(baseUrl.length + 1)}`));
+  }
+}
+
+main().catch((err) => {
+  console.error('Error:', err.message);
+  process.exit(1);
+});

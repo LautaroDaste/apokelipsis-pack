@@ -1,0 +1,11 @@
+{
+  "packVersion": "1.0.0",
+  "minecraft": "1.21.1",
+  "fabricLoader": "0.16.14",
+  "server": {
+    "name": "Apokelipsis",
+    "address": ""
+  },
+  "clientMods": ["customskinloader"],
+  "baseUrl":"https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main"
+}

@@ -1,0 +1,105 @@
+{
+  "packVersion": "1.0.0",
+  "minecraft": "1.21.1",
+  "fabricLoader": "0.16.14",
+  "server": {
+    "name": "Apokelipsis",
+    "address": ""
+  },
+  "mods": [
+    {
+      "file": "apokelipsis-menu-1.0.0.jar",
+      "sha1": "2d7f1b565e7df8c8d83e52ed41e3cd665f69bf1c",
+      "size": 16166,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar"
+    },
+    {
+      "file": "CustomSkinLoader_Universal-15.1.jar",
+      "url": "https://cdn.modrinth.com/data/idMHQ4n2/versions/yyYvYfZI/CustomSkinLoader_Universal-15.1.jar",
+      "sha1": "324e6921ecd576e44875981466e7f22170b6541a",
+      "size": 222917
+    }
+  ],
+  "optional": [
+    {
+      "id": "sodium",
+      "name": "Sodium",
+      "description": "Mejora muchísimo los FPS.",
+      "category": "Rendimiento",
+      "default": true,
+      "file": "sodium-fabric-0.8.13+mc1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/AANobbMI/versions/SMxNOGZ6/sodium-fabric-0.8.13%2Bmc1.21.1.jar",
+      "sha1": "003c114c85ca88ef3362e018deb6aca0c682d6a1",
+      "size": 1574609
+    },
+    {
+      "id": "entityculling",
+      "name": "Entity Culling",
+      "description": "No dibuja entidades que no ves. Más FPS con muchos Pokémon cerca.",
+      "category": "Rendimiento",
+      "default": true,
+      "file": "entityculling-fabric-1.11.3-mc1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/yllJFBpU/entityculling-fabric-1.11.3-mc1.21.1.jar",
+      "sha1": "5a65a3944e32cc57b73b0f208d15d16fe9df4ed1",
+      "size": 1519243
+    },
+    {
+      "id": "iris",
+      "name": "Iris Shaders",
+      "description": "Permite usar shaders (pon los packs en la carpeta shaderpacks).",
+      "category": "Visual",
+      "default": false,
+      "requires": [
+        "sodium"
+      ],
+      "file": "iris-fabric-1.8.8+mc1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/zsoi0dso/iris-fabric-1.8.8%2Bmc1.21.1.jar",
+      "sha1": "4e0df4011503b4b36ba69877ea7247c1a47fea00",
+      "size": 2690177
+    },
+    {
+      "id": "continuity",
+      "name": "Continuity",
+      "description": "Texturas conectadas (cristales y bloques sin bordes).",
+      "category": "Visual",
+      "default": false,
+      "file": "continuity-3.0.0+1.21.jar",
+      "url": "https://cdn.modrinth.com/data/1IjD5062/versions/kSPJ4hQv/continuity-3.0.0%2B1.21.jar",
+      "sha1": "c7f09b53512604c2ba6803b1247bc70e4d0f8f8c",
+      "size": 1014044
+    },
+    {
+      "id": "lambdynamiclights",
+      "name": "LambDynamicLights",
+      "description": "Las antorchas iluminan al llevarlas en la mano.",
+      "category": "Visual",
+      "default": false,
+      "file": "lambdynamiclights-4.8.11+1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/yBW8D80W/versions/ksaGCvSu/lambdynamiclights-4.8.11%2B1.21.1.jar",
+      "sha1": "7b5afc75a094b4e8a7118f9856eec959b10f2422",
+      "size": 2023375
+    },
+    {
+      "id": "xaerominimap",
+      "name": "Xaero's Minimap",
+      "description": "Minimapa en una esquina de la pantalla.",
+      "category": "Utilidades",
+      "default": false,
+      "file": "xaerominimap-fabric-1.21.1-26.6.0.jar",
+      "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/W4dcLcUs/xaerominimap-fabric-1.21.1-26.6.0.jar",
+      "sha1": "5fbb03dd3f22c0c3d5466d1366222d7d277a8df3",
+      "size": 2234556
+    },
+    {
+      "id": "appleskin",
+      "name": "AppleSkin",
+      "description": "Muestra la saturación y lo que alimenta cada comida.",
+      "category": "Utilidades",
+      "default": false,
+      "file": "appleskin-fabric-mc1.21-3.0.6.jar",
+      "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/b5ZiCjAr/appleskin-fabric-mc1.21-3.0.6.jar",
+      "sha1": "97452cfadfde1f8f8c67838643019eabafa58fbb",
+      "size": 1082585
+    }
+  ]
+}
