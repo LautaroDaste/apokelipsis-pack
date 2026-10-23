@@ -6,6 +6,6 @@
     "name": "Apokelipsis",
     "address": ""
   },
-  "clientMods": ["customskinloader"],
+  "clientMods": ["fabric-api", "customskinloader"],
   "baseUrl":"https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main"
 }
