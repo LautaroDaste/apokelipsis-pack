@@ -182,7 +182,7 @@ async function main() {
   }
 
   // Avisa de dependencias que no estén en el pack.
-  const present = new Set([...mods, ...optional].map((m) => m.projectId).filter(Boolean));
+  const present = new Set([...mods, ...optionalMods, ...optional].map((m) => m.projectId).filter(Boolean));
   const missingDeps = [...mods, ...optional].flatMap((mod) =>
     (mod.deps || []).filter((dep) => !present.has(dep)).map((dep) => ({ mod, dep }))
   );
@@ -216,7 +216,7 @@ async function main() {
       const full = path.join(dir, entry.name);
       const relPath = rel ? `${rel}/${entry.name}` : entry.name;
       if (entry.isDirectory()) walk(full, relPath);
-      else if (!entry.name.endsWith('.txt')) {
+      else if (!/\.(txt|part|tmp)$/i.test(entry.name) && !/^(Thumbs\.db|desktop\.ini|\.DS_Store)$/i.test(entry.name)) {
         files.push({
           path: relPath,
           url: `${baseUrl}/files/${relPath.split('/').map(encodeURIComponent).join('/')}`,
@@ -246,29 +246,109 @@ async function main() {
     initial = { url: `${baseUrl}/inicial.zip`, sha1: sha1(initialFile), size: fs.statSync(initialFile).size };
   }
 
-  const clean = ({ projectId, deps, modrinth, ...rest }) => rest;
+  // Instalador del launcher (para que se actualice solo en las PCs de los jugadores).
+  let launcher = null;
+  if (pack.launcher?.file && fs.existsSync(path.join(ROOT, pack.launcher.file))) {
+    const full = path.join(ROOT, pack.launcher.file);
+    launcher = {
+      version: pack.launcher.version,
+      url: `${baseUrl}/${pack.launcher.file.split('/').map(encodeURIComponent).join('/')}`,
+      sha1: sha1(full),
+      size: fs.statSync(full).size
+    };
+  }
+
+  const clean = ({ projectId, deps, modrinth, info, side, title, text, ...rest }) => rest;
   const manifest = {
     packVersion: pack.packVersion,
     minecraft: pack.minecraft,
     fabricLoader: pack.fabricLoader,
     server: pack.server,
+    launcher,
     defaultOptions,
     mods: mods.map(clean),
     optional: optional.map(clean),
     files,
     initial
   };
-  fs.writeFileSync(path.join(ROOT, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
 
-  const hosted = [...mods, ...optional, ...files, ...(initial ? [initial] : [])].filter((m) => m.url.startsWith(baseUrl));
-  console.log(`\nmanifest.json generado: ${mods.length} obligatorios, ${optional.length} opcionales, ${files.length} archivos extra.`);
-  if (hosted.length) {
-    console.log('Estos archivos no están en Modrinth y deben subirse al repo junto al manifest:');
-    hosted.forEach((m) => console.log(`  - ${decodeURIComponent(m.url.slice(baseUrl.length + 1))}  (${(m.size / 1048576).toFixed(1)} MB)`));
+  // ¿Qué cambió respecto de la lista anterior? Si cambió algo, sube el número de versión.
+  const previousFile = path.join(ROOT, 'manifest.json');
+  const previous = fs.existsSync(previousFile) ? readJson('manifest.json') : null;
+  const fingerprint = (m) => {
+    const map = new Map();
+    for (const x of [...(m?.mods || []), ...(m?.optional || [])]) map.set(`mods/${x.file}`, x.sha1);
+    for (const x of m?.files || []) map.set(x.path, x.sha1);
+    if (m?.initial) map.set('configuración inicial', m.initial.sha1);
+    if (m?.launcher) map.set(`launcher ${m.launcher.version}`, m.launcher.sha1);
+    map.set('opciones predeterminadas', JSON.stringify(m?.defaultOptions || {}));
+    map.set('servidor', JSON.stringify(m?.server || {}));
+    return map;
+  };
+  const before = fingerprint(previous);
+  const after = fingerprint(manifest);
+  const added = [...after.keys()].filter((k) => !before.has(k));
+  const removed = [...before.keys()].filter((k) => !after.has(k));
+  const changed = [...after.keys()].filter((k) => before.has(k) && before.get(k) !== after.get(k));
+  const anyChange = !previous || added.length || removed.length || changed.length;
+  if (anyChange && previous) {
+    const v = String(pack.packVersion || '1.0.0').split('.').map(Number);
+    v[v.length - 1] = (v[v.length - 1] || 0) + 1;
+    pack.packVersion = v.join('.');
+    manifest.packVersion = pack.packVersion;
+    const packText = fs.readFileSync(path.join(ROOT, 'pack.json'), 'utf8').replace(/^﻿/, '');
+    fs.writeFileSync(path.join(ROOT, 'pack.json'),
+      packText.replace(/"packVersion"\s*:\s*"[^"]*"/, `"packVersion": "${pack.packVersion}"`));
   }
+  if (anyChange) fs.writeFileSync(previousFile, JSON.stringify(manifest, null, 2) + '\n');
+
+  // Firma digital: el launcher solo acepta una lista firmada con la clave privada, que existe
+  // únicamente en esta PC (herramientas/clave-privada.pem, nunca se sube a GitHub).
+  // Así, aunque alguien entrara a la cuenta de GitHub, no podría meter mods ni launchers falsos.
+  const keyFile = path.join(ROOT, 'herramientas', 'clave-privada.pem');
+  if (!fs.existsSync(keyFile)) {
+    throw new Error('Falta la clave de firma (herramientas\\clave-privada.pem). Sin ella los launchers no aceptan la lista. '
+      + 'Cópiala desde tu respaldo a la carpeta "herramientas".');
+  }
+  const signature = crypto.sign(null, fs.readFileSync(previousFile), fs.readFileSync(keyFile, 'utf8'));
+  fs.writeFileSync(path.join(ROOT, 'manifest.sig'), signature.toString('base64') + '\n');
+
+  // Los archivos que se descargan de Modrinth no hace falta subirlos a GitHub (algunos pesan
+  // más de 100 MB, el límite de GitHub): se anotan en .gitignore para que GitHub Desktop los ignore.
+  const hostedPaths = new Set([
+    ...[...mods, ...optional].filter((m) => m.url.startsWith(baseUrl)).map((m) => `mods/${m.file}`),
+    ...files.filter((f) => f.url.startsWith(baseUrl)).map((f) => `files/${f.path}`)
+  ]);
+  const ignored = [
+    ...jarsIn('mods').map((f) => `mods/${f}`).filter((p) => !hostedPaths.has(p)),
+    ...files.filter((f) => !f.url.startsWith(baseUrl)).map((f) => `files/${f.path}`)
+  ];
+  const gitignorePath = path.join(ROOT, '.gitignore');
+  const MARK = '# --- generado por el .bat (no editar debajo de esta línea) ---';
+  const head = fs.existsSync(gitignorePath) ? fs.readFileSync(gitignorePath, 'utf8').split(MARK)[0].trimEnd() : '';
+  const escapeGit = (p) => '/' + p.replace(/([\[\]*?!#\\])/g, '\\$1');
+  fs.writeFileSync(gitignorePath, `${head}\n\n${MARK}\n${ignored.map(escapeGit).join('\n')}\n`.trimStart());
+
+  // Resumen en español.
+  const label = (k) => k.replace(/^mods\//, 'mod: ').replace(/^files\//, 'archivo: ');
+  console.log('');
+  if (!previous) console.log('Lista creada por primera vez.');
+  else if (!anyChange) console.log('No hay cambios: la lista ya estaba al día. No hace falta publicar nada.');
+  else {
+    console.log(`Cambios (versión del pack ${pack.packVersion}):`);
+    added.forEach((k) => console.log(`  + agregado   ${label(k)}`));
+    removed.forEach((k) => console.log(`  - quitado    ${label(k)}`));
+    changed.forEach((k) => console.log(`  * cambiado   ${label(k)}`));
+  }
+  console.log(`\nEn total: ${mods.length} mods obligatorios, ${optional.length} opcionales, ${files.length} archivos extra.`);
+  const tooBig = [...mods, ...optional, ...files, ...(initial ? [initial] : []), ...(launcher ? [launcher] : [])]
+    .filter((m) => m.url.startsWith(baseUrl) && m.size > 99 * 1048576);
+  tooBig.forEach((m) => console.warn(`  AVISO: ${decodeURIComponent(m.url.slice(baseUrl.length + 1))} pesa más de 99 MB y GitHub no lo va a aceptar.`));
+  return anyChange;
 }
 
 main().catch((err) => {
-  console.error('Error:', err.message);
+  console.error('\nERROR: ' + err.message);
+  console.error('Revisa tu conexión a internet y vuelve a intentarlo. Si sigue fallando, pásale este mensaje a Claude.');
   process.exit(1);
 });

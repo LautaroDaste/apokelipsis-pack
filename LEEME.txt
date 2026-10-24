@@ -1,0 +1,84 @@
+APOKÉLIPSIS SMP - CÓMO ACTUALIZAR LOS MODS Y EL LAUNCHER
+==========================================================
+
+Esta carpeta está conectada a tu GitHub (LautaroDaste/apokelipsis-pack).
+Todo lo que publiques desde acá les llega solo a los jugadores la próxima vez
+que abran el launcher.
+
+
+PRIMERA VEZ (solo una vez)
+--------------------------
+1. Abre GitHub Desktop (con tu sesión de GitHub iniciada).
+2. Menú "File" > "Add local repository...".
+3. Toca "Choose..." y elige ESTA carpeta (repositorio). Toca "Add repository".
+   Listo: GitHub Desktop ya la reconoce.
+
+
+AGREGAR, QUITAR O ACTUALIZAR MODS
+---------------------------------
+1. Pon o saca los .jar en la carpeta "mods" (la misma que la del servidor).
+2. Doble clic en "PUBLICAR MODS.bat".
+   Te muestra qué se agregó (+), qué se quitó (-) y qué cambió (*).
+   Si dice "No hay cambios", no hace falta hacer nada más.
+3. Abre GitHub Desktop:
+   - Abajo a la izquierda, en "Summary", escribe un nombre (por ejemplo: mods).
+   - Toca el botón azul "Commit to main".
+   - Arriba toca "Push origin" y espera a que termine.
+4. Listo. Los jugadores lo reciben al abrir el launcher.
+
+El .bat se encarga solo de:
+- Separar los mods: los que son solo de servidor NO se instalan en los jugadores,
+  los que son solo de cliente aparecen como "Mods opcionales" (se pueden apagar),
+  y el resto es obligatorio.
+- Descargar desde Modrinth los mods que están ahí (no se suben a GitHub, por eso
+  GitHub Desktop no te los muestra; es normal).
+- Subir el número de versión del pack.
+
+
+OTRAS COSAS QUE PUEDES CAMBIAR
+------------------------------
+- Packs de texturas / shaders: carpeta files\resourcepacks y files\shaderpacks.
+- Fondo del menú del juego: files\config\apokelipsis (panorama_0 a panorama_5).
+- Opciones con las que arranca el juego: opciones-predeterminadas.txt
+  (mismo formato que el options.txt de Minecraft).
+- Descripción en español de un mod opcional: descripciones.json.
+- IP del servidor: en pack.json, "address" (por ejemplo "play.apokelipsis.com").
+Después de cualquier cambio: doble clic en "PUBLICAR MODS.bat" y Commit + Push.
+
+
+SUBIR UNA VERSIÓN NUEVA DEL LAUNCHER
+------------------------------------
+(Solo si se cambió el launcher. Los mods no necesitan esto.)
+1. Reemplaza launcher\Instalar Apokelipsis.exe por el nuevo.
+2. En pack.json, en "launcher", cambia "version" por la del nuevo (por ejemplo 1.2.0).
+3. Doble clic en "PUBLICAR MODS.bat" y Commit + Push.
+Los launchers de los jugadores se actualizan solos al abrirse.
+(Funciona a partir de la versión 1.1.0: quien tenga una más vieja tiene que
+instalar la 1.1.0 una vez a mano.)
+
+
+SEGURIDAD (importante)
+----------------------
+- FIRMA DIGITAL: cada vez que usas "PUBLICAR MODS.bat", la lista se firma con una clave
+  que está SOLO en esta PC: herramientas\clave-privada.pem (GitHub Desktop nunca la sube).
+  Los launchers rechazan cualquier lista que no tenga tu firma. Así, aunque alguien entrara
+  a tu cuenta de GitHub, no podría hacer que tus amigos descarguen mods o launchers falsos.
+  * NO compartas esa clave ni la carpeta "herramientas" con nadie.
+  * Guarda una copia en un pendrive o lugar seguro. Si pierdes la clave, no podrás publicar
+    cambios hasta que Claude arme un launcher nuevo con otra clave y todos lo reinstalen.
+  * Esta carpeta está en OneDrive: protege también tu cuenta de Microsoft con verificación
+    en dos pasos (account.microsoft.com > Seguridad).
+- El launcher de todos descarga lo que está en tu GitHub: esa cuenta es la llave.
+  Activa la verificación en dos pasos en GitHub (Settings > Password and authentication)
+  y no le des acceso al repositorio a nadie de quien no estés seguro.
+- El launcher siempre comprueba que cada archivo descargado sea el correcto antes de usarlo.
+- Windows puede avisar "Windows protegió su PC" con el instalador porque no tiene firma
+  digital (es de pago). Es normal: "Más información" > "Ejecutar de todas formas".
+  Si quieres comprobarlo, puedes subir el .exe a virustotal.com.
+
+
+SI ALGO FALLA
+-------------
+- Si el .bat muestra un ERROR, cópialo y pásaselo a Claude.
+- Si a un jugador no le abre el juego: en el launcher, tuerca > "Abrir archivos locales"
+  > carpeta logs > launcher.log. Pásale ese archivo a Claude.

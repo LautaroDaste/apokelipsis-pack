@@ -1,10 +1,16 @@
 {
-  "packVersion": "1.0.0",
+  "packVersion": "1.0.4",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
     "name": "APOKÉLIPSIS SMP",
     "address": ""
+  },
+  "launcher": {
+    "version": "1.1.0",
+    "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/launcher/Instalar%20Apokelipsis.exe",
+    "sha1": "cded51746b585fac07567bfe5c51b586108bcd12",
+    "size": 82303705
   },
   "defaultOptions": {
     "ao": "true",
@@ -297,1938 +303,529 @@
       "file": "AdvancedCoreInfo-fabric-1.21.1-1.4.0.jar",
       "sha1": "7701eb10be08c9ef113b9b723cc04e118e0cd4e0",
       "size": 263282,
-      "url": "https://cdn.modrinth.com/data/BaR4ijFC/versions/3ijXb7RE/AdvancedCoreInfo-fabric-1.21.1-1.4.0.jar",
-      "info": {
-        "id": "aci",
-        "name": "AdvancedCoreInfo",
-        "description": "Shared core library for AdvancedLootInfo and AdvancedWorldgenInfo",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Advanced Core Info (ACI)",
-      "text": "Shared core library for AdvancedLootInfo (ALI) and AdvancedWorldgenInfo (AWI)"
+      "url": "https://cdn.modrinth.com/data/BaR4ijFC/versions/3ijXb7RE/AdvancedCoreInfo-fabric-1.21.1-1.4.0.jar"
     },
     {
       "file": "AdvancedLootInfo-fabric-1.21.1-2.4.0.jar",
       "sha1": "1aac7cde7b87498b30494eb50d7ac7f774bf1ed3",
       "size": 643295,
-      "url": "https://cdn.modrinth.com/data/PEPVViac/versions/A7HsVFQ1/AdvancedLootInfo-fabric-1.21.1-2.4.0.jar",
-      "info": {
-        "id": "ali",
-        "name": "AdvancedLootInfo",
-        "description": "EMI/JEI/REI plugin for displaying advanced information about loot tables and trades",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "java",
-          "aci"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Advanced Loot Info (ALI)",
-      "text": "EMI/JEI/REI plugin for displaying advanced information about loot tables and villager trades"
+      "url": "https://cdn.modrinth.com/data/PEPVViac/versions/A7HsVFQ1/AdvancedLootInfo-fabric-1.21.1-2.4.0.jar"
     },
     {
       "file": "Clumps-fabric-1.21.1-19.0.0.1.jar",
       "sha1": "14628ba309d876cfefc4cef864a66ef12812066c",
       "size": 20723,
-      "url": "https://cdn.modrinth.com/data/Wnxd13zP/versions/3ene3W1l/Clumps-fabric-1.21.1-19.0.0.1.jar",
-      "info": {
-        "id": "clumps",
-        "name": "Clumps",
-        "description": "Clumps xp orbs together.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "java",
-          "minecraft"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Clumps",
-      "text": "Clumps XP orbs together to reduce lag"
+      "url": "https://cdn.modrinth.com/data/Wnxd13zP/versions/3ene3W1l/Clumps-fabric-1.21.1-19.0.0.1.jar"
     },
     {
       "file": "CobbleFurnies-fabric-1.2.jar",
       "sha1": "a71f20907c3350680a11054584cf96963f5875e5",
       "size": 2337235,
-      "url": "https://cdn.modrinth.com/data/AXY1OO9m/versions/54k31lEX/CobbleFurnies-fabric-1.2.jar",
-      "info": {
-        "id": "cobblefurnies",
-        "name": "CobbleFurnies",
-        "description": "Whether you're building a professor's lab, a bustling Pokécenter, or just a cozy cabin in the woods, CobbleFurnies is here to make your world feel more alive!",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "athena",
-          "cobblemon",
-          "architectury",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "CobbleFurnies",
-      "text": "CobbleFurnies is here to bring your creations to life with beautifully crafted, Cobblemon-inspired furniture that blends seamlessly into your Minecraft world!"
+      "url": "https://cdn.modrinth.com/data/AXY1OO9m/versions/54k31lEX/CobbleFurnies-fabric-1.2.jar"
     },
     {
       "file": "Cobblemon-fabric-1.8.2+1.21.1.jar",
       "sha1": "1a8ec812b2e7b392ac60801c910d3128d0bbb432",
       "size": 139317851,
-      "url": "https://cdn.modrinth.com/data/MdwFAVRL/versions/GJ2a1b8O/Cobblemon-fabric-1.8.2%2B1.21.1.jar",
-      "info": {
-        "id": "cobblemon",
-        "name": "Cobblemon",
-        "description": "Adds Pokémon to the world, letting you find, battle, capture, and evolve them.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Cobblemon",
-      "text": "A Pokémon mod for Fabric and NeoForge"
+      "url": "https://cdn.modrinth.com/data/MdwFAVRL/versions/GJ2a1b8O/Cobblemon-fabric-1.8.2%2B1.21.1.jar"
     },
     {
       "file": "Cobbreeding-fabric-2.4.1.jar",
       "sha1": "4de6e86541ab2d94b1327ce68a26771e8f33f030",
       "size": 477771,
-      "url": "https://cdn.modrinth.com/data/ItmVb4zY/versions/QEX1BKMf/Cobbreeding-fabric-2.4.1.jar",
-      "info": {
-        "id": "cobbreeding",
-        "name": "Cobbreeding",
-        "description": "Adds Pokémon breeding to Cobblemon!",
-        "environment": "*",
-        "depends": [
-          "fabric-api",
-          "minecraft",
-          "architectury",
-          "cloth-config",
-          "cobblemon"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Cobbreeding",
-      "text": "A side-mod for Cobblemon to add Pokémon breeding early."
+      "url": "https://cdn.modrinth.com/data/ItmVb4zY/versions/QEX1BKMf/Cobbreeding-fabric-2.4.1.jar"
     },
     {
       "file": "Debugify-1.21.1+1.1.jar",
       "sha1": "3388ba4c0f973f0a73a68a42048fe902bb2b14ea",
       "size": 289699,
-      "url": "https://cdn.modrinth.com/data/QwxR6Gcd/versions/pyIdu3f1/Debugify-1.21.1%2B1.1.jar",
-      "info": {
-        "id": "debugify",
-        "name": "Debugify",
-        "description": "Fixes Minecraft bugs found on the bug tracker License stuff: j-Tai's TieFix - Code used licensed under LGPLv3 FlashyReese's Sodium Extra - Code used licensed under LGPLv3 Ampflower's 2x2 Surrounded Saplings Fix - Code used licensed under Zlib",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-resource-loader-v0"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Debugify",
-      "text": "Fixes Minecraft bugs found on the bug tracker"
+      "url": "https://cdn.modrinth.com/data/QwxR6Gcd/versions/pyIdu3f1/Debugify-1.21.1%2B1.1.jar"
     },
     {
       "file": "EasyAnvils-v21.1.0-1.21.1-Fabric.jar",
       "sha1": "c07d01e04a29d4adcee8ffeb14eb3290a279627e",
       "size": 148736,
-      "url": "https://cdn.modrinth.com/data/OZBR5JT5/versions/znaWBlgU/EasyAnvils-v21.1.0-1.21.1-Fabric.jar",
-      "info": {
-        "id": "easyanvils",
-        "name": "Easy Anvils",
-        "description": "Be ready for overhauled anvils! Items stay, better name tags, many tweaks!",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "puzzleslib",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Easy Anvils",
-      "text": "Overhauled anvils with stored items, fairer costs, and no more frustrating repair penalties."
+      "url": "https://cdn.modrinth.com/data/OZBR5JT5/versions/znaWBlgU/EasyAnvils-v21.1.0-1.21.1-Fabric.jar"
     },
     {
       "file": "EasyMagic-v21.1.4-1.21.1-Fabric.jar",
       "sha1": "2131b964eafe376ff7e565cdae330a585e42d2e1",
       "size": 140897,
-      "url": "https://cdn.modrinth.com/data/9hx3AbJM/versions/LLLfoeWJ/EasyMagic-v21.1.4-1.21.1-Fabric.jar",
-      "info": {
-        "id": "easymagic",
-        "name": "Easy Magic",
-        "description": "Enchanting tables as they always should have been! Items stay after closing, and easy re-rolls.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "puzzleslib",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Easy Magic",
-      "text": "Enchanting tables as they always should have been! Items stay after closing, and easy re-rolls."
+      "url": "https://cdn.modrinth.com/data/9hx3AbJM/versions/LLLfoeWJ/EasyMagic-v21.1.4-1.21.1-Fabric.jar"
     },
     {
       "file": "ExplorersCompass-1.21.1-2.6.0-fabric.jar",
       "sha1": "cc3cf49a0ddb726e28af58d186145b027ea0adb5",
       "size": 177481,
-      "url": "https://cdn.modrinth.com/data/RV1qfVQ8/versions/qSRKiE4D/ExplorersCompass-1.21.1-2.6.0-fabric.jar",
-      "info": {
-        "id": "explorerscompass",
-        "name": "Explorer's Compass",
-        "description": "Search for and locate structures anywhere in the world.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Explorer's Compass",
-      "text": "Allows you to locate structures anywhere in the world."
+      "url": "https://cdn.modrinth.com/data/RV1qfVQ8/versions/qSRKiE4D/ExplorersCompass-1.21.1-2.6.0-fabric.jar"
     },
     {
       "file": "ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar",
       "sha1": "18bf1f21cd2db6dcd4e42db85eae54e2a49a48ee",
       "size": 633065,
-      "url": "https://cdn.modrinth.com/data/ohNO6lps/versions/N5qzq0XV/ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar",
-      "info": {
-        "id": "forgeconfigapiport",
-        "name": "Forge Config API Port",
-        "description": "Provides NeoForge's & Forge's config systems to other modding ecosystems. Designed for a multi-loader architecture.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Forge Config API Port",
-      "text": "NeoForge's & Forge's config systems provided to other modding ecosystems. Designed for a multiloader architecture."
+      "url": "https://cdn.modrinth.com/data/ohNO6lps/versions/N5qzq0XV/ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar"
     },
     {
       "file": "Geophilic v3.7.mod.jar",
       "sha1": "4d668978e18b450c030ed4be096fce52d3a9ceca",
       "size": 1115993,
-      "url": "https://cdn.modrinth.com/data/hl5OLM95/versions/5kFV8CEz/Geophilic%20v3.7.mod.jar",
-      "info": {
-        "id": "geophilic",
-        "name": "Geophilic",
-        "description": "A subtle-ish overhaul of vanilla Overworld biomes.",
-        "environment": "*",
-        "depends": [
-          "fabric-api",
-          "minecraft"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Geophilic",
-      "text": "A subtle-ish overhaul of vanilla Overworld biomes! Reworked!"
+      "url": "https://cdn.modrinth.com/data/hl5OLM95/versions/5kFV8CEz/Geophilic%20v3.7.mod.jar"
     },
     {
       "file": "Iceberg-1.21.1-fabric-1.3.2.jar",
       "sha1": "170e30bf93ccba6d80dd481eedddae16cb549d29",
       "size": 413302,
-      "url": "https://cdn.modrinth.com/data/5faXoLqX/versions/7ITFAyW8/Iceberg-1.21.1-fabric-1.3.2.jar",
-      "info": {
-        "id": "iceberg",
-        "name": "Iceberg",
-        "description": "A library containing events, helpers, and utilities to make modding easier.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Iceberg",
-      "text": "A modding library that contains new events, helpers, and utilities to make modder's lives easier."
+      "url": "https://cdn.modrinth.com/data/5faXoLqX/versions/7ITFAyW8/Iceberg-1.21.1-fabric-1.3.2.jar"
     },
     {
       "file": "Item_Obliterator-Fabric_Quilt-MC_1.21-3.1.1.jar",
       "sha1": "42202c67ef7166ffb5255ada7370b36c9d50110c",
       "size": 29943,
-      "url": "https://cdn.modrinth.com/data/3ESR84kR/versions/OqMP9ZL0/Item_Obliterator-Fabric_Quilt-MC_1.21-3.1.1.jar",
-      "info": {
-        "id": "item_obliterator",
-        "name": "Item Obliterator",
-        "description": "Allows modpack devs to completely disable items and other misc features.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "java",
-          "minecraft",
-          "necronomicon"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Item Obliterator",
-      "text": "Modpack utility mod that allows to disable items and/or its interactions. Also removes them from creative tabs, recipes, trades, and JEI/REI/EMI."
+      "url": "https://cdn.modrinth.com/data/3ESR84kR/versions/OqMP9ZL0/Item_Obliterator-Fabric_Quilt-MC_1.21-3.1.1.jar"
     },
     {
       "file": "Jade-1.21.1-Fabric-15.10.6.jar",
       "sha1": "bed67c605cbc991f474b270581cfa04ed48228df",
       "size": 740746,
-      "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/adpNvTZS/Jade-1.21.1-Fabric-15.10.6.jar",
-      "info": {
-        "id": "jade",
-        "name": "Jade",
-        "description": "Minecraft mod shows what you are looking at. (Hwyla fork)",
-        "environment": "*",
-        "depends": [
-          "fabric-api",
-          "minecraft"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Jade 🔍",
-      "text": "Shows information about what you are looking at. (Hwyla/Waila fork for Minecraft 1.16+)"
+      "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/adpNvTZS/Jade-1.21.1-Fabric-15.10.6.jar"
     },
     {
       "file": "JadeAddons-1.21.1-Fabric-6.0.3.jar",
       "sha1": "2da733519a0e9c7b79cc4b4194a3b0fe5f42f5bf",
       "size": 39917,
-      "url": "https://cdn.modrinth.com/data/fThnVRli/versions/xtWiiv5X/JadeAddons-1.21.1-Fabric-6.0.3.jar",
-      "info": {
-        "id": "jadeaddons",
-        "name": "Jade Addons",
-        "description": "Jade's additional mod supports for Fabric.",
-        "environment": "*",
-        "depends": [
-          "jade",
-          "minecraft"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Jade Addons (Fabric)",
-      "text": "Jade 🔍's additional mod supports for Fabric"
+      "url": "https://cdn.modrinth.com/data/fThnVRli/versions/xtWiiv5X/JadeAddons-1.21.1-Fabric-6.0.3.jar"
     },
     {
       "file": "NaturesCompass-1.21.1-2.6.0-fabric.jar",
       "sha1": "15bb7a4f27eaa13b755edac496c1c9d502843827",
       "size": 233392,
-      "url": "https://cdn.modrinth.com/data/fPetb5Kh/versions/dtrDpgsF/NaturesCompass-1.21.1-2.6.0-fabric.jar",
-      "info": {
-        "id": "naturescompass",
-        "name": "Nature's Compass",
-        "description": "Search for a biome and get information about it.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Nature's Compass",
-      "text": "Allows you to locate biomes anywhere in the world."
+      "url": "https://cdn.modrinth.com/data/fPetb5Kh/versions/dtrDpgsF/NaturesCompass-1.21.1-2.6.0-fabric.jar"
     },
     {
       "file": "Necronomicon-Fabric-1.6.0+1.21.jar",
       "sha1": "b6ac70d9ecac570f56e75db81d8281976fea1357",
       "size": 37055,
-      "url": "https://cdn.modrinth.com/data/P1Kv5EAO/versions/O6odCETu/Necronomicon-Fabric-1.6.0%2B1.21.jar",
-      "info": {
-        "id": "necronomicon",
-        "name": "Necronomicon",
-        "description": "An utility library for my mods!",
-        "environment": "*",
-        "depends": [
-          "fabric",
-          "fabricloader",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Necronomicon API",
-      "text": "A personal utility library for my mods."
+      "url": "https://cdn.modrinth.com/data/P1Kv5EAO/versions/O6odCETu/Necronomicon-Fabric-1.6.0%2B1.21.jar"
     },
     {
       "file": "Not Enough Recipe Book-FABRIC-0.4.3+1.21.jar",
       "sha1": "f7fcc3d8969f0838e32bf8dd0ed17ef46c07a655",
       "size": 23652,
-      "url": "https://cdn.modrinth.com/data/bQh7xzFq/versions/IdupyNOK/Not%20Enough%20Recipe%20Book-FABRIC-0.4.3%2B1.21.jar",
-      "info": {
-        "id": "nerb",
-        "name": "Not Enough Recipe Book",
-        "description": "Optimization tool that removes Minecraft's recipe book",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "architectury",
-          "octolib",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Not Enough Recipe Book [NERB]",
-      "text": "Completely removes recipe book from the game, optimizing player data."
+      "url": "https://cdn.modrinth.com/data/bQh7xzFq/versions/IdupyNOK/Not%20Enough%20Recipe%20Book-FABRIC-0.4.3%2B1.21.jar"
     },
     {
       "file": "OctoLib-FABRIC-0.6.2+1.21.jar",
       "sha1": "e18bf47209c43d2eff882fd906f2cafd887b7378",
       "size": 543254,
-      "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/Sj6w7O0I/OctoLib-FABRIC-0.6.2%2B1.21.jar",
-      "info": {
-        "id": "octolib",
-        "name": "OctoLib",
-        "description": "Collection of shared code for OctoStudios' mods",
-        "environment": "*",
-        "depends": [
-          "minecraft",
-          "java",
-          "architectury",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "ShatterLib | OctoLib",
-      "text": "Collection of shared code for OctoStudios' mods"
+      "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/Sj6w7O0I/OctoLib-FABRIC-0.6.2%2B1.21.jar"
     },
     {
       "file": "PokeMisiones.jar",
       "sha1": "208817b9347fda8ff7fe134df72ca05c49356567",
       "size": 657944,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones.jar",
-      "info": {
-        "id": "pokemisiones",
-        "name": "PokeMisiones",
-        "description": "Unifica Tutorial de Flechas, Nexus Codex y Anuncios en un solo mod.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api",
-          "geckolib"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "PokeMisiones",
-      "text": "Unifica Tutorial de Flechas, Nexus Codex y Anuncios en un solo mod."
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones.jar"
     },
     {
       "file": "apokelipsis-menu-1.0.0.jar",
       "sha1": "fab2c5f0a3e5bac3c106a27cff8c8eb01f0b7503",
       "size": 38290,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar",
-      "info": {
-        "id": "apokelipsis",
-        "name": "Apokelipsis Menu",
-        "description": "Menú principal personalizado del servidor Apokelipsis.",
-        "environment": "client",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "client",
-      "title": "Apokelipsis Menu",
-      "text": "Menú principal personalizado del servidor Apokelipsis."
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar"
     },
     {
       "file": "aps_trophies-1.21.1-fabric-1.2.0.jar",
       "sha1": "cc89cf9ddc8f13a9cfbbb5ecfa20201bf7a9e13c",
       "size": 341339,
-      "url": "https://cdn.modrinth.com/data/ZmP6jlh0/versions/B1xcWIqn/aps_trophies-1.21.1-fabric-1.2.0.jar",
-      "info": {
-        "id": "aps_trophies",
-        "name": "APS Trophies",
-        "description": "",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "APS Trophies",
-      "text": "Reward your Players with over 60 unique Cobblemon themed Trophies!"
+      "url": "https://cdn.modrinth.com/data/ZmP6jlh0/versions/B1xcWIqn/aps_trophies-1.21.1-fabric-1.2.0.jar"
     },
     {
       "file": "architectury-13.0.11-fabric.jar",
       "sha1": "18200609d4c3571c4237b50884966f6fd82431ea",
       "size": 600921,
-      "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/Pzc2FP5K/architectury-13.0.11-fabric.jar",
-      "info": {
-        "id": "architectury",
-        "name": "Architectury",
-        "description": "A intermediary api aimed to ease developing multiplatform mods.",
-        "environment": "*",
-        "depends": [
-          "minecraft",
-          "fabricloader",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Architectury API",
-      "text": "An intermediary api aimed to ease developing multiplatform mods."
+      "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/Pzc2FP5K/architectury-13.0.11-fabric.jar"
     },
     {
       "file": "athena-fabric-1.21.1-4.0.6.jar",
       "sha1": "92534d85cad33ab1fee598068443c685f4bb06e0",
       "size": 88425,
-      "url": "https://cdn.modrinth.com/data/b1ZV3DIJ/versions/JfyYsWKP/athena-fabric-1.21.1-4.0.6.jar",
-      "info": {
-        "id": "athena",
-        "name": "Athena",
-        "description": "Crossplatform Baked Model Loader",
-        "environment": "*",
-        "depends": [
-          "fabric",
-          "minecraft"
-        ],
-        "provides": []
-      },
-      "side": "client",
-      "title": "Athena",
-      "text": "A crossplatform (Forge/Fabric) solution to connected block textures for 1.19.4+"
+      "url": "https://cdn.modrinth.com/data/b1ZV3DIJ/versions/JfyYsWKP/athena-fabric-1.21.1-4.0.6.jar"
     },
     {
       "file": "backpacked-fabric-1.21.1-3.0.5.jar",
       "sha1": "3600ef5726eb7c5d79613ed1c34b39980224482e",
       "size": 1285683,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/backpacked-fabric-1.21.1-3.0.5.jar",
-      "info": {
-        "id": "backpacked",
-        "name": "Backpacked",
-        "description": "A vanilla-friendly backpack mod, featuring an unlock-based progression system, special augments that can be applied to backpacks to enhance gameplay, and a data-driven cosmetic system to unlock new backpack styles.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "java",
-          "framework"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Backpacked",
-      "text": "A vanilla-friendly backpack mod, featuring an unlock-based progression system, special augments that can be applied to backpacks to enhance gameplay, and a data-driven cosmetic system to unlock new backpack styles."
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/backpacked-fabric-1.21.1-3.0.5.jar"
     },
     {
       "file": "badgebox-fabric-1.3.0.jar",
       "sha1": "627a4b2a43082a90e38438f6611affdec78ff4c5",
       "size": 74534,
-      "url": "https://cdn.modrinth.com/data/8J7TR166/versions/1iJ9oDN4/badgebox-fabric-1.3.0.jar",
-      "info": {
-        "id": "badgebox",
-        "name": "Badge Box",
-        "description": "Adds Badges and a Badge Box for Cobblemon",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "architectury",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "【Cobblemon】BadgeBox",
-      "text": "A side mod for Cobblemon that adds the badgebox from the Pokemon Anime, also comes with custom badges"
+      "url": "https://cdn.modrinth.com/data/8J7TR166/versions/1iJ9oDN4/badgebox-fabric-1.3.0.jar"
     },
     {
       "file": "balm-fabric-1.21.1-21.0.66.jar",
       "sha1": "37266aadaed39205f4a3844930e76d2eebb866a4",
       "size": 805265,
-      "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/EghJxg4h/balm-fabric-1.21.1-21.0.66.jar",
-      "info": {
-        "id": "balm",
-        "name": "Balm",
-        "description": "Abstraction Layer (but not really) for Blay's multiplatform mods",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": [
-          "balm-fabric"
-        ]
-      },
-      "side": "both",
-      "title": "Balm",
-      "text": "Abstraction Layer for Multi-Loader Mods"
+      "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/EghJxg4h/balm-fabric-1.21.1-21.0.66.jar"
     },
     {
       "file": "cloth-config-15.0.140-fabric.jar",
       "sha1": "5d82342a2df53fd6df712bfdd583a811572918a4",
       "size": 1157166,
-      "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/HpMb5wGb/cloth-config-15.0.140-fabric.jar",
-      "info": {
-        "id": "cloth-config",
-        "name": "Cloth Config v15",
-        "description": "An API for config screens.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft"
-        ],
-        "provides": [
-          "cloth-config2"
-        ]
-      },
-      "side": "both",
-      "title": "Cloth Config API",
-      "text": "Configuration Library for Minecraft Mods"
+      "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/HpMb5wGb/cloth-config-15.0.140-fabric.jar"
     },
     {
       "file": "cobble-caf-forms-5.1.jar",
       "sha1": "762001529715ce0916067cb4c863d889fe81a05e",
       "size": 3717526,
-      "url": "https://cdn.modrinth.com/data/469QXqgC/versions/1R3Fvu7O/cobble-caf-forms-5.1.jar",
-      "info": {
-        "id": "mr_cobble_cafforms",
-        "name": "Cobblemon cafe",
-        "description": "Adds new outfits to some Pokémon based on those seen in Café remix!",
-        "environment": "*",
-        "depends": [
-          "fabric-resource-loader-v0"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Cobblemon cafe",
-      "text": "Adds new outfits to some Pokémon based on those seen in Café remix!"
+      "url": "https://cdn.modrinth.com/data/469QXqgC/versions/1R3Fvu7O/cobble-caf-forms-5.1.jar"
     },
     {
       "file": "cobblemon-battle-extras-fabric-1.13.45.jar",
       "sha1": "8d56d3e943d20f9d22be32e9a9dee5851eb7f654",
       "size": 1515972,
-      "url": "https://cdn.modrinth.com/data/2iY8VFqL/versions/Sf5W9mRS/cobblemon-battle-extras-fabric-1.13.45.jar",
-      "info": {
-        "id": "cobblemon-battle-extras",
-        "name": "Cobblemon Battle Extras",
-        "description": "Enhance your Cobblemon battles with a comprehensive suite of quality-of-life improvements and informative displays. As well as enabling keyboard/controller support for battles.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api",
-          "cobblemon"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Cobblemon Battle Extras",
-      "text": "Cobblemon add-on that enhances battling and enables in-battle keyboard/controller support!"
+      "url": "https://cdn.modrinth.com/data/2iY8VFqL/versions/Sf5W9mRS/cobblemon-battle-extras-fabric-1.13.45.jar"
     },
     {
       "file": "cobblemonfence-1.0.3.jar",
       "sha1": "1e9d94c87cb1d4f7297821b30144ed0a354e8646",
       "size": 167581,
-      "url": "https://cdn.modrinth.com/data/aCQFwusS/versions/I5fyoqLb/cobblemonfence-1.0.3.jar",
-      "info": {
-        "id": "cobblemonfence",
-        "name": "Cobblemon_Fence",
-        "description": "Special fence to stop Pokémon from going places you don't want them",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Cobblemon Fence",
-      "text": "Invisible Pokémon Fences that stop only Pokémon from passing through."
+      "url": "https://cdn.modrinth.com/data/aCQFwusS/versions/I5fyoqLb/cobblemonfence-1.0.3.jar"
     },
     {
       "file": "cobblemonintegrations-fabric-1.21.1-1.1.8.jar",
       "sha1": "b7d37c92ab4958e720657018c58960535ff1335b",
       "size": 385418,
-      "url": "https://cdn.modrinth.com/data/NPCfuUI4/versions/gy1AJCQB/cobblemonintegrations-fabric-1.21.1-1.1.8.jar",
-      "info": {
-        "id": "cobblemonintegrations",
-        "name": "CobblemonIntegrations",
-        "description": "Various mod integrations for Cobblemon.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java",
-          "fabric-language-kotlin",
-          "forgeconfigapiport",
-          "cobblemon"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Cobblemon Integrations",
-      "text": "Various mod integrations for Cobblemon."
+      "url": "https://cdn.modrinth.com/data/NPCfuUI4/versions/gy1AJCQB/cobblemonintegrations-fabric-1.21.1-1.1.8.jar"
     },
     {
       "file": "cobblemonresearchtasks-2.0.jar",
       "sha1": "a9768e7b8b25325f75b65c919b66bc8d7911d743",
       "size": 1345922,
-      "url": "https://cdn.modrinth.com/data/zoP5qy7S/versions/BMbNXB3F/cobblemonresearchtasks-2.0.jar",
-      "info": {
-        "id": "cobblemonresearchtasks",
-        "name": "Cobblemon Research Tasks",
-        "description": "Adds Research Tasks Similar To Pokemon: Legends Arceus to Cobblemon",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api",
-          "cobblemon"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Cobblemon: Research Tasks",
-      "text": "Adds Research Tasks Similar To Pokemon: Legends Arceus to Cobblemon"
+      "url": "https://cdn.modrinth.com/data/zoP5qy7S/versions/BMbNXB3F/cobblemonresearchtasks-2.0.jar"
     },
     {
       "file": "cobweb-fabric-1.21-1.4.0.jar",
       "sha1": "d744244463b0bc0dc53137da28a89fea7474f82c",
       "size": 418604,
-      "url": "https://cdn.modrinth.com/data/dQcfqGbl/versions/RDHSnisj/cobweb-fabric-1.21-1.4.0.jar",
-      "info": {
-        "id": "cobweb",
-        "name": "Cobweb",
-        "description": "Crystal Nest API",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Cobweb",
-      "text": "Crystal Nest API"
+      "url": "https://cdn.modrinth.com/data/dQcfqGbl/versions/RDHSnisj/cobweb-fabric-1.21-1.4.0.jar"
     },
     {
       "file": "comforts-fabric-9.0.5+1.21.1.jar",
       "sha1": "e47d6c2f0213abed8865dfa51ee05dea86c1baa9",
       "size": 914494,
-      "url": "https://cdn.modrinth.com/data/SaCpeal4/versions/LUPOTXbk/comforts-fabric-9.0.5%2B1.21.1.jar",
-      "info": {
-        "id": "comforts",
-        "name": "Comforts",
-        "description": "Adds sleeping bags and hammocks for, respectively, portability and turning day to night, without setting new spawns.\nComes in 16 different colors!",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Comforts",
-      "text": "Adds sleeping bags and hammocks for, respectively, portability and turning day to night, without setting new spawns. Comes in 16 different colors!"
+      "url": "https://cdn.modrinth.com/data/SaCpeal4/versions/LUPOTXbk/comforts-fabric-9.0.5%2B1.21.1.jar"
     },
     {
       "file": "configured-fabric-1.21.1-2.6.3.jar",
       "sha1": "7d1f43eb143c528e2431d8dcaf2e3007837ddf08",
       "size": 400642,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/configured-fabric-1.21.1-2.6.3.jar",
-      "info": {
-        "id": "configured",
-        "name": "Configured",
-        "description": "Creates a simple GUI config for every mod!",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Configured",
-      "text": "Creates a simple GUI config for every mod!"
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/configured-fabric-1.21.1-2.6.3.jar"
     },
     {
       "file": "connectedglass-1.1.14-fabric-mc1.21.jar",
       "sha1": "dc2a646fce4691b2f4f73faa8bedcfa52d543bee",
       "size": 848250,
-      "url": "https://cdn.modrinth.com/data/DghO0R02/versions/NnQWcI9h/connectedglass-1.1.14-fabric-mc1.21.jar",
-      "info": {
-        "id": "connectedglass",
-        "name": "Connected Glass",
-        "description": "Connected Glass adds new types of glass with connecting textures!",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "java",
-          "supermartijn642corelib",
-          "fusion"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Connected Glass",
-      "text": "Connected Glass adds new types of glass with connecting textures!"
+      "url": "https://cdn.modrinth.com/data/DghO0R02/versions/NnQWcI9h/connectedglass-1.1.14-fabric-mc1.21.jar"
     },
     {
       "file": "connectivity-fabric-1.21-7.6.jar",
       "sha1": "62501d615a3d5192cc1675293fa78f6f11b5e7e9",
       "size": 198109,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/connectivity-fabric-1.21-7.6.jar",
-      "info": {
-        "id": "connectivity",
-        "name": "Connectivity Mod",
-        "description": "Connectivity fixes connection issues",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "cupboard",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Connectivity Mod",
-      "text": "Connectivity fixes connection issues"
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/connectivity-fabric-1.21-7.6.jar"
     },
     {
       "file": "cupboard-fabric-1.21.1-4.1.jar",
       "sha1": "7fc35dc4f683229e1bb2e6c6f71b98b9a666b1c8",
       "size": 27371,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/cupboard-fabric-1.21.1-4.1.jar",
-      "info": {
-        "id": "cupboard",
-        "name": "cupboard",
-        "description": "",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "cupboard",
-      "text": ""
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/cupboard-fabric-1.21.1-4.1.jar"
     },
     {
       "file": "easy_npc-fabric-1.21.1-7.15.0.jar",
       "sha1": "691ee7226d2f20c89efd0b67da4f9d32dae71cfc",
       "size": 3207174,
-      "url": "https://cdn.modrinth.com/data/Epm6R3P2/versions/Kp1krim8/easy_npc-fabric-1.21.1-7.15.0.jar",
-      "info": {
-        "id": "easy_npc",
-        "name": "Easy NPC",
-        "description": "Create easily NPCs for your world or for your mods.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Easy NPC: Core",
-      "text": "Provides the core functionallity for the Easy NPC mod."
+      "url": "https://cdn.modrinth.com/data/Epm6R3P2/versions/Kp1krim8/easy_npc-fabric-1.21.1-7.15.0.jar"
     },
     {
       "file": "easy_npc_bundle-fabric-1.21.1-7.15.0.jar",
       "sha1": "5857fedd3bf5bd3402a89b66c8d4e5580a296cfd",
       "size": 25261,
-      "url": "https://cdn.modrinth.com/data/CgGEe1h3/versions/hBaCIEAp/easy_npc_bundle-fabric-1.21.1-7.15.0.jar",
-      "info": {
-        "id": "easy_npc_bundle",
-        "name": "Easy NPC (Bundle)",
-        "description": "Bundle version of Easy NPC mod with configuration UI included",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "easy_npc",
-          "easy_npc_config_ui"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Easy NPC",
-      "text": "Create easily NPCs with dialogs for your world or for your mods."
+      "url": "https://cdn.modrinth.com/data/CgGEe1h3/versions/hBaCIEAp/easy_npc_bundle-fabric-1.21.1-7.15.0.jar"
     },
     {
       "file": "easy_npc_config_ui-fabric-1.21.1-7.15.0.jar",
       "sha1": "dbc5d4513f2e5ed3999955977651836f48a2199a",
       "size": 1197196,
-      "url": "https://cdn.modrinth.com/data/uTGjf7vA/versions/n8rFK1Yv/easy_npc_config_ui-fabric-1.21.1-7.15.0.jar",
-      "info": {
-        "id": "easy_npc_config_ui",
-        "name": "Easy NPC: Config UI",
-        "description": "Create easily NPCs for your world or for your mods.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java",
-          "easy_npc"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Easy NPC: Config UI",
-      "text": "Provides a configuration UI for the Easy NPC mod, allowing players to customize NPC settings easily."
+      "url": "https://cdn.modrinth.com/data/uTGjf7vA/versions/n8rFK1Yv/easy_npc_config_ui-fabric-1.21.1-7.15.0.jar"
     },
     {
       "file": "elevatorid-fabric-1.21-1.11.1.jar",
       "sha1": "3f34470781f4b5cbeb1e83a259cceae616077b67",
       "size": 185086,
-      "url": "https://cdn.modrinth.com/data/hi2dSXTu/versions/IYcefR0v/elevatorid-fabric-1.21-1.11.1.jar",
-      "info": {
-        "id": "elevatorid",
-        "name": "ElevatorMod",
-        "description": "Simple port of the elevator from OpenBlocks to 1.8+",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api",
-          "forgeconfigapiport"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "ElevatorMod",
-      "text": "Simple port of the elevator from OpenBlocks to 1.8+"
+      "url": "https://cdn.modrinth.com/data/hi2dSXTu/versions/IYcefR0v/elevatorid-fabric-1.21-1.11.1.jar"
     },
     {
       "file": "emotecraft-for-MC1.21.1-2.4.12-fabric.jar",
       "sha1": "9be2a237e27f20d2d00f0036a8be53d7d66c5df5",
       "size": 863362,
-      "url": "https://cdn.modrinth.com/data/pZ2wrerK/versions/daqt5qcK/emotecraft-for-MC1.21.1-2.4.12-fabric.jar",
-      "info": {
-        "id": "emotecraft",
-        "name": "Emotecraft",
-        "description": "Play emotes in Minecraft\nOpen the menu to setup your fast-choose wheel\n\nYou can add custom emotes, and you can play these even if nobody else has them\n\nSpecial thanks:\nKale Ko for creating emotes and help in the UI design\nOrsond for inspiring me and providing CollarMC\nArchitectury for the Forge build tools",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "playeranimator"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Emotecraft",
-      "text": "Create your own emotes in Minecraft."
+      "url": "https://cdn.modrinth.com/data/pZ2wrerK/versions/daqt5qcK/emotecraft-for-MC1.21.1-2.4.12-fabric.jar"
     },
     {
       "file": "entrenadores-pokemon-1.0.0.jar",
       "sha1": "7b3f42e17e7357fdbe15aa333f318e9e5332af58",
       "size": 209320,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/entrenadores-pokemon-1.0.0.jar",
-      "info": {
-        "id": "entrenadores",
-        "name": "Entrenadores Pokémon",
-        "description": "Súbditos y líderes de gimnasio: NPCs entrenadores con diálogos estilo Pokémon, animación VS, IA de Radical Cobblemon Trainers y recompensas (puntos de PokeMisiones + item). Se configuran con la Llave de administrador de PokeGambling.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api",
-          "cobblemon",
-          "rctapi"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Entrenadores Pokémon",
-      "text": "Súbditos y líderes de gimnasio: NPCs entrenadores con diálogos estilo Pokémon, animación VS, IA de Radical Cobblemon Trainers y recompensas (puntos de PokeMisiones + item). Se configuran con la Llave de administrador de PokeGambling."
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/entrenadores-pokemon-1.0.0.jar"
     },
     {
       "file": "fabric-api-0.116.17+1.21.1.jar",
       "sha1": "810b2b0195371a012906241d8b85a32a1d6de53c",
       "size": 2452735,
-      "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/Mys3P7lK/fabric-api-0.116.17%2B1.21.1.jar",
-      "info": {
-        "id": "fabric-api",
-        "name": "Fabric API",
-        "description": "Core API module providing key hooks and intercompatibility features.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "java",
-          "minecraft"
-        ],
-        "provides": [
-          "fabric"
-        ]
-      },
-      "side": "both",
-      "title": "Fabric API",
-      "text": "Lightweight and modular API providing common hooks and intercompatibility measures utilized by mods using the Fabric toolchain."
+      "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/Mys3P7lK/fabric-api-0.116.17%2B1.21.1.jar"
     },
     {
       "file": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
       "sha1": "f1d4ab6ecd54d9782521333a87eb50724ecb03e0",
       "size": 8142878,
-      "url": "https://cdn.modrinth.com/data/Ha28R6CL/versions/SKW1BTL3/fabric-language-kotlin-1.14.2%2Bkotlin.2.4.21.jar",
-      "info": {
-        "id": "fabric-language-kotlin",
-        "name": "Fabric Language Kotlin",
-        "description": "Fabric language module for Kotlin.",
-        "environment": "*",
-        "depends": [
-          "fabricloader"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Fabric Language Kotlin",
-      "text": "This is a mod that enables usage of the Kotlin programming language for Fabric mods."
+      "url": "https://cdn.modrinth.com/data/Ha28R6CL/versions/SKW1BTL3/fabric-language-kotlin-1.14.2%2Bkotlin.2.4.21.jar"
     },
     {
       "file": "farsight-fabric-1.21-4.5.jar",
       "sha1": "3d7ebb35ac03724ed2c73d399392228d1de40159",
       "size": 371550,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/farsight-fabric-1.21-4.5.jar",
-      "info": {
-        "id": "farsight",
-        "name": "Farsight Mod",
-        "description": "Farsight lets you see further than the servers view distance",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "cupboard",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Farsight Mod",
-      "text": "Farsight lets you see further than the servers view distance"
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/farsight-fabric-1.21-4.5.jar"
     },
     {
       "file": "fastpaintings-1.21-1.3.1-fabric.jar",
       "sha1": "cc94ed7feefa15b43ce58612b6826632ba92cbe3",
       "size": 156680,
-      "url": "https://cdn.modrinth.com/data/z3TzcquW/versions/8xe5ZhgX/fastpaintings-1.21-1.3.1-fabric.jar",
-      "info": {
-        "id": "fastpaintings",
-        "name": "Fast Paintings",
-        "description": "Makes paintings way faster by turning them into blocks! Also allows customizing their model",
-        "environment": "*",
-        "depends": [
-          "fabric-api",
-          "minecraft",
-          "moonlight"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Fast Paintings",
-      "text": "Fixes painting rendering, increasing their performance and allowing them to have custom models"
+      "url": "https://cdn.modrinth.com/data/z3TzcquW/versions/8xe5ZhgX/fastpaintings-1.21-1.3.1-fabric.jar"
     },
     {
       "file": "ferritecore-7.0.3-fabric.jar",
       "sha1": "a8a6a34fcda177da2828cedef44e0e538cf78aad",
       "size": 123450,
-      "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/sOzRw3CG/ferritecore-7.0.3-fabric.jar",
-      "info": {
-        "id": "ferritecore",
-        "name": "FerriteCore",
-        "description": "Reduces memory usage",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "FerriteCore",
-      "text": "Memory usage optimizations"
+      "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/sOzRw3CG/ferritecore-7.0.3-fabric.jar"
     },
     {
       "file": "framework-fabric-1.21.1-0.13.11.jar",
       "sha1": "87ce6c5c312da043e823e9407a04d307b5974d06",
       "size": 1647903,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/framework-fabric-1.21.1-0.13.11.jar",
-      "info": {
-        "id": "framework",
-        "name": "Framework",
-        "description": "A library providing powerful utilities for developers",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Framework",
-      "text": "A library providing powerful utilities for developers"
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/framework-fabric-1.21.1-0.13.11.jar"
     },
     {
       "file": "fusion-1.3.16-fabric-mc1.21.jar",
       "sha1": "ce69d9c427e17d15ce99b43a2c5cffc4cd5dfa30",
       "size": 913396,
-      "url": "https://cdn.modrinth.com/data/p19vrgc2/versions/LQSMRNBf/fusion-1.3.16-fabric-mc1.21.jar",
-      "info": {
-        "id": "fusion",
-        "name": "Fusion",
-        "description": "Fusion allows resource packs to use additional texture and model types such as connected textures!",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "client",
-      "title": "Fusion (Connected Textures)",
-      "text": "Fusion allows resource packs to use additional texture and model types such as connected textures!"
+      "url": "https://cdn.modrinth.com/data/p19vrgc2/versions/LQSMRNBf/fusion-1.3.16-fabric-mc1.21.jar"
     },
     {
       "file": "geckolib-fabric-1.21.1-4.9.3.jar",
       "sha1": "b3a6aff6ffff34d20ffde1faa640bcf17ff4b646",
       "size": 664463,
-      "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/tmxM7U4W/geckolib-fabric-1.21.1-4.9.3.jar",
-      "info": {
-        "id": "geckolib",
-        "name": "GeckoLib 4",
-        "description": "GeckoLib is an animation engine for Minecraft Mods, with support for complex 3D keyframe-based animations, 30+ easings, concurrent animation support, sound and particle keyframes, event keyframes, and more.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "java",
-          "minecraft"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Geckolib",
-      "text": "A 3D animation library for entities, blocks, items, armor, and more!"
+      "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/tmxM7U4W/geckolib-fabric-1.21.1-4.9.3.jar"
     },
     {
       "file": "guia-flechas-1.0.0.jar",
       "sha1": "9dee20fc5b61806a2d5a476a866dd022482dba14",
       "size": 48944,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/guia-flechas-1.0.0.jar",
-      "info": {
-        "id": "guiaflechas",
-        "name": "Guía de Flechas",
-        "description": "Guía a los jugadores por pasos con mensajes, sonidos y una flecha flotante visible a través de las estructuras.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Guía de Flechas",
-      "text": "Guía a los jugadores por pasos con mensajes, sonidos y una flecha flotante visible a través de las estructuras."
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/guia-flechas-1.0.0.jar"
     },
     {
       "file": "jei-1.21.1-fabric-19.64.0.453.jar",
       "sha1": "d292061f9a55e6e88193549009ef9718c021cd57",
       "size": 2415684,
-      "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/3eOKpuhg/jei-1.21.1-fabric-19.64.0.453.jar",
-      "info": {
-        "id": "jei",
-        "name": "Just Enough Items",
-        "description": "JEI is an item and recipe viewing mod for Minecraft, built from the ground up for stability and performance.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "mezz_config",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Just Enough Items (JEI)",
-      "text": "View Items and Recipes"
+      "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/3eOKpuhg/jei-1.21.1-fabric-19.64.0.453.jar"
     },
     {
       "file": "konkrete_fabric_1.9.9_MC_1.21.jar",
       "sha1": "c521e23a8be17a941f4f95a76feba9df5e3de5d0",
       "size": 786695,
-      "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/Qvrc7DuG/konkrete_fabric_1.9.9_MC_1.21.jar",
-      "info": {
-        "id": "konkrete",
-        "name": "Konkrete",
-        "description": "Library for Keksuccino's mods.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Konkrete",
-      "text": "Just another boring library mod."
+      "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/Qvrc7DuG/konkrete_fabric_1.9.9_MC_1.21.jar"
     },
     {
       "file": "krypton-0.2.8.jar",
       "sha1": "73e792eb5f120787becda4b87b6ff18b26caea50",
       "size": 161045,
-      "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/Acz3ttTp/krypton-0.2.8.jar",
-      "info": {
-        "id": "krypton",
-        "name": "Krypton",
-        "description": "A Fabric mod that optimizes the Minecraft networking stack and entity tracker.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Krypton",
-      "text": "A mod to optimize the Minecraft networking stack"
+      "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/Acz3ttTp/krypton-0.2.8.jar"
     },
     {
       "file": "lithium-fabric-0.15.4+mc1.21.1.jar",
       "sha1": "7d82a004403b7780d4443d8e40361a55cfd0ae63",
       "size": 797454,
-      "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/N08Z8wog/lithium-fabric-0.15.4%2Bmc1.21.1.jar",
-      "info": {
-        "id": "lithium",
-        "name": "Lithium",
-        "description": "Lithium is a free and open-source optimization mod for Minecraft which makes a wide range of performance improvements to the game.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Lithium",
-      "text": "No-compromises game logic optimization mod, useful for both single-player games and multi-player servers."
+      "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/N08Z8wog/lithium-fabric-0.15.4%2Bmc1.21.1.jar"
     },
     {
       "file": "lootr-fabric-1.21.1-1.11.38.127.jar",
       "sha1": "6671786d4c36a33dcefff85d757022c2a8ed535f",
       "size": 1111591,
-      "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/nar56EsW/lootr-fabric-1.21.1-1.11.38.127.jar",
-      "info": {
-        "id": "lootr",
-        "name": "Lootr",
-        "description": "A mod that makes it so nobody misses out on Loot!",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "java",
-          "cloth-config"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Lootr",
-      "text": "A mod that makes it so nobody misses out on Loot! All loot chests are instanced per player and visually unique."
+      "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/nar56EsW/lootr-fabric-1.21.1-1.11.38.127.jar"
     },
     {
       "file": "mezz_config-1.21.1-fabric-0.6.8.jar",
       "sha1": "e9351cf60199e3a2db427342f33a18949c0dc67e",
       "size": 372634,
-      "url": "https://cdn.modrinth.com/data/7tEfOcA7/versions/Q5Yns1Qe/mezz_config-1.21.1-fabric-0.6.8.jar",
-      "info": {
-        "id": "mezz_config",
-        "name": "MezzConfig",
-        "description": "Lightweight client and server-authoritative config support for Minecraft mods.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "MezzConfig",
-      "text": "Simple configuration library for Minecraft Mods"
+      "url": "https://cdn.modrinth.com/data/7tEfOcA7/versions/Q5Yns1Qe/mezz_config-1.21.1-fabric-0.6.8.jar"
     },
     {
       "file": "midnightlib-fabric-1.9.3+1.21.1.jar",
       "sha1": "6595a90351e827b99b36fa2c6ef1dde1a4c8fdf1",
       "size": 58781,
-      "url": "https://cdn.modrinth.com/data/codAaoxh/versions/as2ZKoB1/midnightlib-fabric-1.9.3%2B1.21.1.jar",
-      "info": {
-        "id": "midnightlib",
-        "name": "MidnightLib",
-        "description": "Lightweight config library with config screens and commands.",
-        "environment": "*",
-        "depends": [
-          "fabric-resource-loader-v0",
-          "minecraft"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "MidnightLib",
-      "text": "Common library providing a lightweight configuration system"
+      "url": "https://cdn.modrinth.com/data/codAaoxh/versions/as2ZKoB1/midnightlib-fabric-1.9.3%2B1.21.1.jar"
     },
     {
       "file": "modernfix-fabric-5.25.1+mc1.21.1.jar",
       "sha1": "4ab39e9c736e7204146792c545ec5b29fc0a3872",
       "size": 471258,
-      "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/NnNX8LBn/modernfix-fabric-5.25.1%2Bmc1.21.1.jar",
-      "info": {
-        "id": "modernfix",
-        "name": "ModernFix",
-        "description": "Egregious, yet effective performance improvements for modern Minecraft",
-        "environment": "*",
-        "depends": [
-          "minecraft",
-          "fabricloader"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "ModernFix",
-      "text": "All-in-one mod that improves performance, reduces memory usage, and fixes many bugs. Compatible with all your favorite performance mods!"
+      "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/NnNX8LBn/modernfix-fabric-5.25.1%2Bmc1.21.1.jar"
     },
     {
       "file": "moonlight-1.21.1-3.7.2-fabric.jar",
       "sha1": "7db7c0999fb29579790edae83292622cee933e20",
       "size": 2325731,
-      "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/fWlk6YEB/moonlight-1.21.1-3.7.2-fabric.jar",
-      "info": {
-        "id": "moonlight",
-        "name": "Moonlight Lib",
-        "description": "A small library with many cool unique features, from dynamic asset generation to dynamic villager schedules, data driven trades and Map Markers, simple multi loader utilities and more",
-        "environment": "*",
-        "depends": [
-          "fabric",
-          "minecraft"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Moonlight Lib",
-      "text": "dynamic data pack and registration, villager activities, custom map marker and a lot more"
+      "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/fWlk6YEB/moonlight-1.21.1-3.7.2-fabric.jar"
     },
     {
       "file": "owo-lib-0.13.0-alpha.15+1.21.jar",
       "sha1": "5042f3b15df7cdbb058436bb105aedf826f39d3c",
       "size": 1963544,
-      "url": "https://cdn.modrinth.com/data/ccKDOlHs/versions/m3XmDd8j/owo-lib-0.13.0-alpha.15%2B1.21.jar",
-      "info": {
-        "id": "owo",
-        "name": "oωo",
-        "description": "yes its bad i know thanks",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft"
-        ],
-        "provides": [
-          "owo-impl",
-          "owo-lib"
-        ]
-      },
-      "side": "both",
-      "title": "oωo (owo-lib)",
-      "text": "A general utility, GUI and config library for modding on Fabric and Quilt"
+      "url": "https://cdn.modrinth.com/data/ccKDOlHs/versions/m3XmDd8j/owo-lib-0.13.0-alpha.15%2B1.21.jar"
     },
     {
       "file": "placeholder-api-2.4.2+1.21.jar",
       "sha1": "aa1b9a49f9f190dfe4825c502b150817dd2998c3",
       "size": 232325,
-      "url": "https://cdn.modrinth.com/data/eXts2L7r/versions/U5bhVym2/placeholder-api-2.4.2%2B1.21.jar",
-      "info": {
-        "id": "placeholder-api",
-        "name": "Placeholder API",
-        "description": "Simple api for mods allowing for user friendly formatting and universal placeholders!",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Text Placeholder API",
-      "text": "Placeholder and Text manipulation library for your Minecraft mods."
+      "url": "https://cdn.modrinth.com/data/eXts2L7r/versions/U5bhVym2/placeholder-api-2.4.2%2B1.21.jar"
     },
     {
       "file": "poke-clothing-1.2.2.jar",
       "sha1": "195201a8ddb31f21b7224cb68cb3ca9893e8e34a",
       "size": 325615,
-      "url": "https://cdn.modrinth.com/data/enyi2m8u/versions/bmLnQ5iN/poke-clothing-1.2.2.jar",
-      "info": {
-        "id": "poke-clothing",
-        "name": "Poke Clothing",
-        "description": "Adds clothes from Pokémon characters.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Poke Clothing",
-      "text": "Cosplay as your favorite Pokémon characters with craftable outfits!"
+      "url": "https://cdn.modrinth.com/data/enyi2m8u/versions/bmLnQ5iN/poke-clothing-1.2.2.jar"
     },
     {
       "file": "pokeblocks-1.5.0-1.21.1.jar",
       "sha1": "a767426171b3085775b57bfd53b66fe7fa6edd88",
       "size": 1775159,
-      "url": "https://cdn.modrinth.com/data/hnOfcjSq/versions/qlp66lU8/pokeblocks-1.5.0-1.21.1.jar",
-      "info": {
-        "id": "pokeblocks",
-        "name": "Pokeblocks",
-        "description": "Add cool blocks to the game",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api",
-          "geckolib"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Pokeblocks",
-      "text": "Adds Pokemon-themed dolls/blocks to your world"
+      "url": "https://cdn.modrinth.com/data/hnOfcjSq/versions/qlp66lU8/pokeblocks-1.5.0-1.21.1.jar"
     },
     {
       "file": "pokegambling-1.0.0.jar",
       "sha1": "3f7e763b36b142b7c645b210830af5bfb57137ed",
       "size": 2375700,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokegambling-1.0.0.jar",
-      "info": {
-        "id": "pokegambling",
-        "name": "PokeGambling",
-        "description": "Cajas de recompensas con llaves y animación CS:GO, fichas, cajero, ruleta y tragamonedas. La Llave de administrador configura cajas y tragamonedas.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api"
-        ],
-        "provides": [
-          "pokecasino",
-          "cajas"
-        ]
-      },
-      "side": "both",
-      "title": "PokeGambling",
-      "text": "Cajas de recompensas con llaves y animación CS:GO, fichas, cajero, ruleta y tragamonedas. La Llave de administrador configura cajas y tragamonedas."
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokegambling-1.0.0.jar"
     },
     {
       "file": "polymer-bundled-0.9.19+1.21.1.jar",
       "sha1": "15a58f43a672ed486bee4f7983ae8ff566a6b5e7",
       "size": 1705944,
-      "url": "https://cdn.modrinth.com/data/xGdtZczs/versions/xqZ9fctS/polymer-bundled-0.9.19%2B1.21.1.jar",
-      "info": {
-        "id": "polymer-bundled",
-        "name": "Polymer",
-        "description": "Set of libraries for creation of better server driven content!",
-        "environment": "*",
-        "depends": [],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Polymer",
-      "text": "Library for creating better server side content!"
+      "url": "https://cdn.modrinth.com/data/xGdtZczs/versions/xqZ9fctS/polymer-bundled-0.9.19%2B1.21.1.jar"
     },
     {
       "file": "polymorph-fabric-1.1.0+1.21.1.jar",
       "sha1": "e4f9ec40058c07f263d19b21e438b5204ea4dc22",
       "size": 320928,
-      "url": "https://cdn.modrinth.com/data/tagwiZkJ/versions/Ng5Y6KVo/polymorph-fabric-1.1.0%2B1.21.1.jar",
-      "info": {
-        "id": "polymorph",
-        "name": "Polymorph",
-        "description": "No more recipe conflicts! Adds an option to choose the crafting result if more than one is available.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Polymorph",
-      "text": "No more recipe conflicts! Adds an option to choose the crafting result if more than one is available."
+      "url": "https://cdn.modrinth.com/data/tagwiZkJ/versions/Ng5Y6KVo/polymorph-fabric-1.1.0%2B1.21.1.jar"
     },
     {
       "file": "proteccion-zonas-1.0.0.jar",
       "sha1": "54ec24244f8e7d9c3e57af2847fe58f2f8defd6c",
       "size": 111340,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.0.jar",
-      "info": {
-        "id": "proteccion",
-        "name": "Protección de Zonas",
-        "description": "Protegé zonas con un tótem, un menú de permisos detallado y /proteger. Incluye /admin (Hoopa) y /facy.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Protección de Zonas",
-      "text": "Protegé zonas con un tótem, un menú de permisos detallado y /proteger. Incluye /admin (Hoopa) y /facy."
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.0.jar"
     },
     {
       "file": "puzzleslib-v21.1.64-mc1.21.1+fabric.jar",
       "sha1": "3ba4d1f1be35673b0e2be1961350c378db461923",
       "size": 1507546,
-      "url": "https://cdn.modrinth.com/data/QAGBst4M/versions/SOu6522s/puzzleslib-v21.1.64-mc1.21.1%2Bfabric.jar",
-      "info": {
-        "id": "puzzleslib",
-        "name": "Puzzles Lib",
-        "description": "Why it's called Puzzles, you ask? That's the puzzle!",
-        "environment": "*",
-        "depends": [
-          "minecraft",
-          "fabricloader",
-          "fabric-api",
-          "forgeconfigapiport"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Puzzles Lib",
-      "text": "Why is it called Puzzles? That's the puzzle."
+      "url": "https://cdn.modrinth.com/data/QAGBst4M/versions/SOu6522s/puzzleslib-v21.1.64-mc1.21.1%2Bfabric.jar"
     },
     {
       "file": "rctapi-fabric-1.21.1-0.16.2-beta.jar",
       "sha1": "3514532fea28e2e1160894428302eb1000af8459",
       "size": 267864,
-      "url": "https://cdn.modrinth.com/data/CBfM2yw7/versions/DoQNDXAU/rctapi-fabric-1.21.1-0.16.2-beta.jar",
-      "info": {
-        "id": "rctapi",
-        "name": "Radical Cobblemon Trainers API",
-        "description": "Trainer management and battle API for Cobblemon.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "architectury",
-          "cobblemon",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Radical Cobblemon Trainers API",
-      "text": "Trainer management and battle API for Cobblemon."
+      "url": "https://cdn.modrinth.com/data/CBfM2yw7/versions/DoQNDXAU/rctapi-fabric-1.21.1-0.16.2-beta.jar"
     },
     {
       "file": "securetrade-fabric-1.3.0-1.21.1.jar",
       "sha1": "0da131d3ebbc47ff2a3827afea8616aaa4d58816",
       "size": 323297,
-      "url": "https://cdn.modrinth.com/data/ptgA3PQG/versions/hz8618ME/securetrade-fabric-1.3.0-1.21.1.jar",
-      "info": {
-        "id": "securetrade",
-        "name": "Secure Trade",
-        "description": "Trade items and XP with other players from anywhere, across distance and dimensions, with configurable server-side limits.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Secure Trade",
-      "text": "Player Trade from anywhere: exchange items and XP across distance and dimensions with a custom GUI and configurable server-side limits."
+      "url": "https://cdn.modrinth.com/data/ptgA3PQG/versions/hz8618ME/securetrade-fabric-1.3.0-1.21.1.jar"
     },
     {
       "file": "smoothchunk-fabric-1.21-4.1.jar",
       "sha1": "b367bd9aa8709c09bb26662aeefd0d8bc871d3f5",
       "size": 13769,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/smoothchunk-fabric-1.21-4.1.jar",
-      "info": {
-        "id": "smoothchunk",
-        "name": "Smooth chunk save Mod",
-        "description": "Spreads out chunk saves equally and saves them after a configured delay",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "cupboard",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Smooth chunk save Mod",
-      "text": "Spreads out chunk saves equally and saves them after a configured delay"
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/smoothchunk-fabric-1.21-4.1.jar"
     },
     {
       "file": "sootychimneys-fabric-1.3.5.jar",
       "sha1": "f7ffb5d252f712b2de831d255cf11ef23acbaed9",
       "size": 166938,
-      "url": "https://cdn.modrinth.com/data/b3w1XM9H/versions/sUuTA9z2/sootychimneys-fabric-1.3.5.jar",
-      "info": {
-        "id": "sootychimneys",
-        "name": "Sooty Chimneys",
-        "description": "Spiritual successor to campfires!",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api",
-          "forgeconfigapiport"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Sooty Chimneys",
-      "text": "Spiritual successor to campfires!"
+      "url": "https://cdn.modrinth.com/data/b3w1XM9H/versions/sUuTA9z2/sootychimneys-fabric-1.3.5.jar"
     },
     {
       "file": "spark-1.10.109-fabric.jar",
       "sha1": "eff42cbeee6fe9a7f3c57031c23200256366dcd1",
       "size": 3609981,
-      "url": "https://cdn.modrinth.com/data/l6YH9Als/versions/cALUj9l1/spark-1.10.109-fabric.jar",
-      "info": {
-        "id": "spark",
-        "name": "spark",
-        "description": "spark is a performance profiling plugin/mod for Minecraft clients, servers and proxies.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api-base",
-          "fabric-command-api-v2",
-          "fabric-lifecycle-events-v1",
-          "fabric-permissions-api-v0"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "spark",
-      "text": "spark is a performance profiler for Minecraft clients, servers and proxies."
+      "url": "https://cdn.modrinth.com/data/l6YH9Als/versions/cALUj9l1/spark-1.10.109-fabric.jar"
     },
     {
       "file": "spuds-shops-1.21.1-1.9.0.jar",
       "sha1": "fc52428ee2055519eb23fde20fa7a75c2ac269a5",
       "size": 1037914,
-      "url": "https://cdn.modrinth.com/data/sHFbDnFN/versions/E9OkDfuk/spuds-shops-1.21.1-1.9.0.jar",
-      "info": {
-        "id": "spuds_shops",
-        "name": "Spud's Shops",
-        "description": "A simple and decorative shop mod",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Spud's shops",
-      "text": "A simple and decorative shop mod with an unrestrictive UI."
+      "url": "https://cdn.modrinth.com/data/sHFbDnFN/versions/E9OkDfuk/spuds-shops-1.21.1-1.9.0.jar"
     },
     {
       "file": "structurify-fabric-2.0.43+mc1.21.1.jar",
       "sha1": "322de784f5719927132f87e09c1eb0d2a2a20a39",
       "size": 539339,
-      "url": "https://cdn.modrinth.com/data/yz7AM2zx/versions/KAN9hrFX/structurify-fabric-2.0.43%2Bmc1.21.1.jar",
-      "info": {
-        "id": "structurify",
-        "name": "Structurify",
-        "description": "A structure configuration mod that eliminates the need for datapacks. Spread out structures, prevent overlap, enforce flat terrain, customize size and biomes.",
-        "environment": "*",
-        "depends": [
-          "minecraft",
-          "fabricloader",
-          "fabric-api",
-          "yet_another_config_lib_v3"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Structurify - Structure Control",
-      "text": "A structure configuration mod that eliminates the need for datapacks. Spread out structures, prevent overlap, enforce flat terrain, customize size and biomes."
+      "url": "https://cdn.modrinth.com/data/yz7AM2zx/versions/KAN9hrFX/structurify-fabric-2.0.43%2Bmc1.21.1.jar"
     },
     {
       "file": "supermartijn642corelib-1.1.25-fabric-mc1.21.jar",
       "sha1": "3339afb26de57eb3b83aed326e6cab5c1af1e490",
       "size": 622551,
-      "url": "https://cdn.modrinth.com/data/rOUBggPv/versions/ImY2F2fz/supermartijn642corelib-1.1.25-fabric-mc1.21.jar",
-      "info": {
-        "id": "supermartijn642corelib",
-        "name": "SuperMartijn642's Core Lib",
-        "description": "SuperMartijn642's Core Lib adds lots of basic implementations for guis that allow for similar code between Minecraft 1.12, 1.14, 1.15, and 1.16!",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "SuperMartijn642's Core Lib",
-      "text": "SuperMartijn642's Core Lib adds lots of basic implementations that allow for similar code between different Minecraft versions!"
+      "url": "https://cdn.modrinth.com/data/rOUBggPv/versions/ImY2F2fz/supermartijn642corelib-1.1.25-fabric-mc1.21.jar"
     },
     {
       "file": "trashslot-fabric-1.21.1-21.1.11.jar",
       "sha1": "1e58a95ebfd9c2078fcba4100f1afa80512c9f94",
       "size": 78842,
-      "url": "https://cdn.modrinth.com/data/vRYk0bv7/versions/apJG54CW/trashslot-fabric-1.21.1-21.1.11.jar",
-      "info": {
-        "id": "trashslot",
-        "name": "TrashSlot",
-        "description": "Adds a trash slot to the inventory screen that allows deletion of unwanted items.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "balm-fabric",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "TrashSlot",
-      "text": "Adds a draggable trash slot to all inventory screens. Press T to toggle."
+      "url": "https://cdn.modrinth.com/data/vRYk0bv7/versions/apJG54CW/trashslot-fabric-1.21.1-21.1.11.jar"
     },
     {
       "file": "voicechat-fabric-1.21.1-2.6.24.jar",
       "sha1": "5abe8af0b85acc94506caa0a36ccc59836956dd2",
       "size": 5386871,
-      "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/6PKCVne5/voicechat-fabric-1.21.1-2.6.24.jar",
-      "info": {
-        "id": "voicechat",
-        "name": "Simple Voice Chat",
-        "description": "A working voice chat in Minecraft!",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Simple Voice Chat",
-      "text": "A working voice chat in Minecraft!"
+      "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/6PKCVne5/voicechat-fabric-1.21.1-2.6.24.jar"
     },
     {
       "file": "waystones-fabric-1.21.1-21.1.46.jar",
       "sha1": "2ef078e0e3409e3a97ec3fdc0cfd7db7ca34bc40",
       "size": 1248666,
-      "url": "https://cdn.modrinth.com/data/LOpKHB2A/versions/nSAwjAk4/waystones-fabric-1.21.1-21.1.46.jar",
-      "info": {
-        "id": "waystones",
-        "name": "Waystones",
-        "description": "Teleport back to activated waystones. For Survival, Adventure or Servers.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "balm",
-          "minecraft",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Waystones",
-      "text": "Teleport from waystone to waystone or craft magical scrolls to warp."
+      "url": "https://cdn.modrinth.com/data/LOpKHB2A/versions/nSAwjAk4/waystones-fabric-1.21.1-21.1.46.jar"
     },
     {
       "file": "xaerominimap-fabric-1.21.1-26.6.0.jar",
       "sha1": "5fbb03dd3f22c0c3d5466d1366222d7d277a8df3",
       "size": 2234556,
-      "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/W4dcLcUs/xaerominimap-fabric-1.21.1-26.6.0.jar",
-      "info": {
-        "id": "xaerominimap",
-        "name": "Xaero's Minimap",
-        "description": "The most vanilla-looking minimap for Minecraft.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "xaerolib"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Xaero's Minimap",
-      "text": "Displays a map of the nearby world terrain, players, mobs, entities in the corner of your screen. Lets you create waypoints which help you find the locations you've marked."
+      "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/W4dcLcUs/xaerominimap-fabric-1.21.1-26.6.0.jar"
     },
     {
       "file": "xaeroworldmap-fabric-1.21.1-1.47.0.jar",
       "sha1": "db7ad23fe512dbc13a8286844fd9277c08a7ef5a",
       "size": 1456162,
-      "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/XIR7GzC3/xaeroworldmap-fabric-1.21.1-1.47.0.jar",
-      "info": {
-        "id": "xaeroworldmap",
-        "name": "Xaero's World Map",
-        "description": "A self-writing fullscreen map which also works as an add-on to Xaero's Minimap.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "fabric-api",
-          "minecraft",
-          "xaerolib"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "Xaero's World Map",
-      "text": "Adds a full screen world map which shows you what you have explored in the world. Works great together with Xaero's Minimap."
+      "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/XIR7GzC3/xaeroworldmap-fabric-1.21.1-1.47.0.jar"
     },
     {
       "file": "yet_another_config_lib_v3-3.8.2+1.21.1-fabric.jar",
       "sha1": "e075503382f70715ab9fc6f66d603397a86eb3e0",
       "size": 1131265,
-      "url": "https://cdn.modrinth.com/data/1eAoo2KR/versions/o3cDn8Vp/yet_another_config_lib_v3-3.8.2%2B1.21.1-fabric.jar",
-      "info": {
-        "id": "yet_another_config_lib_v3",
-        "name": "YetAnotherConfigLib",
-        "description": "YetAnotherConfigLib (yacl) is just that. A builder-based configuration library for Minecraft.",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "minecraft",
-          "java",
-          "fabric-api"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "YetAnotherConfigLib (YACL)",
-      "text": "A builder-based configuration library for Minecraft!"
+      "url": "https://cdn.modrinth.com/data/1eAoo2KR/versions/o3cDn8Vp/yet_another_config_lib_v3-3.8.2%2B1.21.1-fabric.jar"
     },
     {
       "file": "zconfig-1.0.0+1.21.x.jar",
       "sha1": "cb9fe03e6f64b900317d7edf305c1d7d43412a60",
       "size": 405552,
-      "url": "https://cdn.modrinth.com/data/4qmvXRB9/versions/yD19P1nG/zconfig-1.0.0%2B1.21.x.jar",
-      "info": {
-        "id": "zconfig",
-        "name": "ZConfig",
-        "description": "A mixin config mod for zfastnoise",
-        "environment": "*",
-        "depends": [
-          "fabricloader",
-          "java"
-        ],
-        "provides": []
-      },
-      "side": "both",
-      "title": "ZConfig",
-      "text": "A mixin config plugin for zfastnoise"
+      "url": "https://cdn.modrinth.com/data/4qmvXRB9/versions/yD19P1nG/zconfig-1.0.0%2B1.21.x.jar"
     },
     {
       "file": "CustomSkinLoader_Universal-15.1.jar",
