@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.4",
+  "packVersion": "1.0.5",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -427,8 +427,8 @@
     },
     {
       "file": "apokelipsis-menu-1.0.0.jar",
-      "sha1": "fab2c5f0a3e5bac3c106a27cff8c8eb01f0b7503",
-      "size": 38290,
+      "sha1": "92971374177d21b5672fb55135dfcc7fb1a018e7",
+      "size": 43192,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar"
     },
     {

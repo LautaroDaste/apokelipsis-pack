@@ -310,7 +310,10 @@ async function main() {
     throw new Error('Falta la clave de firma (herramientas\\clave-privada.pem). Sin ella los launchers no aceptan la lista. '
       + 'Cópiala desde tu respaldo a la carpeta "herramientas".');
   }
-  const signature = crypto.sign(null, fs.readFileSync(previousFile), fs.readFileSync(keyFile, 'utf8'));
+  // Siempre con saltos de línea tipo Linux (LF), que es como lo guarda y lo sirve GitHub.
+  const lfText = fs.readFileSync(previousFile, 'utf8').replace(/\r\n/g, '\n');
+  fs.writeFileSync(previousFile, lfText);
+  const signature = crypto.sign(null, Buffer.from(lfText, 'utf8'), fs.readFileSync(keyFile, 'utf8'));
   fs.writeFileSync(path.join(ROOT, 'manifest.sig'), signature.toString('base64') + '\n');
 
   // Los archivos que se descargan de Modrinth no hace falta subirlos a GitHub (algunos pesan

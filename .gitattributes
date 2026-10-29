@@ -1,0 +1,3 @@
+# La lista y su firma tienen que quedar byte a byte iguales (si Git cambia los saltos de linea, la firma deja de valer).
+manifest.json -text
+manifest.sig -text
