@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.6",
+  "packVersion": "1.0.7",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -354,6 +354,12 @@
       "url": "https://cdn.modrinth.com/data/9hx3AbJM/versions/LLLfoeWJ/EasyMagic-v21.1.4-1.21.1-Fabric.jar"
     },
     {
+      "file": "EntrenadoresPokemon-1.1.1.jar",
+      "sha1": "fdf4ee830cc54d1fba99804a7e6d38505bb3465a",
+      "size": 211433,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/EntrenadoresPokemon-1.1.1.jar"
+    },
+    {
       "file": "ExplorersCompass-1.21.1-2.6.0-fabric.jar",
       "sha1": "cc3cf49a0ddb726e28af58d186145b027ea0adb5",
       "size": 177481,
@@ -420,16 +426,10 @@
       "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/Sj6w7O0I/OctoLib-FABRIC-0.6.2%2B1.21.jar"
     },
     {
-      "file": "PokeMisiones.jar",
-      "sha1": "208817b9347fda8ff7fe134df72ca05c49356567",
-      "size": 657944,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones.jar"
-    },
-    {
-      "file": "apokelipsis-menu-1.0.0.jar",
-      "sha1": "92971374177d21b5672fb55135dfcc7fb1a018e7",
-      "size": 43192,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar"
+      "file": "PokeMisiones-1.4.4.jar",
+      "sha1": "91866ad65269000f3a0ee6285a4aef3abfb93f95",
+      "size": 761460,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.4.4.jar"
     },
     {
       "file": "aps_trophies-1.21.1-fabric-1.2.0.jar",
@@ -445,9 +445,9 @@
     },
     {
       "file": "athena-fabric-1.21.1-4.0.6.jar",
-      "sha1": "92534d85cad33ab1fee598068443c685f4bb06e0",
-      "size": 88425,
-      "url": "https://cdn.modrinth.com/data/b1ZV3DIJ/versions/JfyYsWKP/athena-fabric-1.21.1-4.0.6.jar"
+      "sha1": "6f963a936f5e4023ec5f778d9c6f80883fb52c49",
+      "size": 2079609,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/athena-fabric-1.21.1-4.0.6.jar"
     },
     {
       "file": "backpacked-fabric-1.21.1-3.0.5.jar",
@@ -570,12 +570,6 @@
       "url": "https://cdn.modrinth.com/data/pZ2wrerK/versions/daqt5qcK/emotecraft-for-MC1.21.1-2.4.12-fabric.jar"
     },
     {
-      "file": "entrenadores-pokemon-1.0.0.jar",
-      "sha1": "7b3f42e17e7357fdbe15aa333f318e9e5332af58",
-      "size": 209320,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/entrenadores-pokemon-1.0.0.jar"
-    },
-    {
       "file": "fabric-api-0.116.17+1.21.1.jar",
       "sha1": "810b2b0195371a012906241d8b85a32a1d6de53c",
       "size": 2452735,
@@ -622,12 +616,6 @@
       "sha1": "b3a6aff6ffff34d20ffde1faa640bcf17ff4b646",
       "size": 664463,
       "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/tmxM7U4W/geckolib-fabric-1.21.1-4.9.3.jar"
-    },
-    {
-      "file": "guia-flechas-1.0.0.jar",
-      "sha1": "9dee20fc5b61806a2d5a476a866dd022482dba14",
-      "size": 48944,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/guia-flechas-1.0.0.jar"
     },
     {
       "file": "jei-1.21.1-fabric-19.64.0.453.jar",
@@ -709,8 +697,8 @@
     },
     {
       "file": "pokegambling-1.0.0.jar",
-      "sha1": "3f7e763b36b142b7c645b210830af5bfb57137ed",
-      "size": 2375700,
+      "sha1": "1499edb76f55a6dd4e1650c81c3a04750f1d4688",
+      "size": 2391991,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokegambling-1.0.0.jar"
     },
     {
@@ -727,8 +715,8 @@
     },
     {
       "file": "proteccion-zonas-1.0.0.jar",
-      "sha1": "54ec24244f8e7d9c3e57af2847fe58f2f8defd6c",
-      "size": 111340,
+      "sha1": "a589a2b8c6ce1297ac3045ccca7102958e95e35f",
+      "size": 172805,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.0.jar"
     },
     {
