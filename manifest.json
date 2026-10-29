@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.7",
+  "packVersion": "1.0.8",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -1179,38 +1179,38 @@
     {
       "path": "config/apokelipsis/panorama_0.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_0.png",
-      "sha1": "99d313575e45d0cdd69705409f8758592673220d",
-      "size": 665512
+      "sha1": "31238b5164a783ae6a63f70744ef9e3d3a6f2b12",
+      "size": 2325262
     },
     {
       "path": "config/apokelipsis/panorama_1.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_1.png",
-      "sha1": "9b71c8071d5e8678c81a677c49907062c629205d",
-      "size": 686980
+      "sha1": "d71a933596aeb0c767465e200307ca15ce96384f",
+      "size": 2365789
     },
     {
       "path": "config/apokelipsis/panorama_2.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_2.png",
-      "sha1": "12ead78b71400b4c377e72d6dda72cf69c01df28",
-      "size": 580254
+      "sha1": "720669fd2ab97340608a36faf6828f2c3ce82eff",
+      "size": 2341983
     },
     {
       "path": "config/apokelipsis/panorama_3.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_3.png",
-      "sha1": "1abc1f5622be5b2c9fc0d11f23c0519939b02738",
-      "size": 514473
+      "sha1": "6b702253de582e23b8fe56e5f3716e8ba8fc8ee5",
+      "size": 2231587
     },
     {
       "path": "config/apokelipsis/panorama_4.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_4.png",
-      "sha1": "1dc7ab71636d400150a465b7fcaa6e469a2e2ad3",
-      "size": 293455
+      "sha1": "bf35b42e586047c9c20bdccf6c1167cd3f594eff",
+      "size": 2336741
     },
     {
       "path": "config/apokelipsis/panorama_5.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_5.png",
-      "sha1": "f8562537fdc3bcf5eecf6e84fedd2d93d48e3a03",
-      "size": 95630
+      "sha1": "745089b07d1a659cd85bcde47655b1d7badd8767",
+      "size": 1495468
     },
     {
       "path": "resourcepacks/Better Caps! [v1.2].zip",
