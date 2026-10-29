@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.5",
+  "packVersion": "1.0.6",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
