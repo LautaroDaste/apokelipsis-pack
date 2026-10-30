@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.11",
+  "packVersion": "1.0.12",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -7,10 +7,10 @@
     "address": ""
   },
   "launcher": {
-    "version": "1.2.0",
+    "version": "1.2.1",
     "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/launcher/Instalar%20Apokelipsis.exe",
-    "sha1": "f2e1f25d5b7723994df3f9ecd1c9a3c0cd0c26be",
-    "size": 82304634
+    "sha1": "994aadf86cb734600dd2e5dc788a7bbde523db3e",
+    "size": 82304633
   },
   "defaultOptions": {
     "ao": "true",
