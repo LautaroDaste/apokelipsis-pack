@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.9",
+  "packVersion": "1.0.11",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -7,10 +7,10 @@
     "address": ""
   },
   "launcher": {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/launcher/Instalar%20Apokelipsis.exe",
-    "sha1": "cded51746b585fac07567bfe5c51b586108bcd12",
-    "size": 82303705
+    "sha1": "f2e1f25d5b7723994df3f9ecd1c9a3c0cd0c26be",
+    "size": 82304634
   },
   "defaultOptions": {
     "ao": "true",
@@ -433,8 +433,8 @@
     },
     {
       "file": "apokelipsis-menu-1.0.0.jar",
-      "sha1": "92971374177d21b5672fb55135dfcc7fb1a018e7",
-      "size": 43192,
+      "sha1": "e2f2808af16f02c223a1c2c6bdbac2ce90cc15ba",
+      "size": 43380,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar"
     },
     {
