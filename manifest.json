@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.8",
+  "packVersion": "1.0.9",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -430,6 +430,12 @@
       "sha1": "91866ad65269000f3a0ee6285a4aef3abfb93f95",
       "size": 761460,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.4.4.jar"
+    },
+    {
+      "file": "apokelipsis-menu-1.0.0.jar",
+      "sha1": "92971374177d21b5672fb55135dfcc7fb1a018e7",
+      "size": 43192,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar"
     },
     {
       "file": "aps_trophies-1.21.1-fabric-1.2.0.jar",
