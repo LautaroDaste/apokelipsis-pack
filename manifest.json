@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.13",
+  "packVersion": "1.0.14",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -355,8 +355,8 @@
     },
     {
       "file": "EntrenadoresPokemon-1.1.1.jar",
-      "sha1": "fdf4ee830cc54d1fba99804a7e6d38505bb3465a",
-      "size": 211433,
+      "sha1": "fc3fa810a87dc0798aff2b4792ba72084ee64f77",
+      "size": 218481,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/EntrenadoresPokemon-1.1.1.jar"
     },
     {
@@ -427,8 +427,8 @@
     },
     {
       "file": "PokeMisiones-1.4.4.jar",
-      "sha1": "91866ad65269000f3a0ee6285a4aef3abfb93f95",
-      "size": 761460,
+      "sha1": "aecafcf05217f41e72300da3072cf0a60fad4c54",
+      "size": 769872,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.4.4.jar"
     },
     {
@@ -703,8 +703,8 @@
     },
     {
       "file": "pokegambling-1.0.0.jar",
-      "sha1": "1499edb76f55a6dd4e1650c81c3a04750f1d4688",
-      "size": 2391991,
+      "sha1": "283881690c8784248e3bc684b8900fd703073d53",
+      "size": 2397507,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokegambling-1.0.0.jar"
     },
     {
@@ -721,8 +721,8 @@
     },
     {
       "file": "proteccion-zonas-1.0.0.jar",
-      "sha1": "a589a2b8c6ce1297ac3045ccca7102958e95e35f",
-      "size": 172805,
+      "sha1": "76a0b630515b04239b2f805610be9604d565aa4a",
+      "size": 217175,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.0.jar"
     },
     {
@@ -916,6 +916,17 @@
       "url": "https://cdn.modrinth.com/data/qekxLrOP/versions/c03nfIwP/cobbledex-rei-emi-jei-fabric-2.29.0.jar",
       "sha1": "16975f551413520c39ded7e21e483b6a5d578741",
       "size": 5418984
+    },
+    {
+      "id": "controlling",
+      "name": "Controlling",
+      "description": "Adds a search bar to the Key-Bindings menu",
+      "default": true,
+      "requires": [],
+      "file": "Controlling-fabric-1.21.1-19.0.5.jar",
+      "url": "https://cdn.modrinth.com/data/xv94TkTM/versions/hGJDoW2W/Controlling-fabric-1.21.1-19.0.5.jar",
+      "sha1": "22d2407311298d0185b606aa1dd03ae33b98dff3",
+      "size": 83679
     },
     {
       "id": "cullleaves",

@@ -26,6 +26,10 @@ AGREGAR, QUITAR O ACTUALIZAR MODS
    - Arriba toca "Push origin" y espera a que termine.
 4. Listo. Los jugadores lo reciben al abrir el launcher.
 
+Si GitHub Desktop no te deja hacer Commit y dice "NO SE PUEDE HACER COMMIT",
+es porque cambiaste mods o archivos sin correr el .bat: haz doble clic en
+"PUBLICAR MODS.bat" y vuelve a tocar "Commit to main".
+
 El .bat se encarga solo de:
 - Separar los mods: los que son solo de servidor NO se instalan en los jugadores,
   los que son solo de cliente aparecen como "Mods opcionales" (se pueden apagar),

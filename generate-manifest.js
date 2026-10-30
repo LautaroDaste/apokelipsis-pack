@@ -332,6 +332,9 @@ async function main() {
   const escapeGit = (p) => '/' + p.replace(/([\[\]*?!#\\])/g, '\\$1');
   fs.writeFileSync(gitignorePath, `${head}\n\n${MARK}\n${ignored.map(escapeGit).join('\n')}\n`.trimStart());
 
+  // Anota cómo quedaron los archivos: el hook de Git frena el Commit si después cambian sin publicar.
+  require('./estado-publicado').guardar();
+
   // Resumen en español.
   const label = (k) => k.replace(/^mods\//, 'mod: ').replace(/^files\//, 'archivo: ');
   console.log('');
