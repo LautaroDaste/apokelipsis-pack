@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.14",
+  "packVersion": "1.0.15",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -922,7 +922,9 @@
       "name": "Controlling",
       "description": "Adds a search bar to the Key-Bindings menu",
       "default": true,
-      "requires": [],
+      "requires": [
+        "searchables"
+      ],
       "file": "Controlling-fabric-1.21.1-19.0.5.jar",
       "url": "https://cdn.modrinth.com/data/xv94TkTM/versions/hGJDoW2W/Controlling-fabric-1.21.1-19.0.5.jar",
       "sha1": "22d2407311298d0185b606aa1dd03ae33b98dff3",
@@ -1133,6 +1135,17 @@
       "url": "https://cdn.modrinth.com/data/Bh37bMuy/versions/XtuPOKUN/reeses-sodium-options-fabric-2.2.4%2Bmc1.21.1.jar",
       "sha1": "552c80c3113ad346c3abcdf7c5c6cc3a02a5fb62",
       "size": 257229
+    },
+    {
+      "id": "searchables",
+      "name": "Searchables",
+      "description": "Searchables is a library mod that adds helper methods that allow for searching and filtering elements based on compon...",
+      "default": true,
+      "requires": [],
+      "file": "Searchables-fabric-1.21.1-1.0.2.jar",
+      "url": "https://cdn.modrinth.com/data/fuuu3xnx/versions/tRdr8Bg3/Searchables-fabric-1.21.1-1.0.2.jar",
+      "sha1": "2777db0b967e80e0659053154f32f14a0e99a7a7",
+      "size": 79531
     },
     {
       "id": "sodium",
