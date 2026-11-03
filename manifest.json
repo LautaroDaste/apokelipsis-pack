@@ -1,7 +1,84 @@
 {
-  "packVersion": "1.0.15",
+  "format": 2,
+  "packVersion": "1.0.16",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
+  "fabricProfile": {
+    "id": "fabric-loader-0.19.5-1.21.1",
+    "inheritsFrom": "1.21.1",
+    "type": "release",
+    "mainClass": "net.fabricmc.loader.impl.launch.knot.KnotClient",
+    "arguments": {
+      "game": [],
+      "jvm": [
+        "-DFabricMcEmu= net.minecraft.client.main.Main "
+      ]
+    },
+    "libraries": [
+      {
+        "name": "org.ow2.asm:asm:9.10.1",
+        "url": "https://maven.fabricmc.net/",
+        "md5": "9cb72080438acf27f2607002e1444a7b",
+        "sha1": "ada2141c0cc52ee8f5c48cd5fa4ce0e794f22236",
+        "sha256": "ed825d10ab1399c8c0cb669e688cf0c8c82629b4c8399b58352b68e92ca10fcb",
+        "sha512": "8db6efa37d4d569bf2b95d90931b8064f87ed928d20bbf8d8e7fa6182e9a11d32e6a2cc034a3d173a38ee70ce2ea9f20f52f9d8730d9401d2bc6060674c18928",
+        "size": 126151
+      },
+      {
+        "name": "org.ow2.asm:asm-analysis:9.10.1",
+        "url": "https://maven.fabricmc.net/",
+        "md5": "6dd9011ec87f65e4b2e14e938c4118e4",
+        "sha1": "8d49f14d51f632cb1d87c88d1ceaf50db0d8af1b",
+        "sha256": "dede75a21306b65974ecd8f87114ff6970f09fb794157a4ca09ab25c888c2bfc",
+        "sha512": "0542a90be38f81e39ef43a9253630a2d59f82c17c24492f005c67619561308afbbd23bf8504d3e83b1d4cebe5746126da76037473ddac3071b028c2ae279296b",
+        "size": 35140
+      },
+      {
+        "name": "org.ow2.asm:asm-commons:9.10.1",
+        "url": "https://maven.fabricmc.net/",
+        "md5": "8eee0b1bdd046baf472eb83dd5e6bb44",
+        "sha1": "4229e4c55fd8e01c23f9fe9884075cc628aacc50",
+        "sha256": "6d0abefb7cbf972ea16edb37ec14835372505063a45f976ab7ea889ed9497895",
+        "sha512": "8540a8f9a63b22bae54fc501f2da405c2c1c45fa13921a1193629cfbfbb716473f8a19984559af7b0b1ea3814d439ec445ea1cfeb159bf922bb7e60a40acf823",
+        "size": 74840
+      },
+      {
+        "name": "org.ow2.asm:asm-tree:9.10.1",
+        "url": "https://maven.fabricmc.net/",
+        "md5": "62541e1dc62331408ef31317555bf4fa",
+        "sha1": "e244332a17564c1d1572449399a842de35881be2",
+        "sha256": "3dfb0d5b6a106cd40b5b250e39935fbf2f927f4477546a5369a3ac609cf0506b",
+        "sha512": "2ffe5bbfac53bbacc1e4e474628b4247fb1c5f592017f393a327b3f2d2a72a338263f2f6549a42cea57a42f676b967153a10a22aae46affed83608f74daf3768",
+        "size": 51958
+      },
+      {
+        "name": "org.ow2.asm:asm-util:9.10.1",
+        "url": "https://maven.fabricmc.net/",
+        "md5": "d0892ecb209867805e7d2418e5dc6c42",
+        "sha1": "7bb9d450e8d4cbf9f9e04096c44bbfe7fba80b15",
+        "sha256": "1bb99d091fba2597dc6d51193e9bbcf0d8447e7ed96bd8f0198b18152f09655c",
+        "sha512": "7330ded981ddeb01b302cba12d56b419207b6b02ebfaf814cbbc3d2d2d1055e055294ce108ac9e4de9e1d0f3c4e0064f133e87e8085922241c1a2e5fa1fedd2c",
+        "size": 95628
+      },
+      {
+        "name": "net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7",
+        "url": "https://maven.fabricmc.net/",
+        "md5": "9e33b145b2a46fbc70daf532e3705066",
+        "sha1": "5f66cc9f59b8efaa942155a3d5a30599bf6640dd",
+        "sha256": "1f0ae44db7295f8626f33b1dc0ad7f043d8954a8d6847247875fcc5dfcecc934",
+        "sha512": "837b479c7e831463e074b56314259952f2f82c2ec8ddd71930514ca04f97bb488f43fdb2d4608e7f3fad334604a546053256844ea653542bae8d25bbdab66e21",
+        "size": 1539080
+      },
+      {
+        "name": "net.fabricmc:intermediary:1.21.1",
+        "url": "https://maven.fabricmc.net/"
+      },
+      {
+        "name": "net.fabricmc:fabric-loader:0.19.5",
+        "url": "https://maven.fabricmc.net/"
+      }
+    ]
+  },
   "server": {
     "name": "APOKÉLIPSIS SMP",
     "address": ""
@@ -10,6 +87,7 @@
     "version": "1.2.2",
     "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/launcher/Instalar%20Apokelipsis.exe",
     "sha1": "6cc767b8e270c4183b15e4ff63a10759d6113e1a",
+    "sha512": "bc1c687575abfe46cf410a3f082a586e2bb0a0b1db7c4c51b8b816588cf49bcc9f11928ed58d8a1d79dbf08f685eb936c908b3e26f1494f32d83158feb0b064d",
     "size": 82304935
   },
   "defaultOptions": {
@@ -302,522 +380,609 @@
     {
       "file": "AdvancedCoreInfo-fabric-1.21.1-1.4.0.jar",
       "sha1": "7701eb10be08c9ef113b9b723cc04e118e0cd4e0",
+      "sha512": "cd5cbf9f5fb40c005b07be148efbbbc83c956d664fcc559953e9622bc344d8a363a8311d2258a9a585d5309ca96f843f10188519f6d838f975f8bd4fbddd9168",
       "size": 263282,
       "url": "https://cdn.modrinth.com/data/BaR4ijFC/versions/3ijXb7RE/AdvancedCoreInfo-fabric-1.21.1-1.4.0.jar"
     },
     {
       "file": "AdvancedLootInfo-fabric-1.21.1-2.4.0.jar",
       "sha1": "1aac7cde7b87498b30494eb50d7ac7f774bf1ed3",
+      "sha512": "992e3d4125030bc40a88701fb80bf7d3b69fb0d1167acac0c2775b9d2089395deb2dab2cf927484ca8924ce72ba1cb2dce22f3e3d0cff88f197c4746e3da075d",
       "size": 643295,
       "url": "https://cdn.modrinth.com/data/PEPVViac/versions/A7HsVFQ1/AdvancedLootInfo-fabric-1.21.1-2.4.0.jar"
     },
     {
       "file": "Clumps-fabric-1.21.1-19.0.0.1.jar",
       "sha1": "14628ba309d876cfefc4cef864a66ef12812066c",
+      "sha512": "0aa8e3508d0a40ef814d4064c0b6cadba6326128dd878fe69f30677c889cec4ccb8f639c22bdd7083a73ae8fa76e1c115b5e4b1885904dc1244b02ab2f728e78",
       "size": 20723,
       "url": "https://cdn.modrinth.com/data/Wnxd13zP/versions/3ene3W1l/Clumps-fabric-1.21.1-19.0.0.1.jar"
     },
     {
       "file": "CobbleFurnies-fabric-1.2.jar",
       "sha1": "a71f20907c3350680a11054584cf96963f5875e5",
+      "sha512": "9cb5a3f1e4604bb30f89f1fa9acd83c260bf6852201ac7a50b40d13afc80b09549da655f74f9dd8ca090e5756422f02865db1a32ead857c74c664e2c96325ee0",
       "size": 2337235,
       "url": "https://cdn.modrinth.com/data/AXY1OO9m/versions/54k31lEX/CobbleFurnies-fabric-1.2.jar"
     },
     {
       "file": "Cobblemon-fabric-1.8.2+1.21.1.jar",
       "sha1": "1a8ec812b2e7b392ac60801c910d3128d0bbb432",
+      "sha512": "fe0090aa00a010a2353b4da43693ef70b675d5255756541cd679d2cf1df077ffedb790e9de66b1bd69cc9f6336d58763aeb15f146d07420d466daaeb3d992386",
       "size": 139317851,
       "url": "https://cdn.modrinth.com/data/MdwFAVRL/versions/GJ2a1b8O/Cobblemon-fabric-1.8.2%2B1.21.1.jar"
     },
     {
       "file": "Cobbreeding-fabric-2.4.1.jar",
       "sha1": "4de6e86541ab2d94b1327ce68a26771e8f33f030",
+      "sha512": "5c1d192d82d61b47233625a4780600c81eb7d807103bf40954ea2d55fca4e1e71d9d45168d2cb1e55fe96d0cb92b6f5d702bfc7090702907bc51412dc1e4e468",
       "size": 477771,
       "url": "https://cdn.modrinth.com/data/ItmVb4zY/versions/QEX1BKMf/Cobbreeding-fabric-2.4.1.jar"
     },
     {
       "file": "Debugify-1.21.1+1.1.jar",
       "sha1": "3388ba4c0f973f0a73a68a42048fe902bb2b14ea",
+      "sha512": "40ab23b41579e1d8e220d9852fe46ee05af136b7932f9095b7b1e98f1716b7599fccb7e094e183668c6c30deb79488d118578d6843022e3a3850971db01524b5",
       "size": 289699,
       "url": "https://cdn.modrinth.com/data/QwxR6Gcd/versions/pyIdu3f1/Debugify-1.21.1%2B1.1.jar"
     },
     {
       "file": "EasyAnvils-v21.1.0-1.21.1-Fabric.jar",
       "sha1": "c07d01e04a29d4adcee8ffeb14eb3290a279627e",
+      "sha512": "cf9eda6d27ac9155c83140b1b931a3048a2e81da63957423c5a2958342c58c315d17c5c3730f3f952ef19e4e3632741cee4ef9605c476b8c82b06d60190ee6a1",
       "size": 148736,
       "url": "https://cdn.modrinth.com/data/OZBR5JT5/versions/znaWBlgU/EasyAnvils-v21.1.0-1.21.1-Fabric.jar"
     },
     {
       "file": "EasyMagic-v21.1.4-1.21.1-Fabric.jar",
       "sha1": "2131b964eafe376ff7e565cdae330a585e42d2e1",
+      "sha512": "46927747f1867a152cb291bd76a8e013cf1cd0821663614f9d737c704743fe4c356aff6fb7cbcc3e8c425d964678631fab8afdd2b26cda5f577b6a3cc9160a5a",
       "size": 140897,
       "url": "https://cdn.modrinth.com/data/9hx3AbJM/versions/LLLfoeWJ/EasyMagic-v21.1.4-1.21.1-Fabric.jar"
     },
     {
       "file": "EntrenadoresPokemon-1.1.1.jar",
       "sha1": "fc3fa810a87dc0798aff2b4792ba72084ee64f77",
+      "sha512": "aa3b9d2247c04bb4dae55dff80c145252ee3790331e8e6db762015dec4b8a9d50533292d52850fd2046c47ecf4e75d8949126116683a4f752767fbfc326c2f89",
       "size": 218481,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/EntrenadoresPokemon-1.1.1.jar"
     },
     {
       "file": "ExplorersCompass-1.21.1-2.6.0-fabric.jar",
       "sha1": "cc3cf49a0ddb726e28af58d186145b027ea0adb5",
+      "sha512": "134501d97f0c264e609a67a8416dbae7bb5dc7f8e11f82b8130efd7ea0cedc6f3be153f0f61b2c503e5ea1efd4734a12c6edfa922503a94981565adfca8b2402",
       "size": 177481,
       "url": "https://cdn.modrinth.com/data/RV1qfVQ8/versions/qSRKiE4D/ExplorersCompass-1.21.1-2.6.0-fabric.jar"
     },
     {
       "file": "ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar",
       "sha1": "18bf1f21cd2db6dcd4e42db85eae54e2a49a48ee",
+      "sha512": "cd9296e78ba969f7aed6e3692aa25eb61c102c79c55ca5f9592576bacaa26feab5d5d48fa30cf07ca852e0f1d42afc4d4558feff69a67b225183d2bc15898cf9",
       "size": 633065,
       "url": "https://cdn.modrinth.com/data/ohNO6lps/versions/N5qzq0XV/ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar"
     },
     {
       "file": "Geophilic v3.7.mod.jar",
       "sha1": "4d668978e18b450c030ed4be096fce52d3a9ceca",
+      "sha512": "7731d6d7f85af0dc9eb232138b1dc1096f083d13a9f3e592b84f6c89a97cca0c642c68d5943e0e63bd35e93002708b945554991f519b754a04c6eec058305c19",
       "size": 1115993,
       "url": "https://cdn.modrinth.com/data/hl5OLM95/versions/5kFV8CEz/Geophilic%20v3.7.mod.jar"
     },
     {
       "file": "Iceberg-1.21.1-fabric-1.3.2.jar",
       "sha1": "170e30bf93ccba6d80dd481eedddae16cb549d29",
+      "sha512": "d781cf25ac6a630477b7b8a016d9762655aff877f39a601ff6d7f44062534a47831ff0d58adcb94d776cbb1b9077993ff29b7a804714892e4e13da0278213684",
       "size": 413302,
       "url": "https://cdn.modrinth.com/data/5faXoLqX/versions/7ITFAyW8/Iceberg-1.21.1-fabric-1.3.2.jar"
     },
     {
       "file": "Item_Obliterator-Fabric_Quilt-MC_1.21-3.1.1.jar",
       "sha1": "42202c67ef7166ffb5255ada7370b36c9d50110c",
+      "sha512": "e7209beb2b33ab98a9bb02375a78f6ea1e72226804c6e28e887a169295d0781d50a008993750a7f53eddda8bf24845162d67b781e2e8f65924d8e31cc4955e16",
       "size": 29943,
       "url": "https://cdn.modrinth.com/data/3ESR84kR/versions/OqMP9ZL0/Item_Obliterator-Fabric_Quilt-MC_1.21-3.1.1.jar"
     },
     {
       "file": "Jade-1.21.1-Fabric-15.10.6.jar",
       "sha1": "bed67c605cbc991f474b270581cfa04ed48228df",
+      "sha512": "fbae1c796368a09c579dd780a1d510fa5ab73f0eca370ddbfe0a9e6ca162e1b806261577306a259773f309dc4938a839b2065c5eef98b2810855c241addf17f5",
       "size": 740746,
       "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/adpNvTZS/Jade-1.21.1-Fabric-15.10.6.jar"
     },
     {
       "file": "JadeAddons-1.21.1-Fabric-6.0.3.jar",
       "sha1": "2da733519a0e9c7b79cc4b4194a3b0fe5f42f5bf",
+      "sha512": "93aeb1e4f329e725740edccd2638902fe932ef973dd64dbca60d981756d04d4e8affd93f015caa264e344d13d09029ddcb277df9875b6dc8dc6171330441593c",
       "size": 39917,
       "url": "https://cdn.modrinth.com/data/fThnVRli/versions/xtWiiv5X/JadeAddons-1.21.1-Fabric-6.0.3.jar"
     },
     {
       "file": "NaturesCompass-1.21.1-2.6.0-fabric.jar",
       "sha1": "15bb7a4f27eaa13b755edac496c1c9d502843827",
+      "sha512": "e39a30da8ad209223c508174c267a7cb59dfd78d25cf38dd2a7ac76f783a669fe3407aeaddc05550ef2cbf2614e9886464bef5ba236edb6e8bdabea9fe3035f8",
       "size": 233392,
       "url": "https://cdn.modrinth.com/data/fPetb5Kh/versions/dtrDpgsF/NaturesCompass-1.21.1-2.6.0-fabric.jar"
     },
     {
       "file": "Necronomicon-Fabric-1.6.0+1.21.jar",
       "sha1": "b6ac70d9ecac570f56e75db81d8281976fea1357",
+      "sha512": "0deeb7ed7914994bf274547d7c665be460a27a2526adc00f3708b257bab8b51204dc6c8b3b2259440c57b3ebfeaa3d8ca9e9c4308f0265a041233dbeb5eae2af",
       "size": 37055,
       "url": "https://cdn.modrinth.com/data/P1Kv5EAO/versions/O6odCETu/Necronomicon-Fabric-1.6.0%2B1.21.jar"
     },
     {
       "file": "Not Enough Recipe Book-FABRIC-0.4.3+1.21.jar",
       "sha1": "f7fcc3d8969f0838e32bf8dd0ed17ef46c07a655",
+      "sha512": "7809b60a7564ca518131325a9c40e5ac473f896e8c153a42db0bee7e94717cc9c428c24431645af39a9715cc45160bd03f8442e36cf7edb1a30cf31f01a47fa8",
       "size": 23652,
       "url": "https://cdn.modrinth.com/data/bQh7xzFq/versions/IdupyNOK/Not%20Enough%20Recipe%20Book-FABRIC-0.4.3%2B1.21.jar"
     },
     {
       "file": "OctoLib-FABRIC-0.6.2+1.21.jar",
       "sha1": "e18bf47209c43d2eff882fd906f2cafd887b7378",
+      "sha512": "179c75e7b74da339f87c59c2318c733d15cc17b8bdb9604b1be10fb7d73d1138ae9a4759fa22a8f740707c0fe66bdf26a8eb8d7d40dbfa9479ba1308e3048ad0",
       "size": 543254,
       "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/Sj6w7O0I/OctoLib-FABRIC-0.6.2%2B1.21.jar"
     },
     {
       "file": "PokeMisiones-1.4.4.jar",
       "sha1": "aecafcf05217f41e72300da3072cf0a60fad4c54",
+      "sha512": "9937f683de24256e5e9a6e4184a6215ef4689fbf8504a957b724143e7b16b78a75e46121488529892df73d88188bc7ef9014e91691e5a2e9d9872b3f2f755efb",
       "size": 769872,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.4.4.jar"
     },
     {
       "file": "apokelipsis-menu-1.0.0.jar",
       "sha1": "e2f2808af16f02c223a1c2c6bdbac2ce90cc15ba",
+      "sha512": "4651010dd31fb093ad43ee607661abd4298cb42549ed1078ec2e83b86102966ae0d7bac059bd4d235209e391d93de1414916a9d36ae1b1f8dd0663cc7ede0797",
       "size": 43380,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar"
     },
     {
       "file": "aps_trophies-1.21.1-fabric-1.2.0.jar",
       "sha1": "cc89cf9ddc8f13a9cfbbb5ecfa20201bf7a9e13c",
+      "sha512": "fa74fec4db13dc328f2a014e31c2ed3cc86f49e6e58ed72275eb58a026f26a34cfb9a867858877b056f23881ab8167e85fee380a6d3ac5d89833ec042d4fed32",
       "size": 341339,
       "url": "https://cdn.modrinth.com/data/ZmP6jlh0/versions/B1xcWIqn/aps_trophies-1.21.1-fabric-1.2.0.jar"
     },
     {
       "file": "architectury-13.0.11-fabric.jar",
       "sha1": "18200609d4c3571c4237b50884966f6fd82431ea",
+      "sha512": "53314eb34890b11ad3c06c6f3ba2d01ae1ca756235ce4f0574e4b0544952a2ab3c628c81b521653d6487d62c5dc3055e06fed6367a3a499bafad909512f0c716",
       "size": 600921,
       "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/Pzc2FP5K/architectury-13.0.11-fabric.jar"
     },
     {
       "file": "athena-fabric-1.21.1-4.0.6.jar",
       "sha1": "6f963a936f5e4023ec5f778d9c6f80883fb52c49",
+      "sha512": "07c5e67cba9346059c8004faac0a4554200a8bcaffeca7d924743b905e9d5f8fd81f9514b384264dab34843e8d7c429d1eda8557269263fdccae0ef728abb372",
       "size": 2079609,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/athena-fabric-1.21.1-4.0.6.jar"
     },
     {
       "file": "backpacked-fabric-1.21.1-3.0.5.jar",
       "sha1": "3600ef5726eb7c5d79613ed1c34b39980224482e",
+      "sha512": "f294cbd71b321e6d5f61c5feb870337d148a8f677fc5cacf18e3c12bf15de2ac4f5da06a6d118167b75956a1e9f434819b49a1b9f000b4374d56b3ddcb9db5fb",
       "size": 1285683,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/backpacked-fabric-1.21.1-3.0.5.jar"
     },
     {
       "file": "badgebox-fabric-1.3.0.jar",
       "sha1": "627a4b2a43082a90e38438f6611affdec78ff4c5",
+      "sha512": "57bf8c2e37c43da1708c6535fe05250206e0a2824bd8f37cdf3811fe35d3070b9506dffde1a647e5806da6703c727adea909464cc311603532078f420c65b65d",
       "size": 74534,
       "url": "https://cdn.modrinth.com/data/8J7TR166/versions/1iJ9oDN4/badgebox-fabric-1.3.0.jar"
     },
     {
       "file": "balm-fabric-1.21.1-21.0.66.jar",
       "sha1": "37266aadaed39205f4a3844930e76d2eebb866a4",
+      "sha512": "cf0df4ff300fdd1c7b1cfdb952fbbe0f6af06b87175d8d87bbbb63073d62abe2e4085aea4bd590149fd5906a32f3eb424cb5526cc332937ab449c8f6a9bd41e4",
       "size": 805265,
       "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/EghJxg4h/balm-fabric-1.21.1-21.0.66.jar"
     },
     {
       "file": "cloth-config-15.0.140-fabric.jar",
       "sha1": "5d82342a2df53fd6df712bfdd583a811572918a4",
+      "sha512": "1b3f5db4fc1d481704053db9837d530919374bf7518d7cede607360f0348c04fc6347a3a72ccfef355559e1f4aef0b650cd58e5ee79c73b12ff0fc2746797a00",
       "size": 1157166,
       "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/HpMb5wGb/cloth-config-15.0.140-fabric.jar"
     },
     {
       "file": "cobble-caf-forms-5.1.jar",
       "sha1": "762001529715ce0916067cb4c863d889fe81a05e",
+      "sha512": "0ccb319576e5d4d5957dabf58611625e5d4913c8bdc895174691b94e76eb6e632e7bb33d036920d0e2bb2d7361735e1987d00d8c77631e050c1448338be6a05a",
       "size": 3717526,
       "url": "https://cdn.modrinth.com/data/469QXqgC/versions/1R3Fvu7O/cobble-caf-forms-5.1.jar"
     },
     {
       "file": "cobblemon-battle-extras-fabric-1.13.45.jar",
       "sha1": "8d56d3e943d20f9d22be32e9a9dee5851eb7f654",
+      "sha512": "f6c1a43c3eef81fef56ac4f17d83407f9a80ef08a2d841ab5f3ca3c2a9fb1076f6b0de1747c51a9f942a0516ac467c6d53b30fa2532c78fbdfe5d6ff5290a303",
       "size": 1515972,
       "url": "https://cdn.modrinth.com/data/2iY8VFqL/versions/Sf5W9mRS/cobblemon-battle-extras-fabric-1.13.45.jar"
     },
     {
       "file": "cobblemonfence-1.0.3.jar",
       "sha1": "1e9d94c87cb1d4f7297821b30144ed0a354e8646",
+      "sha512": "aeb40bfc48248eff4db0221d3a038ea3a75aeb840dd1cebf7795b732f301d1a7a73a94917e3d1f37ae1bc6cd6daf9eda2bd81faa48b735a063724bd9faf91203",
       "size": 167581,
       "url": "https://cdn.modrinth.com/data/aCQFwusS/versions/I5fyoqLb/cobblemonfence-1.0.3.jar"
     },
     {
       "file": "cobblemonintegrations-fabric-1.21.1-1.1.8.jar",
       "sha1": "b7d37c92ab4958e720657018c58960535ff1335b",
+      "sha512": "a8feaa65a0563d31bc28c4194141b5748610433672d93b706cb8cdbd3ea63cfda9b74e55f2e0d65ad770a92e508025e06553a62f4da4c406a4465cac9811bf42",
       "size": 385418,
       "url": "https://cdn.modrinth.com/data/NPCfuUI4/versions/gy1AJCQB/cobblemonintegrations-fabric-1.21.1-1.1.8.jar"
     },
     {
       "file": "cobblemonresearchtasks-2.0.jar",
       "sha1": "a9768e7b8b25325f75b65c919b66bc8d7911d743",
+      "sha512": "80836ba68c6be86061f12651c01cf9af50937278173a08ee57f59d8a8ea6f9906e4d4cee31c4476fa582c7c564c391cfdfbf9be62aca3d74f0dabb1a3f1210ae",
       "size": 1345922,
       "url": "https://cdn.modrinth.com/data/zoP5qy7S/versions/BMbNXB3F/cobblemonresearchtasks-2.0.jar"
     },
     {
       "file": "cobweb-fabric-1.21-1.4.0.jar",
       "sha1": "d744244463b0bc0dc53137da28a89fea7474f82c",
+      "sha512": "05007533a5d67284fd039b6a5e577e0eb2bd48b797d067e1f944142a2d69c75fd294ed5ba55b71a97bd1503da1205a1430430fdeb64032d9bd8998a011df4781",
       "size": 418604,
       "url": "https://cdn.modrinth.com/data/dQcfqGbl/versions/RDHSnisj/cobweb-fabric-1.21-1.4.0.jar"
     },
     {
       "file": "comforts-fabric-9.0.5+1.21.1.jar",
       "sha1": "e47d6c2f0213abed8865dfa51ee05dea86c1baa9",
+      "sha512": "617711d65c0ac1ddb8069ed46051c7da5fd7f4a19adbefc1c6d417621d32a4a4929dd60bd76f204045537a151d29f5e518aa7d18d604012ef1f9b62de707530d",
       "size": 914494,
       "url": "https://cdn.modrinth.com/data/SaCpeal4/versions/LUPOTXbk/comforts-fabric-9.0.5%2B1.21.1.jar"
     },
     {
       "file": "configured-fabric-1.21.1-2.6.3.jar",
       "sha1": "7d1f43eb143c528e2431d8dcaf2e3007837ddf08",
+      "sha512": "1009175dd4c1bfc4425194e76535abe93c84ed6058fb8b7e7e7831392c2ef567c79d0bebccda98b1f522856c93067865c4637ef7c45e68cdd62556fa3e248afd",
       "size": 400642,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/configured-fabric-1.21.1-2.6.3.jar"
     },
     {
       "file": "connectedglass-1.1.14-fabric-mc1.21.jar",
       "sha1": "dc2a646fce4691b2f4f73faa8bedcfa52d543bee",
+      "sha512": "83579ae6cfbc6ac8ecb93be7177bf3e3a87f848931fd51befa4a26fcaefd7d1d833ee67b362d2f884bfcf53421ab2dc66697a02e52c52117256e3afd31fccf78",
       "size": 848250,
       "url": "https://cdn.modrinth.com/data/DghO0R02/versions/NnQWcI9h/connectedglass-1.1.14-fabric-mc1.21.jar"
     },
     {
       "file": "connectivity-fabric-1.21-7.6.jar",
       "sha1": "62501d615a3d5192cc1675293fa78f6f11b5e7e9",
+      "sha512": "85af3363e0aefe3fe9bd72552c01dcb3104c8fc648bb884ee63f0d657ff59a21644b064d67f84145d6e7605b947f5342967cdc74de698e5c66510fdbce44abef",
       "size": 198109,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/connectivity-fabric-1.21-7.6.jar"
     },
     {
       "file": "cupboard-fabric-1.21.1-4.1.jar",
       "sha1": "7fc35dc4f683229e1bb2e6c6f71b98b9a666b1c8",
+      "sha512": "045915cc584042167e9a9d54798a0798286cc9c52af3dc28305d4d3261a76b9e29d406682212dad45052a796ed8e5e4d6ec3a2f3b58e80844e5b79e94305b87d",
       "size": 27371,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/cupboard-fabric-1.21.1-4.1.jar"
     },
     {
       "file": "easy_npc-fabric-1.21.1-7.15.0.jar",
       "sha1": "691ee7226d2f20c89efd0b67da4f9d32dae71cfc",
+      "sha512": "c056ebe781797c7db04eb448a44484436a255eef8ccd179053f4dc540604ab6f12ce09ca6a6a6749e3ff71b209ac55feb9db681c431aba8976a3cda9d5082a1f",
       "size": 3207174,
       "url": "https://cdn.modrinth.com/data/Epm6R3P2/versions/Kp1krim8/easy_npc-fabric-1.21.1-7.15.0.jar"
     },
     {
       "file": "easy_npc_bundle-fabric-1.21.1-7.15.0.jar",
       "sha1": "5857fedd3bf5bd3402a89b66c8d4e5580a296cfd",
+      "sha512": "b3580095721d8c484628deabed1f50fd49aac052ebec651326f0535470b55d85493a0ba289508b53100a498c24798e450a23aec770bb914ae7785824d47155de",
       "size": 25261,
       "url": "https://cdn.modrinth.com/data/CgGEe1h3/versions/hBaCIEAp/easy_npc_bundle-fabric-1.21.1-7.15.0.jar"
     },
     {
       "file": "easy_npc_config_ui-fabric-1.21.1-7.15.0.jar",
       "sha1": "dbc5d4513f2e5ed3999955977651836f48a2199a",
+      "sha512": "82b839dba0b2d98a5aa7c2d330223a3d4722a37fef8f1c5f042ee96157e3d1b477ab087d1723e107209e0d8df1c8dd92bfa8870a094512829a7bc184ea54ece9",
       "size": 1197196,
       "url": "https://cdn.modrinth.com/data/uTGjf7vA/versions/n8rFK1Yv/easy_npc_config_ui-fabric-1.21.1-7.15.0.jar"
     },
     {
       "file": "elevatorid-fabric-1.21-1.11.1.jar",
       "sha1": "3f34470781f4b5cbeb1e83a259cceae616077b67",
+      "sha512": "64c3032475996a5478dae85205a42708d305cde6de98a7aaa450e41e698cfff1155fea593568f4de8bf0c17e685c671fc587f8fed1ca709456e4972b96752f61",
       "size": 185086,
       "url": "https://cdn.modrinth.com/data/hi2dSXTu/versions/IYcefR0v/elevatorid-fabric-1.21-1.11.1.jar"
     },
     {
       "file": "emotecraft-for-MC1.21.1-2.4.12-fabric.jar",
       "sha1": "9be2a237e27f20d2d00f0036a8be53d7d66c5df5",
+      "sha512": "c5b7211468e657c321e574f5179547407ad6a4d82c290dc747fde500e2c3b4e8b49bff1ea95da4ff2111e228c86edf72d6ceb084fbb9c2ec01f3d6d7c7424ae0",
       "size": 863362,
       "url": "https://cdn.modrinth.com/data/pZ2wrerK/versions/daqt5qcK/emotecraft-for-MC1.21.1-2.4.12-fabric.jar"
     },
     {
       "file": "fabric-api-0.116.17+1.21.1.jar",
       "sha1": "810b2b0195371a012906241d8b85a32a1d6de53c",
+      "sha512": "98c478217da19181f0e4df3ea6c2da6bdbda271c7544a4aea048513a49b444f1ff5b71dc0df6303017c48e8ff69b7bb6af6179bdf0d0e09ab3c1ee08411857a8",
       "size": 2452735,
       "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/Mys3P7lK/fabric-api-0.116.17%2B1.21.1.jar"
     },
     {
       "file": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
       "sha1": "f1d4ab6ecd54d9782521333a87eb50724ecb03e0",
+      "sha512": "7fb475c4a7e7bdf8d0aca4b5798a58a354c51443d5b1fbde3e8cf34dfbf7191ef4238b5f07d08ec9490ec180b371624523326c3ad45d4ed2b2be541de9407e5d",
       "size": 8142878,
       "url": "https://cdn.modrinth.com/data/Ha28R6CL/versions/SKW1BTL3/fabric-language-kotlin-1.14.2%2Bkotlin.2.4.21.jar"
     },
     {
       "file": "farsight-fabric-1.21-4.5.jar",
       "sha1": "3d7ebb35ac03724ed2c73d399392228d1de40159",
+      "sha512": "3f0d22a181136b6a9cc0fe627d70391c26362bce6533564bdf9be5fd33c3a47274ec5cbdd576be2001f2da73d06324394d2b7a6132eace92afd3d194df2466a4",
       "size": 371550,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/farsight-fabric-1.21-4.5.jar"
     },
     {
       "file": "fastpaintings-1.21-1.3.1-fabric.jar",
       "sha1": "cc94ed7feefa15b43ce58612b6826632ba92cbe3",
+      "sha512": "43452955e1639bf6e682e4c5cecde81d2634faefd57141657d2152ba79e53a3f402b0369c2cb9f4807289b05418a3a518855517439afc8a8d02bd5fb04b7de25",
       "size": 156680,
       "url": "https://cdn.modrinth.com/data/z3TzcquW/versions/8xe5ZhgX/fastpaintings-1.21-1.3.1-fabric.jar"
     },
     {
       "file": "ferritecore-7.0.3-fabric.jar",
       "sha1": "a8a6a34fcda177da2828cedef44e0e538cf78aad",
+      "sha512": "3ad31620fac4ff44327dc7dedbe162b2d978f3f246dc16255a6e400ce9592a0d326fe36a626f3c1bf30a11f813093cbb4dcc107af039cff724d0cdf648541fdf",
       "size": 123450,
       "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/sOzRw3CG/ferritecore-7.0.3-fabric.jar"
     },
     {
       "file": "framework-fabric-1.21.1-0.13.11.jar",
       "sha1": "87ce6c5c312da043e823e9407a04d307b5974d06",
+      "sha512": "de4b0725805f1cccfb6ba9a227294113bade47d843862c77daf0f2390a826064828c03ce1968f1ffa1f5ba5e8840783c72c7f1607cb71c41399aa5c696b74a96",
       "size": 1647903,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/framework-fabric-1.21.1-0.13.11.jar"
     },
     {
       "file": "fusion-1.3.16-fabric-mc1.21.jar",
       "sha1": "ce69d9c427e17d15ce99b43a2c5cffc4cd5dfa30",
+      "sha512": "0a4d2a195153cc41cd070908000283d1e6b3df2b5607605c965a7e80f3329270ad13593c2b1210fca0a6675ca9c0ef7adeb22535dfc2cfe16ffe48161b0358e9",
       "size": 913396,
       "url": "https://cdn.modrinth.com/data/p19vrgc2/versions/LQSMRNBf/fusion-1.3.16-fabric-mc1.21.jar"
     },
     {
       "file": "geckolib-fabric-1.21.1-4.9.3.jar",
       "sha1": "b3a6aff6ffff34d20ffde1faa640bcf17ff4b646",
+      "sha512": "e26a1c15d10cf5c1234309dbb82fb23d4783b2594b2454b16a9c964fab9e9912be66904b03eb01ebb94dada298d98de18d66f5e3f4173f771579b56e13f7da16",
       "size": 664463,
       "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/tmxM7U4W/geckolib-fabric-1.21.1-4.9.3.jar"
     },
     {
       "file": "jei-1.21.1-fabric-19.64.0.453.jar",
       "sha1": "d292061f9a55e6e88193549009ef9718c021cd57",
+      "sha512": "29644ec17c6c5ba787d55042f4090e736776024c287ef7e439d98383d5f8ebb7aa93e0aecf7aabf4d785f7cdbaf9967530ec3b05f84415611f7738a14df4b08d",
       "size": 2415684,
       "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/3eOKpuhg/jei-1.21.1-fabric-19.64.0.453.jar"
     },
     {
       "file": "konkrete_fabric_1.9.9_MC_1.21.jar",
       "sha1": "c521e23a8be17a941f4f95a76feba9df5e3de5d0",
+      "sha512": "6d4c65a0a9d51b2b956ba61f926f642e901573c9621289cf7a387996370fcab23c69ee6e698596965e9bd68b86b1e96e44295172a880a979105347719228ecf8",
       "size": 786695,
       "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/Qvrc7DuG/konkrete_fabric_1.9.9_MC_1.21.jar"
     },
     {
       "file": "krypton-0.2.8.jar",
       "sha1": "73e792eb5f120787becda4b87b6ff18b26caea50",
+      "sha512": "5f8cf96c79bfd4d893f1d70da582e62026bed36af49a7fa7b1e00fb6efb28d9ad6a1eec147020496b4fe38693d33fe6bfcd1eebbd93475612ee44290c2483784",
       "size": 161045,
       "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/Acz3ttTp/krypton-0.2.8.jar"
     },
     {
       "file": "lithium-fabric-0.15.4+mc1.21.1.jar",
       "sha1": "7d82a004403b7780d4443d8e40361a55cfd0ae63",
+      "sha512": "182064b00e6315e2255b857eaab8eb759e6b042ebd4cc8b855ff0d93f875a5a7188fac49f878d7b29d4ef7e6b6341190ad7f6f6f39f4a6d2c62003468b08e4c6",
       "size": 797454,
       "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/N08Z8wog/lithium-fabric-0.15.4%2Bmc1.21.1.jar"
     },
     {
       "file": "lootr-fabric-1.21.1-1.11.38.127.jar",
       "sha1": "6671786d4c36a33dcefff85d757022c2a8ed535f",
+      "sha512": "6a0d50423c76740b3da18853af743d697127cd38a83b98b363305aae0cf74a18fe9b61a68ffe25498232344fe2d1b325fd960396ae49135f59458ea1ec6efab1",
       "size": 1111591,
       "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/nar56EsW/lootr-fabric-1.21.1-1.11.38.127.jar"
     },
     {
       "file": "mezz_config-1.21.1-fabric-0.6.8.jar",
       "sha1": "e9351cf60199e3a2db427342f33a18949c0dc67e",
+      "sha512": "6d29605f5456934d413f99748ee6551f2bbc72242be89c7c6e9f62c9748106e6a5a079df77d9bdecd1f209f5b04ba21435cece2bd0c9c35d9e9cab3be2899f17",
       "size": 372634,
       "url": "https://cdn.modrinth.com/data/7tEfOcA7/versions/Q5Yns1Qe/mezz_config-1.21.1-fabric-0.6.8.jar"
     },
     {
       "file": "midnightlib-fabric-1.9.3+1.21.1.jar",
       "sha1": "6595a90351e827b99b36fa2c6ef1dde1a4c8fdf1",
+      "sha512": "bfab6bec9dfe4800237861df4d1749cc42770a81599d7a4f2c3dd83efca91347faa113240c63e20c1135593cce6dbcde517512083c4dfd5efab12df0f4f95e69",
       "size": 58781,
       "url": "https://cdn.modrinth.com/data/codAaoxh/versions/as2ZKoB1/midnightlib-fabric-1.9.3%2B1.21.1.jar"
     },
     {
       "file": "modernfix-fabric-5.25.1+mc1.21.1.jar",
       "sha1": "4ab39e9c736e7204146792c545ec5b29fc0a3872",
+      "sha512": "dc67d6e023e1fcdeaf7837917c477cba212c611dfc2463c6ea021319c644087c79b477e0ea8194e113ddd7332fd5c6d82baa47c291eaac7f4a86252507b4e19f",
       "size": 471258,
       "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/NnNX8LBn/modernfix-fabric-5.25.1%2Bmc1.21.1.jar"
     },
     {
       "file": "moonlight-1.21.1-3.7.2-fabric.jar",
       "sha1": "7db7c0999fb29579790edae83292622cee933e20",
+      "sha512": "084bf751e65479556134ead47944953db6d0be5acee69210c1e38534ba049a132ea4813bd6ba9a9ca16063a18b06cdf92d9d722a11398de4cb751322f45ca781",
       "size": 2325731,
       "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/fWlk6YEB/moonlight-1.21.1-3.7.2-fabric.jar"
     },
     {
       "file": "owo-lib-0.13.0-alpha.15+1.21.jar",
       "sha1": "5042f3b15df7cdbb058436bb105aedf826f39d3c",
+      "sha512": "939299e72209f8e5a4937fbb2290ed63f7bc5caf2677e6d9fbea8be8049d5ad39c1173f0b61abae7cfddcf7cceb9802f7e2d60b9e8a0fdda399fcbad8f0ac5b4",
       "size": 1963544,
       "url": "https://cdn.modrinth.com/data/ccKDOlHs/versions/m3XmDd8j/owo-lib-0.13.0-alpha.15%2B1.21.jar"
     },
     {
       "file": "placeholder-api-2.4.2+1.21.jar",
       "sha1": "aa1b9a49f9f190dfe4825c502b150817dd2998c3",
+      "sha512": "fc13d3a5c048dbaab86318edaf8b6c6b46ef9f1d367e8f063d19f5a9b0da66c5ae419d92c8c4608edc89a01eb44d91ffcf017fea73f39b222cbd85e82f70a233",
       "size": 232325,
       "url": "https://cdn.modrinth.com/data/eXts2L7r/versions/U5bhVym2/placeholder-api-2.4.2%2B1.21.jar"
     },
     {
       "file": "poke-clothing-1.2.2.jar",
       "sha1": "195201a8ddb31f21b7224cb68cb3ca9893e8e34a",
+      "sha512": "d407353f95400c38504902f1b9030a5a86c678e126bd8674e1c4a143a9910c319fab92f62a87539cc6ff3ac4633b680401330006390b3b2d115cdbdc8f2bca93",
       "size": 325615,
       "url": "https://cdn.modrinth.com/data/enyi2m8u/versions/bmLnQ5iN/poke-clothing-1.2.2.jar"
     },
     {
       "file": "pokeblocks-1.5.0-1.21.1.jar",
       "sha1": "a767426171b3085775b57bfd53b66fe7fa6edd88",
+      "sha512": "470e811c40f1e37ec6b405139a212a053598b554f2845108a75df575ec5d6c29e89afb309222b54a6724aab4e7fb25df41a1357d0068fb16ba591cbe6077cdfa",
       "size": 1775159,
       "url": "https://cdn.modrinth.com/data/hnOfcjSq/versions/qlp66lU8/pokeblocks-1.5.0-1.21.1.jar"
     },
     {
       "file": "pokegambling-1.0.0.jar",
       "sha1": "283881690c8784248e3bc684b8900fd703073d53",
+      "sha512": "9dc9640dde7b2be82de7ab16ab47bbeb44be9d6562dbf36f1cae4c5ac4aa1043a06bdfe179d350c0a18fd86cdb9a86b19df280fb550dfbe9dd833859d190ecfe",
       "size": 2397507,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokegambling-1.0.0.jar"
     },
     {
       "file": "polymer-bundled-0.9.19+1.21.1.jar",
       "sha1": "15a58f43a672ed486bee4f7983ae8ff566a6b5e7",
+      "sha512": "6a804059be62ed312f6f3c8ef31fbda5889d2a0d088891966bf5a9ae18756198617b7fede322f596b1c98c0068638e28d9b6099037e00eca32a864f3441354cf",
       "size": 1705944,
       "url": "https://cdn.modrinth.com/data/xGdtZczs/versions/xqZ9fctS/polymer-bundled-0.9.19%2B1.21.1.jar"
     },
     {
       "file": "polymorph-fabric-1.1.0+1.21.1.jar",
       "sha1": "e4f9ec40058c07f263d19b21e438b5204ea4dc22",
+      "sha512": "701cbff45976dcc5e8c480582fdcfaf20565d17b763a091e551debd343c37430cd711844d3d11b3f1abb236cca56ae907045b64c6ac5f70553aaa98e4fb69527",
       "size": 320928,
       "url": "https://cdn.modrinth.com/data/tagwiZkJ/versions/Ng5Y6KVo/polymorph-fabric-1.1.0%2B1.21.1.jar"
     },
     {
       "file": "proteccion-zonas-1.0.0.jar",
       "sha1": "76a0b630515b04239b2f805610be9604d565aa4a",
+      "sha512": "8804d1737cb299427fd6c352b374a42ccde7569b84ae2a0bfe1084bc63a831dd060f236b9a24597e9af39028da4dbb208b29a6d07dd24f9cf462f81799d68407",
       "size": 217175,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.0.jar"
     },
     {
       "file": "puzzleslib-v21.1.64-mc1.21.1+fabric.jar",
       "sha1": "3ba4d1f1be35673b0e2be1961350c378db461923",
+      "sha512": "23321d4dfdc9f26083a6006074ba151f2dbc2e8c731d79f245f6546221d802c780dbd45824cae8bf85c65b6fa6890b8aa736698ade46932a281ff372f75309e6",
       "size": 1507546,
       "url": "https://cdn.modrinth.com/data/QAGBst4M/versions/SOu6522s/puzzleslib-v21.1.64-mc1.21.1%2Bfabric.jar"
     },
     {
       "file": "rctapi-fabric-1.21.1-0.16.2-beta.jar",
       "sha1": "3514532fea28e2e1160894428302eb1000af8459",
+      "sha512": "e53f223229454f101a5cdc25c0a85a964b680535b4f85b490f7bca0e9481309e4db40c029be0fd2ed6473c9f1b58657c5dc84e01d16f66e85ddce232abbb02b9",
       "size": 267864,
       "url": "https://cdn.modrinth.com/data/CBfM2yw7/versions/DoQNDXAU/rctapi-fabric-1.21.1-0.16.2-beta.jar"
     },
     {
       "file": "securetrade-fabric-1.3.0-1.21.1.jar",
       "sha1": "0da131d3ebbc47ff2a3827afea8616aaa4d58816",
+      "sha512": "4fd600c80c8367252d7ffc7b83406c4da184283f0f23b1657c60af44900bfafe6ef5e4428185f691eb6f9d43aa772c400af9c00402c81aa87b539e14a0b8709d",
       "size": 323297,
       "url": "https://cdn.modrinth.com/data/ptgA3PQG/versions/hz8618ME/securetrade-fabric-1.3.0-1.21.1.jar"
     },
     {
       "file": "smoothchunk-fabric-1.21-4.1.jar",
       "sha1": "b367bd9aa8709c09bb26662aeefd0d8bc871d3f5",
+      "sha512": "7baa8a11f588368df10e560ba9e1239f100232ec0dc2d97807d3028d805eb838291e8959a30a088df9d13b1ae2afb1e4862548f4861620dbcd8285e313223013",
       "size": 13769,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/smoothchunk-fabric-1.21-4.1.jar"
     },
     {
       "file": "sootychimneys-fabric-1.3.5.jar",
       "sha1": "f7ffb5d252f712b2de831d255cf11ef23acbaed9",
+      "sha512": "f9966fad9ea954025012bc410ab30ae0b2ac3305e03a0cf532b56e57539ed2bad7ad1b4036b1b225bd5fcb0eec56278b304c83f7523fc14f832761a43251d4a7",
       "size": 166938,
       "url": "https://cdn.modrinth.com/data/b3w1XM9H/versions/sUuTA9z2/sootychimneys-fabric-1.3.5.jar"
     },
     {
       "file": "spark-1.10.109-fabric.jar",
       "sha1": "eff42cbeee6fe9a7f3c57031c23200256366dcd1",
+      "sha512": "367f574f6d28432067f09737577d799ced9c309c1725da1d09ffdfe10eacf461a66967205cc938131afbcc8b8255c8c25f8aa516e15f061c6481b6e7b8c94250",
       "size": 3609981,
       "url": "https://cdn.modrinth.com/data/l6YH9Als/versions/cALUj9l1/spark-1.10.109-fabric.jar"
     },
     {
       "file": "spuds-shops-1.21.1-1.9.0.jar",
       "sha1": "fc52428ee2055519eb23fde20fa7a75c2ac269a5",
+      "sha512": "cddaac845a66e8b9b22891837f2e153c234b74e03626e93ee879e96ed9f883fa608507f471d87b522896a9b5fc48ba9be4665054670ef183e9a354c891fcd31e",
       "size": 1037914,
       "url": "https://cdn.modrinth.com/data/sHFbDnFN/versions/E9OkDfuk/spuds-shops-1.21.1-1.9.0.jar"
     },
     {
       "file": "structurify-fabric-2.0.43+mc1.21.1.jar",
       "sha1": "322de784f5719927132f87e09c1eb0d2a2a20a39",
+      "sha512": "c02ba559bc317f865398ca1dc60b0a111787cde42254c1ac93c56406a99353e89d56abaaa8df573067b60d25ac201d1ea7ecbb1e3f4d8ee405002585a763a6e2",
       "size": 539339,
       "url": "https://cdn.modrinth.com/data/yz7AM2zx/versions/KAN9hrFX/structurify-fabric-2.0.43%2Bmc1.21.1.jar"
     },
     {
       "file": "supermartijn642corelib-1.1.25-fabric-mc1.21.jar",
       "sha1": "3339afb26de57eb3b83aed326e6cab5c1af1e490",
+      "sha512": "04da165777d7e85fe47456a7c8c779118a65471293f8ec797c6c3156583d24c0cbe5babddf5e1d1bf9057b11aee6b7d581606821977f854bcefef74eb077ff74",
       "size": 622551,
       "url": "https://cdn.modrinth.com/data/rOUBggPv/versions/ImY2F2fz/supermartijn642corelib-1.1.25-fabric-mc1.21.jar"
     },
     {
       "file": "trashslot-fabric-1.21.1-21.1.11.jar",
       "sha1": "1e58a95ebfd9c2078fcba4100f1afa80512c9f94",
+      "sha512": "1217e200972ce80b5023ae52a8d29eaf136f64fc1bf2a5e377b91a257282ced9501f81c3a853be1e1932e7cf5ec7acdd4f83195aa3596348fde5d1f0a71689d3",
       "size": 78842,
       "url": "https://cdn.modrinth.com/data/vRYk0bv7/versions/apJG54CW/trashslot-fabric-1.21.1-21.1.11.jar"
     },
     {
       "file": "voicechat-fabric-1.21.1-2.6.24.jar",
       "sha1": "5abe8af0b85acc94506caa0a36ccc59836956dd2",
+      "sha512": "a708962875ef3beafe4eeeea0d7984c1d810fce23544e1615f51d0f5900e2d65633056bf62b793bc9486ea0ef117d34b18d5cac461870e35677c51c979519eda",
       "size": 5386871,
       "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/6PKCVne5/voicechat-fabric-1.21.1-2.6.24.jar"
     },
     {
       "file": "waystones-fabric-1.21.1-21.1.46.jar",
       "sha1": "2ef078e0e3409e3a97ec3fdc0cfd7db7ca34bc40",
+      "sha512": "b301a1afb7e13fe8a4a28330b0bd8c0da3eb829d85e50fc04fc86868388ecf3222d24ce49a361bbac2153ce3abf792d7c0dc91fc94022f5b4f5f214a0ef0e183",
       "size": 1248666,
       "url": "https://cdn.modrinth.com/data/LOpKHB2A/versions/nSAwjAk4/waystones-fabric-1.21.1-21.1.46.jar"
     },
     {
       "file": "xaerominimap-fabric-1.21.1-26.6.0.jar",
       "sha1": "5fbb03dd3f22c0c3d5466d1366222d7d277a8df3",
+      "sha512": "bad6dfbdfa4fa83c10155380e44e7c7a181c86144cbb377548a3df94e1fdadb88a27dbf18dca89bf8748a49a1c485a03b458e1f74a7881029763297106ed26b7",
       "size": 2234556,
       "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/W4dcLcUs/xaerominimap-fabric-1.21.1-26.6.0.jar"
     },
     {
       "file": "xaeroworldmap-fabric-1.21.1-1.47.0.jar",
       "sha1": "db7ad23fe512dbc13a8286844fd9277c08a7ef5a",
+      "sha512": "7bdf96a45ab729ad5b8c56b1de421ab8c94006a65e62f21e45a4733a38a7a1655b8be03ef3bdfcdc52401c66894b9f4f80fc28b41d47a787a9fa45094629f5c7",
       "size": 1456162,
       "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/XIR7GzC3/xaeroworldmap-fabric-1.21.1-1.47.0.jar"
     },
     {
       "file": "yet_another_config_lib_v3-3.8.2+1.21.1-fabric.jar",
       "sha1": "e075503382f70715ab9fc6f66d603397a86eb3e0",
+      "sha512": "353169f85fa63e73ce9bdd0d4ddce54e3cbc4d71153a93c982f74c68fd93325986663f94fc2f2b10f4427e8b15a0485c608c5587b3840d933204b50ea4cb6d4c",
       "size": 1131265,
       "url": "https://cdn.modrinth.com/data/1eAoo2KR/versions/o3cDn8Vp/yet_another_config_lib_v3-3.8.2%2B1.21.1-fabric.jar"
     },
     {
       "file": "zconfig-1.0.0+1.21.x.jar",
       "sha1": "cb9fe03e6f64b900317d7edf305c1d7d43412a60",
+      "sha512": "706819e56672a79a814a6b04a96cf5be585679c093a3027f5a2652ca60678c9bd24d5596fa7e373447e582a1360ab4c8540b023ca744ebabca1be426166d0b84",
       "size": 405552,
       "url": "https://cdn.modrinth.com/data/4qmvXRB9/versions/yD19P1nG/zconfig-1.0.0%2B1.21.x.jar"
     },
@@ -825,6 +990,7 @@
       "file": "CustomSkinLoader_Universal-15.1.jar",
       "url": "https://cdn.modrinth.com/data/idMHQ4n2/versions/yyYvYfZI/CustomSkinLoader_Universal-15.1.jar",
       "sha1": "324e6921ecd576e44875981466e7f22170b6541a",
+      "sha512": "1c3ee525200d3dff69b19d4667f0c40155d0a8eedcfed4749ec8883fcf169bcf1123942a87ca73ecf46002fded35ec653bb902b0d3900c42f4eab0323793daf2",
       "size": 222917
     }
   ],
@@ -838,6 +1004,7 @@
       "file": "AdvancementPlaques-1.21.1-fabric-1.6.8.jar",
       "url": "https://cdn.modrinth.com/data/9NM0dXub/versions/g0SNjiMq/AdvancementPlaques-1.21.1-fabric-1.6.8.jar",
       "sha1": "e3a5a514bbcc18e2c4e3bc251eb9f48e64217405",
+      "sha512": "32afe425aecefaaca94abedec39d5a5bfaaa7361a0f36e92577ff70d4003cf9587750213b83693da0da8716f5e2da6e7f68932cc5c19f9ad330977144ab355b1",
       "size": 195505
     },
     {
@@ -849,6 +1016,7 @@
       "file": "AmbientEnvironment-fabric-1.21.1-18.0.0.2.jar",
       "url": "https://cdn.modrinth.com/data/DyTvM1dv/versions/TsLZwxGv/AmbientEnvironment-fabric-1.21.1-18.0.0.2.jar",
       "sha1": "51d00c5342ac128dbab28f7efbf428e1fe2519d5",
+      "sha512": "cba802b05bc139732d15a839eb8983e5a083df9c1c6b3d65a07354dd68351b6cc80e76a14ce8e509d80b516f9683b92e4526cca03c988b5e86478c0d4ea91af2",
       "size": 52331
     },
     {
@@ -860,6 +1028,7 @@
       "file": "BadOptimizations-2.4.1-1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/S2qthD5S/BadOptimizations-2.4.1-1.21.1.jar",
       "sha1": "1461d8e46391efd32a3085150e86094c9f6f5c9d",
+      "sha512": "2b66428bd98bd5ec0e09f2ec6af801cefb7b9b99cc4f0993daeaffe8d0ccc5ee0c2a73e9f38d4f92540ead0181704d2c9e946837ec05cf710fc3b20fce3b0cac",
       "size": 283566
     },
     {
@@ -871,6 +1040,7 @@
       "file": "BetterPingDisplay-Fabric-1.21.1-1.1.1.jar",
       "url": "https://cdn.modrinth.com/data/MS1ZMyR7/versions/xCWQ8iLW/BetterPingDisplay-Fabric-1.21.1-1.1.1.jar",
       "sha1": "534ba30ec8a7ea23048a507d02a651b6ddcaf523",
+      "sha512": "04bca229ffd42eccf1d7d0fc05c02f1a8a5cde20b263ed7b72a3cf7557e8606b6f78192f0f4e99bb88eaff3d48612e248762cdbbb5f5bb02315ee4d7b86a585c",
       "size": 14850
     },
     {
@@ -882,6 +1052,7 @@
       "file": "BiomeParticleWeather-5.3.1.jar",
       "url": "https://cdn.modrinth.com/data/XH09j5fH/versions/ISWQQ16Y/BiomeParticleWeather-5.3.1.jar",
       "sha1": "7ae636b7422d0a68c40ba46afbdffc9e4a38162a",
+      "sha512": "d8aa537ec4122a48286820530a4547644a75fc8ab8f49f45633f22c532427d05b71535b3373e86ca36b4683a54afe29d29b24003df7afc8028e364d5041c6611",
       "size": 278669
     },
     {
@@ -893,6 +1064,7 @@
       "file": "chat_heads-0.15.7-fabric-1.21.jar",
       "url": "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/5t3tM2L3/chat_heads-0.15.7-fabric-1.21.jar",
       "sha1": "5f37d428e0cc5ff08ed73a21ee11af0dde4105c2",
+      "sha512": "2d34ad4031fcf9f8cef8e88d3a69ed2c2d8e0ad32c5571f551e82f045a17c20ed896771c9cd731c8183a4a9134141172a4db733684adfb35e789237d30fec0a9",
       "size": 86944
     },
     {
@@ -904,6 +1076,7 @@
       "file": "catchrate-display-fabric-2.12.3.jar",
       "url": "https://cdn.modrinth.com/data/vADO40xp/versions/rh5xmGEe/catchrate-display-fabric-2.12.3.jar",
       "sha1": "03b4ac960b70b0ad33ef9cf942fe7ff504f0a00a",
+      "sha512": "b933b0914a17695542560885b85d7dd1d5c315f86793ae4bc155394d2d100386c6bd8be67c97321a3a657684feb3a05db8ad38fbe8bd281ba2892e77ef890f94",
       "size": 293930
     },
     {
@@ -915,6 +1088,7 @@
       "file": "cobbledex-rei-emi-jei-fabric-2.29.0.jar",
       "url": "https://cdn.modrinth.com/data/qekxLrOP/versions/c03nfIwP/cobbledex-rei-emi-jei-fabric-2.29.0.jar",
       "sha1": "16975f551413520c39ded7e21e483b6a5d578741",
+      "sha512": "f17407922fd07cd095a2b37e9dca3c6c575d9cd964d5bbd9ef1872b327b0f4da9f48b080926f37c5ef2c2f027f6ed30b24220e5f2cc300d9f6a1fd358d2a9a34",
       "size": 5418984
     },
     {
@@ -928,6 +1102,7 @@
       "file": "Controlling-fabric-1.21.1-19.0.5.jar",
       "url": "https://cdn.modrinth.com/data/xv94TkTM/versions/hGJDoW2W/Controlling-fabric-1.21.1-19.0.5.jar",
       "sha1": "22d2407311298d0185b606aa1dd03ae33b98dff3",
+      "sha512": "2b172371037bdac4d37332f1fcfbd09c6e083524ba02ea62d980aab937c79cef4eeeea4e05353cbb0428dcb1d31f04ce0f6f148619d15db74587b983c6d04bc8",
       "size": 83679
     },
     {
@@ -939,6 +1114,7 @@
       "file": "cullleaves-fabric-4.1.1+1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/GNxdLCoP/versions/b3VxU7eO/cullleaves-fabric-4.1.1%2B1.21.1.jar",
       "sha1": "e1f494684b6ee9d3c8e50a34002c32331b3ffd0a",
+      "sha512": "43389205cfdc35da3fb07ab22284a0a158e8b80dda888be5b3b742280670a55ee0df79cc45f23081d8b378a287c08109b51d220ef01dd6e4f239e7939e542ce8",
       "size": 92108
     },
     {
@@ -950,6 +1126,7 @@
       "file": "dynamic-fps-3.11.4+minecraft-1.21.0-fabric.jar",
       "url": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/GBH14HiF/dynamic-fps-3.11.4%2Bminecraft-1.21.0-fabric.jar",
       "sha1": "c0ee92c6d8a48e077aa9b02f3470619eab17d59c",
+      "sha512": "42c7043517889274f2932f257a78d0a67c22f2bebb1385ab4d0ba7936da2163e907d63f22bfeed5126342b568ddf4d7bc576ab6e76401a07d20a4978ba61bf20",
       "size": 217532
     },
     {
@@ -961,6 +1138,7 @@
       "file": "enhancedblockentities-0.10.2+1.21.jar",
       "url": "https://cdn.modrinth.com/data/OVuFYfre/versions/HBZAPs3u/enhancedblockentities-0.10.2%2B1.21.jar",
       "sha1": "d81359d77fc7c5437f3e83e519dc2f869300f0cd",
+      "sha512": "60e01db603fcf1392c0cd5c3ce742e568f7d445d83fe60828b21f546e7d29fb6947231f22d28e29b07f4bdcb767b6dc2a2398b4decea665ecba1166690a44d49",
       "size": 201157
     },
     {
@@ -972,6 +1150,7 @@
       "file": "entityculling-fabric-1.11.3-mc1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/yllJFBpU/entityculling-fabric-1.11.3-mc1.21.1.jar",
       "sha1": "5a65a3944e32cc57b73b0f208d15d16fe9df4ed1",
+      "sha512": "51cc760b886f53a8469f5f87098688c8e00a70e9499f4146908f676dc95c78bbfd6de6ddab124e5ba8c1057335c3727c24243af2807497c6e4b05cb2da811364",
       "size": 1519243
     },
     {
@@ -983,6 +1162,7 @@
       "file": "explosive-enhancement-1.3.2-1.21-1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/OSQ8mw2r/versions/LEeJnb8j/explosive-enhancement-1.3.2-1.21-1.21.1.jar",
       "sha1": "07725f58e05d46e1a3d9bb774e6b96c6fbe5dcb5",
+      "sha512": "57692e93c1c8b331884c63e213e3dac5cb19ce2f3bf818f6db1c2cbcdff1d1b8a5ea107f01c6bca79882962df6cf8332a96c5e1adda864345371faff7a6d747a",
       "size": 114621
     },
     {
@@ -994,6 +1174,7 @@
       "file": "fallingleaves-1.17.1+1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/WhbRG4iK/versions/Y0zS16Bk/fallingleaves-1.17.1%2B1.21.1.jar",
       "sha1": "5210b4cb359a95c53580b1399f98e51ab0967cc5",
+      "sha512": "a2e89d23f25fc7387f68e1055325367fd8a01d4267ea5f2612edd83b09948bd74cdc670e1397dcbcb91f2b599d46ece4f51c076fd0c364920228df0862f6acab",
       "size": 170056
     },
     {
@@ -1005,6 +1186,7 @@
       "file": "FpsReducer2-fabric-1.21-2.9.jar",
       "url": "https://cdn.modrinth.com/data/iZ10HXDj/versions/9ewqcOwy/FpsReducer2-fabric-1.21-2.9.jar",
       "sha1": "9219d7f657f4adb61315cd15023265d1070d24ca",
+      "sha512": "b4f5c1192c0756ee9226b6cdfa230c49efa5049c9570a9c3f5e7d14250716600e9cc630fe4cf4c26334cc09bfb97705a4f785ad64d7262c1b6394de508c2423a",
       "size": 124879
     },
     {
@@ -1016,6 +1198,7 @@
       "file": "GymBadges-1.1.jar",
       "url": "https://cdn.modrinth.com/data/HnePtkev/versions/NQZTUhfS/GymBadges-1.1.jar",
       "sha1": "2d4befdd51f8b205668e50dceafaf5e2aae287b5",
+      "sha512": "a10d7215ae03d160fb6c88b48f3bb14f032005b6ce89b5e6fef34b8c1a47eb1c0e14ecaf1f961c24617ce2eb9accef7f3389d12697369f6437260b6c6f1debb3",
       "size": 77360
     },
     {
@@ -1027,6 +1210,7 @@
       "file": "ImmediatelyFast-Fabric-1.6.14+1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/5ZwdcRci/versions/7XKnsIC8/ImmediatelyFast-Fabric-1.6.14%2B1.21.1.jar",
       "sha1": "023805be7d701b9769e987449d217c557de5f848",
+      "sha512": "d3f2748ac2b51548157d0acf9d44e99ab786beab5322cbc452ad7999b187ead2a4ee6bb2aee1a179dc72dbb7bb2b3945b38c529acee454fe4b526648eefab0b4",
       "size": 340166
     },
     {
@@ -1040,6 +1224,7 @@
       "file": "indium-1.0.35+mc1.21.jar",
       "url": "https://cdn.modrinth.com/data/Orvt0mRa/versions/Z8VpxxGh/indium-1.0.35%2Bmc1.21.jar",
       "sha1": "1bf4b5db91f4e6d7a4f94fe2e96525d22df1cacb",
+      "sha512": "5f5e8a6ce29e6faecf442fe1fad76a3dd3631d83daa30423ba5cdb2cacf7efd92c16f05b65c3270faa23e4a803f392db9af40a030b81ea898550eded74ea8706",
       "size": 105000
     },
     {
@@ -1053,6 +1238,7 @@
       "file": "iris-fabric-1.8.14-beta.1+mc1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/bAo1Qhte/iris-fabric-1.8.14-beta.1%2Bmc1.21.1.jar",
       "sha1": "6776c0340845887477bfa463acc736ce7fcb6de5",
+      "sha512": "a7fbb629793c52f0be8b049f787cb598879239b1ad8e1de62e103c8b9efff140e3232b93ef1f14e505d262897d8cf9505b1126396429ad4056bff969c8674e52",
       "size": 2791343
     },
     {
@@ -1064,6 +1250,7 @@
       "file": "justzoom_fabric_3.0.1_MC_1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/iAiqcykM/versions/zW9agw05/justzoom_fabric_3.0.1_MC_1.21.1.jar",
       "sha1": "a47500421f7328bc4cc8f2ef80fabe76c9d680bd",
+      "sha512": "3410355191e6bffce43ee3b9a8bae992660a5ed5986420920095676a4cdedeb5da24984d79042ae5bd0d500d94c4df9577e67df0e6ba96a41c1c744fc8a9bd15",
       "size": 336135
     },
     {
@@ -1077,6 +1264,7 @@
       "file": "litematica-fabric-1.21-0.19.61.jar",
       "url": "https://cdn.modrinth.com/data/bEpr0Arc/versions/o7i8oi1Z/litematica-fabric-1.21-0.19.61.jar",
       "sha1": "efce2dd7118b1e61c8aa461bd8cc9902907dd863",
+      "sha512": "626d0b9785afa5cd9915a25089213332b0ae6805e992a15c12292fa174146a354c7fa891e5f834e2eb10c281dbd4b4d69081649b2a83b48f22a66bc99220b328",
       "size": 1642590
     },
     {
@@ -1088,6 +1276,7 @@
       "file": "malilib-fabric-1.21-0.21.10.jar",
       "url": "https://cdn.modrinth.com/data/GcWjdA9I/versions/C99LEy6r/malilib-fabric-1.21-0.21.10.jar",
       "sha1": "e2699ef71618c54fc03c6c8b28e336603596dcef",
+      "sha512": "9f70b4605ea23f8c8b519622a6cbdcac6c8934c70bab3b8ea2d5da071a37e71ff74406d2e154c5ba4ebc7772d76e97ae94f5760e71632bd8a11d23ae8ae9a111",
       "size": 1411200
     },
     {
@@ -1099,6 +1288,7 @@
       "file": "modmenu-11.0.5.jar",
       "url": "https://cdn.modrinth.com/data/mOgUt4GM/versions/6lgOkclV/modmenu-11.0.5.jar",
       "sha1": "2321d890a25b5985eba576d7cd8fe9a9c136e33d",
+      "sha512": "92e8e96267ff18d320903090f2ad9b32408a218919f5a0d578e232ad774c89d49a34a8271806652be7d6283f24e98432bc4af7f95855e78b843f9100d68696c7",
       "size": 975846
     },
     {
@@ -1110,6 +1300,7 @@
       "file": "MouseTweaks-fabric-mc1.21-2.26.jar",
       "url": "https://cdn.modrinth.com/data/aC3cM3Vq/versions/ylmBQ38A/MouseTweaks-fabric-mc1.21-2.26.jar",
       "sha1": "ee81af33a5606ef2cd057e075833d7c69836c210",
+      "sha512": "1744a48a47aedcbf19a0a93f78473cf0221fc4782852dca7fc02685719174664b4f9d95d353fcfc16902ac3815594511ba6d9ab14391f9b7e25ec9b2e777927a",
       "size": 75984
     },
     {
@@ -1121,6 +1312,7 @@
       "file": "punchy-2.8e-fabric-1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/8aoMKplv/versions/vQFe6AaG/punchy-2.8e-fabric-1.21.1.jar",
       "sha1": "f522517bd53d9e936069634756963b304e6469f7",
+      "sha512": "6d0713328a9876f8b02cdc15fb9b1306e4b43b96565b129453d9a684353dc5f62a8b672ff27500be58022b4242ec38f772d7297f3a23b7fffec6d1b3cf206c2f",
       "size": 1878473
     },
     {
@@ -1134,6 +1326,7 @@
       "file": "reeses-sodium-options-fabric-2.2.4+mc1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/Bh37bMuy/versions/XtuPOKUN/reeses-sodium-options-fabric-2.2.4%2Bmc1.21.1.jar",
       "sha1": "552c80c3113ad346c3abcdf7c5c6cc3a02a5fb62",
+      "sha512": "7784880c4dedae15e3e03c6de4cfa67a9ed242006f90b764c0fa6fda8679e219ca6c9987aae76ec9b0fff6f8cc38fff86b16e2836aaa0200998c9de938617d3e",
       "size": 257229
     },
     {
@@ -1145,6 +1338,7 @@
       "file": "Searchables-fabric-1.21.1-1.0.2.jar",
       "url": "https://cdn.modrinth.com/data/fuuu3xnx/versions/tRdr8Bg3/Searchables-fabric-1.21.1-1.0.2.jar",
       "sha1": "2777db0b967e80e0659053154f32f14a0e99a7a7",
+      "sha512": "1d57bd196a1122953a4f80d18af660be7ad791b9264e46666b273172c448df4de9acf2630fae7d196a4da8168c829fad18756c86b2cd3dd1068a0b453d8ec222",
       "size": 79531
     },
     {
@@ -1156,6 +1350,7 @@
       "file": "sodium-fabric-0.8.13+mc1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/AANobbMI/versions/SMxNOGZ6/sodium-fabric-0.8.13%2Bmc1.21.1.jar",
       "sha1": "003c114c85ca88ef3362e018deb6aca0c682d6a1",
+      "sha512": "8614a374593698069a80ac74de8cd9c28f3928d16819a0e0d6320b538e823f7e54e8be06d5ea5a9c268beb0e02073209d1f831a02dede851588b972367680853",
       "size": 1574609
     },
     {
@@ -1169,6 +1364,7 @@
       "file": "sodium-extra-fabric-0.9.4+mc1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/PtjYWJkn/versions/YEWu6red/sodium-extra-fabric-0.9.4%2Bmc1.21.1.jar",
       "sha1": "628487b330c9589d26cada5c4a51ac457af80a1f",
+      "sha512": "824b06ddaa7ab697ff252ee47c6278725fc2ed6eeaaa027c32c0ee8bbb9ab416c23dfdd3c89a2ca7f4618cb106ef55694a6163cd09abc248219d14e9eca3d7d3",
       "size": 472019
     },
     {
@@ -1180,6 +1376,7 @@
       "file": "tidal-0.0.2-beta.jar",
       "url": "https://cdn.modrinth.com/data/QsiPPta0/versions/Rh86Cb7C/tidal-0.0.2-beta.jar",
       "sha1": "1099fa3055eee8ab6c503d40001682fa83c07e04",
+      "sha512": "11761786384e94f0ccc13f32dade9cb43dc3c045db7a876c4b038f88cb0f5846024b88df0f7b314cb7322417b88899d3a45e49b00178e294a6072698fa119d14",
       "size": 198920
     },
     {
@@ -1191,6 +1388,7 @@
       "file": "Too Many Entities 1.21.1 Fabric v1.2.0.jar",
       "url": "https://cdn.modrinth.com/data/BvnRxzIF/versions/LIr36rRw/Too%20Many%20Entities%201.21.1%20Fabric%20v1.2.0.jar",
       "sha1": "499880e7c9186995d0c3839ab7b5d8a20e92354d",
+      "sha512": "afbbe69fa4480a4b21d46292746a1da67420a3cb65cd3cdf483f38e4a62625342120e6a7dbdd70d363be392677e48117aa36054fce865e7bed7fc0f34d1cbdca",
       "size": 73633
     },
     {
@@ -1202,6 +1400,7 @@
       "file": "wakes-0.4.1+1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/dlNu0RQY/versions/WuY7eJX9/wakes-0.4.1%2B1.21.1.jar",
       "sha1": "c4f4d09a4b9362bcc952f370ce8c8b44d662dc42",
+      "sha512": "cccf8e69c2e3d9abcf73e9ed618edb39a3a41f89c8b35292c6cbccfec8c439bb1a9101ecf82b154fa8901ae2dbec6045468b56f12e14a7955a0b8af49157a451",
       "size": 268435
     }
   ],
@@ -1210,138 +1409,161 @@
       "path": "config/apokelipsis/panorama_0.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_0.png",
       "sha1": "31238b5164a783ae6a63f70744ef9e3d3a6f2b12",
+      "sha512": "a9847ae706dffbefc04b38e3b85479e0d47ea42ece01cb8a2764e056ec0a3447a601f4d42816b6fdf8d741d1ee0972493a626f753131e13f006b7bc1294a5b43",
       "size": 2325262
     },
     {
       "path": "config/apokelipsis/panorama_1.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_1.png",
       "sha1": "d71a933596aeb0c767465e200307ca15ce96384f",
+      "sha512": "c1fe3f7b50730fae50a0434a7a775ff4500c4588b42e3fc8be2929a3da19b83622da084059bad54f26e8a16aa7c278568ac3c33789cb59dc06b8dcfaeb112195",
       "size": 2365789
     },
     {
       "path": "config/apokelipsis/panorama_2.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_2.png",
       "sha1": "720669fd2ab97340608a36faf6828f2c3ce82eff",
+      "sha512": "7be04437119c81c8bbc8c33453490d483fdbaffb0056c81882a3dd47e82c2ec0fdd3b3df1cf1493ed6fe3e2414911dc687ff7f3805f02a8f6bd1487ca0adc7a2",
       "size": 2341983
     },
     {
       "path": "config/apokelipsis/panorama_3.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_3.png",
       "sha1": "6b702253de582e23b8fe56e5f3716e8ba8fc8ee5",
+      "sha512": "0d7fff3ccb61ab862ad8de819c4f9bec3cde35870ba454075d702b865868088e990024be9c30baa898b0bf2695e804eaacf031fc10e1b821a7a85f17e0930859",
       "size": 2231587
     },
     {
       "path": "config/apokelipsis/panorama_4.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_4.png",
       "sha1": "bf35b42e586047c9c20bdccf6c1167cd3f594eff",
+      "sha512": "25b2358e38b15f247c8d89eedb3c8023e9ef5018cf609878ee47e7b659e54a70a44aead69e2816ecf65f874f620ad522ca28bdb158c33e46c35a9d04e2981113",
       "size": 2336741
     },
     {
       "path": "config/apokelipsis/panorama_5.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_5.png",
       "sha1": "745089b07d1a659cd85bcde47655b1d7badd8767",
+      "sha512": "c618d06fcfb476d3aa6b2ea0ec819ff6436ca8b4d915fb7a2b7cee46e619444dcef91a9e7898edd8f4a2b6684b2bf562856ce2293067283fdc655047562390d0",
       "size": 1495468
     },
     {
       "path": "resourcepacks/Better Caps! [v1.2].zip",
       "url": "https://cdn.modrinth.com/data/mbndKTrW/versions/H3DxdTkA/Better%20Caps%21%20%5Bv1.2%5D.zip",
       "sha1": "0adf1ee3f876b3dd22b3e3b7115db6268b879c4b",
+      "sha512": "c9897acc594e417f6dcc0aaa65960a200f01a5aa7dd546c4d5c84bb0bf258aa06ae6cdec00e7b2cb873409366baf2408ddf4f0a150eac7f2bb907078da773780",
       "size": 125177
     },
     {
       "path": "resourcepacks/Better-Leaves-9.6.zip",
       "url": "https://cdn.modrinth.com/data/uvpymuxq/versions/w4ReEpuG/Better-Leaves-9.6.zip",
       "sha1": "fa3a961b82a9f15a4e80b1f7f021bc121649f073",
+      "sha512": "793dacaca4c200656e8875195e42975ecb628af114e13aad2059368b51cf45f00280f86075368e9adf492e847718a9d593bdf481664e10cf1aa9628d2a51a8d6",
       "size": 1977146
     },
     {
       "path": "resourcepacks/CobblemonCosplay.zip",
       "url": "https://cdn.modrinth.com/data/5cow1bP4/versions/hpBzUlro/CobblemonCosplay.zip",
       "sha1": "b80fbeec80f7c1430bf79b9012e9f95d68478ef2",
+      "sha512": "d2378738deb615e0117b726de312b550df43f872eef09909e7e809aa3f380937f82acc3a5302d244340e0432a5023ed74e4038be915d8047fb14a74200725f02",
       "size": 253362
     },
     {
       "path": "resourcepacks/CobblemonLoadingBackgrounds-[1.0.2].zip",
       "url": "https://cdn.modrinth.com/data/KS8ThZBC/versions/uRsiSRtw/CobblemonLoadingBackgrounds-%5B1.0.2%5D.zip",
       "sha1": "1976eab776d8280e062bd5136b24bdc4dfa1a049",
+      "sha512": "6a233d24895f4563120d4255327fcc0d4b90b275a75b513746fe37bb5eeb843c55ceaadfc8ab02ccd18f76cf4aaa2bb1234f266fa5672796a4efb36634981da6",
       "size": 25725321
     },
     {
       "path": "resourcepacks/Cobblemotion_v1.5.1.zip",
       "url": "https://cdn.modrinth.com/data/lIDAJAby/versions/sPztKDIi/Cobblemotion_v1.5.1.zip",
       "sha1": "b683791ddfbbde25c0450133f789ebc6fa9f2c7d",
+      "sha512": "87e9175ccab02ad3939ae31f3715349249fc400167882946c1617a3fc55274c1de21794a2d811314a015a5eb88149b2f84089c20e628d4212bbd8a48ac17ba4b",
       "size": 3148542
     },
     {
       "path": "resourcepacks/CobbleSounds[Complete]_v1.4.1.zip",
       "url": "https://cdn.modrinth.com/data/yIgJQt6H/versions/ryII9cwu/CobbleSounds%5BComplete%5D_v1.4.1.zip",
       "sha1": "d542873ffbb0427d4cb4bc374a37419d4d93a216",
+      "sha512": "2854c01cf32f33574c92709e933752ef3ee85a39ae74753c8c938c13351d7a9811de767bd066487fc277163929a28d45012de4072ebe5fec1605a2abe361553a",
       "size": 511473929
     },
     {
       "path": "resourcepacks/E19 Cobblemon Minimap Icons.zip",
       "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/MAumPyhV/E19%20Cobblemon%20Minimap%20Icons.zip",
       "sha1": "77813d38002b43c9c243d694728479bd3879cf86",
+      "sha512": "f9eff4c718818a2b030aa7b6b86b73f384f869cb39fe1e4c189c07f8feb7aedd717a33d966face570ae89b67ee0c28c35fb611883b882677eecf0fa041b9088f",
       "size": 23270833
     },
     {
       "path": "resourcepacks/FireFitsforFireCats.v.13.zip",
       "url": "https://cdn.modrinth.com/data/MyBgiUdg/versions/i0kTh4oX/FireFitsforFireCats.v.13.zip",
       "sha1": "08802a1865016d509ed54ce5add430d2a22c4bc4",
+      "sha512": "f2c4ff05cc27d2de0ef8a616e3c982bc24b539a5ca20239a70d7ec23c1b752e02d9c25e5d2335745ad57c2b43f942a3e0e1f08955eb746865a1724b183953709",
       "size": 1167802
     },
     {
       "path": "resourcepacks/fresh_waystones.zip",
       "url": "https://cdn.modrinth.com/data/BcyGAwlg/versions/LvhBQERi/fresh_waystones.zip",
       "sha1": "a2134b1bd5eeef9dde00bf637f43539d428739c0",
+      "sha512": "e2d369d751ce923bd13147a500989200be915bc5bfd40ccf1ce9dd907a6efc1a8fe500e0915964b3550a6eba126b436a4cda3f442ae0bf6df63e9b2badac3239",
       "size": 321969
     },
     {
       "path": "resourcepacks/muddiescosmetics (4).zip",
       "url": "https://cdn.modrinth.com/data/ADiTmgKC/versions/1Qwsicxb/muddiescosmetics%20%284%29.zip",
       "sha1": "cdb82aa1174a33dc639acb89cd213ef2d8815f38",
+      "sha512": "c4b4de7e90c4b0383385fc70a02390a9d4bd5c3af9b509a3f46a857d6d85e8908d4645624fa7d3ffb959bae9bfec41dcb2a3d6c0e2f491142c21386e538b5db6",
       "size": 310311
     },
     {
       "path": "resourcepacks/PokeCostume v.3.3.zip",
       "url": "https://cdn.modrinth.com/data/k1X1bPvt/versions/DEtvGMQW/PokeCostume%20v.3.3.zip",
       "sha1": "a46d9dc61d4e911d83ca737320db1d88cb3380e4",
+      "sha512": "8a7dc97f5598e0a8d6096b54491c20173cd136041b6de99c25f663675451cbe140196aded720cd0b337d5b73b5f384158fdc193b757367d36c7f75bd32bcf1c5",
       "size": 210597
     },
     {
       "path": "resourcepacks/pokopia-1.1.zip",
       "url": "https://cdn.modrinth.com/data/7bGbiPV6/versions/vMTfqbRo/pokopia-1.1.zip",
       "sha1": "572a341a84652f611586cb889c486f667bb9a825",
+      "sha512": "7e5e7ba9e83d1954e5eeeeb443195f2db9051c9415d964174169ac3ad9c4654b96461afc1abaf8e1bb4ba5079cea43506a90c3dc00cf3b6db962151664c7d7c9",
       "size": 109784
     },
     {
       "path": "resourcepacks/StylesUponStyles.v.1.6.1.zip",
       "url": "https://cdn.modrinth.com/data/LizLsGI4/versions/h4Tv9pCv/StylesUponStyles.v.1.6.1.zip",
       "sha1": "1ab4e757f618dbc299a46bc4b042b8a64485d231",
+      "sha512": "d44dfa67d97253b2fb8e8397cffd888d6c4e22e52ae15e53744bb8e58c341b17d52d5ba8b3b82956170b83fbec263f0ae9245985540e1e971b5109d715be6de0",
       "size": 1917520
     },
     {
       "path": "resourcepacks/Wood Cosmetic Rillaboom.zip",
       "url": "https://cdn.modrinth.com/data/eThFuBO4/versions/RPZco1mt/Wood%20Cosmetic%20Rillaboom.zip",
       "sha1": "96e8d9949fa22469e8f236e9094998b99eb4fd41",
+      "sha512": "b7f31e2c7fef2aa1590c85a0c0cb21e064d287bf956d914204213035d5a970e841a4a46d8abf3a28098a1866b3d32106a4fe40d7448c7e470a1c1ab649f6469d",
       "size": 137766
     },
     {
       "path": "resourcepacks/[Chilli´s] punchy! cobblemon.zip",
       "url": "https://cdn.modrinth.com/data/5sRSLTlC/versions/ibKS2oz3/%5BChilli%C2%B4s%5D%20punchy%21%20cobblemon.zip",
       "sha1": "41a1a04713d15f5c15be1445128678a6f3f8a021",
+      "sha512": "ff794060f70bf870733864d775dfa935a3859fedf551cae9cc4b136b9e507f246d9b48bccf43d4f7a7df2609646b585779b3c9080a2873a025b05803964c8dad",
       "size": 2666928
     },
     {
       "path": "shaderpacks/Visual-Vibrance-v0.3.5a.zip",
       "url": "https://cdn.modrinth.com/data/l6Uqs2fS/versions/zGC385Y8/Visual-Vibrance-v0.3.5a.zip",
       "sha1": "e60e5c1ea1243bf93798ddd34b4a70202781cab8",
+      "sha512": "6ff69514259793ef54c3e8d9f849da3b23e9bc4a825417401299fae05093574895ed6bf274800db4d85bc0d5e33324b914d645b701c1515093928c6a9291bffe",
       "size": 4571188
     }
   ],
   "initial": {
     "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/inicial.zip",
     "sha1": "d66b17e1840d9af2274d548286470f48c5efe70c",
+    "sha512": "6775781900e9b4589731a0e55be2736245c44326166fb8d11e18bc66b60e953a323a30f9ba1ea2fecdff8d592cffbf5bb3ea1fb7a4db9c1a879b6b89b7aec42c",
     "size": 2358930
   }
 }

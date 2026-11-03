@@ -64,14 +64,17 @@ instalar la 1.1.0 una vez a mano.)
 SEGURIDAD (importante)
 ----------------------
 - FIRMA DIGITAL: cada vez que usas "PUBLICAR MODS.bat", la lista se firma con una clave
-  que está SOLO en esta PC: herramientas\clave-privada.pem (GitHub Desktop nunca la sube).
-  Los launchers rechazan cualquier lista que no tenga tu firma. Así, aunque alguien entrara
-  a tu cuenta de GitHub, no podría hacer que tus amigos descarguen mods o launchers falsos.
-  * NO compartas esa clave ni la carpeta "herramientas" con nadie.
-  * Guarda una copia en un pendrive o lugar seguro. Si pierdes la clave, no podrás publicar
-    cambios hasta que Claude arme un launcher nuevo con otra clave y todos lo reinstalen.
-  * Esta carpeta está en OneDrive: protege también tu cuenta de Microsoft con verificación
-    en dos pasos (account.microsoft.com > Seguridad).
+  que está SOLO en esta PC, fuera de OneDrive: C:\Users\lauti\apokelipsis-firma\clave-privada.pem
+  (ni GitHub ni OneDrive la suben). Los launchers rechazan cualquier lista que no tenga tu firma.
+  Así, aunque alguien entrara a tu cuenta de GitHub, no podría hacer que tus amigos descarguen
+  mods o launchers falsos.
+  * NO compartas esa clave ni la carpeta "apokelipsis-firma" con nadie.
+  * NO la vuelvas a poner dentro de OneDrive (el .bat se niega a usarla si está en "herramientas").
+  * Guarda una copia en un pendrive o lugar seguro (OneDrive ya no la respalda). Si pierdes la
+    clave, no podrás publicar cambios hasta que Claude arme un launcher nuevo con otra clave
+    y todos lo reinstalen. En una PC nueva: copia el archivo del pendrive a esa misma carpeta.
+  * Protege también tu cuenta de Microsoft con verificación en dos pasos
+    (account.microsoft.com > Seguridad).
 - El launcher de todos descarga lo que está en tu GitHub: esa cuenta es la llave.
   Activa la verificación en dos pasos en GitHub (Settings > Password and authentication)
   y no le des acceso al repositorio a nadie de quien no estés seguro.

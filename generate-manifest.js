@@ -23,6 +23,10 @@ const MODRINTH = 'https://api.modrinth.com/v2';
 
 const readJson = (file) => JSON.parse(fs.readFileSync(path.join(ROOT, file), 'utf8').replace(/^﻿/, ''));
 const sha1 = (file) => crypto.createHash('sha1').update(fs.readFileSync(file)).digest('hex');
+// SHA-512: la huella fuerte que comprueban los launchers nuevos (SHA-1 queda para los viejos).
+const sha512 = (file) => crypto.createHash('sha512').update(fs.readFileSync(file)).digest('hex');
+// Cambia cuando la lista gana campos nuevos, para que se vuelva a generar y firmar.
+const MANIFEST_FORMAT = 2;
 const jarsIn = (dir) =>
   fs.existsSync(path.join(ROOT, dir))
     ? fs.readdirSync(path.join(ROOT, dir)).filter((f) => f.endsWith('.jar')).sort()
@@ -41,7 +45,7 @@ async function api(url, options = {}) {
 async function describeLocal(dir, baseUrl) {
   const entries = jarsIn(dir).map((file) => {
     const full = path.join(ROOT, dir, file);
-    return { file, sha1: sha1(full), size: fs.statSync(full).size };
+    return { file, sha1: sha1(full), sha512: sha512(full), size: fs.statSync(full).size };
   });
   let found = {};
   if (entries.length) {
@@ -79,6 +83,7 @@ async function resolveModrinth(slug, pack) {
     file: file.filename,
     url: file.url,
     sha1: file.hashes.sha1,
+    sha512: file.hashes.sha512,
     size: file.size,
     projectId: version.project_id,
     deps: version.dependencies
@@ -87,7 +92,25 @@ async function resolveModrinth(slug, pack) {
   };
 }
 
+// La clave privada vive FUERA de OneDrive (C:\Users\<tú>\apokelipsis-firma\clave-privada.pem), para
+// que no se suba a la nube junto con esta carpeta. APOKELIPSIS_CLAVE permite indicar otra ruta.
+const KEY_DIR = path.join(require('os').homedir(), 'apokelipsis-firma');
+
+function findKey() {
+  const candidates = [process.env.APOKELIPSIS_CLAVE, path.join(KEY_DIR, 'clave-privada.pem')].filter(Boolean);
+  const found = candidates.find((f) => fs.existsSync(f));
+  if (found) return found;
+  if (fs.existsSync(path.join(ROOT, 'herramientas', 'clave-privada.pem'))) {
+    throw new Error('La clave de firma está en "herramientas", dentro de OneDrive. Muévela a '
+      + `${KEY_DIR} (y borra la copia de OneDrive y de su papelera).`);
+  }
+  throw new Error(`Falta la clave de firma (${path.join(KEY_DIR, 'clave-privada.pem')}). `
+    + 'Sin ella los launchers no aceptan la lista. Cópiala desde tu respaldo (pendrive) a esa carpeta.');
+}
+
 async function main() {
+  // Se busca la clave antes de tocar nada: sin ella no se puede firmar la lista.
+  const keyFile = findKey();
   const pack = readJson('pack.json');
   const baseUrl = pack.baseUrl.replace(/\/$/, '');
   const optionalDefs = fs.existsSync(path.join(ROOT, 'optional.json')) ? readJson('optional.json') : [];
@@ -152,6 +175,7 @@ async function main() {
       file: m.file,
       url: m.url,
       sha1: m.sha1,
+      sha512: m.sha512,
       size: m.size
     }))
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -221,6 +245,7 @@ async function main() {
           path: relPath,
           url: `${baseUrl}/files/${relPath.split('/').map(encodeURIComponent).join('/')}`,
           sha1: sha1(full),
+          sha512: sha512(full),
           size: fs.statSync(full).size
         });
       }
@@ -243,26 +268,41 @@ async function main() {
   let initial = null;
   const initialFile = path.join(ROOT, 'inicial.zip');
   if (fs.existsSync(initialFile)) {
-    initial = { url: `${baseUrl}/inicial.zip`, sha1: sha1(initialFile), size: fs.statSync(initialFile).size };
+    initial = { url: `${baseUrl}/inicial.zip`, sha1: sha1(initialFile), sha512: sha512(initialFile), size: fs.statSync(initialFile).size };
   }
 
   // Instalador del launcher (para que se actualice solo en las PCs de los jugadores).
   let launcher = null;
   if (pack.launcher?.file && fs.existsSync(path.join(ROOT, pack.launcher.file))) {
     const full = path.join(ROOT, pack.launcher.file);
+    // "url" en pack.json permite alojar el instalador fuera del repo (por ejemplo en GitHub Releases,
+    // que acepta archivos de más de 100 MB). La huella se calcula igual con la copia local.
+    if (pack.launcher.url && !/^https:\/\//.test(pack.launcher.url)) {
+      throw new Error('pack.json: "launcher.url" tiene que empezar con https://');
+    }
     launcher = {
       version: pack.launcher.version,
-      url: `${baseUrl}/${pack.launcher.file.split('/').map(encodeURIComponent).join('/')}`,
+      url: pack.launcher.url || `${baseUrl}/${pack.launcher.file.split('/').map(encodeURIComponent).join('/')}`,
       sha1: sha1(full),
+      sha512: sha512(full),
       size: fs.statSync(full).size
     };
   }
 
+  // Perfil de Fabric (clase principal y librerías que se ejecutan): va dentro de la lista firmada
+  // para que el launcher no dependa de lo que conteste meta.fabricmc.net en el momento de jugar.
+  // Se quitan las fechas, que Fabric regenera en cada consulta.
+  const { releaseTime, time, ...fabricProfile } = await api(
+    `https://meta.fabricmc.net/v2/versions/loader/${pack.minecraft}/${pack.fabricLoader}/profile/json`
+  );
+
   const clean = ({ projectId, deps, modrinth, info, side, title, text, ...rest }) => rest;
   const manifest = {
+    format: MANIFEST_FORMAT,
     packVersion: pack.packVersion,
     minecraft: pack.minecraft,
     fabricLoader: pack.fabricLoader,
+    fabricProfile,
     server: pack.server,
     launcher,
     defaultOptions,
@@ -283,6 +323,8 @@ async function main() {
     if (m?.launcher) map.set(`launcher ${m.launcher.version}`, m.launcher.sha1);
     map.set('opciones predeterminadas', JSON.stringify(m?.defaultOptions || {}));
     map.set('servidor', JSON.stringify(m?.server || {}));
+    map.set('formato de la lista', String(m?.format || 1));
+    map.set('perfil de Fabric', JSON.stringify(m?.fabricProfile || null));
     return map;
   };
   const before = fingerprint(previous);
@@ -302,14 +344,8 @@ async function main() {
   }
   if (anyChange) fs.writeFileSync(previousFile, JSON.stringify(manifest, null, 2) + '\n');
 
-  // Firma digital: el launcher solo acepta una lista firmada con la clave privada, que existe
-  // únicamente en esta PC (herramientas/clave-privada.pem, nunca se sube a GitHub).
+  // Firma digital: el launcher solo acepta una lista firmada con la clave privada (ver findKey).
   // Así, aunque alguien entrara a la cuenta de GitHub, no podría meter mods ni launchers falsos.
-  const keyFile = path.join(ROOT, 'herramientas', 'clave-privada.pem');
-  if (!fs.existsSync(keyFile)) {
-    throw new Error('Falta la clave de firma (herramientas\\clave-privada.pem). Sin ella los launchers no aceptan la lista. '
-      + 'Cópiala desde tu respaldo a la carpeta "herramientas".');
-  }
   // Siempre con saltos de línea tipo Linux (LF), que es como lo guarda y lo sirve GitHub.
   const lfText = fs.readFileSync(previousFile, 'utf8').replace(/\r\n/g, '\n');
   fs.writeFileSync(previousFile, lfText);
@@ -324,7 +360,8 @@ async function main() {
   ]);
   const ignored = [
     ...jarsIn('mods').map((f) => `mods/${f}`).filter((p) => !hostedPaths.has(p)),
-    ...files.filter((f) => !f.url.startsWith(baseUrl)).map((f) => `files/${f.path}`)
+    ...files.filter((f) => !f.url.startsWith(baseUrl)).map((f) => `files/${f.path}`),
+    ...(launcher && !launcher.url.startsWith(baseUrl) ? [pack.launcher.file] : [])
   ];
   const gitignorePath = path.join(ROOT, '.gitignore');
   const MARK = '# --- generado por el .bat (no editar debajo de esta línea) ---';
