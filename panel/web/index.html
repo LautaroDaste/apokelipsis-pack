@@ -165,7 +165,7 @@
 
     <!-- PUBLICAR -->
     <section class="view" id="view-publicar" hidden>
-      <header class="vh"><h1>Publicar</h1><p>Envía los cambios a los jugadores. Les llegan la próxima vez que abran el launcher.</p></header>
+      <header class="vh"><h1>Publicar</h1><p>Envía los cambios a los jugadores con un solo botón. Les llegan la próxima vez que abran el launcher.</p></header>
       <div class="steps" id="pub-steps"></div>
       <pre class="console" id="pub-out" hidden></pre>
     </section>
@@ -178,9 +178,9 @@
   </main>
 
   <div class="savebar" id="savebar" hidden>
-    <span>Tienes cambios sin guardar</span>
+    <span id="savebar-text">Tienes cambios sin guardar</span>
     <button class="btn ghost" id="discard">Descartar</button>
-    <button class="btn primary" id="save">Guardar</button>
+    <button class="btn primary" id="save">💾 Guardar y publicar</button>
   </div>
   <div class="modal" id="modal" hidden><div class="modal-box" id="modal-box"></div></div>
   <div class="toasts" id="toasts"></div>

@@ -319,7 +319,10 @@ async function main() {
     mods: mods.map(clean),
     optional: optional.map(clean),
     files,
-    initial
+    initial,
+    // Mods solo de servidor: los launchers no los usan; sirven para que el panel de otro
+    // administrador pueda bajarlos y tener la carpeta mods completa.
+    serverOnly: skipped.map((m) => ({ file: m.file, url: m.url, sha1: m.sha1, sha512: m.sha512, size: m.size }))
   };
 
   // ¿Qué cambió respecto de la lista anterior? Si cambió algo, sube el número de versión.
@@ -329,6 +332,7 @@ async function main() {
     const map = new Map();
     for (const x of [...(m?.mods || []), ...(m?.optional || [])]) map.set(`mods/${x.file}`, x.sha1);
     for (const x of m?.files || []) map.set(x.path, x.sha1);
+    for (const x of m?.serverOnly || []) map.set(`mods/${x.file} (solo servidor)`, x.sha1);
     if (m?.initial) map.set('configuración inicial', m.initial.sha1);
     if (m?.launcher) map.set(`launcher ${m.launcher.version}`, m.launcher.sha1);
     map.set('opciones predeterminadas', JSON.stringify(m?.defaultOptions || {}));

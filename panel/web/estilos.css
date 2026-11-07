@@ -280,3 +280,10 @@ ol.howto { line-height: 1.6; padding-left: 20px; margin: 6px 0; }
   .opt { grid-template-columns: 1fr 140px 30px; }
   .savebar { left: 50%; }
 }
+
+.job-fase { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 500; margin: 14px 0 6px; }
+.big-ok { font-size: 26px; }
+.pub-hero { display: flex; align-items: center; justify-content: space-between; gap: 20px; background: linear-gradient(135deg, #fff, var(--orange-soft)); }
+.pub-hero p { margin: 4px 0; }
+.modal-box details { margin-top: 8px; }
+.modal-box .console { max-height: 260px; margin-top: 8px; }

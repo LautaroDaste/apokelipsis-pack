@@ -37,6 +37,19 @@ function inputs() {
 
 const sha1 = (file) => crypto.createHash('sha1').update(fs.readFileSync(file)).digest('hex');
 
+// Ajustes de pack.json (servidor, mods forzados, reinicio, launcher...). El número de versión no
+// cuenta porque lo cambia el propio generador.
+const PACK_KEY = 'pack.json (ajustes)';
+function packHash() {
+  try {
+    const pack = JSON.parse(fs.readFileSync(path.join(ROOT, 'pack.json'), 'utf8').replace(/^﻿/, ''));
+    delete pack.packVersion;
+    return crypto.createHash('sha1').update(JSON.stringify(pack)).digest('hex');
+  } catch {
+    return 'ilegible';
+  }
+}
+
 function guardar() {
   const state = {};
   for (const rel of inputs()) {
@@ -44,6 +57,7 @@ function guardar() {
     const stat = fs.statSync(full);
     state[rel] = { sha1: sha1(full), size: stat.size, mtimeMs: stat.mtimeMs };
   }
+  state[PACK_KEY] = { sha1: packHash() };
   fs.mkdirSync(path.dirname(STAMP), { recursive: true });
   fs.writeFileSync(STAMP, JSON.stringify(state, null, 1) + '\n');
 }
@@ -65,8 +79,9 @@ function comprobar() {
     if (sha1(path.join(ROOT, rel)) !== before.sha1) problems.push(`* cambiado:  ${rel}`);
   }
   for (const rel of Object.keys(saved)) {
-    if (!current.includes(rel)) problems.push(`- quitado:   ${rel}`);
+    if (rel !== PACK_KEY && !current.includes(rel)) problems.push(`- quitado:   ${rel}`);
   }
+  if (saved[PACK_KEY] && saved[PACK_KEY].sha1 !== packHash()) problems.push(`* cambiado:  pack.json`);
   return problems;
 }
 

@@ -6,9 +6,16 @@ Todo lo que publiques desde acá les llega solo a los jugadores la próxima vez
 que abran el launcher.
 
 
-LO MÁS FÁCIL: EL PANEL DE CONTROL
----------------------------------
-Doble clic en "PANEL DE CONTROL.bat". Se abre una página en tu navegador desde la que puedes:
+LO MÁS FÁCIL: EL PANEL DE CONTROL (un solo botón)
+-------------------------------------------------
+Doble clic en "PANEL DE CONTROL.bat". Se abre una página en tu navegador. Cambias lo que
+quieras y tocas "Guardar y publicar": el panel trae lo de otros administradores, sube el
+launcher nuevo si hay uno, firma la lista y la sube a GitHub. No hace falta abrir
+"PUBLICAR MODS.bat" ni GitHub Desktop.
+La primera vez te pide conectar el panel con GitHub (una llave que se crea en un minuto;
+el panel te lleva a la página y te dice qué tocar). Se guarda cifrada en esta PC.
+
+Desde el panel puedes:
 - Agregar mods (arrastrando los .jar) o quitarlos (van a una papelera, por si te arrepientes).
 - Cambiar nombre, descripción y si viene encendido cada mod opcional.
 - Cambiar las frases amarillas del menú del juego y la dirección del servidor.
@@ -17,7 +24,8 @@ Doble clic en "PANEL DE CONTROL.bat". Se abre una página en tu navegador desde 
   como quieres y usar "Copiar desde mi juego". En "Controles" te marca en rojo las teclas repetidas.
 - "Reiniciar a todos": la próxima vez que cada jugador abra el juego, vuelve a recibir toda la
   configuración inicial (una sola vez).
-- Publicar: genera y firma la lista, y la sube a GitHub (o te abre GitHub Desktop).
+- Launcher nuevo: cuando Claude compila uno, queda solo en la carpeta "launcher" y el panel
+  lo publica con el próximo "Guardar y publicar" (los launchers de todos se actualizan solos).
 No cierres la ventana negra mientras uses el panel. Todo lo de abajo es la forma "a mano".
 
 
@@ -69,10 +77,13 @@ Después de cualquier cambio: doble clic en "PUBLICAR MODS.bat" y Commit + Push.
 
 SUBIR UNA VERSIÓN NUEVA DEL LAUNCHER
 ------------------------------------
-(Solo si se cambió el launcher. Los mods no necesitan esto.)
-1. Reemplaza launcher\Instalar Apokelipsis.exe por el nuevo.
-2. En pack.json, en "launcher", cambia "version" por la del nuevo (por ejemplo 1.2.0).
-3. Doble clic en "PUBLICAR MODS.bat" y Commit + Push.
+Con el panel no hay que hacer nada: "npm run dist" deja el instalador y launcher\version.json
+en esta carpeta, y "Guardar y publicar" lo sube a GitHub Releases y avisa a los launchers.
+A mano (sin el panel), porque el instalador pesa más de 100 MB:
+1. En GitHub > Releases > Draft a new release, tag v1.X.X, sube el instalador.
+2. Copia el instalador a launcher\Instalar Apokelipsis.exe.
+3. En pack.json, en "launcher", pon "version" y "url" (la dirección de descarga de la Release).
+4. Doble clic en "PUBLICAR MODS.bat" y Commit + Push.
 Los launchers de los jugadores se actualizan solos al abrirse.
 (Funciona a partir de la versión 1.1.0: quien tenga una más vieja tiene que
 instalar la 1.1.0 una vez a mano.)

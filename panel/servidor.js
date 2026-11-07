@@ -121,6 +121,7 @@ api['GET /estado'] = async () => {
     mods: man ? { obligatorios: man.mods.length, opcionales: man.optional.length, archivos: (man.files || []).length } : null,
     totalJars: listJars(p('mods')).length,
     pendientes,
+    ...(await publicador.estadoLocal()),
     clave: claveEstado(),
     juego: exists(path.join(GAME, 'options.txt')),
     carpeta: ROOT
@@ -432,72 +433,9 @@ api['POST /clave/crear'] = async () => {
   return claveEstado();
 };
 
-// Publicar (genera y firma la lista)
-let publicando = false;
-api['POST /publicar'] = async () => {
-  const clave = claveEstado();
-  if (!clave.existe) fail('Esta PC no tiene la clave de firma. Ve a la pestaña "Administradores".');
-  if (!clave.autorizada) fail('La clave de esta PC todavía no está autorizada en el launcher. Si publicas, los launchers rechazarían la lista. Pídele al dueño que la agregue (pestaña "Administradores").');
-  if (publicando) fail('Ya se está publicando');
-  publicando = true;
-  try {
-    const r = await run(process.execPath, ['generate-manifest.js'], { timeout: 600000 });
-    return { ok: r.code === 0, salida: r.out };
-  } finally {
-    publicando = false;
-  }
-};
-
-// Git (opcional: si no hay git, se usa GitHub Desktop)
-let gitPath;
-function findGit() {
-  if (gitPath !== undefined) return gitPath;
-  gitPath = null;
-  const candidates = [];
-  for (const dir of (process.env.PATH || '').split(path.delimiter)) candidates.push(path.join(dir, 'git.exe'));
-  const desktop = path.join(process.env.LOCALAPPDATA || '', 'GitHubDesktop');
-  if (exists(desktop)) {
-    for (const app of fs.readdirSync(desktop).filter((d) => d.startsWith('app-')).sort().reverse()) {
-      candidates.push(path.join(desktop, app, 'resources', 'app', 'git', 'cmd', 'git.exe'));
-    }
-  }
-  candidates.push('C:\\Program Files\\Git\\cmd\\git.exe');
-  gitPath = candidates.find((c) => exists(c)) || null;
-  return gitPath;
-}
-const git = (args, opts) => run(findGit(), args, opts);
-
-api['GET /git'] = async () => {
-  if (!findGit() || !exists(p('.git'))) return { disponible: false };
-  await git(['fetch', '--quiet'], { env: { GIT_TERMINAL_PROMPT: '0' }, timeout: 30000 });
-  const status = await git(['status', '--porcelain']);
-  const behind = await git(['rev-list', '--count', 'HEAD..@{u}']);
-  const ahead = await git(['rev-list', '--count', '@{u}..HEAD']);
-  return {
-    disponible: true,
-    cambios: status.out ? status.out.split('\n').length : 0,
-    atrasado: behind.code === 0 ? Number(behind.out) : null,
-    adelantado: ahead.code === 0 ? Number(ahead.out) : null
-  };
-};
-api['POST /git/traer'] = async () => {
-  if (!findGit()) fail('No hay Git en esta PC');
-  const r = await git(['pull', '--ff-only'], { env: { GIT_TERMINAL_PROMPT: '0' } });
-  return { ok: r.code === 0, salida: r.out };
-};
-api['POST /git/subir'] = async (q, req, res, body) => {
-  if (!findGit()) fail('No hay Git en esta PC');
-  const mensaje = String(JSON.parse(body).mensaje || 'cambios desde el panel').slice(0, 120);
-  const out = [];
-  let r = await git(['add', '-A']);
-  out.push(r.out);
-  r = await git(['commit', '-m', mensaje]);
-  out.push(r.out);
-  if (r.code !== 0 && !/nothing to commit|nada para hacer commit/i.test(r.out)) return { ok: false, salida: out.join('\n') };
-  r = await git(['push'], { timeout: 600000 });
-  out.push(r.out);
-  return { ok: r.code === 0, salida: out.filter(Boolean).join('\n') };
-};
+// Publicar en un solo paso (traer, launcher, lista firmada, commit y push): ver publicar.js
+const publicador = require('./publicar')({ ROOT, KEY_DIR, TRASH, run, readJson, readPack, writePack, claveEstado, UserError });
+Object.assign(api, publicador.api);
 
 api['POST /abrir'] = async (q, req, res, body) => {
   const { que } = JSON.parse(body);

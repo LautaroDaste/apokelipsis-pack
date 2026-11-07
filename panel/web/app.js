@@ -32,7 +32,7 @@ function modal(html, { wide } = {}) {
   return $('#modal-box');
 }
 const closeModal = () => ($('#modal').hidden = true);
-$('#modal').addEventListener('mousedown', (e) => e.target.id === 'modal' && closeModal());
+$('#modal').addEventListener('mousedown', (e) => e.target.id === 'modal' && !$('#modal').dataset.lock && closeModal());
 function confirmar(titulo, texto, { ok = 'Aceptar', danger } = {}) {
   return new Promise((resolve) => {
     const box = modal(`<h2>${titulo}</h2><p>${texto}</p><div class="modal-actions"><button class="btn ghost" data-r="0">Cancelar</button><button class="btn ${danger ? 'danger' : 'primary'}" data-r="1">${ok}</button></div>`);
@@ -46,40 +46,46 @@ function confirmar(titulo, texto, { ok = 'Aceptar', danger } = {}) {
 }
 
 // ---------------- navegación y guardado ----------------
+// Un solo botón: «Guardar y publicar» guarda lo que estés editando y lo publica para todos
+// (trae lo de otros administradores, sube el launcher nuevo si hay, firma la lista y la sube a GitHub).
 const dirty = new Set();
 const savers = {};
 const loaders = {};
 let current = 'inicio';
 function markDirty(key) {
   dirty.add(key);
-  $('#savebar').hidden = false;
+  updateBar();
 }
-async function saveAll() {
-  const btn = $('#save');
-  btn.disabled = true;
-  try {
-    for (const key of [...dirty]) {
-      await savers[key]();
-      dirty.delete(key);
-    }
-    $('#savebar').hidden = true;
-    toast('Guardado. Recuerda publicar para que les llegue a los jugadores.', 'ok');
-    refreshEstado();
-  } catch (err) {
-    toast(err.message, 'err');
-  } finally {
-    btn.disabled = false;
+function pendiente(e = estado) {
+  return !!e && (e.pendientes.length > 0 || e.reinicio > e.reinicioPublicado || !!e.launcherNuevo || !!e.sinSubir);
+}
+function updateBar() {
+  const bar = $('#savebar');
+  if (publishing) return (bar.hidden = true);
+  if (dirty.size) {
+    $('#savebar-text').textContent = 'Tienes cambios sin guardar';
+    $('#discard').hidden = false;
+  } else if (pendiente()) {
+    $('#savebar-text').textContent = estado.launcherNuevo ? `Hay un launcher nuevo (${estado.launcherNuevo}) y cambios para publicar` : 'Hay cambios que los jugadores todavía no tienen';
+    $('#discard').hidden = true;
+  } else return (bar.hidden = true);
+  bar.hidden = false;
+}
+async function saveEdits() {
+  for (const key of [...dirty]) {
+    await savers[key]();
+    dirty.delete(key);
   }
 }
-$('#save').onclick = saveAll;
+$('#save').onclick = () => publishAll();
 $('#discard').onclick = async () => {
   const keys = [...dirty];
   dirty.clear();
-  $('#savebar').hidden = true;
+  updateBar();
   for (const key of keys) await loaders[key]?.();
 };
 window.addEventListener('beforeunload', (e) => {
-  if (dirty.size) e.preventDefault();
+  if (dirty.size || publishing) e.preventDefault();
 });
 
 async function show(view) {
@@ -101,12 +107,14 @@ document.addEventListener('click', async (e) => {
   const go = e.target.closest('[data-go]');
   if (go) {
     e.preventDefault();
+    closeModal();
     return show(go.dataset.go);
   }
   if (e.target.closest('[data-close]')) return closeModal();
+  if (e.target.closest('[data-publish]')) return publishAll();
   const o = e.target.closest('[data-open]');
-  if (o) e.preventDefault();
   if (!o) return;
+  e.preventDefault();
   try {
     await api('/abrir', { method: 'POST', body: { que: o.dataset.open } });
   } catch (err) {
@@ -118,9 +126,106 @@ let estado = null;
 async function refreshEstado() {
   estado = await api('/estado');
   $$('.mc-ver').forEach((el) => (el.textContent = estado.minecraft));
-  $('#nav-pend').hidden = !estado.pendientes.length && estado.reinicio === estado.reinicioPublicado;
+  $('#nav-pend').hidden = !pendiente();
   $('#side-foot').innerHTML = `Pack ${esc(estado.packVersion)} · Launcher ${esc(estado.launcher || '?')}<br>${esc(estado.carpeta)}`;
+  updateBar();
   return estado;
+}
+
+// ---------------- PUBLICAR (un solo botón) ----------------
+let publishing = false;
+let lastJob = null;
+async function publishAll() {
+  if (publishing) return;
+  try {
+    if (dirty.size) await saveEdits();
+    const e = await refreshEstado();
+    if (!e.clave.autorizada) {
+      return modal(`<h2>Esta PC no puede publicar</h2><p>${e.clave.existe ? 'Su clave de firma todavía no está autorizada en el launcher.' : 'No tiene la clave de firma.'} Tus cambios quedaron guardados en esta carpeta.</p>
+        <div class="modal-actions"><button class="btn ghost" data-close>Cerrar</button><button class="btn primary" data-go="admins">Ver cómo solucionarlo</button></div>`);
+    }
+    if (!e.git) {
+      return modal(`<h2>Falta GitHub Desktop</h2><p>Para publicar desde el panel, esta carpeta tiene que estar conectada con GitHub. Instala <b>GitHub Desktop</b>, inicia sesión y agrega esta carpeta (File → Add local repository).</p><div class="modal-actions"><button class="btn primary" data-close>Entendido</button></div>`);
+    }
+    if (!e.conectado && !(await connectGithub())) return;
+  } catch (err) {
+    return toast(err.message, 'err');
+  }
+  await runJob('/publicar', '🚀 Publicando');
+}
+async function runJob(endpoint, titulo) {
+  publishing = true;
+  updateBar();
+  const box = modal(`<h2>${titulo}</h2>
+    <div class="job-fase"><span class="spin"></span> <span id="job-fase">Empezando...</span></div>
+    <p class="muted small">No cierres el panel hasta que termine. Si hay un launcher nuevo, subirlo tarda unos minutos.</p>
+    <details><summary class="muted small">Ver detalle</summary><pre class="console" id="job-log"></pre></details>
+    <div class="modal-actions" id="job-actions" hidden></div>`);
+  $('#modal').dataset.lock = '1';
+  try {
+    await api(endpoint, { method: 'POST' });
+    let job;
+    do {
+      await new Promise((r) => setTimeout(r, 900));
+      job = await api('/trabajo');
+      $('#job-fase', box).textContent = job.fase;
+      $('#job-log', box).textContent = job.log.join('\n');
+    } while (!job.done);
+    lastJob = job;
+    box.querySelector('.job-fase').innerHTML = job.ok ? `<span class="big-ok">✅</span> ${esc(job.fase)}` : `<span class="big-ok">⚠️</span> ${esc(job.error || 'Algo salió mal')}`;
+    if (job.ok && endpoint === '/publicar') box.querySelector('p').textContent = 'Los jugadores lo reciben la próxima vez que abran el launcher.';
+    if (!job.ok) {
+      box.querySelector('p').textContent = 'No se publicó nada. Tus cambios siguen guardados en esta PC: puedes volver a intentarlo.';
+      box.querySelector('details').open = true;
+    }
+  } catch (err) {
+    box.querySelector('.job-fase').innerHTML = `⚠️ ${esc(err.message)}`;
+  } finally {
+    publishing = false;
+    delete $('#modal').dataset.lock;
+    $('#job-actions', box).hidden = false;
+    $('#job-actions', box).innerHTML = '<button class="btn primary" data-close>Cerrar</button>';
+    await refreshEstado().catch(() => {});
+    show(current);
+  }
+}
+function connectGithub() {
+  return new Promise((resolve) => {
+    const box = modal(`<h2>Conectar el panel con GitHub</h2>
+      <p>Solo se hace <b>una vez</b> en esta PC. El panel necesita una llave para subir los cambios por ti.</p>
+      <ol class="howto">
+        <li>Abre <a href="https://github.com/settings/tokens/new?description=Panel%20Apokelipsis&scopes=public_repo" target="_blank" rel="noopener">esta página de GitHub</a> (inicia sesión si te lo pide).</li>
+        <li>En <b>Expiration</b> elige <b>No expiration</b> (o un año). La casilla <b>public_repo</b> ya viene marcada.</li>
+        <li>Abajo toca <b>Generate token</b> y copia la llave (empieza con <code>ghp_</code>).</li>
+        <li>Pégala aquí:</li>
+      </ol>
+      <input id="gh-token" placeholder="ghp_..." autocomplete="off" spellcheck="false">
+      <p class="muted small">Se guarda cifrada con tu usuario de Windows, fuera de OneDrive, junto a tu clave de firma. No se la pases a nadie.</p>
+      <div class="note err" id="gh-err" hidden></div>
+      <div class="modal-actions"><button class="btn ghost" id="gh-cancel">Cancelar</button><button class="btn primary" id="gh-ok">Conectar</button></div>`);
+    $('#gh-token', box).focus();
+    $('#gh-cancel', box).onclick = () => {
+      closeModal();
+      resolve(false);
+    };
+    $('#gh-ok', box).onclick = async () => {
+      const b = $('#gh-ok', box);
+      b.disabled = true;
+      b.innerHTML = '<span class="spin"></span> Comprobando...';
+      try {
+        const r = await api('/github/conectar', { method: 'POST', body: { token: $('#gh-token', box).value } });
+        toast(`Conectado como ${r.usuario}`, 'ok');
+        closeModal();
+        await refreshEstado();
+        resolve(true);
+      } catch (err) {
+        $('#gh-err', box).hidden = false;
+        $('#gh-err', box).textContent = err.message;
+        b.disabled = false;
+        b.textContent = 'Conectar';
+      }
+    };
+  });
 }
 
 // ---------------- INICIO ----------------
@@ -132,14 +237,17 @@ views.inicio = async () => {
     <div class="stat hl"><div class="k">Servidor</div><div class="v">${esc(e.servidor.name || '—')}</div><div class="s">${e.servidor.address ? esc(e.servidor.address) : 'Sin dirección todavía'}</div></div>
     <div class="stat"><div class="k">Versión del pack</div><div class="v">${esc(e.packVersion)}</div><div class="s">Minecraft ${esc(e.minecraft)} · Fabric ${esc(e.fabric)}</div></div>
     <div class="stat"><div class="k">Mods</div><div class="v">${e.totalJars}</div><div class="s">${m ? `${m.obligatorios} obligatorios · ${m.opcionales} opcionales` : 'Sin publicar'}</div></div>
-    <div class="stat"><div class="k">Launcher</div><div class="v">${esc(e.launcher || '—')}</div><div class="s">Versión que reciben los jugadores</div></div>`;
+    <div class="stat"><div class="k">Launcher</div><div class="v">${esc(e.launcher || '—')}</div><div class="s">${e.launcherNuevo ? `La ${esc(e.launcherNuevo)} se publica con el próximo «Publicar»` : 'Versión que reciben los jugadores'}</div></div>`;
   const pend = e.pendientes;
   const reset = e.reinicio > e.reinicioPublicado;
-  $('#inicio-pend').innerHTML = pend.length || reset
+  $('#key-warn')?.remove();
+  $('#inicio-pend').innerHTML = pendiente(e)
     ? `<h3>📝 Cambios sin publicar</h3><p class="muted small">Están guardados en esta PC pero los jugadores todavía no los tienen.</p>
        <div class="list">${pend.slice(0, 12).map((x) => `<div class="mf">${esc(x)}</div>`).join('')}${pend.length > 12 ? `<div class="mf">…y ${pend.length - 12} más</div>` : ''}
-       ${reset ? '<div class="mf">♻️ Reinicio de configuración para todos los jugadores</div>' : ''}</div>
-       <p><button class="btn primary" data-go="publicar">🚀 Ir a publicar</button></p>`
+       ${reset ? '<div class="mf">♻️ Reinicio de configuración para todos los jugadores</div>' : ''}
+       ${e.launcherNuevo ? `<div class="mf">🚀 Launcher ${esc(e.launcherNuevo)}</div>` : ''}
+       ${!pend.length && !reset && !e.launcherNuevo ? '<div class="mf">Archivos preparados que todavía no se subieron a GitHub</div>' : ''}</div>
+       <p><button class="btn primary big" data-publish>🚀 Publicar ahora</button></p>`
     : `<h3>✅ Todo publicado</h3><p class="muted">Los jugadores tienen la última versión de todo.</p>`;
   if (!e.clave.autorizada) {
     $('#inicio-pend').insertAdjacentHTML('beforebegin', `<div class="note err" id="key-warn">🔑 Esta PC no puede publicar todavía: ${e.clave.existe ? 'su clave no está autorizada en el launcher' : 'no tiene la clave de firma'}. <a href="#" data-go="admins">Ver cómo solucionarlo</a>.</div>`);
@@ -150,19 +258,12 @@ async function gitBanner() {
   const el = $('#git-banner');
   el.innerHTML = '';
   try {
-    const g = await api('/git');
-    if (g.disponible && g.atrasado > 0) {
-      el.innerHTML = `<div class="note info">⬇ Hay <b>${g.atrasado}</b> cambio(s) en GitHub que no tienes (de otro administrador). <button class="btn" id="pull-btn">Traerlos ahora</button></div>`;
-      $('#pull-btn').onclick = pull;
+    const g = await api('/remoto');
+    if (g.git && g.atrasado > 0) {
+      el.innerHTML = `<div class="note info">⬇ Otro administrador publicó cambios que no tienes en esta PC. <button class="btn" id="pull-btn">Traerlos ahora</button></div>`;
+      $('#pull-btn').onclick = () => runJob('/traer', '⬇ Trayendo cambios');
     }
   } catch {}
-}
-async function pull() {
-  const r = await api('/git/traer', { method: 'POST' });
-  if (r.ok) {
-    toast('Cambios traídos', 'ok');
-    show(current);
-  } else modal(`<h2>No se pudieron traer los cambios</h2><pre class="console">${esc(r.salida)}</pre><p>Ábrelo en GitHub Desktop y toca «Pull origin».</p><div class="modal-actions"><button class="btn" data-open="desktop">Abrir GitHub Desktop</button><button class="btn primary" data-close>Cerrar</button></div>`);
 }
 
 // ---------------- MODS ----------------
@@ -712,72 +813,43 @@ async function renderReset() {
   });
 }
 
-// ---------------- PUBLICAR ----------------
-let published = false;
+// ---------------- PUBLICAR (pestaña) ----------------
 views.publicar = async () => {
-  const [e, g] = await Promise.all([refreshEstado(), api('/git').catch(() => ({ disponible: false }))]);
-  const pend = e.pendientes.length || e.reinicio > e.reinicioPublicado;
-  const steps = [];
-  if (g.disponible && g.atrasado > 0) {
-    steps.push(`<div class="step"><div class="n">!</div><div class="body"><h3>Primero: trae los cambios de otros administradores</h3>
-      <p>En GitHub hay ${g.atrasado} cambio(s) que no tienes. Tráelos antes de publicar para no pisarlos.</p><button class="btn primary" id="p-pull">⬇ Traer cambios</button></div></div>`);
-  }
-  steps.push(`<div class="step ${published ? 'done' : ''}"><div class="n">${published ? '✓' : 1}</div><div class="body"><h3>Generar y firmar la lista</h3>
-    <p>${pend ? 'Revisa los mods, prepara la lista y la firma con tu clave. Tarda menos de un minuto.' : 'No hay cambios nuevos, pero puedes generarla igual para comprobar.'}</p>
-    ${dirty.size ? '<div class="note">Tienes cambios sin guardar: guárdalos antes.</div>' : ''}
-    ${!e.clave.autorizada ? '<div class="note err">Esta PC no puede firmar (mira la pestaña Administradores).</div>' : ''}
-    <button class="btn primary big" id="p-gen" ${!e.clave.autorizada || dirty.size ? 'disabled' : ''}>🚀 Generar y firmar</button></div></div>`);
-  steps.push(`<div class="step"><div class="n">2</div><div class="body"><h3>Subir a GitHub</h3>
-    ${g.disponible
-      ? `<p>${g.cambios ? `Hay ${g.cambios} archivo(s) para subir.` : 'No hay nada para subir.'}${g.adelantado ? ` Y ${g.adelantado} commit(s) guardados sin subir.` : ''}</p>
-         <div class="toolbar"><input id="p-msg" placeholder="Qué cambiaste (por ejemplo: nuevos mods)" style="max-width:380px"><button class="btn primary" id="p-push" ${g.cambios || g.adelantado ? '' : 'disabled'}>⬆ Subir</button></div>
-         <p class="muted small">¿Prefieres hacerlo a mano? <a href="#" data-open="desktop">Abrir GitHub Desktop</a> → Commit to main → Push origin.</p>`
-      : `<p>Abre GitHub Desktop y:</p><ul><li>Abajo a la izquierda escribe un nombre (por ejemplo: <i>mods</i>).</li><li>Toca <b>Commit to main</b>.</li><li>Arriba toca <b>Push origin</b>.</li></ul><button class="btn" data-open="desktop">Abrir GitHub Desktop</button>`}
-    </div></div>`);
-  $('#pub-steps').innerHTML = steps.join('');
-  $('#p-pull') && ($('#p-pull').onclick = async () => { await pull(); });
-  $('#p-gen').onclick = generate;
-  $('#p-push') && ($('#p-push').onclick = push);
+  const e = await refreshEstado();
+  const g = await api('/github').catch(() => ({ conectado: false }));
+  const pend = pendiente(e);
+  $('#pub-steps').innerHTML = `
+    <div class="card pub-hero">
+      <div>
+        <h3>${pend || dirty.size ? '📝 Hay cambios para publicar' : '✅ Todo publicado'}</h3>
+        <p class="muted">${pend || dirty.size ? 'Un clic y les llega a todos la próxima vez que abran el launcher.' : 'Los jugadores tienen la última versión. Puedes publicar igual si quieres comprobarlo.'}</p>
+        ${e.launcherNuevo ? `<p>🚀 Incluye el <b>launcher ${esc(e.launcherNuevo)}</b>: se sube a GitHub y los launchers se actualizan solos.</p>` : ''}
+      </div>
+      <button class="btn primary big" data-publish>🚀 Publicar ahora</button>
+    </div>
+    <div class="card"><h3>🔗 Conexión con GitHub</h3>
+      ${g.conectado
+        ? `<p>Conectado como <b>${esc(g.usuario)}</b> al repositorio <b>${esc(g.repo)}</b>. ${g.puedeEscribir ? '' : '<span class="badge red">sin permiso para publicar</span>'}</p><button class="btn ghost" id="gh-off">Desconectar</button>`
+        : `<p class="muted">${g.error ? esc(g.error) : 'El panel todavía no puede subir cambios desde esta PC.'}</p><button class="btn" id="gh-on">Conectar con GitHub</button>`}
+    </div>
+    <div class="card"><h3>¿Qué hace «Publicar»?</h3>
+      <ol class="howto">
+        <li>Trae lo que hayan publicado otros administradores (y descarga los mods que falten en esta PC).</li>
+        <li>Si hay un launcher nuevo, lo sube a GitHub Releases.</li>
+        <li>Revisa los mods, prepara la lista y la firma con tu clave.</li>
+        <li>Lo sube todo a GitHub. No hace falta abrir GitHub Desktop.</li>
+      </ol>
+    </div>`;
+  $('#gh-on') && ($('#gh-on').onclick = async () => { if (await connectGithub()) views.publicar(); });
+  $('#gh-off') && ($('#gh-off').onclick = async () => {
+    await api('/github/desconectar', { method: 'POST' });
+    toast('Desconectado');
+    views.publicar();
+  });
+  const out = $('#pub-out');
+  out.hidden = !lastJob;
+  if (lastJob) out.textContent = lastJob.log.join('\n');
 };
-async function generate() {
-  const b = $('#p-gen');
-  b.disabled = true;
-  b.innerHTML = '<span class="spin"></span> Generando...';
-  const out = $('#pub-out');
-  out.hidden = false;
-  out.textContent = 'Revisando mods y consultando Modrinth...';
-  try {
-    const r = await api('/publicar', { method: 'POST' });
-    out.textContent = r.salida;
-    if (r.ok) {
-      published = true;
-      toast('Lista generada y firmada ✔', 'ok');
-    } else toast('Hubo un error: mira el detalle abajo', 'err');
-  } catch (err) {
-    out.textContent = err.message;
-    toast(err.message, 'err');
-  }
-  await views.publicar();
-  out.hidden = false;
-}
-async function push() {
-  const b = $('#p-push');
-  b.disabled = true;
-  b.innerHTML = '<span class="spin"></span> Subiendo...';
-  const out = $('#pub-out');
-  try {
-    const r = await api('/git/subir', { method: 'POST', body: { mensaje: $('#p-msg').value.trim() || 'cambios desde el panel' } });
-    out.hidden = false;
-    out.textContent = r.salida;
-    if (r.ok) {
-      toast('¡Publicado! Los jugadores lo reciben al abrir el launcher.', 'ok');
-      published = false;
-    } else toast('No se pudo subir. Prueba con GitHub Desktop.', 'err');
-  } catch (err) {
-    toast(err.message, 'err');
-  }
-  await views.publicar();
-}
 
 // ---------------- ADMINISTRADORES ----------------
 views.admins = async () => {
