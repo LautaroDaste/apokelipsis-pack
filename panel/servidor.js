@@ -99,6 +99,25 @@ function listJars(dir) {
   return exists(dir) ? fs.readdirSync(dir).filter((f) => f.toLowerCase().endsWith('.jar')).sort((a, b) => a.localeCompare(b)) : [];
 }
 
+// ---------- ¿Cambió el código del panel desde que se abrió? ----------
+// (por ejemplo, llegó una versión nueva con los cambios de otro administrador). Node ya cargó el
+// código viejo, así que hay que cerrar y volver a abrir el panel antes de publicar.
+const codeHash = () => {
+  const h = crypto.createHash('sha1');
+  const walk = (dir) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) walk(full);
+      else if (/\.(js|html|css)$/.test(e.name)) h.update(e.name).update(fs.readFileSync(full));
+    }
+  };
+  walk(__dirname);
+  for (const f of ['generate-manifest.js', 'estado-publicado.js', 'modinfo.js']) if (exists(p(f))) h.update(fs.readFileSync(p(f)));
+  return h.digest('hex');
+};
+const CODE_AT_START = codeHash();
+const panelDesactualizado = () => codeHash() !== CODE_AT_START;
+
 // ---------- API ----------
 const api = {};
 
@@ -122,6 +141,7 @@ api['GET /estado'] = async () => {
     totalJars: listJars(p('mods')).length,
     pendientes,
     ...(await publicador.estadoLocal()),
+    panelDesactualizado: panelDesactualizado(),
     clave: claveEstado(),
     juego: exists(path.join(GAME, 'options.txt')),
     carpeta: ROOT
@@ -434,7 +454,7 @@ api['POST /clave/crear'] = async () => {
 };
 
 // Publicar en un solo paso (traer, launcher, lista firmada, commit y push): ver publicar.js
-const publicador = require('./publicar')({ ROOT, KEY_DIR, TRASH, run, readJson, readPack, writePack, claveEstado, UserError });
+const publicador = require('./publicar')({ ROOT, KEY_DIR, TRASH, run, readJson, readPack, writePack, claveEstado, UserError, panelDesactualizado });
 Object.assign(api, publicador.api);
 
 api['POST /abrir'] = async (q, req, res, body) => {

@@ -128,6 +128,9 @@ async function refreshEstado() {
   $$('.mc-ver').forEach((el) => (el.textContent = estado.minecraft));
   $('#nav-pend').hidden = !pendiente();
   $('#side-foot').innerHTML = `Pack ${esc(estado.packVersion)} · Launcher ${esc(estado.launcher || '?')}<br>${esc(estado.carpeta)}`;
+  if (estado.panelDesactualizado && !$('#stale-banner')) {
+    $('#main').insertAdjacentHTML('afterbegin', `<div class="note err" id="stale-banner" style="max-width:1060px;margin:0 auto 16px">🔄 <b>El panel se actualizó.</b> Cierra la ventana negra del panel y vuelve a abrir «PANEL DE CONTROL.bat» antes de publicar. Tus cambios están guardados.</div>`);
+  }
   updateBar();
   return estado;
 }

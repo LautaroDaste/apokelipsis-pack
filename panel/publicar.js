@@ -12,7 +12,8 @@ const crypto = require('crypto');
 const { spawn } = require('child_process');
 
 module.exports = function crearPublicador(ctx) {
-  const { ROOT, KEY_DIR, TRASH, run, readJson, readPack, writePack, claveEstado, UserError } = ctx;
+  const { ROOT, KEY_DIR, TRASH, run, readJson, readPack, writePack, claveEstado, UserError, panelDesactualizado } = ctx;
+  const REINICIAR = 'El panel se actualizó mientras estaba abierto. Cierra la ventana negra del panel y vuelve a abrir «PANEL DE CONTROL.bat»; tus cambios están guardados.';
   const p = (...a) => path.join(ROOT, ...a);
   const exists = (f) => fs.existsSync(f);
   const TOKEN_FILE = path.join(KEY_DIR, 'github-token.dat');
@@ -307,8 +308,11 @@ module.exports = function crearPublicador(ctx) {
     if (!claveEstado().existe) fail('Esta PC no tiene la clave de firma (pestaña «Administradores»).');
     if (!(await getToken())) fail('El panel todavía no está conectado con GitHub (pestaña «Publicar»).');
 
+    if (panelDesactualizado()) fail(REINICIAR);
     // Primero se trae lo publicado: la lista de claves autorizadas puede haber cambiado.
     await traer();
+    // Si con lo traído llegó una versión nueva del panel, se publica con ella (no con la cargada).
+    if (panelDesactualizado()) fail(REINICIAR);
     if (!claveEstado().autorizada) fail('La clave de esta PC todavía no está autorizada en el launcher (pestaña «Administradores»).');
     await publicarLauncher();
 
