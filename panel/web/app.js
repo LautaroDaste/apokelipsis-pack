@@ -140,8 +140,10 @@ async function publishAll() {
   try {
     if (dirty.size) await saveEdits();
     const e = await refreshEstado();
-    if (!e.clave.autorizada) {
-      return modal(`<h2>Esta PC no puede publicar</h2><p>${e.clave.existe ? 'Su clave de firma todavía no está autorizada en el launcher.' : 'No tiene la clave de firma.'} Tus cambios quedaron guardados en esta carpeta.</p>
+    // Si la clave existe pero no figura como autorizada, se intenta igual: al traer los cambios del
+    // dueño puede llegar la lista nueva de claves (el servidor vuelve a comprobarlo después).
+    if (!e.clave.existe) {
+      return modal(`<h2>Esta PC no puede publicar</h2><p>No tiene la clave de firma. Tus cambios quedaron guardados en esta carpeta.</p>
         <div class="modal-actions"><button class="btn ghost" data-close>Cerrar</button><button class="btn primary" data-go="admins">Ver cómo solucionarlo</button></div>`);
     }
     if (!e.git) {

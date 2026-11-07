@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.19",
+  "packVersion": "1.0.20",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -85,11 +85,11 @@
   },
   "resetVersion": 0,
   "launcher": {
-    "version": "1.4.0",
-    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v.1.4.0/Instalar.Apokelipsis.exe",
-    "sha1": "c2210c001210f1cc6aaad6e3a4f09f6f3be71e14",
-    "sha512": "a28013186be8342b06fa15a329b2842d6668adc74995e6fafec893f4523c239f2f32317a936f392d68b8be0d301eeccdc8b26bec3858e94aad56af549d81c5a9",
-    "size": 113607983
+    "version": "1.4.1",
+    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.1/Instalar-Apokelipsis.exe",
+    "sha1": "dbf7813ba69d8a2d9000a9b64bed8a21817dc42c",
+    "sha512": "62ba8552d7b341735b60b2be8dad23100aacec5cc969f2aed26623d99aaa4ecb1b9e1302428240c2d767e53713937433a12b8a6f9093e0ec94d6676667a7c39d",
+    "size": 113607953
   },
   "defaultOptions": {
     "ao": "true",

@@ -4,6 +4,10 @@
     {
       "nombre": "Dueño del servidor",
       "clave": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAAXxC7hKv200b/OPPbVTz9JjRlMMLBZU2UbVDMLcRrlk=\n-----END PUBLIC KEY-----"
+    },
+    {
+      "nombre": "Segundo administrador",
+      "clave": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA7UFmwiqnxxVPICYUZBscxXA9nrtnwkOFFNfPTbpTgIo=\n-----END PUBLIC KEY-----"
     }
   ]
 }

@@ -304,12 +304,12 @@ module.exports = function crearPublicador(ctx) {
   }
 
   async function publicar() {
-    const clave = claveEstado();
-    if (!clave.existe) fail('Esta PC no tiene la clave de firma (pestaña «Administradores»).');
-    if (!clave.autorizada) fail('La clave de esta PC todavía no está autorizada en el launcher (pestaña «Administradores»).');
+    if (!claveEstado().existe) fail('Esta PC no tiene la clave de firma (pestaña «Administradores»).');
     if (!(await getToken())) fail('El panel todavía no está conectado con GitHub (pestaña «Publicar»).');
 
+    // Primero se trae lo publicado: la lista de claves autorizadas puede haber cambiado.
     await traer();
+    if (!claveEstado().autorizada) fail('La clave de esta PC todavía no está autorizada en el launcher (pestaña «Administradores»).');
     await publicarLauncher();
 
     fase('Preparando y firmando la lista de mods (consulta Modrinth)');

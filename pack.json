@@ -1,13 +1,23 @@
 {
-  "packVersion": "1.0.19",
+  "packVersion": "1.0.20",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
     "name": "APOKÉLIPSIS SMP",
     "address": ""
   },
-  "clientMods": ["fabric-api", "customskinloader"],
-  "requiredClient": ["apokelipsis", "customskinloader"],
-  "launcher": { "version": "1.4.0", "file": "launcher/Instalar Apokelipsis.exe", "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v.1.4.0/Instalar.Apokelipsis.exe" },
-  "baseUrl":"https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main"
+  "clientMods": [
+    "fabric-api",
+    "customskinloader"
+  ],
+  "requiredClient": [
+    "apokelipsis",
+    "customskinloader"
+  ],
+  "launcher": {
+    "version": "1.4.1",
+    "file": "launcher/Instalar Apokelipsis.exe",
+    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.1/Instalar-Apokelipsis.exe"
+  },
+  "baseUrl": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main"
 }
