@@ -180,14 +180,14 @@ textarea { resize: vertical; min-height: 54px; line-height: 1.4; }
 .pv-title { font-family: var(--pixel); font-size: clamp(22px, 4.2vw, 44px); color: #ffb95e; text-shadow: 0 3px 0 #d46a0c, 0 6px 0 #803c00; display: flex; flex-direction: column; align-items: center; line-height: 1; margin-bottom: 8%; }
 .pv-title small { font-size: .45em; color: #ffe6b8; margin-top: 6px; }
 .pv-splash {
-  position: absolute; top: 25%; left: 62%; color: #ffff00; font-family: var(--pixel); text-shadow: 2px 2px 0 #3f3f00; transform: rotate(-18deg);
+  position: absolute; top: 25%; left: 62%; color: #ffff00; font-family: "Rubik", "Segoe UI", sans-serif; font-weight: 700; text-shadow: 2px 2px 0 #3f3f00; transform: rotate(-18deg);
   white-space: nowrap; animation: pulse .45s ease-in-out infinite alternate; transform-origin: center;
 }
 @keyframes pulse { from { transform: rotate(-18deg) scale(1); } to { transform: rotate(-18deg) scale(1.07); } }
-.pv-btn { width: 38%; background: rgba(0, 0, 0, .55); border: 1px solid rgba(255,255,255,.25); color: #fff; text-align: center; font-size: 12px; padding: 5px; font-family: var(--pixel); }
-.pv-foot { position: absolute; bottom: 4px; left: 6px; right: 6px; display: flex; justify-content: space-between; color: #fff; font-size: 10px; font-family: var(--pixel); }
+.pv-btn { width: 38%; background: rgba(0, 0, 0, .55); border: 1px solid rgba(255,255,255,.25); color: #fff; text-align: center; font-size: 12px; padding: 5px; font-family: "Rubik", "Segoe UI", sans-serif; font-weight: 500; }
+.pv-foot { position: absolute; bottom: 4px; left: 6px; right: 6px; display: flex; justify-content: space-between; color: #fff; font-size: 10px; font-family: "Rubik", "Segoe UI", sans-serif; }
 .frase { display: flex; gap: 6px; margin-bottom: 6px; align-items: center; }
-.frase input { font-family: var(--pixel); font-size: 13px; color: #8a7300; background: #fffde6; }
+.frase input { font-family: "Rubik", "Segoe UI", sans-serif; font-size: 14px; color: #8a7300; background: #fffde6; }
 .frase input.sel { border-color: #e6c600; }
 .frase .len { font-size: 11px; color: var(--ink-soft); width: 34px; text-align: right; }
 
