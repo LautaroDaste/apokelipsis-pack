@@ -6,6 +6,21 @@ Todo lo que publiques desde acá les llega solo a los jugadores la próxima vez
 que abran el launcher.
 
 
+LO MÁS FÁCIL: EL PANEL DE CONTROL
+---------------------------------
+Doble clic en "PANEL DE CONTROL.bat". Se abre una página en tu navegador desde la que puedes:
+- Agregar mods (arrastrando los .jar) o quitarlos (van a una papelera, por si te arrepientes).
+- Cambiar nombre, descripción y si viene encendido cada mod opcional.
+- Cambiar las frases amarillas del menú del juego y la dirección del servidor.
+- Configuración inicial: lo que recibe un jugador la PRIMERA vez que abre el juego
+  (video, controles, packs de texturas, configs de mods). Lo más cómodo es dejar tu juego
+  como quieres y usar "Copiar desde mi juego". En "Controles" te marca en rojo las teclas repetidas.
+- "Reiniciar a todos": la próxima vez que cada jugador abra el juego, vuelve a recibir toda la
+  configuración inicial (una sola vez).
+- Publicar: genera y firma la lista, y la sube a GitHub (o te abre GitHub Desktop).
+No cierres la ventana negra mientras uses el panel. Todo lo de abajo es la forma "a mano".
+
+
 PRIMERA VEZ (solo una vez)
 --------------------------
 1. Abre GitHub Desktop (con tu sesión de GitHub iniciada).
@@ -44,7 +59,9 @@ OTRAS COSAS QUE PUEDES CAMBIAR
 - Packs de texturas / shaders: carpeta files\resourcepacks y files\shaderpacks.
 - Fondo del menú del juego: files\config\apokelipsis (panorama_0 a panorama_5).
 - Opciones con las que arranca el juego: opciones-predeterminadas.txt
-  (mismo formato que el options.txt de Minecraft).
+  (mismo formato que el options.txt de Minecraft). Solo se aplican la primera vez que el
+  jugador abre el juego; después se respeta lo que cambie.
+- Frases amarillas del menú: files\config\apokelipsis\frases.json.
 - Descripción en español de un mod opcional: descripciones.json.
 - IP del servidor: en pack.json, "address" (por ejemplo "play.apokelipsis.com").
 Después de cualquier cambio: doble clic en "PUBLICAR MODS.bat" y Commit + Push.

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel Apokelipsis</title>
+  <link rel="icon" href="icono.png">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <aside class="side">
+    <div class="brand">
+      <img src="icono.png" alt="">
+      <div>
+        <div class="brand-title">APOKÉLIPSIS</div>
+        <div class="brand-sub">Panel de control</div>
+      </div>
+    </div>
+    <nav id="nav">
+      <button data-view="inicio" class="active"><span class="ic">🏠</span>Inicio</button>
+      <button data-view="mods"><span class="ic">📦</span>Mods</button>
+      <button data-view="opcionales"><span class="ic">🎚️</span>Mods opcionales</button>
+      <button data-view="menu"><span class="ic">✨</span>Menú del juego</button>
+      <button data-view="config"><span class="ic">⚙️</span>Configuración inicial</button>
+      <button data-view="publicar"><span class="ic">🚀</span>Publicar <span class="dot" id="nav-pend" hidden></span></button>
+      <button data-view="admins"><span class="ic">🔑</span>Administradores</button>
+    </nav>
+    <div class="side-foot" id="side-foot"></div>
+  </aside>
+
+  <main id="main">
+    <!-- INICIO -->
+    <section class="view" id="view-inicio">
+      <header class="vh"><h1>Hola 👋</h1><p>Desde aquí cambias lo que reciben los jugadores. Nada llega a ellos hasta que lo <b>publiques</b>.</p></header>
+      <div id="git-banner"></div>
+      <div class="cards" id="inicio-cards"></div>
+      <div class="card" id="inicio-pend"></div>
+    </section>
+
+    <!-- MODS -->
+    <section class="view" id="view-mods" hidden>
+      <header class="vh"><h1>Mods</h1><p>Arrastra los <code>.jar</code> para agregarlos. El panel decide solo si son obligatorios, opcionales o solo del servidor al publicar.</p></header>
+      <label class="drop" id="drop">
+        <input type="file" id="drop-input" accept=".jar" multiple hidden>
+        <div class="drop-ic">⬇</div>
+        <div><b>Arrastra aquí los mods</b> o haz clic para elegirlos</div>
+        <div class="muted small">Solo mods de Fabric para Minecraft <span class="mc-ver"></span></div>
+      </label>
+      <div id="upload-list"></div>
+      <div class="toolbar">
+        <input type="search" id="mods-search" placeholder="Buscar mod...">
+        <div class="chips" id="mods-filter">
+          <button data-f="todos" class="on">Todos</button>
+          <button data-f="obligatorio">Obligatorios</button>
+          <button data-f="opcional">Opcionales</button>
+          <button data-f="servidor">Solo servidor</button>
+          <button data-f="nuevo">Sin publicar</button>
+        </div>
+        <button class="btn ghost" data-open="mods">📂 Abrir carpeta</button>
+      </div>
+      <div class="list" id="mods-list"></div>
+      <details class="card trash" id="trash">
+        <summary>🗑️ Papelera <span class="muted" id="trash-count"></span></summary>
+        <p class="muted small">Los mods que quitas se guardan aquí (en <code>herramientas/mods-quitados</code>) por si te arrepientes.</p>
+        <div class="list" id="trash-list"></div>
+      </details>
+    </section>
+
+    <!-- OPCIONALES -->
+    <section class="view" id="view-opcionales" hidden>
+      <header class="vh"><h1>Mods opcionales</h1><p>Son los mods que cada jugador puede apagar desde el launcher. Cambia cómo se llaman, qué dicen y si vienen encendidos.</p></header>
+      <div class="note" id="opc-note"></div>
+      <div class="opc-grid" id="opc-list"></div>
+      <div class="card" id="forzados"></div>
+    </section>
+
+    <!-- MENÚ -->
+    <section class="view" id="view-menu" hidden>
+      <header class="vh"><h1>Menú del juego</h1><p>Las frases amarillas que salen junto al título y los datos del servidor.</p></header>
+      <div class="menu-wrap">
+        <div class="preview" id="menu-preview">
+          <div class="pv-title">APOKÉLIPSIS<small>SMP</small></div>
+          <div class="pv-splash" id="pv-splash">¡Hazte con todos!</div>
+          <div class="pv-btn">Jugar</div><div class="pv-btn">Opciones</div><div class="pv-btn">Campos de prueba</div>
+          <div class="pv-foot"><span>APOKÉLIPSIS SMP · Minecraft <span class="mc-ver"></span></span><span id="pv-server"></span></div>
+        </div>
+        <div class="card">
+          <h3>Frases amarillas</h3>
+          <p class="muted small">Cada vez que se abre el juego sale una al azar. Máximo 80 letras (las cortas se ven más grandes). Haz clic en una para verla en la vista previa.</p>
+          <div id="frases"></div>
+          <button class="btn ghost" id="frase-add">＋ Agregar frase</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Servidor</h3>
+        <div class="form2">
+          <label>Nombre<input id="srv-name" maxlength="60"></label>
+          <label>Dirección (IP)<input id="srv-addr" placeholder="por ejemplo: play.apokelipsis.com" maxlength="120"></label>
+        </div>
+        <p class="muted small">Mientras la dirección esté vacía, el botón «Jugar» del menú sale apagado con el aviso «próximamente».</p>
+      </div>
+    </section>
+
+    <!-- CONFIGURACIÓN INICIAL -->
+    <section class="view" id="view-config" hidden>
+      <header class="vh"><h1>Configuración inicial</h1><p>Lo que recibe un jugador <b>la primera vez</b> que abre el juego. Después cada uno la cambia a su gusto y el launcher no la vuelve a tocar.</p></header>
+      <div class="tabs" id="cfg-tabs">
+        <button data-t="opciones" class="on">🖥️ Opciones</button>
+        <button data-t="controles">🎮 Controles <span class="badge red" id="conf-count" hidden></span></button>
+        <button data-t="packs">🎨 Packs de texturas</button>
+        <button data-t="configs">🧩 Configs de mods</button>
+        <button data-t="reinicio">♻️ Reiniciar a todos</button>
+      </div>
+
+      <div class="tab" id="t-opciones">
+        <div class="toolbar">
+          <input type="search" id="opt-search" placeholder="Buscar opción...">
+          <button class="btn" id="import-btn">⤵ Copiar desde mi juego</button>
+        </div>
+        <p class="muted small">Consejo: abre el juego con el launcher, déjalo como quieres que lo reciban los jugadores (video, controles, packs), ciérralo y usa <b>«Copiar desde mi juego»</b>.</p>
+        <div id="opt-groups"></div>
+      </div>
+
+      <div class="tab" id="t-controles" hidden>
+        <div class="toolbar">
+          <input type="search" id="key-search" placeholder="Buscar control o mod...">
+          <label class="check"><input type="checkbox" id="key-conf-only"> Solo teclas repetidas</label>
+        </div>
+        <p class="muted small">Haz clic en una tecla y luego pulsa la nueva (o un botón del mouse). <kbd>Esc</kbd> cancela, <kbd>Retroceso</kbd> la deja sin asignar. En rojo: teclas que usan dos o más controles a la vez.</p>
+        <div id="keys"></div>
+      </div>
+
+      <div class="tab" id="t-packs" hidden>
+        <p class="muted small">Arriba = más prioridad (se dibuja encima de los de abajo). Los packs se ponen en <code>files/resourcepacks</code>.</p>
+        <div class="packs">
+          <div class="card"><h3>Activados</h3><div id="packs-on" class="list"></div></div>
+          <div class="card"><h3>Disponibles</h3><div id="packs-off" class="list"></div><button class="btn ghost" data-open="packs">📂 Abrir carpeta de packs</button></div>
+        </div>
+      </div>
+
+      <div class="tab" id="t-configs" hidden>
+        <p class="muted small">Archivos de configuración de los mods (carpeta <code>config</code>) que reciben los jugadores nuevos. Elige de dónde sale cada uno.</p>
+        <div class="toolbar">
+          <input type="search" id="cfgf-search" placeholder="Buscar archivo...">
+          <div class="chips" id="cfgf-filter">
+            <button data-f="todos" class="on">Todos</button>
+            <button data-f="distinto">Distintos en mi juego</button>
+            <button data-f="nuevo">Solo en mi juego</button>
+            <button data-f="pack">En el pack</button>
+          </div>
+          <button class="btn ghost" id="cfgf-all">Usar mi juego en todos los distintos</button>
+        </div>
+        <div class="list" id="cfgf-list"></div>
+      </div>
+
+      <div class="tab" id="t-reinicio" hidden>
+        <div class="card danger-card">
+          <h3>♻️ Reiniciar la configuración de todos los jugadores</h3>
+          <p>La próxima vez que cada jugador abra el juego, el launcher le vuelve a poner <b>toda</b> la configuración inicial (opciones, controles, packs de texturas y configs de mods), aunque la haya cambiado. Pasa <b>una sola vez</b> por cada reinicio.</p>
+          <p class="muted small">Úsalo con cuidado: borra los ajustes personales de todos. Los mundos, skins y mods opcionales elegidos no se tocan.</p>
+          <div id="reset-state"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICAR -->
+    <section class="view" id="view-publicar" hidden>
+      <header class="vh"><h1>Publicar</h1><p>Envía los cambios a los jugadores. Les llegan la próxima vez que abran el launcher.</p></header>
+      <div class="steps" id="pub-steps"></div>
+      <pre class="console" id="pub-out" hidden></pre>
+    </section>
+
+    <!-- ADMINISTRADORES -->
+    <section class="view" id="view-admins" hidden>
+      <header class="vh"><h1>Administradores</h1><p>Quién puede publicar cambios y cómo compartir este panel.</p></header>
+      <div id="admins"></div>
+    </section>
+  </main>
+
+  <div class="savebar" id="savebar" hidden>
+    <span>Tienes cambios sin guardar</span>
+    <button class="btn ghost" id="discard">Descartar</button>
+    <button class="btn primary" id="save">Guardar</button>
+  </div>
+  <div class="modal" id="modal" hidden><div class="modal-box" id="modal-box"></div></div>
+  <div class="toasts" id="toasts"></div>
+  <script src="nombres.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

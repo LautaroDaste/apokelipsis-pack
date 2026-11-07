@@ -163,14 +163,22 @@ async function main() {
     if (!mods.some((m) => m.projectId === info.projectId)) mods.push(info);
     console.log(`  ${slug} (cliente): ${info.file}`);
   }
-  // Descripciones en español (descripciones.json, por id del mod). Si falta, se usa la original.
-  const spanish = fs.existsSync(path.join(ROOT, 'descripciones.json')) ? readJson('descripciones.json') : {};
+  // Datos de los mods opcionales (descripciones.json, por id del mod; se edita con el panel de control).
+  // Cada valor puede ser solo la descripción ("texto") o { "nombre", "descripcion", "activado" }.
+  // Si falta la descripción, se usa la original del mod.
+  const spanishRaw = fs.existsSync(path.join(ROOT, 'descripciones.json')) ? readJson('descripciones.json') : {};
+  const optMeta = (id) => {
+    const v = spanishRaw[id];
+    if (typeof v === 'string') return { descripcion: v };
+    return v && typeof v === 'object' ? v : {};
+  };
+  const spanish = Object.fromEntries(Object.keys(spanishRaw).map((id) => [id, optMeta(id).descripcion]).filter(([, d]) => d));
   const optional = optionalMods
     .map((m) => ({
       id: optionalId(m),
-      name: m.title,
+      name: optMeta(optionalId(m)).nombre || m.title,
       description: spanish[optionalId(m)] || (m.text.length > 120 ? m.text.slice(0, 117) + '...' : m.text),
-      default: true,
+      default: optMeta(optionalId(m)).activado !== false,
       requires: depsOf(m).filter((d) => optionalMods.includes(d)).map(optionalId),
       file: m.file,
       url: m.url,
@@ -304,6 +312,8 @@ async function main() {
     fabricLoader: pack.fabricLoader,
     fabricProfile,
     server: pack.server,
+    // Sube cuando el administrador pide reiniciar la configuración de todos los jugadores.
+    resetVersion: Number.isInteger(pack.reinicioConfig) ? pack.reinicioConfig : 0,
     launcher,
     defaultOptions,
     mods: mods.map(clean),
@@ -323,6 +333,8 @@ async function main() {
     if (m?.launcher) map.set(`launcher ${m.launcher.version}`, m.launcher.sha1);
     map.set('opciones predeterminadas', JSON.stringify(m?.defaultOptions || {}));
     map.set('servidor', JSON.stringify(m?.server || {}));
+    map.set('reinicio de configuración', String(m?.resetVersion || 0));
+    for (const o of m?.optional || []) map.set(`opcional ${o.id}`, JSON.stringify([o.name, o.description, o.default]));
     map.set('formato de la lista', String(m?.format || 1));
     map.set('perfil de Fabric', JSON.stringify(m?.fabricProfile || null));
     return map;

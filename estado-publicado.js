@@ -70,7 +70,7 @@ function comprobar() {
   return problems;
 }
 
-module.exports = { guardar };
+module.exports = { guardar, comprobar };
 
 if (require.main === module) {
   const problems = comprobar();

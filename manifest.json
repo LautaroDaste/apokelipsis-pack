@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.17",
+  "packVersion": "1.0.18",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -83,6 +83,7 @@
     "name": "APOKÉLIPSIS SMP",
     "address": ""
   },
+  "resetVersion": 0,
   "launcher": {
     "version": "1.2.2",
     "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/launcher/Instalar%20Apokelipsis.exe",
@@ -532,11 +533,11 @@
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.4.13.jar"
     },
     {
-      "file": "apokelipsis-menu-1.0.0.jar",
-      "sha1": "e2f2808af16f02c223a1c2c6bdbac2ce90cc15ba",
-      "sha512": "4651010dd31fb093ad43ee607661abd4298cb42549ed1078ec2e83b86102966ae0d7bac059bd4d235209e391d93de1414916a9d36ae1b1f8dd0663cc7ede0797",
-      "size": 43380,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.0.0.jar"
+      "file": "apokelipsis-menu-1.1.0.jar",
+      "sha1": "f078317d8c90ab2ab8e25d4c4ff4bb6c92b6b630",
+      "sha512": "fbea3c9881f46187a38b4aedf3e56b24b242afdebc8340273bbb2688f379f60b7b999383aa6355d111de7abc7b33ba19a4e0f7e5a339cbe05d8c6f05c449fc8a",
+      "size": 22779,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.1.0.jar"
     },
     {
       "file": "aps_trophies-1.21.1-fabric-1.2.0.jar",
@@ -1412,6 +1413,13 @@
     }
   ],
   "files": [
+    {
+      "path": "config/apokelipsis/frases.json",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/frases.json",
+      "sha1": "f52a2296c5d8cac6a25de114cc93b526209cf5d2",
+      "sha512": "8bca6180e7865aba542c115e53c1791bd7314b312345d820f4539603b7a78fd8ab21f1b8302a08c969868dbb6e1a3bcbbedb1cd7c9430081a21e8d6f150b4599",
+      "size": 257
+    },
     {
       "path": "config/apokelipsis/panorama_0.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/panorama_0.png",

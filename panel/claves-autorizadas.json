@@ -1,0 +1,9 @@
+{
+  "nota": "Claves públicas que acepta el launcher (copia de launcher/src/core/firma.js). Solo quien tenga una de estas claves puede publicar. Para sumar un administrador, su clave pública tiene que estar aquí Y en el launcher.",
+  "claves": [
+    {
+      "nombre": "Dueño del servidor",
+      "clave": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAAXxC7hKv200b/OPPbVTz9JjRlMMLBZU2UbVDMLcRrlk=\n-----END PUBLIC KEY-----"
+    }
+  ]
+}
