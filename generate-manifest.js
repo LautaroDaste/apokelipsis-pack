@@ -280,21 +280,31 @@ async function main() {
   }
 
   // Instalador del launcher (para que se actualice solo en las PCs de los jugadores).
+  // El instalador vive en GitHub Releases y no se sube al repositorio, así que otros administradores
+  // no lo tienen: su huella queda guardada en pack.json (la anota quien sí tiene el archivo).
+  // Nunca se publica una lista sin launcher: si no hay forma de saber su huella, se frena.
   let launcher = null;
-  if (pack.launcher?.file && fs.existsSync(path.join(ROOT, pack.launcher.file))) {
-    const full = path.join(ROOT, pack.launcher.file);
+  if (pack.launcher?.version) {
     // "url" en pack.json permite alojar el instalador fuera del repo (por ejemplo en GitHub Releases,
-    // que acepta archivos de más de 100 MB). La huella se calcula igual con la copia local.
+    // que acepta archivos de más de 100 MB).
     if (pack.launcher.url && !/^https:\/\//.test(pack.launcher.url)) {
       throw new Error('pack.json: "launcher.url" tiene que empezar con https://');
     }
-    launcher = {
-      version: pack.launcher.version,
-      url: pack.launcher.url || `${baseUrl}/${pack.launcher.file.split('/').map(encodeURIComponent).join('/')}`,
-      sha1: sha1(full),
-      sha512: sha512(full),
-      size: fs.statSync(full).size
-    };
+    const url = pack.launcher.url || `${baseUrl}/${pack.launcher.file.split('/').map(encodeURIComponent).join('/')}`;
+    const full = pack.launcher.file ? path.join(ROOT, pack.launcher.file) : null;
+    if (full && fs.existsSync(full)) {
+      launcher = { version: pack.launcher.version, url, sha1: sha1(full), sha512: sha512(full), size: fs.statSync(full).size };
+      if (pack.launcher.sha512 !== launcher.sha512 || pack.launcher.size !== launcher.size || pack.launcher.sha1 !== launcher.sha1) {
+        const packJson = readJson('pack.json');
+        packJson.launcher = { ...packJson.launcher, sha1: launcher.sha1, sha512: launcher.sha512, size: launcher.size };
+        fs.writeFileSync(path.join(ROOT, 'pack.json'), JSON.stringify(packJson, null, 2) + '\n');
+      }
+    } else if (pack.launcher.sha512 && pack.launcher.size) {
+      launcher = { version: pack.launcher.version, url, sha1: pack.launcher.sha1, sha512: pack.launcher.sha512, size: pack.launcher.size };
+    } else {
+      throw new Error(`No tengo el instalador del launcher ${pack.launcher.version} en esta PC ni su huella en pack.json. `
+        + 'Pídele al dueño del servidor que publique una vez desde su panel (así queda anotada) y vuelve a intentarlo.');
+    }
   }
 
   // Perfil de Fabric (clase principal y librerías que se ejecutan): va dentro de la lista firmada

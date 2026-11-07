@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.22",
+  "packVersion": "1.0.23",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -84,7 +84,13 @@
     "address": ""
   },
   "resetVersion": 0,
-  "launcher": null,
+  "launcher": {
+    "version": "1.4.2",
+    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.2/Instalar-Apokelipsis.exe",
+    "sha1": "80e9b8a819a630442a3f39146975d57fa7e620b0",
+    "sha512": "d7f84496b4d100df115af022103c8eab338e4e0a031ecae86c7f3e84f2cb85b1eaa1a1d8b85b52461e41af4a083cd3fc63faba68d2bcfd6047a18708cc330cf9",
+    "size": 113608341
+  },
   "defaultOptions": {
     "ao": "true",
     "biomeBlendRadius": "2",
@@ -1422,9 +1428,9 @@
     {
       "path": "config/apokelipsis/frases.json",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/frases.json",
-      "sha1": "e686d2e1441718013e0387d6ef6f33b986c91e12",
-      "sha512": "3af0ded46eeaabff3f28f7cc45039023f49f2eace7c9eec716ab25e6d1374d0f208306494eea034c50ac59c9613af0cc00be508aed75faf12dcdf3f4250a452c",
-      "size": 41
+      "sha1": "99b9f1d4bbc90a3e4cb07367873a2563a688877b",
+      "sha512": "8da7852a6c5451a75c7041743d853ca24111609af635302c189dbb4d2016ca33bf6c9b9d245ee8876c81f8dccadcb228ed24ec53ceb075060c5f49322c5d5a68",
+      "size": 46
     },
     {
       "path": "config/apokelipsis/panorama_0.png",
