@@ -354,10 +354,14 @@ module.exports = function crearPublicador(ctx) {
   async function estadoLocal() {
     if (!hayGit()) return { git: false, conectado: exists(TOKEN_FILE), launcherNuevo: launcherNuevo() };
     const status = (await git(['status', '--porcelain'])).out.trim();
+    // Archivos para los jugadores guardados en Git con otros saltos de línea que los de esta PC
+    // (Git no los muestra como cambiados, pero GitHub los entregaría distintos a su huella).
+    const eol = (await git(['ls-files', '--eol', '--', 'files'])).out.split('\n');
+    const malGuardados = eol.some((l) => /^i\/lf\s+w\/crlf\s+attr\/-text/.test(l) || /^i\/crlf\s+w\/lf\s+attr\/-text/.test(l));
     return {
       git: true,
       conectado: exists(TOKEN_FILE),
-      sinSubir: (await count('@{u}..HEAD')) > 0 || !!status,
+      sinSubir: (await count('@{u}..HEAD')) > 0 || !!status || malGuardados,
       launcherNuevo: launcherNuevo()
     };
   }
