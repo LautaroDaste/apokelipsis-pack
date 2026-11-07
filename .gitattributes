@@ -1,3 +1,8 @@
 # La lista y su firma tienen que quedar byte a byte iguales (si Git cambia los saltos de linea, la firma deja de valer).
 manifest.json -text
 manifest.sig -text
+
+# Lo que se descarga a los jugadores tiene que llegar byte a byte igual a como se calculó su huella
+# (si Git cambia los saltos de linea, el launcher lo ve como archivo dañado).
+files/** -text
+inicial.zip -text

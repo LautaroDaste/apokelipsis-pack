@@ -325,6 +325,9 @@ module.exports = function crearPublicador(ctx) {
       await git(['rm', '--cached', '--quiet', '--ignore-unmatch', '--', pack.launcher.file]);
     }
     await gitOk(['add', '-A'], 'No se pudieron preparar los archivos');
+    // Los archivos que se descargan a los jugadores se suben tal cual (sin cambiar saltos de línea),
+    // así GitHub sirve exactamente los mismos bytes con los que se calculó su huella.
+    await git(['add', '--renormalize', '--', 'files', '.gitattributes']);
     const dirty = (await git(['status', '--porcelain'])).out.trim();
     if (dirty) {
       await gitOk([...(await identity()), 'commit', '--quiet', '-m', `Panel: pack ${pack.packVersion}`], 'No se pudo guardar el cambio en Git');
