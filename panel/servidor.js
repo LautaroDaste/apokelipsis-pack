@@ -188,6 +188,16 @@ api['POST /mods/subir'] = async (q, req, res, body) => {
   }
   const fmj = entries.find((e) => e.name === 'fabric.mod.json');
   if (!fmj) fail(`${name} no es un mod de Fabric. Este servidor solo usa mods de Fabric para Minecraft ${readPack().minecraft}.`);
+  // Si ya hay un mod igualito (mismo contenido), no se toca nada: no hay nada nuevo que publicar.
+  const hash = crypto.createHash('sha1').update(body).digest('hex');
+  const igual = listJars(p('mods')).find((f) => {
+    const full = p('mods', f);
+    return fs.statSync(full).size === body.length && crypto.createHash('sha1').update(fs.readFileSync(full)).digest('hex') === hash;
+  });
+  if (igual) {
+    const info = jarInfo(p('mods', igual));
+    return { ok: true, file: igual, name: info.name, id: info.id, otros: [], yaEstaba: true };
+  }
   const tmp = p('mods', name + '.subiendo');
   await fsp.writeFile(tmp, body);
   const target = p('mods', name);

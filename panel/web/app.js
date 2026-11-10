@@ -352,7 +352,9 @@ async function upload(files) {
     try {
       if (!/\.jar$/i.test(f.name)) throw new Error('No es un .jar');
       const r = await api(`/mods/subir?nombre=${encodeURIComponent(f.name)}`, { method: 'POST', body: f, raw: true });
-      row.innerHTML = `<div class="mi">✅</div><div class="mt"><div class="mn">${esc(r.name || f.name)}</div><div class="mf">Agregado: ${esc(r.file)}</div></div>`;
+      row.innerHTML = r.yaEstaba
+        ? `<div class="mi">ℹ️</div><div class="mt"><div class="mn">${esc(r.name || f.name)}</div><div class="mf">Ya estaba en el pack, igual a ${esc(r.file)}: no hay nada nuevo que publicar.</div></div>`
+        : `<div class="mi">✅</div><div class="mt"><div class="mn">${esc(r.name || f.name)}</div><div class="mf">Agregado: ${esc(r.file)}</div></div>`;
       row.className = 'row';
       if (r.otros.length && (await confirmar('Hay otra versión de este mod', `Ya tenías <b>${esc(r.otros.join(', '))}</b>, que es el mismo mod (${esc(r.id)}). ¿Quitar la versión vieja? (va a la papelera)`, { ok: 'Quitar la vieja' }))) {
         await api('/mods/quitar', { method: 'POST', body: { files: r.otros } });
