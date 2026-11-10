@@ -8,6 +8,10 @@
     {
       "nombre": "Segundo administrador",
       "clave": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA7UFmwiqnxxVPICYUZBscxXA9nrtnwkOFFNfPTbpTgIo=\n-----END PUBLIC KEY-----"
+    },
+    {
+      "nombre": "Dueño del servidor (segundo ordenador)",
+      "clave": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAErRTRcI6vkkJj2JK9fqnlg876leO9XrcfhuMvX+Ccy0=\n-----END PUBLIC KEY-----"
     }
   ]
 }
