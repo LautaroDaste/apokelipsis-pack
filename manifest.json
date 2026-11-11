@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.27",
+  "packVersion": "1.0.28",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -85,11 +85,11 @@
   },
   "resetVersion": 0,
   "launcher": {
-    "version": "1.4.4",
-    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.4/Instalar-Apokelipsis.exe",
-    "sha1": "ab0360803ac39ef1c6103d379be7f99c03dc6200",
-    "sha512": "3ab5fcbbbcf5e5066baeade165e525ab3534ce3903bf53f2b8cdd11eed067b35504f4378ebb759140e6e5d0d3a0e711c9bd09b3f3ad46d259a6ef979a41df615",
-    "size": 113608462
+    "version": "1.4.5",
+    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.5/Instalar-Apokelipsis.exe",
+    "sha1": "ae61686912eff2bb055443cc7d5931771ca80c46",
+    "sha512": "eca781e9115eb74e318f44e81d28b555c630b5ca56126f58b5a583a6226cbc9102b5bac30a67eb992ef850613223e89448b46002608ee7c6b494c2e7222e89b0",
+    "size": 113733008
   },
   "defaultOptions": {
     "ao": "true",
@@ -533,11 +533,11 @@
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.4.13.jar"
     },
     {
-      "file": "apokelipsis-menu-1.2.0.jar",
-      "sha1": "c30ae4f0f382684a4a0e68667b4d346d5c1a9c26",
-      "sha512": "d8665252d8ad1097d476f0beb1067058769aabdf11e071d040a9e57e8048c8ec777abfacd300d8e52851b8e31af4ce3774b479d366fa62750134623af86d3741",
-      "size": 96163,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.2.0.jar"
+      "file": "apokelipsis-menu-1.2.1.jar",
+      "sha1": "260ecdbf4e037c0ca0d423c4960a02ef50b32aec",
+      "sha512": "f09110894ff128cb80eae8364a9d9cec4a9159226130f21b34b303ae8cf604dbc2220f7f1a6604d3950e40141b86ba609fd83e8697a0742603b49fe273be9215",
+      "size": 1138752,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.2.1.jar"
     },
     {
       "file": "aps_trophies-1.21.1-fabric-1.2.0.jar",
