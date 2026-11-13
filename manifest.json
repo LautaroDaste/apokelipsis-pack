@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.29",
+  "packVersion": "1.0.30",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -1428,9 +1428,9 @@
     {
       "path": "config/apokelipsis/frases.json",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/frases.json",
-      "sha1": "83f122210c123c9cfeabbfce5269296e8918e0a6",
-      "sha512": "a450aa9ccbdbda7acc6f77470aa6a905c70105795187895f5ade8990a5c86c2e24f6200282bf065a71048f32330fc5efa86ac2c4b5f8f261e46364deddbbc60f",
-      "size": 40
+      "sha1": "d866cf5253ddc55ff5ad6832c007035410712883",
+      "sha512": "88c4bf08dde6928dbffbcc4282e85dc8b06af8a79b602b8576dc322d40551a491a0efeb8154002cfad26426dd49016e15ece0365ea6d2c58af8d64f84dada766",
+      "size": 1528
     },
     {
       "path": "config/apokelipsis/panorama_0.png",
