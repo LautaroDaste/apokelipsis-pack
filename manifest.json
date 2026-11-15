@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.42",
+  "packVersion": "1.0.43",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -139,7 +139,7 @@
     "damageTiltStrength": "1.0",
     "highContrast": "false",
     "narratorHotkey": "true",
-    "resourcePacks": "[\"vanilla\",\"cobbreeding:pasturefix\",\"fabric\",\"moonlight:merged_pack\",\"file/[Chilli´s] punchy! cobblemon.zip\",\"file/pokopia-1.1.zip\",\"file/fresh_waystones.zip\",\"punchy:punchy\",\"file/Better-Leaves-9.6.zip\",\"file/E19 Cobblemon Minimap Icons.zip\",\"cobblemon:gyaradosjump\",\"cobblemon:regionbiasforms\",\"cobblemon:uniqueshinyforms\",\"cobbreeding:coloredeggs\",\"file/Better Caps! [v1.2].zip\",\"file/CobbleSounds[Complete]_v1.4.1.zip\",\"file/CobblemonCosplay.zip\",\"file/Cobblemotion_v1.5.1.zip\",\"file/FireFitsforFireCats.v.13.zip\",\"file/PokeCostume v.3.3.zip\",\"file/StylesUponStyles.v.1.6.1.zip\",\"file/Wood Cosmetic Rillaboom.zip\",\"file/muddiescosmetics (4).zip\",\"file/CobblemonLoadingBackgrounds-[1.0.2].zip\"]",
+    "resourcePacks": "[\"vanilla\",\"cobbreeding:pasturefix\",\"fabric\",\"moonlight:merged_pack\",\"file/[Chilli´s] punchy! cobblemon.zip\",\"file/pokopia-1.1.zip\",\"file/fresh_waystones.zip\",\"punchy:punchy\",\"file/Better-Leaves-9.6.zip\",\"cobblemon:gyaradosjump\",\"cobblemon:regionbiasforms\",\"cobblemon:uniqueshinyforms\",\"cobbreeding:coloredeggs\",\"file/Better Caps! [v1.2].zip\",\"file/CobbleSounds[Complete]_v1.4.1.zip\",\"file/CobblemonCosplay.zip\",\"file/Cobblemotion_v1.5.1.zip\",\"file/FireFitsforFireCats.v.13.zip\",\"file/PokeCostume v.3.3.zip\",\"file/StylesUponStyles.v.1.6.1.zip\",\"file/Wood Cosmetic Rillaboom.zip\",\"file/muddiescosmetics (4).zip\",\"file/CobblemonLoadingBackgrounds-[1.0.2].zip\"]",
     "incompatibleResourcePacks": "[\"aci\",\"ali\",\"ambientenvironment\",\"backpacked\",\"badoptimizations\",\"balm\",\"comforts\",\"connectivity\",\"cullleaves\",\"easy_npc\",\"easy_npc_config_ui\",\"essential\",\"framework\",\"jade\",\"jadeaddons\",\"konkrete\",\"ksyxis\",\"modernfix\",\"pokegambling\",\"polymorph\",\"punchy\",\"smoothchunk\",\"spark\",\"spectrelib\",\"trashslot\",\"waystones\",\"xaerolib\",\"xaerominimap\",\"xaeroworldmap\",\"yet_another_config_lib_v3\"]",
     "lang": "es_ar",
     "chatVisibility": "0",
@@ -379,18 +379,18 @@
   },
   "mods": [
     {
-      "file": "AdvancedCoreInfo-fabric-1.21.1-1.4.0.jar",
-      "sha1": "7701eb10be08c9ef113b9b723cc04e118e0cd4e0",
-      "sha512": "cd5cbf9f5fb40c005b07be148efbbbc83c956d664fcc559953e9622bc344d8a363a8311d2258a9a585d5309ca96f843f10188519f6d838f975f8bd4fbddd9168",
-      "size": 263282,
-      "url": "https://cdn.modrinth.com/data/BaR4ijFC/versions/3ijXb7RE/AdvancedCoreInfo-fabric-1.21.1-1.4.0.jar"
+      "file": "AdvancedCoreInfo-fabric-1.21.1-1.5.0.jar",
+      "sha1": "108876770081a1305d8d56f62044ab7c42a67005",
+      "sha512": "1b8ff0bd76a1f7f0042ec703abce8341bca45947015676ad1c26ac9b7f63bc35d4b9821eccd08c6346a1cd7eefbe69132b48a876a935937a21604345211f3301",
+      "size": 269308,
+      "url": "https://cdn.modrinth.com/data/BaR4ijFC/versions/dQbPgYpQ/AdvancedCoreInfo-fabric-1.21.1-1.5.0.jar"
     },
     {
-      "file": "AdvancedLootInfo-fabric-1.21.1-2.4.0.jar",
-      "sha1": "1aac7cde7b87498b30494eb50d7ac7f774bf1ed3",
-      "sha512": "992e3d4125030bc40a88701fb80bf7d3b69fb0d1167acac0c2775b9d2089395deb2dab2cf927484ca8924ce72ba1cb2dce22f3e3d0cff88f197c4746e3da075d",
-      "size": 643295,
-      "url": "https://cdn.modrinth.com/data/PEPVViac/versions/A7HsVFQ1/AdvancedLootInfo-fabric-1.21.1-2.4.0.jar"
+      "file": "AdvancedLootInfo-fabric-1.21.1-2.5.0.jar",
+      "sha1": "1411e7c72b6ed5cfbf2afdfebac2d9c34192c11c",
+      "sha512": "a88bfa6f23c61348bdc08492aaa84454d4ec99926fe135644a3c1aadf1f674ee33bfdfad72a2a7d3c2b27054dcd36d3262a4dc7b6cf2c9029f682bf8f3ba0dde",
+      "size": 658795,
+      "url": "https://cdn.modrinth.com/data/PEPVViac/versions/n5WZtIx8/AdvancedLootInfo-fabric-1.21.1-2.5.0.jar"
     },
     {
       "file": "BadOptimizations-2.4.1-1.21.1.jar",
@@ -673,32 +673,32 @@
       "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/HpMb5wGb/cloth-config-15.0.140-fabric.jar"
     },
     {
-      "file": "cobble-caf-forms-5.1.jar",
-      "sha1": "762001529715ce0916067cb4c863d889fe81a05e",
-      "sha512": "0ccb319576e5d4d5957dabf58611625e5d4913c8bdc895174691b94e76eb6e632e7bb33d036920d0e2bb2d7361735e1987d00d8c77631e050c1448338be6a05a",
-      "size": 3717526,
-      "url": "https://cdn.modrinth.com/data/469QXqgC/versions/1R3Fvu7O/cobble-caf-forms-5.1.jar"
+      "file": "cobble-caf-forms-5.3.jar",
+      "sha1": "235c4d0c5a2d452a96908c27073f5f1dc6c8e6c9",
+      "sha512": "3d496535953800602ab8dac5d18f941b785df133858d527326e38973996058da657fcd13b35b57c1dadf5a28391a2bf0571ac0add4214cbd399f6b86780208fb",
+      "size": 4343074,
+      "url": "https://cdn.modrinth.com/data/469QXqgC/versions/5k04KDTV/cobble-caf-forms-5.3.jar"
     },
     {
-      "file": "cobbledex-rei-emi-jei-fabric-2.29.0.jar",
-      "sha1": "16975f551413520c39ded7e21e483b6a5d578741",
-      "sha512": "f17407922fd07cd095a2b37e9dca3c6c575d9cd964d5bbd9ef1872b327b0f4da9f48b080926f37c5ef2c2f027f6ed30b24220e5f2cc300d9f6a1fd358d2a9a34",
-      "size": 5418984,
-      "url": "https://cdn.modrinth.com/data/qekxLrOP/versions/c03nfIwP/cobbledex-rei-emi-jei-fabric-2.29.0.jar"
+      "file": "cobbledex-rei-emi-jei-fabric-2.32.14.jar",
+      "sha1": "275b6aa74182b58f735b943924ebfe1fdfcca19f",
+      "sha512": "65d0bf424865eb8d444a10e44fea418f0f2fabc7c4f4c96b50639977a93ab22c3aa7024b26645bb0b0732a5e81fd61739d3e359ead383bdc9988afbc8ffb2745",
+      "size": 8964814,
+      "url": "https://cdn.modrinth.com/data/qekxLrOP/versions/RMwb8OFD/cobbledex-rei-emi-jei-fabric-2.32.14.jar"
     },
     {
-      "file": "cobblemon-battle-extras-fabric-1.13.45.jar",
-      "sha1": "8d56d3e943d20f9d22be32e9a9dee5851eb7f654",
-      "sha512": "f6c1a43c3eef81fef56ac4f17d83407f9a80ef08a2d841ab5f3ca3c2a9fb1076f6b0de1747c51a9f942a0516ac467c6d53b30fa2532c78fbdfe5d6ff5290a303",
-      "size": 1515972,
-      "url": "https://cdn.modrinth.com/data/2iY8VFqL/versions/Sf5W9mRS/cobblemon-battle-extras-fabric-1.13.45.jar"
+      "file": "cobblemon-battle-extras-fabric-1.13.47.jar",
+      "sha1": "00fc76292c333eef66abf0ab5cb3591d69c52bd3",
+      "sha512": "ee6a80d67f6604df7437dacb7454a06d1890ea5e995388b9ec435e2f8f32c96a468ed26706de9bed27cd10dd0e70531b00069adef14519e5f90c93d4627f6988",
+      "size": 1520770,
+      "url": "https://cdn.modrinth.com/data/2iY8VFqL/versions/ZMERSNGG/cobblemon-battle-extras-fabric-1.13.47.jar"
     },
     {
-      "file": "cobblemonfence-1.0.3.jar",
-      "sha1": "1e9d94c87cb1d4f7297821b30144ed0a354e8646",
-      "sha512": "aeb40bfc48248eff4db0221d3a038ea3a75aeb840dd1cebf7795b732f301d1a7a73a94917e3d1f37ae1bc6cd6daf9eda2bd81faa48b735a063724bd9faf91203",
-      "size": 167581,
-      "url": "https://cdn.modrinth.com/data/aCQFwusS/versions/I5fyoqLb/cobblemonfence-1.0.3.jar"
+      "file": "cobblemonfence-1.0.4.jar",
+      "sha1": "cd85a9dfecd0c8527cc0434135c3754191d7bd0b",
+      "sha512": "36053d36bf64ec2516082b59dcf0480441d2ce010035c8160c9aa784759d4e8e14227bb2d45408c324fa538e62f09ef90b427459e2c28fbb2d5c98c9542fae2c",
+      "size": 194884,
+      "url": "https://cdn.modrinth.com/data/aCQFwusS/versions/Rgo4AfBn/cobblemonfence-1.0.4.jar"
     },
     {
       "file": "cobblemonintegrations-fabric-1.21.1-1.1.8.jar",
@@ -1199,11 +1199,11 @@
       "description": "Calcula en tiempo real la probabilidad de captura y compara Pokéballs.",
       "default": true,
       "requires": [],
-      "file": "catchrate-display-fabric-2.12.3.jar",
-      "url": "https://cdn.modrinth.com/data/vADO40xp/versions/rh5xmGEe/catchrate-display-fabric-2.12.3.jar",
-      "sha1": "03b4ac960b70b0ad33ef9cf942fe7ff504f0a00a",
-      "sha512": "b933b0914a17695542560885b85d7dd1d5c315f86793ae4bc155394d2d100386c6bd8be67c97321a3a657684feb3a05db8ad38fbe8bd281ba2892e77ef890f94",
-      "size": 293930
+      "file": "catchrate-display-fabric-2.12.4.jar",
+      "url": "https://cdn.modrinth.com/data/vADO40xp/versions/SSMkJk8v/catchrate-display-fabric-2.12.4.jar",
+      "sha1": "0728c518e8ffd4e16eb9de8d4e4706ea9f8a8cda",
+      "sha512": "d4b1ca4f65dc602067da0b1243fa7004e5d4a951678e294bb0ecabb2a84dfcab6c2a78f63d689681e5b836e03b9c1f7287e72a04552fe2d15d5360bf823762ab",
+      "size": 305606
     },
     {
       "id": "cullleaves",
@@ -1408,10 +1408,10 @@
     },
     {
       "path": "resourcepacks/E19 Cobblemon Minimap Icons.zip",
-      "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/MAumPyhV/E19%20Cobblemon%20Minimap%20Icons.zip",
-      "sha1": "77813d38002b43c9c243d694728479bd3879cf86",
-      "sha512": "f9eff4c718818a2b030aa7b6b86b73f384f869cb39fe1e4c189c07f8feb7aedd717a33d966face570ae89b67ee0c28c35fb611883b882677eecf0fa041b9088f",
-      "size": 23270833
+      "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/wb3yCVuz/E19%20Cobblemon%20Minimap%20Icons.zip",
+      "sha1": "015c8b74e9c652846792df552831210269365f62",
+      "sha512": "79904e038b93b040564b1e544f95121f8f6f2ff7f6fbed0421320e4eae66fb52a8394a4536ea91d1c48aee5e283002b1623aa9911e5d2b624442cb055d1daaa8",
+      "size": 53955450
     },
     {
       "path": "resourcepacks/FireFitsforFireCats.v.13.zip",
