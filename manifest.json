@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.45",
+  "packVersion": "1.0.46",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -876,11 +876,11 @@
       "url": "https://cdn.modrinth.com/data/Orvt0mRa/versions/Z8VpxxGh/indium-1.0.35%2Bmc1.21.jar"
     },
     {
-      "file": "jei-1.21.1-fabric-19.64.0.453.jar",
-      "sha1": "d292061f9a55e6e88193549009ef9718c021cd57",
-      "sha512": "29644ec17c6c5ba787d55042f4090e736776024c287ef7e439d98383d5f8ebb7aa93e0aecf7aabf4d785f7cdbaf9967530ec3b05f84415611f7738a14df4b08d",
-      "size": 2415684,
-      "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/3eOKpuhg/jei-1.21.1-fabric-19.64.0.453.jar"
+      "file": "jei-1.21.1-fabric-19.64.0.455.jar",
+      "sha1": "f5e0c96e4adb473ae3e401ff5dfefe7ad609cad6",
+      "sha512": "50ea711837fd987bbab92e5161a668d424225aa969da605f6b97c0bb2846635dcb9592e240eab315146a61ced219a322b996aa4e0dd923d1b8c46f600b91813f",
+      "size": 2416860,
+      "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/f27XokoP/jei-1.21.1-fabric-19.64.0.455.jar"
     },
     {
       "file": "justzoom_fabric_3.0.1_MC_1.21.1.jar",
