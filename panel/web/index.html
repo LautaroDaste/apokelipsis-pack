@@ -116,8 +116,10 @@
         <div class="toolbar">
           <input type="search" id="opt-search" placeholder="Buscar opción...">
           <button class="btn" id="import-btn">⤵ Copiar desde mi juego</button>
+          <button class="btn" id="import-file-btn" title="El archivo options.txt de la carpeta del juego tiene todas las opciones, controles y packs">📄 Cargar options.txt</button>
+          <input type="file" id="import-file" accept=".txt" hidden>
         </div>
-        <p class="muted small">Consejo: abre el juego con el launcher, déjalo como quieres que lo reciban los jugadores (video, controles, packs), ciérralo y usa <b>«Copiar desde mi juego»</b>.</p>
+        <p class="muted small">Consejo: abre el juego con el launcher, déjalo como quieres que lo reciban los jugadores (video, controles, packs), ciérralo y usa <b>«Copiar desde mi juego»</b>. Si lo configuraste en otro launcher, usa <b>«Cargar options.txt»</b> y elige el <code>options.txt</code> de esa carpeta del juego (por ejemplo <code>%APPDATA%\.minecraft\options.txt</code>): ese archivo guarda todas las opciones, los controles y los packs de texturas.</p>
         <div id="opt-groups"></div>
       </div>
 
@@ -125,6 +127,8 @@
         <div class="toolbar">
           <input type="search" id="key-search" placeholder="Buscar control o mod...">
           <label class="check"><input type="checkbox" id="key-conf-only"> Solo teclas repetidas</label>
+          <button class="btn" id="import-keys-btn">⤵ Copiar desde mi juego</button>
+          <button class="btn" id="import-keys-file-btn" title="Los controles están dentro del options.txt de la carpeta del juego">📄 Cargar options.txt</button>
         </div>
         <p class="muted small">Haz clic en una tecla y luego pulsa la nueva (o un botón del mouse). <kbd>Esc</kbd> cancela, <kbd>Retroceso</kbd> la deja sin asignar. En rojo: teclas que usan dos o más controles a la vez.</p>
         <div id="keys"></div>

@@ -569,24 +569,55 @@ $('#opt-groups').addEventListener('click', (e) => {
   renderOpts();
 });
 
-// Copiar desde mi juego
-$('#import-btn').onclick = async () => {
+// Copiar desde mi juego (o desde un options.txt elegido a mano)
+async function importFromGame(soloControles) {
   let juego;
   try {
     juego = (await api('/opciones/juego')).lineas;
   } catch (err) {
     return toast(err.message, 'err');
   }
-  const diffs = juego.filter((j) => !N.personales.includes(j.clave) && getOpt(j.clave) !== j.valor);
-  if (!diffs.length) return toast('Tu juego tiene la misma configuración que el pack.', 'ok');
+  importOptions(juego, 'Tu juego', soloControles);
+}
+function parseOptionsText(text) {
+  return text.replace(/^﻿/, '').split(/\r?\n/).filter((l) => l.indexOf(':') > 0).map((l) => {
+    const i = l.indexOf(':');
+    return { clave: l.slice(0, i).trim(), valor: l.slice(i + 1).trim() };
+  }).filter((o) => /^[A-Za-z0-9_.\-]{1,128}$/.test(o.clave));
+}
+let importSoloControles = false;
+function importFromFile(soloControles) {
+  importSoloControles = soloControles;
+  $('#import-file').value = '';
+  $('#import-file').click();
+}
+$('#import-file').onchange = async (e) => {
+  const f = e.target.files[0];
+  if (!f) return;
+  if (f.size > 2 * 1024 * 1024) return toast('Ese archivo es demasiado grande para ser un options.txt.', 'err');
+  const lineas = parseOptionsText(await f.text());
+  if (!lineas.length || !lineas.some((o) => o.clave === 'version' || o.clave.startsWith('key_'))) {
+    return toast('Ese archivo no parece un options.txt de Minecraft.', 'err');
+  }
+  importOptions(lineas, 'El archivo', importSoloControles);
+};
+$('#import-btn').onclick = () => importFromGame(false);
+$('#import-file-btn').onclick = () => importFromFile(false);
+$('#import-keys-btn').onclick = () => importFromGame(true);
+$('#import-keys-file-btn').onclick = () => importFromFile(true);
+
+function importOptions(juego, origen, soloControles) {
+  const diffs = juego.filter((j) => !N.personales.includes(j.clave) && getOpt(j.clave) !== j.valor && (!soloControles || j.clave.startsWith('key_')));
+  if (!diffs.length) return toast(`${origen} tiene ${soloControles ? 'los mismos controles' : 'la misma configuración'} que el pack.`, 'ok');
   const byCat = {};
   for (const d of diffs) (byCat[cat(d.clave)] ||= []).push(d);
   const order = ['video', 'controles', 'packs', 'sonido', 'juego', 'chat', 'skin', 'otros'];
   const label = (k) => (k.startsWith('key_') ? keyLabel(k.slice(4)) : N.opciones[k] || k);
   const val = (k, v) => (v === undefined ? '<i class="muted">(no está)</i>' : k.startsWith('key_') ? esc(N.nombreTecla(v)) : k === 'resourcePacks' ? `${safeArr(v).length} packs` : esc(v));
-  const box = modal(`<h2>Copiar desde mi juego</h2>
-    <p class="muted">Estas opciones de tu juego son distintas a las del pack. Marca las que quieres que reciban los jugadores nuevos.</p>
-    <table class="diff"><tr><th></th><th>Opción</th><th>En el pack</th><th>En tu juego</th></tr>
+  const enDonde = origen === 'Tu juego' ? 'En tu juego' : 'En el archivo';
+  const box = modal(`<h2>${origen === 'Tu juego' ? 'Copiar desde mi juego' : 'Cargar options.txt'}</h2>
+    <p class="muted">Estas ${soloControles ? 'teclas' : 'opciones'} son distintas a las del pack. Marca las que quieres que reciban los jugadores nuevos.</p>
+    <table class="diff"><tr><th></th><th>Opción</th><th>En el pack</th><th>${enDonde}</th></tr>
     ${order.filter((c) => byCat[c]).map((c) => `<tr class="cat"><td><input type="checkbox" data-cat="${c}" checked></td><td colspan="3">${CATS[c]} (${byCat[c].length})</td></tr>
       ${byCat[c].map((d) => `<tr><td><input type="checkbox" data-k="${esc(d.clave)}" data-c="${c}" checked></td><td>${esc(label(d.clave))}</td><td class="val">${val(d.clave, getOpt(d.clave))}</td><td class="val">${val(d.clave, d.valor)}</td></tr>`).join('')}`).join('')}
     </table>
@@ -602,7 +633,7 @@ $('#import-btn').onclick = async () => {
     toast(`${keys.length} opciones copiadas. Toca «Guardar».`, 'ok');
     showCfgTab(cfgTab);
   };
-};
+}
 
 // Controles
 function keyLabel(id) {
