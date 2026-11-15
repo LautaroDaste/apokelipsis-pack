@@ -4,8 +4,8 @@
   "badoptimizations": "Optimizaciones extra que mejoran el rendimiento fuera del renderizado.",
   "betterpingdisplay": "Muestra el ping en números en la lista de jugadores (Tab).",
   "biomeparticleweather": "Reemplaza la lluvia y la nieve por partículas con efectos nuevos según el bioma.",
-  "chat_heads": "Muestra la cabeza de cada jugador al lado de sus mensajes en el chat.",
   "catchrate-display": "Calcula en tiempo real la probabilidad de captura y compara Pokéballs.",
+  "chat_heads": "Muestra la cabeza de cada jugador al lado de sus mensajes en el chat.",
   "cobbledex-rei-emi-jei": "Convierte JEI en una Pokédex completa: dónde aparece cada Pokémon, evoluciones y más.",
   "cullleaves": "Deja de dibujar las hojas ocultas dentro de los árboles. Más FPS.",
   "dynamic_fps": "Baja el consumo cuando el juego está en segundo plano o minimizado.",
@@ -27,7 +27,13 @@
   "reeses-sodium-options": "Menú de opciones de video más cómodo para Sodium.",
   "sodium": "Motor de gráficos mucho más rápido. Mejora muchísimo los FPS.",
   "sodium-extra": "Opciones gráficas extra para Sodium (niebla, partículas, animaciones...).",
-  "tidal": "Agrega olas en playas y océanos.",
-  "too_many_entities": "Oculta entidades de más cuando hay muchas juntas, para reducir el lag.",
+  "tidal": {
+    "descripcion": "Agrega olas en playas y océanos.",
+    "activado": false
+  },
+  "too_many_entities": {
+    "descripcion": "Oculta entidades de más cuando hay muchas juntas, para reducir el lag.",
+    "activado": false
+  },
   "wakes": "Salpicaduras y estelas en el agua al nadar o navegar."
 }

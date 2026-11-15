@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.31",
+  "packVersion": "1.0.32",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -12,7 +12,28 @@
   ],
   "requiredClient": [
     "apokelipsis",
-    "customskinloader"
+    "customskinloader",
+    "indium",
+    "sodium",
+    "sodium-extra",
+    "badoptimizations",
+    "dynamic_fps",
+    "enhancedblockentities",
+    "entityculling",
+    "fpsreducer",
+    "gymbadges",
+    "immediatelyfast",
+    "betterpingdisplay",
+    "customskinloader-bootstrap",
+    "chat_heads",
+    "controlling",
+    "searchables",
+    "cobbledex-rei-emi-jei",
+    "modmenu",
+    "mousetweaks",
+    "justzoom",
+    "reeses-sodium-options",
+    "malilib"
   ],
   "launcher": {
     "version": "1.4.5",

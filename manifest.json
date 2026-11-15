@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.31",
+  "packVersion": "1.0.32",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -139,7 +139,7 @@
     "damageTiltStrength": "1.0",
     "highContrast": "false",
     "narratorHotkey": "true",
-    "resourcePacks": "[\"vanilla\",\"cobbreeding:pasturefix\",\"fabric\",\"moonlight:merged_pack\",\"file/[Chilli´s] punchy! cobblemon.zip\",\"file/pokopia-1.1.zip\",\"file/fresh_waystones.zip\",\"punchy:punchy\",\"file/Better-Leaves-9.6.zip\",\"file/E19 Cobblemon Minimap Icons.zip\",\"cobblemon:gyaradosjump\",\"cobblemon:regionbiasforms\",\"cobblemon:uniqueshinyforms\",\"cobbreeding:coloredeggs\",\"file/Better Caps! [v1.2].zip\",\"file/CobbleSounds[Complete]_v1.4.1.zip\",\"file/CobblemonCosplay.zip\",\"file/Cobblemotion_v1.5.1.zip\",\"file/FireFitsforFireCats.v.13.zip\",\"file/PokeCostume v.3.3.zip\",\"file/StylesUponStyles.v.1.6.1.zip\",\"file/Wood Cosmetic Rillaboom.zip\",\"file/muddiescosmetics (4).zip\"]",
+    "resourcePacks": "[\"vanilla\",\"cobbreeding:pasturefix\",\"fabric\",\"moonlight:merged_pack\",\"file/[Chilli´s] punchy! cobblemon.zip\",\"file/pokopia-1.1.zip\",\"file/fresh_waystones.zip\",\"punchy:punchy\",\"file/Better-Leaves-9.6.zip\",\"file/E19 Cobblemon Minimap Icons.zip\",\"cobblemon:gyaradosjump\",\"cobblemon:regionbiasforms\",\"cobblemon:uniqueshinyforms\",\"cobbreeding:coloredeggs\",\"file/Better Caps! [v1.2].zip\",\"file/CobbleSounds[Complete]_v1.4.1.zip\",\"file/CobblemonCosplay.zip\",\"file/Cobblemotion_v1.5.1.zip\",\"file/FireFitsforFireCats.v.13.zip\",\"file/PokeCostume v.3.3.zip\",\"file/StylesUponStyles.v.1.6.1.zip\",\"file/Wood Cosmetic Rillaboom.zip\",\"file/muddiescosmetics (4).zip\",\"file/CobblemonLoadingBackgrounds-[1.0.2].zip\"]",
     "incompatibleResourcePacks": "[\"aci\",\"ali\",\"ambientenvironment\",\"backpacked\",\"badoptimizations\",\"balm\",\"comforts\",\"connectivity\",\"cullleaves\",\"easy_npc\",\"easy_npc_config_ui\",\"essential\",\"framework\",\"jade\",\"jadeaddons\",\"konkrete\",\"ksyxis\",\"modernfix\",\"pokegambling\",\"polymorph\",\"punchy\",\"smoothchunk\",\"spark\",\"spectrelib\",\"trashslot\",\"waystones\",\"xaerolib\",\"xaerominimap\",\"xaeroworldmap\",\"yet_another_config_lib_v3\"]",
     "lang": "es_ar",
     "chatVisibility": "0",
@@ -393,6 +393,20 @@
       "url": "https://cdn.modrinth.com/data/PEPVViac/versions/A7HsVFQ1/AdvancedLootInfo-fabric-1.21.1-2.4.0.jar"
     },
     {
+      "file": "BadOptimizations-2.4.1-1.21.1.jar",
+      "sha1": "1461d8e46391efd32a3085150e86094c9f6f5c9d",
+      "sha512": "2b66428bd98bd5ec0e09f2ec6af801cefb7b9b99cc4f0993daeaffe8d0ccc5ee0c2a73e9f38d4f92540ead0181704d2c9e946837ec05cf710fc3b20fce3b0cac",
+      "size": 283566,
+      "url": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/S2qthD5S/BadOptimizations-2.4.1-1.21.1.jar"
+    },
+    {
+      "file": "BetterPingDisplay-Fabric-1.21.1-1.1.1.jar",
+      "sha1": "534ba30ec8a7ea23048a507d02a651b6ddcaf523",
+      "sha512": "04bca229ffd42eccf1d7d0fc05c02f1a8a5cde20b263ed7b72a3cf7557e8606b6f78192f0f4e99bb88eaff3d48612e248762cdbbb5f5bb02315ee4d7b86a585c",
+      "size": 14850,
+      "url": "https://cdn.modrinth.com/data/MS1ZMyR7/versions/xCWQ8iLW/BetterPingDisplay-Fabric-1.21.1-1.1.1.jar"
+    },
+    {
       "file": "Clumps-fabric-1.21.1-19.0.0.1.jar",
       "sha1": "14628ba309d876cfefc4cef864a66ef12812066c",
       "sha512": "0aa8e3508d0a40ef814d4064c0b6cadba6326128dd878fe69f30677c889cec4ccb8f639c22bdd7083a73ae8fa76e1c115b5e4b1885904dc1244b02ab2f728e78",
@@ -421,6 +435,20 @@
       "url": "https://cdn.modrinth.com/data/ItmVb4zY/versions/QEX1BKMf/Cobbreeding-fabric-2.4.1.jar"
     },
     {
+      "file": "Controlling-fabric-1.21.1-19.0.5.jar",
+      "sha1": "22d2407311298d0185b606aa1dd03ae33b98dff3",
+      "sha512": "2b172371037bdac4d37332f1fcfbd09c6e083524ba02ea62d980aab937c79cef4eeeea4e05353cbb0428dcb1d31f04ce0f6f148619d15db74587b983c6d04bc8",
+      "size": 83679,
+      "url": "https://cdn.modrinth.com/data/xv94TkTM/versions/hGJDoW2W/Controlling-fabric-1.21.1-19.0.5.jar"
+    },
+    {
+      "file": "CustomSkinLoader_Universal-15.1.jar",
+      "sha1": "324e6921ecd576e44875981466e7f22170b6541a",
+      "sha512": "1c3ee525200d3dff69b19d4667f0c40155d0a8eedcfed4749ec8883fcf169bcf1123942a87ca73ecf46002fded35ec653bb902b0d3900c42f4eab0323793daf2",
+      "size": 222917,
+      "url": "https://cdn.modrinth.com/data/idMHQ4n2/versions/yyYvYfZI/CustomSkinLoader_Universal-15.1.jar"
+    },
+    {
       "file": "Debugify-1.21.1+1.1.jar",
       "sha1": "3388ba4c0f973f0a73a68a42048fe902bb2b14ea",
       "sha512": "40ab23b41579e1d8e220d9852fe46ee05af136b7932f9095b7b1e98f1716b7599fccb7e094e183668c6c30deb79488d118578d6843022e3a3850971db01524b5",
@@ -442,11 +470,11 @@
       "url": "https://cdn.modrinth.com/data/9hx3AbJM/versions/LLLfoeWJ/EasyMagic-v21.1.4-1.21.1-Fabric.jar"
     },
     {
-      "file": "EntrenadoresPokemon-1.2.0.jar",
-      "sha1": "b4d30a42055301a84c801da51a7931fb799d0cbc",
-      "sha512": "37a254c0f1de160241d3391d77c691aac1ff6180647c64f94a5963ff76faa2fd607e6d661e2a904c2f00fc3eeb8232586d4392df8e8e6116a3c09bd756fdbc4a",
-      "size": 709554,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/EntrenadoresPokemon-1.2.0.jar"
+      "file": "EntrenadoresPokemon-1.2.1.jar",
+      "sha1": "d21fd727da9aeaeea494eb96f9b93c175e0eb4a9",
+      "sha512": "a09a04804a8221cabf976f4a783d0dd112007f2ecd3859a74a0f962e51e4806861abdf578844d9f78f7b142c358b4da6c8bf14b0c640ccb4e9b98b11d3ac41b9",
+      "size": 716676,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/EntrenadoresPokemon-1.2.1.jar"
     },
     {
       "file": "ExplorersCompass-1.21.1-2.6.0-fabric.jar",
@@ -463,6 +491,13 @@
       "url": "https://cdn.modrinth.com/data/ohNO6lps/versions/N5qzq0XV/ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar"
     },
     {
+      "file": "FpsReducer2-fabric-1.21-2.9.jar",
+      "sha1": "9219d7f657f4adb61315cd15023265d1070d24ca",
+      "sha512": "b4f5c1192c0756ee9226b6cdfa230c49efa5049c9570a9c3f5e7d14250716600e9cc630fe4cf4c26334cc09bfb97705a4f785ad64d7262c1b6394de508c2423a",
+      "size": 124879,
+      "url": "https://cdn.modrinth.com/data/iZ10HXDj/versions/9ewqcOwy/FpsReducer2-fabric-1.21-2.9.jar"
+    },
+    {
       "file": "Geophilic v3.7.mod.jar",
       "sha1": "4d668978e18b450c030ed4be096fce52d3a9ceca",
       "sha512": "7731d6d7f85af0dc9eb232138b1dc1096f083d13a9f3e592b84f6c89a97cca0c642c68d5943e0e63bd35e93002708b945554991f519b754a04c6eec058305c19",
@@ -470,11 +505,25 @@
       "url": "https://cdn.modrinth.com/data/hl5OLM95/versions/5kFV8CEz/Geophilic%20v3.7.mod.jar"
     },
     {
+      "file": "GymBadges-1.1.jar",
+      "sha1": "2d4befdd51f8b205668e50dceafaf5e2aae287b5",
+      "sha512": "a10d7215ae03d160fb6c88b48f3bb14f032005b6ce89b5e6fef34b8c1a47eb1c0e14ecaf1f961c24617ce2eb9accef7f3389d12697369f6437260b6c6f1debb3",
+      "size": 77360,
+      "url": "https://cdn.modrinth.com/data/HnePtkev/versions/NQZTUhfS/GymBadges-1.1.jar"
+    },
+    {
       "file": "Iceberg-1.21.1-fabric-1.3.2.jar",
       "sha1": "170e30bf93ccba6d80dd481eedddae16cb549d29",
       "sha512": "d781cf25ac6a630477b7b8a016d9762655aff877f39a601ff6d7f44062534a47831ff0d58adcb94d776cbb1b9077993ff29b7a804714892e4e13da0278213684",
       "size": 413302,
       "url": "https://cdn.modrinth.com/data/5faXoLqX/versions/7ITFAyW8/Iceberg-1.21.1-fabric-1.3.2.jar"
+    },
+    {
+      "file": "ImmediatelyFast-Fabric-1.6.14+1.21.1.jar",
+      "sha1": "023805be7d701b9769e987449d217c557de5f848",
+      "sha512": "d3f2748ac2b51548157d0acf9d44e99ab786beab5322cbc452ad7999b187ead2a4ee6bb2aee1a179dc72dbb7bb2b3945b38c529acee454fe4b526648eefab0b4",
+      "size": 340166,
+      "url": "https://cdn.modrinth.com/data/5ZwdcRci/versions/7XKnsIC8/ImmediatelyFast-Fabric-1.6.14%2B1.21.1.jar"
     },
     {
       "file": "Item_Obliterator-Fabric_Quilt-MC_1.21-3.1.1.jar",
@@ -496,6 +545,13 @@
       "sha512": "93aeb1e4f329e725740edccd2638902fe932ef973dd64dbca60d981756d04d4e8affd93f015caa264e344d13d09029ddcb277df9875b6dc8dc6171330441593c",
       "size": 39917,
       "url": "https://cdn.modrinth.com/data/fThnVRli/versions/xtWiiv5X/JadeAddons-1.21.1-Fabric-6.0.3.jar"
+    },
+    {
+      "file": "MouseTweaks-fabric-mc1.21-2.26.jar",
+      "sha1": "ee81af33a5606ef2cd057e075833d7c69836c210",
+      "sha512": "1744a48a47aedcbf19a0a93f78473cf0221fc4782852dca7fc02685719174664b4f9d95d353fcfc16902ac3815594511ba6d9ab14391f9b7e25ec9b2e777927a",
+      "size": 75984,
+      "url": "https://cdn.modrinth.com/data/aC3cM3Vq/versions/ylmBQ38A/MouseTweaks-fabric-mc1.21-2.26.jar"
     },
     {
       "file": "NaturesCompass-1.21.1-2.6.0-fabric.jar",
@@ -526,11 +582,25 @@
       "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/Sj6w7O0I/OctoLib-FABRIC-0.6.2%2B1.21.jar"
     },
     {
-      "file": "PokeMisiones-1.4.13.jar",
-      "sha1": "eaae891e323098f37ac3fe98414e0f4c01a0660d",
-      "sha512": "825427f6176e0e455f17ebe77985afbc9656ae079c62a2ff4ef526017d9a50e30ca0d29d88168602c241cf1b7b2bd97c06aba90bd400fb850a62db4ffccfd129",
-      "size": 796827,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.4.13.jar"
+      "file": "PokeMisiones-1.5.4.jar",
+      "sha1": "ce2550ccbd95509cf77ec81a4c1515570545b7f5",
+      "sha512": "df1987d47d2eaad5a0daf67fb2385a7a8a378d8054f319c90cbc45202dfe661812f6a353b72499dca93df8488f9839c8bcf563c52cdcb5d0120f85583ac977d4",
+      "size": 1054014,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.4.jar"
+    },
+    {
+      "file": "Searchables-fabric-1.21.1-1.0.2.jar",
+      "sha1": "2777db0b967e80e0659053154f32f14a0e99a7a7",
+      "sha512": "1d57bd196a1122953a4f80d18af660be7ad791b9264e46666b273172c448df4de9acf2630fae7d196a4da8168c829fad18756c86b2cd3dd1068a0b453d8ec222",
+      "size": 79531,
+      "url": "https://cdn.modrinth.com/data/fuuu3xnx/versions/tRdr8Bg3/Searchables-fabric-1.21.1-1.0.2.jar"
+    },
+    {
+      "file": "apokelipsis-ajustes-1.1.0.jar",
+      "sha1": "add173a6a5bc92874fcd001d199fd7478691095e",
+      "sha512": "a14e763bad54341189903e143b14480b0b9157c303ee14f05a8a00faccbc9ba9455120b07b6fc405693f6e34a41afeacf0fbf657089cb534b1f6da2b355365b4",
+      "size": 6947,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-ajustes-1.1.0.jar"
     },
     {
       "file": "apokelipsis-menu-1.2.1.jar",
@@ -582,6 +652,20 @@
       "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/EghJxg4h/balm-fabric-1.21.1-21.0.66.jar"
     },
     {
+      "file": "batalla-final-end-1.0.0.jar",
+      "sha1": "46ed2ffc8aa582bc04e57283eb43bcd75cd8c19f",
+      "sha512": "e7a40473070d63d22af22163f312243056b67ba6bb1ff62c1f7cb26ee03465656290849a03303d596a33b4f38872f0135c76513cf0b36f12aad9a0e48b342906",
+      "size": 295327,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/batalla-final-end-1.0.0.jar"
+    },
+    {
+      "file": "chat_heads-0.15.7-fabric-1.21.jar",
+      "sha1": "5f37d428e0cc5ff08ed73a21ee11af0dde4105c2",
+      "sha512": "2d34ad4031fcf9f8cef8e88d3a69ed2c2d8e0ad32c5571f551e82f045a17c20ed896771c9cd731c8183a4a9134141172a4db733684adfb35e789237d30fec0a9",
+      "size": 86944,
+      "url": "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/5t3tM2L3/chat_heads-0.15.7-fabric-1.21.jar"
+    },
+    {
       "file": "cloth-config-15.0.140-fabric.jar",
       "sha1": "5d82342a2df53fd6df712bfdd583a811572918a4",
       "sha512": "1b3f5db4fc1d481704053db9837d530919374bf7518d7cede607360f0348c04fc6347a3a72ccfef355559e1f4aef0b650cd58e5ee79c73b12ff0fc2746797a00",
@@ -594,6 +678,13 @@
       "sha512": "0ccb319576e5d4d5957dabf58611625e5d4913c8bdc895174691b94e76eb6e632e7bb33d036920d0e2bb2d7361735e1987d00d8c77631e050c1448338be6a05a",
       "size": 3717526,
       "url": "https://cdn.modrinth.com/data/469QXqgC/versions/1R3Fvu7O/cobble-caf-forms-5.1.jar"
+    },
+    {
+      "file": "cobbledex-rei-emi-jei-fabric-2.29.0.jar",
+      "sha1": "16975f551413520c39ded7e21e483b6a5d578741",
+      "sha512": "f17407922fd07cd095a2b37e9dca3c6c575d9cd964d5bbd9ef1872b327b0f4da9f48b080926f37c5ef2c2f027f6ed30b24220e5f2cc300d9f6a1fd358d2a9a34",
+      "size": 5418984,
+      "url": "https://cdn.modrinth.com/data/qekxLrOP/versions/c03nfIwP/cobbledex-rei-emi-jei-fabric-2.29.0.jar"
     },
     {
       "file": "cobblemon-battle-extras-fabric-1.13.45.jar",
@@ -666,6 +757,13 @@
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/cupboard-fabric-1.21.1-4.1.jar"
     },
     {
+      "file": "dynamic-fps-3.11.4+minecraft-1.21.0-fabric.jar",
+      "sha1": "c0ee92c6d8a48e077aa9b02f3470619eab17d59c",
+      "sha512": "42c7043517889274f2932f257a78d0a67c22f2bebb1385ab4d0ba7936da2163e907d63f22bfeed5126342b568ddf4d7bc576ab6e76401a07d20a4978ba61bf20",
+      "size": 217532,
+      "url": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/GBH14HiF/dynamic-fps-3.11.4%2Bminecraft-1.21.0-fabric.jar"
+    },
+    {
       "file": "easy_npc-fabric-1.21.1-7.15.0.jar",
       "sha1": "691ee7226d2f20c89efd0b67da4f9d32dae71cfc",
       "sha512": "c056ebe781797c7db04eb448a44484436a255eef8ccd179053f4dc540604ab6f12ce09ca6a6a6749e3ff71b209ac55feb9db681c431aba8976a3cda9d5082a1f",
@@ -699,6 +797,20 @@
       "sha512": "c5b7211468e657c321e574f5179547407ad6a4d82c290dc747fde500e2c3b4e8b49bff1ea95da4ff2111e228c86edf72d6ceb084fbb9c2ec01f3d6d7c7424ae0",
       "size": 863362,
       "url": "https://cdn.modrinth.com/data/pZ2wrerK/versions/daqt5qcK/emotecraft-for-MC1.21.1-2.4.12-fabric.jar"
+    },
+    {
+      "file": "enhancedblockentities-0.10.2+1.21.jar",
+      "sha1": "d81359d77fc7c5437f3e83e519dc2f869300f0cd",
+      "sha512": "60e01db603fcf1392c0cd5c3ce742e568f7d445d83fe60828b21f546e7d29fb6947231f22d28e29b07f4bdcb767b6dc2a2398b4decea665ecba1166690a44d49",
+      "size": 201157,
+      "url": "https://cdn.modrinth.com/data/OVuFYfre/versions/HBZAPs3u/enhancedblockentities-0.10.2%2B1.21.jar"
+    },
+    {
+      "file": "entityculling-fabric-1.11.3-mc1.21.1.jar",
+      "sha1": "5a65a3944e32cc57b73b0f208d15d16fe9df4ed1",
+      "sha512": "51cc760b886f53a8469f5f87098688c8e00a70e9499f4146908f676dc95c78bbfd6de6ddab124e5ba8c1057335c3727c24243af2807497c6e4b05cb2da811364",
+      "size": 1519243,
+      "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/yllJFBpU/entityculling-fabric-1.11.3-mc1.21.1.jar"
     },
     {
       "file": "fabric-api-0.116.17+1.21.1.jar",
@@ -757,11 +869,25 @@
       "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/tmxM7U4W/geckolib-fabric-1.21.1-4.9.3.jar"
     },
     {
+      "file": "indium-1.0.35+mc1.21.jar",
+      "sha1": "1bf4b5db91f4e6d7a4f94fe2e96525d22df1cacb",
+      "sha512": "5f5e8a6ce29e6faecf442fe1fad76a3dd3631d83daa30423ba5cdb2cacf7efd92c16f05b65c3270faa23e4a803f392db9af40a030b81ea898550eded74ea8706",
+      "size": 105000,
+      "url": "https://cdn.modrinth.com/data/Orvt0mRa/versions/Z8VpxxGh/indium-1.0.35%2Bmc1.21.jar"
+    },
+    {
       "file": "jei-1.21.1-fabric-19.64.0.453.jar",
       "sha1": "d292061f9a55e6e88193549009ef9718c021cd57",
       "sha512": "29644ec17c6c5ba787d55042f4090e736776024c287ef7e439d98383d5f8ebb7aa93e0aecf7aabf4d785f7cdbaf9967530ec3b05f84415611f7738a14df4b08d",
       "size": 2415684,
       "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/3eOKpuhg/jei-1.21.1-fabric-19.64.0.453.jar"
+    },
+    {
+      "file": "justzoom_fabric_3.0.1_MC_1.21.1.jar",
+      "sha1": "a47500421f7328bc4cc8f2ef80fabe76c9d680bd",
+      "sha512": "3410355191e6bffce43ee3b9a8bae992660a5ed5986420920095676a4cdedeb5da24984d79042ae5bd0d500d94c4df9577e67df0e6ba96a41c1c744fc8a9bd15",
+      "size": 336135,
+      "url": "https://cdn.modrinth.com/data/iAiqcykM/versions/zW9agw05/justzoom_fabric_3.0.1_MC_1.21.1.jar"
     },
     {
       "file": "konkrete_fabric_1.9.9_MC_1.21.jar",
@@ -792,6 +918,13 @@
       "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/nar56EsW/lootr-fabric-1.21.1-1.11.38.127.jar"
     },
     {
+      "file": "malilib-fabric-1.21-0.21.10.jar",
+      "sha1": "e2699ef71618c54fc03c6c8b28e336603596dcef",
+      "sha512": "9f70b4605ea23f8c8b519622a6cbdcac6c8934c70bab3b8ea2d5da071a37e71ff74406d2e154c5ba4ebc7772d76e97ae94f5760e71632bd8a11d23ae8ae9a111",
+      "size": 1411200,
+      "url": "https://cdn.modrinth.com/data/GcWjdA9I/versions/C99LEy6r/malilib-fabric-1.21-0.21.10.jar"
+    },
+    {
       "file": "mezz_config-1.21.1-fabric-0.6.8.jar",
       "sha1": "e9351cf60199e3a2db427342f33a18949c0dc67e",
       "sha512": "6d29605f5456934d413f99748ee6551f2bbc72242be89c7c6e9f62c9748106e6a5a079df77d9bdecd1f209f5b04ba21435cece2bd0c9c35d9e9cab3be2899f17",
@@ -811,6 +944,13 @@
       "sha512": "dc67d6e023e1fcdeaf7837917c477cba212c611dfc2463c6ea021319c644087c79b477e0ea8194e113ddd7332fd5c6d82baa47c291eaac7f4a86252507b4e19f",
       "size": 471258,
       "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/NnNX8LBn/modernfix-fabric-5.25.1%2Bmc1.21.1.jar"
+    },
+    {
+      "file": "modmenu-11.0.5.jar",
+      "sha1": "2321d890a25b5985eba576d7cd8fe9a9c136e33d",
+      "sha512": "92e8e96267ff18d320903090f2ad9b32408a218919f5a0d578e232ad774c89d49a34a8271806652be7d6283f24e98432bc4af7f95855e78b843f9100d68696c7",
+      "size": 975846,
+      "url": "https://cdn.modrinth.com/data/mOgUt4GM/versions/6lgOkclV/modmenu-11.0.5.jar"
     },
     {
       "file": "moonlight-1.21.1-3.7.2-fabric.jar",
@@ -856,9 +996,9 @@
     },
     {
       "file": "pokegambling-1.0.0.jar",
-      "sha1": "02dbf3ca8d5f59e6bcadc8d97470dec449453790",
-      "sha512": "dff9f69b998e20469b808fef2949ffd4d2d82b45595927ac60efedb2106ad5a8dd466f1de09bfe817249fa29c226bb8fde9c58e9dbcbc9f978b5510b71c20b5b",
-      "size": 2634631,
+      "sha1": "0feebc65ea36c5658b39b24660d948d8b7caebb8",
+      "sha512": "b1e5af477e976fb1cf56337db7580ff6d46525f1f53098188e475f2f20b629b6f22a1ef5aa483c1cbc89799dabc52814fc234837959d85f67f60f9867eb007fb",
+      "size": 2906570,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokegambling-1.0.0.jar"
     },
     {
@@ -877,9 +1017,9 @@
     },
     {
       "file": "proteccion-zonas-1.0.0.jar",
-      "sha1": "61ff14f5444b14d3e25590dc085bab634ac550b8",
-      "sha512": "5bfb3114338f94dd821bc34980451f299a1f4594a2a070584910af95b3acd029b2dba54735461b24668b990df885f6eaff550aa0b58f941690fb930b560ae251",
-      "size": 253193,
+      "sha1": "9dfee7e5b3be2a2b4e5ac4c434be3449fb6e01d6",
+      "sha512": "c22bb3f6195e5472b8a386524240dd4f377f34756d5289bdf6d62103fb1aa47db340c3390d8910184e2d056e6f1ce2e4cd6c68bba3cb56eda1143149cd191615",
+      "size": 237962,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.0.jar"
     },
     {
@@ -897,6 +1037,13 @@
       "url": "https://cdn.modrinth.com/data/CBfM2yw7/versions/DoQNDXAU/rctapi-fabric-1.21.1-0.16.2-beta.jar"
     },
     {
+      "file": "reeses-sodium-options-fabric-2.2.4+mc1.21.1.jar",
+      "sha1": "552c80c3113ad346c3abcdf7c5c6cc3a02a5fb62",
+      "sha512": "7784880c4dedae15e3e03c6de4cfa67a9ed242006f90b764c0fa6fda8679e219ca6c9987aae76ec9b0fff6f8cc38fff86b16e2836aaa0200998c9de938617d3e",
+      "size": 257229,
+      "url": "https://cdn.modrinth.com/data/Bh37bMuy/versions/XtuPOKUN/reeses-sodium-options-fabric-2.2.4%2Bmc1.21.1.jar"
+    },
+    {
       "file": "securetrade-fabric-1.3.0-1.21.1.jar",
       "sha1": "0da131d3ebbc47ff2a3827afea8616aaa4d58816",
       "sha512": "4fd600c80c8367252d7ffc7b83406c4da184283f0f23b1657c60af44900bfafe6ef5e4428185f691eb6f9d43aa772c400af9c00402c81aa87b539e14a0b8709d",
@@ -909,6 +1056,20 @@
       "sha512": "7baa8a11f588368df10e560ba9e1239f100232ec0dc2d97807d3028d805eb838291e8959a30a088df9d13b1ae2afb1e4862548f4861620dbcd8285e313223013",
       "size": 13769,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/smoothchunk-fabric-1.21-4.1.jar"
+    },
+    {
+      "file": "sodium-extra-fabric-0.9.4+mc1.21.1.jar",
+      "sha1": "628487b330c9589d26cada5c4a51ac457af80a1f",
+      "sha512": "824b06ddaa7ab697ff252ee47c6278725fc2ed6eeaaa027c32c0ee8bbb9ab416c23dfdd3c89a2ca7f4618cb106ef55694a6163cd09abc248219d14e9eca3d7d3",
+      "size": 472019,
+      "url": "https://cdn.modrinth.com/data/PtjYWJkn/versions/YEWu6red/sodium-extra-fabric-0.9.4%2Bmc1.21.1.jar"
+    },
+    {
+      "file": "sodium-fabric-0.8.13+mc1.21.1.jar",
+      "sha1": "003c114c85ca88ef3362e018deb6aca0c682d6a1",
+      "sha512": "8614a374593698069a80ac74de8cd9c28f3928d16819a0e0d6320b538e823f7e54e8be06d5ea5a9c268beb0e02073209d1f831a02dede851588b972367680853",
+      "size": 1574609,
+      "url": "https://cdn.modrinth.com/data/AANobbMI/versions/SMxNOGZ6/sodium-fabric-0.8.13%2Bmc1.21.1.jar"
     },
     {
       "file": "sootychimneys-fabric-1.3.5.jar",
@@ -993,13 +1154,6 @@
       "sha512": "706819e56672a79a814a6b04a96cf5be585679c093a3027f5a2652ca60678c9bd24d5596fa7e373447e582a1360ab4c8540b023ca744ebabca1be426166d0b84",
       "size": 405552,
       "url": "https://cdn.modrinth.com/data/4qmvXRB9/versions/yD19P1nG/zconfig-1.0.0%2B1.21.x.jar"
-    },
-    {
-      "file": "CustomSkinLoader_Universal-15.1.jar",
-      "url": "https://cdn.modrinth.com/data/idMHQ4n2/versions/yyYvYfZI/CustomSkinLoader_Universal-15.1.jar",
-      "sha1": "324e6921ecd576e44875981466e7f22170b6541a",
-      "sha512": "1c3ee525200d3dff69b19d4667f0c40155d0a8eedcfed4749ec8883fcf169bcf1123942a87ca73ecf46002fded35ec653bb902b0d3900c42f4eab0323793daf2",
-      "size": 222917
     }
   ],
   "optional": [
@@ -1028,30 +1182,6 @@
       "size": 52331
     },
     {
-      "id": "badoptimizations",
-      "name": "BadOptimizations",
-      "description": "Optimizaciones extra que mejoran el rendimiento fuera del renderizado.",
-      "default": true,
-      "requires": [],
-      "file": "BadOptimizations-2.4.1-1.21.1.jar",
-      "url": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/S2qthD5S/BadOptimizations-2.4.1-1.21.1.jar",
-      "sha1": "1461d8e46391efd32a3085150e86094c9f6f5c9d",
-      "sha512": "2b66428bd98bd5ec0e09f2ec6af801cefb7b9b99cc4f0993daeaffe8d0ccc5ee0c2a73e9f38d4f92540ead0181704d2c9e946837ec05cf710fc3b20fce3b0cac",
-      "size": 283566
-    },
-    {
-      "id": "betterpingdisplay",
-      "name": "Better Ping Display [Fabric]",
-      "description": "Muestra el ping en números en la lista de jugadores (Tab).",
-      "default": true,
-      "requires": [],
-      "file": "BetterPingDisplay-Fabric-1.21.1-1.1.1.jar",
-      "url": "https://cdn.modrinth.com/data/MS1ZMyR7/versions/xCWQ8iLW/BetterPingDisplay-Fabric-1.21.1-1.1.1.jar",
-      "sha1": "534ba30ec8a7ea23048a507d02a651b6ddcaf523",
-      "sha512": "04bca229ffd42eccf1d7d0fc05c02f1a8a5cde20b263ed7b72a3cf7557e8606b6f78192f0f4e99bb88eaff3d48612e248762cdbbb5f5bb02315ee4d7b86a585c",
-      "size": 14850
-    },
-    {
       "id": "biomeparticleweather",
       "name": "Biome Particle Weather",
       "description": "Reemplaza la lluvia y la nieve por partículas con efectos nuevos según el bioma.",
@@ -1062,18 +1192,6 @@
       "sha1": "7ae636b7422d0a68c40ba46afbdffc9e4a38162a",
       "sha512": "d8aa537ec4122a48286820530a4547644a75fc8ab8f49f45633f22c532427d05b71535b3373e86ca36b4683a54afe29d29b24003df7afc8028e364d5041c6611",
       "size": 278669
-    },
-    {
-      "id": "chat_heads",
-      "name": "Chat Heads",
-      "description": "Muestra la cabeza de cada jugador al lado de sus mensajes en el chat.",
-      "default": true,
-      "requires": [],
-      "file": "chat_heads-0.15.7-fabric-1.21.jar",
-      "url": "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/5t3tM2L3/chat_heads-0.15.7-fabric-1.21.jar",
-      "sha1": "5f37d428e0cc5ff08ed73a21ee11af0dde4105c2",
-      "sha512": "2d34ad4031fcf9f8cef8e88d3a69ed2c2d8e0ad32c5571f551e82f045a17c20ed896771c9cd731c8183a4a9134141172a4db733684adfb35e789237d30fec0a9",
-      "size": 86944
     },
     {
       "id": "catchrate-display",
@@ -1088,32 +1206,6 @@
       "size": 293930
     },
     {
-      "id": "cobbledex-rei-emi-jei",
-      "name": "Cobblemon Info for REI / JEI / EMI",
-      "description": "Convierte JEI en una Pokédex completa: dónde aparece cada Pokémon, evoluciones y más.",
-      "default": true,
-      "requires": [],
-      "file": "cobbledex-rei-emi-jei-fabric-2.29.0.jar",
-      "url": "https://cdn.modrinth.com/data/qekxLrOP/versions/c03nfIwP/cobbledex-rei-emi-jei-fabric-2.29.0.jar",
-      "sha1": "16975f551413520c39ded7e21e483b6a5d578741",
-      "sha512": "f17407922fd07cd095a2b37e9dca3c6c575d9cd964d5bbd9ef1872b327b0f4da9f48b080926f37c5ef2c2f027f6ed30b24220e5f2cc300d9f6a1fd358d2a9a34",
-      "size": 5418984
-    },
-    {
-      "id": "controlling",
-      "name": "Controlling",
-      "description": "Adds a search bar to the Key-Bindings menu",
-      "default": true,
-      "requires": [
-        "searchables"
-      ],
-      "file": "Controlling-fabric-1.21.1-19.0.5.jar",
-      "url": "https://cdn.modrinth.com/data/xv94TkTM/versions/hGJDoW2W/Controlling-fabric-1.21.1-19.0.5.jar",
-      "sha1": "22d2407311298d0185b606aa1dd03ae33b98dff3",
-      "sha512": "2b172371037bdac4d37332f1fcfbd09c6e083524ba02ea62d980aab937c79cef4eeeea4e05353cbb0428dcb1d31f04ce0f6f148619d15db74587b983c6d04bc8",
-      "size": 83679
-    },
-    {
       "id": "cullleaves",
       "name": "Cull Leaves",
       "description": "Deja de dibujar las hojas ocultas dentro de los árboles. Más FPS.",
@@ -1124,54 +1216,6 @@
       "sha1": "e1f494684b6ee9d3c8e50a34002c32331b3ffd0a",
       "sha512": "43389205cfdc35da3fb07ab22284a0a158e8b80dda888be5b3b742280670a55ee0df79cc45f23081d8b378a287c08109b51d220ef01dd6e4f239e7939e542ce8",
       "size": 92108
-    },
-    {
-      "id": "customskinloader-bootstrap",
-      "name": "CustomSkinLoader",
-      "description": "Custom Skin Loader mod for Minecraft.",
-      "default": true,
-      "requires": [],
-      "file": "CustomSkinLoader_Universal-15.1.jar",
-      "url": "https://cdn.modrinth.com/data/idMHQ4n2/versions/yyYvYfZI/CustomSkinLoader_Universal-15.1.jar",
-      "sha1": "324e6921ecd576e44875981466e7f22170b6541a",
-      "sha512": "1c3ee525200d3dff69b19d4667f0c40155d0a8eedcfed4749ec8883fcf169bcf1123942a87ca73ecf46002fded35ec653bb902b0d3900c42f4eab0323793daf2",
-      "size": 222917
-    },
-    {
-      "id": "dynamic_fps",
-      "name": "Dynamic FPS",
-      "description": "Baja el consumo cuando el juego está en segundo plano o minimizado.",
-      "default": true,
-      "requires": [],
-      "file": "dynamic-fps-3.11.4+minecraft-1.21.0-fabric.jar",
-      "url": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/GBH14HiF/dynamic-fps-3.11.4%2Bminecraft-1.21.0-fabric.jar",
-      "sha1": "c0ee92c6d8a48e077aa9b02f3470619eab17d59c",
-      "sha512": "42c7043517889274f2932f257a78d0a67c22f2bebb1385ab4d0ba7936da2163e907d63f22bfeed5126342b568ddf4d7bc576ab6e76401a07d20a4978ba61bf20",
-      "size": 217532
-    },
-    {
-      "id": "enhancedblockentities",
-      "name": "Enhanced Block Entities",
-      "description": "Cofres, camas y carteles más livianos y con mejor aspecto. Más FPS.",
-      "default": true,
-      "requires": [],
-      "file": "enhancedblockentities-0.10.2+1.21.jar",
-      "url": "https://cdn.modrinth.com/data/OVuFYfre/versions/HBZAPs3u/enhancedblockentities-0.10.2%2B1.21.jar",
-      "sha1": "d81359d77fc7c5437f3e83e519dc2f869300f0cd",
-      "sha512": "60e01db603fcf1392c0cd5c3ce742e568f7d445d83fe60828b21f546e7d29fb6947231f22d28e29b07f4bdcb767b6dc2a2398b4decea665ecba1166690a44d49",
-      "size": 201157
-    },
-    {
-      "id": "entityculling",
-      "name": "Entity Culling",
-      "description": "No dibuja las entidades que no estás viendo. Más FPS.",
-      "default": true,
-      "requires": [],
-      "file": "entityculling-fabric-1.11.3-mc1.21.1.jar",
-      "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/yllJFBpU/entityculling-fabric-1.11.3-mc1.21.1.jar",
-      "sha1": "5a65a3944e32cc57b73b0f208d15d16fe9df4ed1",
-      "sha512": "51cc760b886f53a8469f5f87098688c8e00a70e9499f4146908f676dc95c78bbfd6de6ddab124e5ba8c1057335c3727c24243af2807497c6e4b05cb2da811364",
-      "size": 1519243
     },
     {
       "id": "explosiveenhancement",
@@ -1198,63 +1242,11 @@
       "size": 170056
     },
     {
-      "id": "fpsreducer",
-      "name": "FPS Reducer",
-      "description": "Baja los FPS automáticamente cuando no estás tocando nada, para ahorrar recursos.",
-      "default": true,
-      "requires": [],
-      "file": "FpsReducer2-fabric-1.21-2.9.jar",
-      "url": "https://cdn.modrinth.com/data/iZ10HXDj/versions/9ewqcOwy/FpsReducer2-fabric-1.21-2.9.jar",
-      "sha1": "9219d7f657f4adb61315cd15023265d1070d24ca",
-      "sha512": "b4f5c1192c0756ee9226b6cdfa230c49efa5049c9570a9c3f5e7d14250716600e9cc630fe4cf4c26334cc09bfb97705a4f785ad64d7262c1b6394de508c2423a",
-      "size": 124879
-    },
-    {
-      "id": "gymbadges",
-      "name": "Gym Badges",
-      "description": "Agrega las medallas de gimnasio de Cobblemon (18 medallas y una Medalla Maestra).",
-      "default": true,
-      "requires": [],
-      "file": "GymBadges-1.1.jar",
-      "url": "https://cdn.modrinth.com/data/HnePtkev/versions/NQZTUhfS/GymBadges-1.1.jar",
-      "sha1": "2d4befdd51f8b205668e50dceafaf5e2aae287b5",
-      "sha512": "a10d7215ae03d160fb6c88b48f3bb14f032005b6ce89b5e6fef34b8c1a47eb1c0e14ecaf1f961c24617ce2eb9accef7f3389d12697369f6437260b6c6f1debb3",
-      "size": 77360
-    },
-    {
-      "id": "immediatelyfast",
-      "name": "ImmediatelyFast",
-      "description": "Acelera el dibujado de la interfaz, textos y entidades. Más FPS.",
-      "default": true,
-      "requires": [],
-      "file": "ImmediatelyFast-Fabric-1.6.14+1.21.1.jar",
-      "url": "https://cdn.modrinth.com/data/5ZwdcRci/versions/7XKnsIC8/ImmediatelyFast-Fabric-1.6.14%2B1.21.1.jar",
-      "sha1": "023805be7d701b9769e987449d217c557de5f848",
-      "sha512": "d3f2748ac2b51548157d0acf9d44e99ab786beab5322cbc452ad7999b187ead2a4ee6bb2aee1a179dc72dbb7bb2b3945b38c529acee454fe4b526648eefab0b4",
-      "size": 340166
-    },
-    {
-      "id": "indium",
-      "name": "Indium",
-      "description": "Complemento de Sodium para que funcionen bien los mods con modelos especiales.",
-      "default": true,
-      "requires": [
-        "sodium"
-      ],
-      "file": "indium-1.0.35+mc1.21.jar",
-      "url": "https://cdn.modrinth.com/data/Orvt0mRa/versions/Z8VpxxGh/indium-1.0.35%2Bmc1.21.jar",
-      "sha1": "1bf4b5db91f4e6d7a4f94fe2e96525d22df1cacb",
-      "sha512": "5f5e8a6ce29e6faecf442fe1fad76a3dd3631d83daa30423ba5cdb2cacf7efd92c16f05b65c3270faa23e4a803f392db9af40a030b81ea898550eded74ea8706",
-      "size": 105000
-    },
-    {
       "id": "iris",
       "name": "Iris Shaders",
       "description": "Permite usar shaders (efectos de luz, sombras y agua realistas).",
       "default": true,
-      "requires": [
-        "sodium"
-      ],
+      "requires": [],
       "file": "iris-fabric-1.8.14-beta.1+mc1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/bAo1Qhte/iris-fabric-1.8.14-beta.1%2Bmc1.21.1.jar",
       "sha1": "6776c0340845887477bfa463acc736ce7fcb6de5",
@@ -1262,66 +1254,16 @@
       "size": 2791343
     },
     {
-      "id": "justzoom",
-      "name": "Just Zoom",
-      "description": "Agrega zoom con una tecla y mejoras al catalejo.",
-      "default": true,
-      "requires": [],
-      "file": "justzoom_fabric_3.0.1_MC_1.21.1.jar",
-      "url": "https://cdn.modrinth.com/data/iAiqcykM/versions/zW9agw05/justzoom_fabric_3.0.1_MC_1.21.1.jar",
-      "sha1": "a47500421f7328bc4cc8f2ef80fabe76c9d680bd",
-      "sha512": "3410355191e6bffce43ee3b9a8bae992660a5ed5986420920095676a4cdedeb5da24984d79042ae5bd0d500d94c4df9577e67df0e6ba96a41c1c744fc8a9bd15",
-      "size": 336135
-    },
-    {
       "id": "litematica",
       "name": "Litematica",
       "description": "Muestra planos (schematics) de construcciones para copiarlas bloque a bloque.",
       "default": true,
-      "requires": [
-        "malilib"
-      ],
+      "requires": [],
       "file": "litematica-fabric-1.21-0.19.61.jar",
       "url": "https://cdn.modrinth.com/data/bEpr0Arc/versions/o7i8oi1Z/litematica-fabric-1.21-0.19.61.jar",
       "sha1": "efce2dd7118b1e61c8aa461bd8cc9902907dd863",
       "sha512": "626d0b9785afa5cd9915a25089213332b0ae6805e992a15c12292fa174146a354c7fa891e5f834e2eb10c281dbd4b4d69081649b2a83b48f22a66bc99220b328",
       "size": 1642590
-    },
-    {
-      "id": "malilib",
-      "name": "MaLiLib",
-      "description": "Librería necesaria para Litematica.",
-      "default": true,
-      "requires": [],
-      "file": "malilib-fabric-1.21-0.21.10.jar",
-      "url": "https://cdn.modrinth.com/data/GcWjdA9I/versions/C99LEy6r/malilib-fabric-1.21-0.21.10.jar",
-      "sha1": "e2699ef71618c54fc03c6c8b28e336603596dcef",
-      "sha512": "9f70b4605ea23f8c8b519622a6cbdcac6c8934c70bab3b8ea2d5da071a37e71ff74406d2e154c5ba4ebc7772d76e97ae94f5760e71632bd8a11d23ae8ae9a111",
-      "size": 1411200
-    },
-    {
-      "id": "modmenu",
-      "name": "Mod Menu",
-      "description": "Agrega un menú para ver y configurar los mods instalados.",
-      "default": true,
-      "requires": [],
-      "file": "modmenu-11.0.5.jar",
-      "url": "https://cdn.modrinth.com/data/mOgUt4GM/versions/6lgOkclV/modmenu-11.0.5.jar",
-      "sha1": "2321d890a25b5985eba576d7cd8fe9a9c136e33d",
-      "sha512": "92e8e96267ff18d320903090f2ad9b32408a218919f5a0d578e232ad774c89d49a34a8271806652be7d6283f24e98432bc4af7f95855e78b843f9100d68696c7",
-      "size": 975846
-    },
-    {
-      "id": "mousetweaks",
-      "name": "Mouse Tweaks",
-      "description": "Mejora el manejo del inventario con el mouse (arrastrar, mover rápido, etc.).",
-      "default": true,
-      "requires": [],
-      "file": "MouseTweaks-fabric-mc1.21-2.26.jar",
-      "url": "https://cdn.modrinth.com/data/aC3cM3Vq/versions/ylmBQ38A/MouseTweaks-fabric-mc1.21-2.26.jar",
-      "sha1": "ee81af33a5606ef2cd057e075833d7c69836c210",
-      "sha512": "1744a48a47aedcbf19a0a93f78473cf0221fc4782852dca7fc02685719174664b4f9d95d353fcfc16902ac3815594511ba6d9ab14391f9b7e25ec9b2e777927a",
-      "size": 75984
     },
     {
       "id": "punchy",
@@ -1336,62 +1278,10 @@
       "size": 1878473
     },
     {
-      "id": "reeses-sodium-options",
-      "name": "Reese's Sodium Options",
-      "description": "Menú de opciones de video más cómodo para Sodium.",
-      "default": true,
-      "requires": [
-        "sodium"
-      ],
-      "file": "reeses-sodium-options-fabric-2.2.4+mc1.21.1.jar",
-      "url": "https://cdn.modrinth.com/data/Bh37bMuy/versions/XtuPOKUN/reeses-sodium-options-fabric-2.2.4%2Bmc1.21.1.jar",
-      "sha1": "552c80c3113ad346c3abcdf7c5c6cc3a02a5fb62",
-      "sha512": "7784880c4dedae15e3e03c6de4cfa67a9ed242006f90b764c0fa6fda8679e219ca6c9987aae76ec9b0fff6f8cc38fff86b16e2836aaa0200998c9de938617d3e",
-      "size": 257229
-    },
-    {
-      "id": "searchables",
-      "name": "Searchables",
-      "description": "Searchables is a library mod that adds helper methods that allow for searching and filtering elements based on compon...",
-      "default": true,
-      "requires": [],
-      "file": "Searchables-fabric-1.21.1-1.0.2.jar",
-      "url": "https://cdn.modrinth.com/data/fuuu3xnx/versions/tRdr8Bg3/Searchables-fabric-1.21.1-1.0.2.jar",
-      "sha1": "2777db0b967e80e0659053154f32f14a0e99a7a7",
-      "sha512": "1d57bd196a1122953a4f80d18af660be7ad791b9264e46666b273172c448df4de9acf2630fae7d196a4da8168c829fad18756c86b2cd3dd1068a0b453d8ec222",
-      "size": 79531
-    },
-    {
-      "id": "sodium",
-      "name": "Sodium",
-      "description": "Motor de gráficos mucho más rápido. Mejora muchísimo los FPS.",
-      "default": true,
-      "requires": [],
-      "file": "sodium-fabric-0.8.13+mc1.21.1.jar",
-      "url": "https://cdn.modrinth.com/data/AANobbMI/versions/SMxNOGZ6/sodium-fabric-0.8.13%2Bmc1.21.1.jar",
-      "sha1": "003c114c85ca88ef3362e018deb6aca0c682d6a1",
-      "sha512": "8614a374593698069a80ac74de8cd9c28f3928d16819a0e0d6320b538e823f7e54e8be06d5ea5a9c268beb0e02073209d1f831a02dede851588b972367680853",
-      "size": 1574609
-    },
-    {
-      "id": "sodium-extra",
-      "name": "Sodium Extra",
-      "description": "Opciones gráficas extra para Sodium (niebla, partículas, animaciones...).",
-      "default": true,
-      "requires": [
-        "sodium"
-      ],
-      "file": "sodium-extra-fabric-0.9.4+mc1.21.1.jar",
-      "url": "https://cdn.modrinth.com/data/PtjYWJkn/versions/YEWu6red/sodium-extra-fabric-0.9.4%2Bmc1.21.1.jar",
-      "sha1": "628487b330c9589d26cada5c4a51ac457af80a1f",
-      "sha512": "824b06ddaa7ab697ff252ee47c6278725fc2ed6eeaaa027c32c0ee8bbb9ab416c23dfdd3c89a2ca7f4618cb106ef55694a6163cd09abc248219d14e9eca3d7d3",
-      "size": 472019
-    },
-    {
       "id": "tidal",
       "name": "Tidal",
       "description": "Agrega olas en playas y océanos.",
-      "default": true,
+      "default": false,
       "requires": [],
       "file": "tidal-0.0.2-beta.jar",
       "url": "https://cdn.modrinth.com/data/QsiPPta0/versions/Rh86Cb7C/tidal-0.0.2-beta.jar",
@@ -1403,7 +1293,7 @@
       "id": "too_many_entities",
       "name": "Too Many Entities",
       "description": "Oculta entidades de más cuando hay muchas juntas, para reducir el lag.",
-      "default": true,
+      "default": false,
       "requires": [],
       "file": "Too Many Entities 1.21.1 Fabric v1.2.0.jar",
       "url": "https://cdn.modrinth.com/data/BvnRxzIF/versions/LIr36rRw/Too%20Many%20Entities%201.21.1%20Fabric%20v1.2.0.jar",
@@ -1589,9 +1479,9 @@
   ],
   "initial": {
     "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/inicial.zip",
-    "sha1": "d66b17e1840d9af2274d548286470f48c5efe70c",
-    "sha512": "6775781900e9b4589731a0e55be2736245c44326166fb8d11e18bc66b60e953a323a30f9ba1ea2fecdff8d592cffbf5bb3ea1fb7a4db9c1a879b6b89b7aec42c",
-    "size": 2358930
+    "sha1": "abb488b37c64cf0010676ef4831e3af3cd2d6112",
+    "sha512": "68d69b061f781a7ce3104170e57ae8ae866a1c77416985674f25f36b10eed774abb73d26a5b5b7633dd82415a905d73eb0054900b52028e9314072d5b06e76cc",
+    "size": 2329069
   },
   "serverOnly": [
     {
