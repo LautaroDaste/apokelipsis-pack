@@ -139,7 +139,12 @@
       </div>
 
       <div class="tab" id="t-configs" hidden>
-        <p class="muted small">Archivos de configuración de los mods (carpeta <code>config</code>) que reciben los jugadores nuevos. Elige de dónde sale cada uno.</p>
+        <p class="muted small">Archivos de configuración de los mods (carpeta <code>config</code>) que reciben los jugadores nuevos. Elige de dónde sale cada uno, edítalos con ✏️ o quítalos con 🗑️.</p>
+        <div class="toolbar">
+          <button class="btn" id="cfgf-new">＋ Nuevo archivo</button>
+          <button class="btn" id="cfgf-up">⬆ Subir archivos</button>
+          <input type="file" id="cfgf-up-input" multiple hidden>
+        </div>
         <div class="toolbar">
           <input type="search" id="cfgf-search" placeholder="Buscar archivo...">
           <div class="chips" id="cfgf-filter">

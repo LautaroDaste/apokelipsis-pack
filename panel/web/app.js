@@ -761,8 +761,9 @@ async function loadConfigs() {
   }
   drawConfigs();
 }
-const cfgState = (r) => (r.enZip && r.enJuego ? (r.igual ? 'igual' : 'distinto') : r.enZip ? 'pack' : 'nuevo');
-const STATE_TXT = { igual: '✔ Igual en tu juego', distinto: '✎ Distinto en tu juego', pack: 'Solo en el pack', nuevo: '＋ Solo en tu juego' };
+const cfgState = (r) => (r.enZip && r.enJuego ? (r.igual ? 'igual' : 'distinto') : r.enZip ? 'pack' : r.enJuego ? 'nuevo' : 'agregado');
+const STATE_TXT = { igual: '✔ Igual en tu juego', distinto: '✎ Distinto en tu juego', pack: 'Solo en el pack', nuevo: '＋ Solo en tu juego', agregado: '＋ Agregado en el panel' };
+const DESDE_TXT = { texto: ' · ✏️ editado en el panel', subido: ' · ⬆ subido desde tu PC', no: ' · no se incluye' };
 function drawConfigs() {
   const q = $('#cfgf-search').value.trim().toLowerCase();
   const list = cfg.rows.filter((r) => {
@@ -770,14 +771,22 @@ function drawConfigs() {
     const f = cfgFilter === 'todos' || (cfgFilter === 'pack' ? r.enZip : s === cfgFilter);
     return f && (!q || r.ruta.toLowerCase().includes(q));
   });
-  $('#cfgf-list').innerHTML = (cfg.hayJuego ? '' : '<div class="note">No encontré tu juego en esta PC: solo puedes quitar archivos del pack.</div>') +
-    (list.slice(0, 400).map((r) => `<div class="row cfgf"><div class="mi">${r.ruta.endsWith('.json') || r.ruta.endsWith('.json5') ? '🧾' : '📄'}</div>
-      <div class="mt"><div class="mn">${esc(r.ruta)}</div><div class="mf">${STATE_TXT[cfgState(r)]}</div></div>
+  $('#cfgf-list').innerHTML = (cfg.hayJuego ? '' : '<div class="note">No encontré tu juego en esta PC: puedes editar, subir o quitar archivos del pack, pero no copiarlos desde tu juego.</div>') +
+    (list.slice(0, 400).map((r) => `<div class="row cfgf ${r.desde === 'no' ? 'off' : ''}"><div class="mi">${/\.json5?$/i.test(r.ruta) ? '🧾' : '📄'}</div>
+      <div class="mt"><div class="mn">${esc(r.ruta)}</div><div class="mf">${STATE_TXT[cfgState(r)]}${DESDE_TXT[r.desde] || ''}</div></div>
       <select data-ruta="${esc(r.ruta)}">
         <option value="no" ${r.desde === 'no' ? 'selected' : ''}>No incluir</option>
         ${r.enZip ? `<option value="zip" ${r.desde === 'zip' ? 'selected' : ''}>Dejar la del pack</option>` : ''}
         ${r.enJuego ? `<option value="juego" ${r.desde === 'juego' ? 'selected' : ''}>Usar la de mi juego</option>` : ''}
-      </select></div>`).join('') || '<div class="empty">Nada que mostrar.</div>') +
+        ${r.contenido != null ? `<option value="texto" ${r.desde === 'texto' ? 'selected' : ''}>Usar la editada aquí</option>` : ''}
+        ${r.base64 != null ? `<option value="subido" ${r.desde === 'subido' ? 'selected' : ''}>Usar la subida</option>` : ''}
+      </select>
+      <div class="pk-actions">
+        <button data-edit="${esc(r.ruta)}" title="Editar">✏️</button>
+        ${r.desde === 'no'
+          ? `<button data-undo="${esc(r.ruta)}" title="Volver a incluir">↩</button>`
+          : `<button data-del="${esc(r.ruta)}" title="Quitar del pack">🗑️</button>`}
+      </div></div>`).join('') || '<div class="empty">Nada que mostrar.</div>') +
     (list.length > 400 ? `<div class="muted small">…y ${list.length - 400} más (usa el buscador).</div>` : '');
 }
 $('#cfgf-search').oninput = drawConfigs;
@@ -788,11 +797,203 @@ $('#cfgf-filter').onclick = (e) => {
   $$('#cfgf-filter button').forEach((x) => x.classList.toggle('on', x === b));
   drawConfigs();
 };
+const cfgRow = (ruta) => cfg.rows.find((x) => x.ruta === ruta);
 $('#cfgf-list').onchange = (e) => {
-  const r = cfg.rows.find((x) => x.ruta === e.target.dataset.ruta);
+  const r = cfgRow(e.target.dataset.ruta);
   if (!r) return;
   r.desde = e.target.value;
   markDirty('configs');
+  drawConfigs();
+};
+$('#cfgf-list').onclick = (e) => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  const r = cfgRow(b.dataset.edit || b.dataset.del || b.dataset.undo);
+  if (!r) return;
+  if (b.dataset.edit) return editConfig(r).catch((err) => toast(err.message, 'err'));
+  if (b.dataset.del) {
+    if (!r.enZip && !r.enJuego) cfg.rows.splice(cfg.rows.indexOf(r), 1);
+    else r.desde = 'no';
+    toast(r.enZip ? `${r.ruta} se quitará del pack al guardar.` : `${r.ruta} no se incluirá.`);
+  } else {
+    r.desde = r.contenido != null ? 'texto' : r.base64 != null ? 'subido' : r.enZip ? 'zip' : 'juego';
+  }
+  markDirty('configs');
+  drawConfigs();
+};
+
+// Rutas válidas para la configuración inicial (las mismas reglas que el servidor)
+function cfgRutaError(ruta) {
+  if (!/^(config|defaultconfigs)\//.test(ruta)) return 'Tiene que empezar con config/ o defaultconfigs/';
+  if (ruta.split('/').some((s) => !s || s === '.' || s === '..' || /[\\:*?"<>|\x00-\x1f]/.test(s) || /[. ]$/.test(s)))
+    return 'Falta el nombre del archivo o tiene caracteres no permitidos (\\ : * ? " < > |)';
+  if (/(^|\/)(apokelipsis\.json|apokelipsis\/)/i.test(ruta)) return 'Ese archivo lo maneja el launcher';
+  if (/\.(log|bak|old|lock|tmp)$/i.test(ruta)) return 'Ese tipo de archivo no se incluye';
+  if (ruta.length > 300) return 'La ruta es demasiado larga';
+  return '';
+}
+const cfgFind = (ruta) => cfg.rows.find((x) => x.ruta.toLowerCase() === ruta.toLowerCase());
+function b64ToText(b64) {
+  const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+  if (bytes.includes(0)) return null;
+  try {
+    return new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+  } catch {
+    return null;
+  }
+}
+function jsonError(ruta, texto) {
+  if (!/\.json$/i.test(ruta) || !texto.trim()) return '';
+  try {
+    JSON.parse(texto);
+    return '';
+  } catch (err) {
+    return `⚠ El JSON tiene un error (${err.message}). El mod podría no leerlo.`;
+  }
+}
+function closeEditor() {
+  delete $('#modal').dataset.lock;
+  closeModal();
+}
+
+// Editor de texto de un archivo de config
+async function editConfig(r, { nuevo } = {}) {
+  // Se edita la versión que está elegida; si está en «No incluir», la mejor que haya.
+  const fuente = r.desde !== 'no' ? r.desde : r.contenido != null ? 'texto' : r.base64 != null ? 'subido' : r.enZip ? 'zip' : r.enJuego ? 'juego' : 'texto';
+  let texto;
+  if (nuevo) texto = '';
+  else if (fuente === 'texto') texto = r.contenido ?? '';
+  else if (fuente === 'subido') {
+    texto = b64ToText(r.base64);
+    if (texto == null) return toast('Ese archivo no es de texto: no se puede editar aquí. Súbelo de nuevo si quieres cambiarlo.', 'err');
+  } else {
+    const d = await api(`/inicial/archivo?ruta=${encodeURIComponent(r.ruta)}&desde=${fuente}`);
+    if (d.binario) return toast('Ese archivo no es de texto: no se puede editar aquí.', 'err');
+    texto = d.texto;
+  }
+  const origen = { juego: 'tu juego', zip: 'el pack', subido: 'el archivo subido', texto: 'tu edición' }[fuente];
+  const box = modal(`<h2>✏️ ${esc(r.ruta)}</h2>
+    <p class="muted small">${nuevo ? 'Archivo nuevo.' : `Editando la versión de <b>${origen}</b>.`} Llega a los jugadores nuevos (o a todos si pides un reinicio) cuando publiques. <kbd>Ctrl</kbd>+<kbd>S</kbd> aplica.</p>
+    <textarea class="cfg-editor" spellcheck="false"></textarea>
+    <div class="cfg-warn"></div>
+    <div class="modal-actions"><button class="btn ghost" data-r="0">Cancelar</button><button class="btn primary" data-r="1">Aplicar cambios</button></div>`, { wide: true });
+  $('#modal').dataset.lock = '1';
+  const ta = $('textarea', box);
+  const warn = $('.cfg-warn', box);
+  ta.value = texto;
+  const check = () => (warn.textContent = jsonError(r.ruta, ta.value));
+  check();
+  ta.oninput = check;
+  const apply = () => {
+    closeEditor();
+    if (!nuevo && ta.value === texto && r.desde !== 'no') return;
+    r.contenido = ta.value;
+    r.desde = 'texto';
+    if (nuevo && !cfg.rows.includes(r)) {
+      cfg.rows.push(r);
+      cfg.rows.sort((a, b) => a.ruta.localeCompare(b.ruta));
+    }
+    markDirty('configs');
+    drawConfigs();
+    toast('Cambios aplicados. Toca «Guardar y publicar» para enviarlos.', 'ok');
+  };
+  ta.onkeydown = (e) => {
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      ta.setRangeText('  ', ta.selectionStart, ta.selectionEnd, 'end');
+      check();
+    } else if (e.key.toLowerCase() === 's' && (e.ctrlKey || e.metaKey)) {
+      e.preventDefault();
+      apply();
+    }
+  };
+  box.onclick = (e) => {
+    const v = e.target.dataset.r;
+    if (v === '1') apply();
+    else if (v === '0') closeEditor();
+  };
+  ta.focus();
+  ta.setSelectionRange(0, 0);
+}
+
+// Pide una ruta en un cuadro (para «Nuevo archivo» y «Subir archivos»)
+function pedirRuta({ titulo, texto, valor, boton, extra = '', validar, listo }) {
+  const box = modal(`<h2>${titulo}</h2><p class="muted small">${texto}</p>
+    <input class="cfg-ruta" value="${esc(valor)}" spellcheck="false">${extra}
+    <div class="cfg-warn"></div>
+    <div class="modal-actions"><button class="btn ghost" data-r="0">Cancelar</button><button class="btn primary" data-r="1">${boton}</button></div>`);
+  const inp = $('input', box);
+  const go = () => {
+    const v = inp.value.trim().replace(/\\/g, '/');
+    const err = validar(v);
+    if (err) return ($('.cfg-warn', box).textContent = err);
+    closeModal();
+    Promise.resolve(listo(v)).catch((e) => toast(e.message, 'err'));
+  };
+  inp.onkeydown = (e) => e.key === 'Enter' && go();
+  box.onclick = (e) => (e.target.dataset.r === '1' ? go() : e.target.dataset.r === '0' && closeModal());
+  inp.focus();
+  inp.setSelectionRange(inp.value.length, inp.value.length);
+}
+
+$('#cfgf-new').onclick = () => {
+  if (!cfg) return;
+  pedirRuta({
+    titulo: '＋ Nuevo archivo de config',
+    texto: 'Escribe la ruta dentro de la carpeta del juego, por ejemplo <code>config/cobblemon/main.json</code>.',
+    valor: 'config/',
+    boton: 'Crear y editar',
+    validar: cfgRutaError,
+    listo: (ruta) => {
+      const ya = cfgFind(ruta);
+      if (ya) {
+        toast('Ese archivo ya existe: lo abro para editarlo.');
+        return editConfig(ya);
+      }
+      return editConfig({ ruta, enZip: false, enJuego: false, igual: null, desde: 'no' }, { nuevo: true });
+    }
+  });
+};
+
+const MAX_CFG = 4 * 1024 * 1024;
+const readB64 = (file) => new Promise((resolve, reject) => {
+  const fr = new FileReader();
+  fr.onload = () => resolve(String(fr.result).replace(/^data:[^,]*,/, ''));
+  fr.onerror = () => reject(new Error('No se pudo leer ' + file.name));
+  fr.readAsDataURL(file);
+});
+$('#cfgf-up').onclick = () => cfg && $('#cfgf-up-input').click();
+$('#cfgf-up-input').onchange = (e) => {
+  const files = [...e.target.files];
+  e.target.value = '';
+  const grandes = files.filter((f) => f.size > MAX_CFG);
+  if (grandes.length) toast(`Demasiado grandes (máximo 4 MB): ${grandes.map((f) => f.name).join(', ')}`, 'err');
+  const ok = files.filter((f) => f.size <= MAX_CFG);
+  if (!ok.length) return;
+  const rutas = (dir) => ok.map((f) => dir.replace(/\/*$/, '/') + f.name);
+  pedirRuta({
+    titulo: `⬆ Subir ${ok.length === 1 ? 'archivo' : ok.length + ' archivos'}`,
+    texto: '¿En qué carpeta del juego van? Por ejemplo <code>config/</code> o <code>config/cobblemon/</code>.',
+    valor: 'config/',
+    boton: 'Agregar',
+    extra: `<ul class="small">${ok.map((f) => `<li><code>${esc(f.name)}</code> · ${fmtSize(f.size)}</li>`).join('')}</ul>`,
+    validar: (dir) => rutas(dir).map((r) => cfgRutaError(r) && `${r}: ${cfgRutaError(r)}`).find(Boolean),
+    listo: async (dir) => {
+      const lista = rutas(dir);
+      let reemplazados = 0;
+      for (let i = 0; i < ok.length; i++) {
+        const base64 = await readB64(ok[i]);
+        let r = cfgFind(lista[i]);
+        if (r) reemplazados++;
+        else cfg.rows.push((r = { ruta: lista[i], enZip: false, enJuego: false, igual: null }));
+        Object.assign(r, { base64, contenido: null, desde: 'subido' });
+      }
+      cfg.rows.sort((a, b) => a.ruta.localeCompare(b.ruta));
+      markDirty('configs');
+      drawConfigs();
+      toast(`${ok.length === 1 ? 'Archivo agregado' : ok.length + ' archivos agregados'}${reemplazados ? ` (${reemplazados} reemplaza${reemplazados > 1 ? 'n' : ''} a uno que ya estaba)` : ''}. Toca «Guardar y publicar».`, 'ok');
+    }
+  });
 };
 $('#cfgf-all').onclick = () => {
   const n = cfg.rows.filter((r) => cfgState(r) === 'distinto' && r.desde !== 'juego').map((r) => (r.desde = 'juego')).length;
@@ -802,7 +1003,7 @@ $('#cfgf-all').onclick = () => {
   toast(`${n} archivos usarán la versión de tu juego. Toca «Guardar».`);
 };
 savers.configs = async () => {
-  await api('/inicial', { method: 'POST', body: { archivos: cfg.rows.filter((r) => r.desde !== 'no').map((r) => ({ ruta: r.ruta, desde: r.desde })) } });
+  await api('/inicial', { method: 'POST', body: { archivos: cfg.rows.filter((r) => r.desde !== 'no').map((r) => ({ ruta: r.ruta, desde: r.desde, ...(r.desde === 'texto' ? { contenido: r.contenido } : r.desde === 'subido' ? { base64: r.base64 } : {}) })) } });
   cfg = null;
 };
 

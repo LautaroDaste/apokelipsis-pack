@@ -386,7 +386,28 @@ function gameConfigFiles() {
   CONFIG_DIRS.forEach((d) => walk(d, 0));
   return out;
 }
-const safeRel = (r) => typeof r === 'string' && CONFIG_DIRS.some((d) => r.startsWith(d + '/')) && !r.split('/').some((s) => !s || s === '..' || s.includes(':') || s.includes('\\'));
+const safeRel = (r) => typeof r === 'string' && r.length <= 300 && CONFIG_DIRS.some((d) => r.startsWith(d + '/')) &&
+  !r.split('/').some((s) => !s || s === '.' || s === '..' || /[\\:*?"<>|\x00-\x1f]/.test(s) || /[. ]$/.test(s));
+const MAX_CONFIG = 4 * 1024 * 1024;
+
+// Contenido de un archivo de config (para editarlo en el panel)
+api['GET /inicial/archivo'] = async (q) => {
+  const ruta = q.get('ruta');
+  if (!safeRel(ruta)) fail('Ruta no válida');
+  let data;
+  if (q.get('desde') === 'juego') {
+    const full = path.join(GAME, ...ruta.split('/'));
+    if (!inside(GAME, full) || !exists(full)) fail('Ese archivo no está en tu juego');
+    data = fs.readFileSync(full);
+  } else {
+    const e = exists(INICIAL) && readZip(INICIAL).find((x) => x.name === ruta);
+    if (!e) fail('Ese archivo no está en el pack');
+    data = e.read();
+  }
+  const texto = data.toString('utf8');
+  const binario = data.includes(0) || Buffer.from(texto, 'utf8').length !== data.length;
+  return { tamano: data.length, binario, texto: binario ? null : texto };
+};
 
 api['GET /inicial'] = async () => {
   const zip = exists(INICIAL) ? readZip(INICIAL) : [];
@@ -412,7 +433,12 @@ api['POST /inicial'] = async (q, req, res, body) => {
   for (const a of archivos || []) {
     if (!safeRel(a.ruta) || seen.has(a.ruta.toLowerCase())) continue;
     seen.add(a.ruta.toLowerCase());
-    if (a.desde === 'juego') {
+    if (IGNORE_CONFIG.test(a.ruta) && a.desde !== 'zip') fail(`${a.ruta} lo maneja el launcher: no se puede poner en la configuración inicial.`);
+    if (a.desde === 'texto' || a.desde === 'subido') {
+      const data = a.desde === 'texto' ? Buffer.from(String(a.contenido ?? ''), 'utf8') : Buffer.from(String(a.base64 || ''), 'base64');
+      if (data.length > MAX_CONFIG) fail(`${a.ruta} es demasiado grande (máximo 4 MB).`);
+      files.push({ name: a.ruta, data });
+    } else if (a.desde === 'juego') {
       const full = path.join(GAME, ...a.ruta.split('/'));
       if (!inside(GAME, full) || !exists(full)) continue;
       files.push({ name: a.ruta, data: fs.readFileSync(full) });
@@ -524,7 +550,8 @@ const server = http.createServer(async (req, res) => {
       return;
     }
     try {
-      const body = req.method === 'POST' ? await readBody(req, url.pathname === '/api/mods/subir' ? 400 * 1024 * 1024 : 4 * 1024 * 1024) : Buffer.alloc(0);
+      const limit = url.pathname === '/api/mods/subir' ? 400 * 1024 * 1024 : url.pathname === '/api/inicial' ? 96 * 1024 * 1024 : 4 * 1024 * 1024;
+      const body = req.method === 'POST' ? await readBody(req, limit) : Buffer.alloc(0);
       const result = await handler(url.searchParams, req, res, url.pathname === '/api/mods/subir' ? body : body.toString('utf8'));
       if (result === undefined) return;
       res.writeHead(200, { ...security, 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' });

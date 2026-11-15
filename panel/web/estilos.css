@@ -225,6 +225,11 @@ textarea { resize: vertical; min-height: 54px; line-height: 1.4; }
 /* Configs */
 .cfgf .mt .mn { font-family: Consolas, monospace; font-size: 13px; }
 .cfgf select { width: 210px; padding: 5px 8px; font-size: 13px; }
+.cfgf.off { opacity: .55; }
+.cfgf.off .mn { text-decoration: line-through; }
+.cfg-editor { width: 100%; min-height: 52vh; font-family: Consolas, monospace; font-size: 13px; line-height: 1.45; white-space: pre; tab-size: 2; }
+.cfg-warn { color: var(--error); font-size: 13px; min-height: 18px; margin-top: 6px; }
+.cfg-ruta { width: 100%; font-family: Consolas, monospace; }
 
 .danger-card { border-left: 5px solid var(--error); }
 .danger-card p { line-height: 1.5; }
