@@ -95,6 +95,25 @@ function jarInfo(full) {
   return info;
 }
 
+// Textos de un .jar para claves concretas (las que jarInfo no guarda por no parecer teclas).
+function extraLang(full, ids) {
+  const out = {};
+  if (!ids.size) return out;
+  try {
+    for (const e of readZip(full)) {
+      const m = /^assets\/[^/]+\/lang\/(es_es|es_ar|es_mx|en_us)\.json$/.exec(e.name);
+      if (!m) continue;
+      try {
+        const data = JSON.parse(e.read().toString('utf8').replace(/^﻿/, ''));
+        for (const k of ids) {
+          if (typeof data[k] === 'string' && (m[1] !== 'en_us' || !out[k])) out[k] = data[k];
+        }
+      } catch {}
+    }
+  } catch {}
+  return out;
+}
+
 function listJars(dir) {
   return exists(dir) ? fs.readdirSync(dir).filter((f) => f.toLowerCase().endsWith('.jar')).sort((a, b) => a.localeCompare(b)) : [];
 }
@@ -335,16 +354,30 @@ api['GET /traducciones'] = async () => {
   if (traduccionesCache) return traduccionesCache;
   const textos = {};
   const mods = {};
+  // Teclas que aparecen en las opciones del pack o del juego: se buscan sus nombres aunque
+  // no sigan la forma "key..." (por ejemplo Xaero usa "gui.xaero_zoom_in").
+  const gameOptions = path.join(GAME, 'options.txt');
+  const teclasJuego = exists(gameOptions)
+    ? parseOptions(readText(gameOptions)).filter((o) => o.clave.startsWith('key_')).map((o) => o.clave.slice(4))
+    : null;
+  const buscadas = new Set([
+    ...(exists(OPTIONS) ? parseOptions(readText(OPTIONS)) : []).filter((o) => o.clave.startsWith('key_')).map((o) => o.clave.slice(4)),
+    ...(teclasJuego || [])
+  ]);
   for (const f of listJars(p('mods'))) {
     const info = jarInfo(p('mods', f));
-    for (const [k, v] of Object.entries(info.lang)) {
+    const add = (k, v) => {
       if (!textos[k]) {
         textos[k] = v;
         mods[k] = info.name || f;
       }
-    }
+    };
+    for (const [k, v] of Object.entries(info.lang)) add(k, v);
+    for (const [k, v] of Object.entries(extraLang(p('mods', f), buscadas))) add(k, v);
   }
-  traduccionesCache = { textos, mods };
+  // teclasJuego: las que existen en el juego de esta PC (null si no hay juego). Las que están
+  // en el pack pero no en el juego son de mods que ya no están.
+  traduccionesCache = { textos, mods, teclasJuego };
   return traduccionesCache;
 };
 

@@ -292,3 +292,10 @@ ol.howto { line-height: 1.6; padding-left: 20px; margin: 6px 0; }
 .pub-hero p { margin: 4px 0; }
 .modal-box details { margin-top: 8px; }
 .modal-box .console { max-height: 260px; margin-top: 8px; }
+.krow { grid-template-columns: 1fr 226px; }
+.kact { display: flex; gap: 4px; align-items: center; }
+.kact .kbtn { flex: 1; }
+.kact .icon-btn:disabled { opacity: .25; cursor: default; }
+.kgroup.orphan h3 { color: var(--error); }
+.kgroup.orphan .krow { opacity: .75; }
+.kgroup.orphan p .btn { margin-left: 8px; }

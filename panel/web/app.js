@@ -487,7 +487,7 @@ savers.menu = () => api('/menu', { method: 'POST', body: menu });
 
 // ---------------- CONFIGURACIÓN INICIAL ----------------
 let opts = null; // [{clave, valor}]
-let trad = { textos: {}, mods: {} };
+let trad = { textos: {}, mods: {}, teclasJuego: null };
 let cfgTab = 'opciones';
 const VIDEO = ['renderDistance', 'simulationDistance', 'graphicsMode', 'maxFps', 'enableVsync', 'guiScale', 'fov', 'fovEffectScale', 'gamma', 'particles', 'mipmapLevels', 'biomeBlendRadius', 'entityDistanceScaling', 'entityShadows', 'renderClouds', 'ao', 'fullscreen', 'prioritizeChunkUpdates', 'screenEffectScale', 'darknessEffectScale', 'glintSpeed', 'glintStrength', 'menuBackgroundBlurriness', 'bobView', 'hideLightningFlashes', 'damageTiltStrength', 'cloudRange'];
 const CATS = { video: '🖥️ Video', sonido: '🔊 Sonido', chat: '💬 Chat', juego: '🎮 Juego y mouse', skin: '🧍 Partes de la skin', otros: '📋 Otras', controles: '🎮 Controles', packs: '🎨 Packs de texturas' };
@@ -642,18 +642,26 @@ function keyLabel(id) {
   if ((m = /^key\.hotbar\.(\d)$/.exec(id))) return `Barra rápida ${m[1]}`;
   return trad.textos[id] || id.replace(/^key\./, '').replace(/[._]/g, ' ');
 }
+const ORPHAN = '⚠ No están en tu juego';
+// Tecla guardada en el pack de un mod que ya no está (el juego de esta PC no la tiene).
+function isOrphan(id) {
+  return !!trad.teclasJuego && !trad.teclasJuego.includes(id) && !N.teclas[id] && !/^key\.hotbar\./.test(id);
+}
 function keyGroup(id) {
+  if (isOrphan(id)) return ORPHAN;
   if (N.teclas[id] || /^key\.hotbar\./.test(id)) return 'Minecraft';
   if (trad.mods[id]) return trad.mods[id];
   const parts = id.replace(/^key\./, '').split('.');
-  return parts.length > 1 ? parts[0] : 'Otros';
+  if (parts.length < 2) return 'Otros';
+  // Si ya hay un mod con ese nombre (ej. "Punchy"), va en el mismo grupo.
+  return Object.values(trad.mods).find((m) => m.toLowerCase() === parts[0].toLowerCase()) || parts[0];
 }
 function conflicts() {
   const byKey = {};
   for (const o of opts) {
     if (!o.clave.startsWith('key_') || o.valor === 'key.keyboard.unknown') continue;
     // Las teclas de JEI/REI/EMI solo funcionan dentro de los inventarios: no chocan con las del juego.
-    if (/^key\.(jei|rei|emi)\./.test(o.clave.slice(4))) continue;
+    if (/^key\.(jei|rei|emi)\./.test(o.clave.slice(4)) || isOrphan(o.clave.slice(4))) continue;
     (byKey[o.valor] ||= []).push(o.clave.slice(4));
   }
   return byKey;
@@ -673,30 +681,46 @@ function renderKeys() {
   for (const o of opts) {
     if (!o.clave.startsWith('key_')) continue;
     const id = o.clave.slice(4);
-    const others = (conf[o.valor] || []).filter((x) => x !== id);
+    const others = isOrphan(id) ? [] : (conf[o.valor] || []).filter((x) => x !== id);
     if (only && !others.length) continue;
     const g = keyGroup(id);
     const label = keyLabel(id);
     if (q && !`${label} ${id} ${g}`.toLowerCase().includes(q)) continue;
     (groups[g] ||= []).push({ id, label, valor: o.valor, others });
   }
-  const names = Object.keys(groups).sort((a, b) => (a === 'Minecraft' ? -1 : b === 'Minecraft' ? 1 : a.localeCompare(b)));
-  $('#keys').innerHTML = names.map((g) => `<div class="kgroup"><h3>${esc(g)}</h3>
+  const rank = (g) => (g === 'Minecraft' ? 0 : g === ORPHAN ? 2 : 1);
+  const names = Object.keys(groups).sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+  $('#keys').innerHTML = names.map((g) => `<div class="kgroup ${g === ORPHAN ? 'orphan' : ''}"><h3>${esc(g)}</h3>
+    ${g === ORPHAN ? `<p class="muted small">Son de mods que no están instalados en tu juego (seguramente se quitaron del pack). No hacen nada: puedes quitarlas. <button class="btn small" id="keys-orphan-rm">✕ Quitar estas ${groups[g].length} teclas</button></p>` : ''}
     ${groups[g].map((k) => `<div class="krow ${k.others.length ? 'conf' : ''}"><div><div class="kn">${esc(k.label)}</div>
       ${k.others.length ? `<div class="kc">⚠ Misma tecla que: ${k.others.map((x) => esc(keyLabel(x))).join(', ')}</div>` : `<div class="kid">${esc(k.id)}</div>`}</div>
-      <button class="kbtn ${k.valor === 'key.keyboard.unknown' ? 'unset' : ''}" data-key="${esc(k.id)}">${esc(N.nombreTecla(k.valor))}</button></div>`).join('')}
+      <div class="kact"><button class="kbtn ${k.valor === 'key.keyboard.unknown' ? 'unset' : ''}" data-key="${esc(k.id)}">${esc(N.nombreTecla(k.valor))}</button>
+      <button class="icon-btn" data-unset="${esc(k.id)}" title="Dejar sin asignar" ${k.valor === 'key.keyboard.unknown' ? 'disabled' : ''}>✕</button></div></div>`).join('')}
   </div>`).join('') || `<div class="empty">${only ? '🎉 No hay teclas repetidas.' : 'No hay controles.'}</div>`;
   updateConfCount();
 }
 $('#key-search').oninput = renderKeys;
 $('#key-conf-only').onchange = renderKeys;
 $('#keys').addEventListener('click', (e) => {
+  if (e.target.closest('#keys-orphan-rm')) {
+    const n = opts.filter((o) => o.clave.startsWith('key_') && isOrphan(o.clave.slice(4))).length;
+    opts = opts.filter((o) => !(o.clave.startsWith('key_') && isOrphan(o.clave.slice(4))));
+    markDirty('opciones');
+    renderKeys();
+    return toast(`${n} teclas quitadas. Toca «Guardar».`, 'ok');
+  }
+  const u = e.target.closest('[data-unset]');
+  if (u && !waiting) {
+    setOpt('key_' + u.dataset.unset, 'key.keyboard.unknown');
+    return renderKeys();
+  }
   const b = e.target.closest('[data-key]');
   if (!b || waiting) return;
   e.stopPropagation();
   waiting = b;
   b.classList.add('wait');
   b.textContent = 'Pulsa una tecla...';
+  b.title = 'Esc: cancelar · Retroceso: sin asignar';
   setTimeout(() => {
     document.addEventListener('keydown', onKey, true);
     document.addEventListener('mousedown', onMouse, true);
