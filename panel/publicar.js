@@ -192,7 +192,10 @@ module.exports = function crearPublicador(ctx) {
       const remotePack = readPack();
       const merged = { ...remotePack };
       for (const k of new Set([...Object.keys(localPack), ...Object.keys(basePack || {})])) {
-        if (k === 'packVersion') continue;
+        // packVersion lo sube el generador. launcher lo maneja solo la publicación (versión y huella
+        // salen de GitHub Releases): si se quedara el de esta PC, un instalador viejo guardado acá
+        // pisaría la huella buena y a los jugadores les fallaría la actualización.
+        if (k === 'packVersion' || k === 'launcher') continue;
         const changedHere = JSON.stringify(localPack[k]) !== JSON.stringify(basePack?.[k]);
         if (changedHere) {
           if (localPack[k] === undefined) delete merged[k];
@@ -200,9 +203,13 @@ module.exports = function crearPublicador(ctx) {
         }
       }
       writePack(merged);
-    } else if (basePack?.packVersion && localPack.packVersion !== basePack.packVersion) {
+    } else if (basePack) {
       // packVersion lo sube el generador; se vuelve al publicado para no sumarlo dos veces.
-      writePack({ ...localPack, packVersion: basePack.packVersion });
+      // launcher: el publicado (ver arriba).
+      const fixed = { ...localPack, packVersion: basePack.packVersion ?? localPack.packVersion };
+      if (basePack.launcher === undefined) delete fixed.launcher;
+      else fixed.launcher = basePack.launcher;
+      if (JSON.stringify(fixed) !== JSON.stringify(localPack)) writePack(fixed);
     }
     await reconciliar(oldMan, readJson(p('manifest.json'), null));
   }
@@ -260,6 +267,14 @@ module.exports = function crearPublicador(ctx) {
     const pack = readPack();
     return v?.version && isNewer(v.version, pack.launcher?.version || '0') ? v.version : null;
   }
+  const LAUNCHER_ASSET = 'Instalar-Apokelipsis.exe';
+  const hashes = (data) => ({
+    sha1: crypto.createHash('sha1').update(data).digest('hex'),
+    sha256: crypto.createHash('sha256').update(data).digest('hex'),
+    sha512: crypto.createHash('sha512').update(data).digest('hex'),
+    size: data.length
+  });
+
   async function publicarLauncher() {
     const version = launcherNuevo();
     if (!version) return;
@@ -267,6 +282,12 @@ module.exports = function crearPublicador(ctx) {
     const file = pack.launcher?.file || 'launcher/Instalar Apokelipsis.exe';
     if (!exists(p(file))) fail(`Falta el instalador del launcher (${file}).`);
     const data = fs.readFileSync(p(file));
+    // version.json anota la huella del instalador al compilarlo: así nunca se sube un instalador
+    // viejo con el número de una versión nueva.
+    const expected = readJson(p('launcher', 'version.json'), {}).sha256;
+    if (expected && expected !== hashes(data).sha256) {
+      fail(`El instalador de launcher/ no es el de la versión ${version}. Vuelve a compilar el launcher (npm run dist) o pídele el instalador a quien lo compiló.`);
+    }
     fase(`Subiendo el launcher ${version} a GitHub (${Math.round(data.length / 1048576)} MB, puede tardar unos minutos)`);
     const { owner, repo } = await repoInfo();
     const tag = `v${version}`;
@@ -277,23 +298,87 @@ module.exports = function crearPublicador(ctx) {
         body: { tag_name: tag, name: `Launcher ${version}`, body: 'Instalador del launcher de Apokelipsis. Los jugadores lo reciben solo al abrir el launcher.' }
       });
     }
-    const sha256 = crypto.createHash('sha256').update(data).digest('hex');
-    const NAME = 'Instalar-Apokelipsis.exe';
-    let asset = (rel.assets || []).find((a) => a.name === NAME);
-    if (asset && (asset.size !== data.length || (asset.digest && asset.digest !== `sha256:${sha256}`))) {
+    const h = hashes(data);
+    let asset = (rel.assets || []).find((a) => a.name === LAUNCHER_ASSET);
+    if (asset && (asset.size !== data.length || (asset.digest && asset.digest !== `sha256:${h.sha256}`))) {
       await gh(`/repos/${owner}/${repo}/releases/assets/${asset.id}`, { method: 'DELETE' });
       asset = null;
     }
     if (!asset) {
-      asset = await gh(`https://uploads.github.com/repos/${owner}/${repo}/releases/${rel.id}/assets?name=${NAME}`, {
+      asset = await gh(`https://uploads.github.com/repos/${owner}/${repo}/releases/${rel.id}/assets?name=${LAUNCHER_ASSET}`, {
         method: 'POST',
         raw: true,
         body: data,
         headers: { 'Content-Type': 'application/octet-stream' }
       });
     }
-    writePack({ ...readPack(), launcher: { version, file, url: asset.browser_download_url } });
+    writePack({ ...readPack(), launcher: { version, file, url: asset.browser_download_url, ...h } });
     log(`Launcher ${version} publicado: ${asset.browser_download_url}`);
+  }
+
+  // La huella del launcher que va en la lista tiene que ser la del archivo que está en GitHub
+  // Releases (el que bajan los jugadores), no la del instalador que haya guardado en esta PC
+  // (puede ser de otra versión). Si no coincide, se corrige antes de firmar.
+  async function asegurarHuellaLauncher() {
+    const pack = readPack();
+    const l = pack.launcher;
+    if (!l?.version || !l.url || !/^https:\/\/github\.com\//.test(l.url)) return;
+    const { owner, repo } = await repoInfo();
+    const tag = (/\/releases\/download\/([^/]+)\//.exec(l.url) || [])[1] || `v${l.version}`;
+    const rel = await gh(`/repos/${owner}/${repo}/releases/tags/${encodeURIComponent(decodeURIComponent(tag))}`);
+    const asset = rel && (rel.assets || []).find((a) => a.browser_download_url === l.url);
+    if (!asset) fail(`No encontré el instalador del launcher ${l.version} en GitHub Releases (${l.url}).`);
+    const digest = asset.digest && asset.digest.startsWith('sha256:') ? asset.digest.slice(7) : null;
+    const ok = (h) => h && h.sha1 && h.sha512 && h.size === asset.size && (digest ? h.sha256 === digest : true);
+    if (ok(l)) return;
+
+    let h = null;
+    const local = l.file && p(l.file);
+    if (local && exists(local) && fs.statSync(local).size === asset.size) {
+      const lh = hashes(fs.readFileSync(local));
+      if (!digest || lh.sha256 === digest) h = lh;
+    }
+    if (!h) {
+      fase(`Comprobando el launcher ${l.version} publicado en GitHub (${Math.round(asset.size / 1048576)} MB)`);
+      const res = await fetch(asset.browser_download_url, { headers: { 'User-Agent': 'apokelipsis-panel' } });
+      if (!res.ok) throw new Error(`No se pudo descargar el launcher publicado (${res.status})`);
+      h = hashes(Buffer.from(await res.arrayBuffer()));
+      if (digest && h.sha256 !== digest) throw new Error('El launcher de GitHub se descargó dañado. Vuelve a intentarlo.');
+    }
+    if (l.sha512 && l.sha512 !== h.sha512) log(`Se corrigió la huella del launcher ${l.version} (no era la del archivo de GitHub).`);
+    writePack({ ...readPack(), launcher: { ...l, ...h } });
+  }
+
+  // ---------- Firma ----------
+  // Si la lista quedó igual a la publicada, no se sube nada nuevo: se deja la firma que ya estaba
+  // (si no, cada administrador que toca «Publicar» sube la misma lista con su firma y a los demás
+  // les aparece «otro administrador publicó cambios» una y otra vez).
+  // Única excepción: la clave principal (la que aceptan TODOS los launchers, también los viejos)
+  // vuelve a firmar una lista que estaba firmada por otra clave, para que llegue a todos.
+  const CLAVES = path.join(__dirname, 'claves-autorizadas.json');
+  const firmadaPor = (text, sig, claves) => {
+    try {
+      const s = Buffer.from(String(sig).trim(), 'base64');
+      return claves.filter((c) => crypto.verify(null, Buffer.from(text, 'utf8'), c.clave.trim(), s));
+    } catch {
+      return [];
+    }
+  };
+  async function conservarFirmaSiNoCambio() {
+    const head = await git(['show', 'HEAD:manifest.json']);
+    const headSig = await git(['show', 'HEAD:manifest.sig']);
+    if (head.code !== 0 || headSig.code !== 0) return;
+    const ahora = fs.readFileSync(p('manifest.json'), 'utf8');
+    const norm = (t) => t.replace(/\r\n/g, '\n').trimEnd();
+    if (norm(ahora) !== norm(head.out)) return;
+    const claves = readJson(CLAVES, { claves: [] }).claves;
+    const antes = firmadaPor(ahora, headSig.out, claves);
+    const mia = claves.find((c) => c.clave.trim() === claveEstado().publica);
+    if (antes.length && !(mia?.principal && !antes.some((c) => c.principal))) {
+      await git(['checkout', 'HEAD', '--', 'manifest.json', 'manifest.sig', '.gitignore']);
+    } else if (antes.length) {
+      log('Se vuelve a firmar la lista con la clave principal, para que la acepten también los launchers viejos.');
+    }
   }
 
   // ---------- Publicar todo ----------
@@ -315,11 +400,13 @@ module.exports = function crearPublicador(ctx) {
     if (panelDesactualizado()) fail(REINICIAR);
     if (!claveEstado().autorizada) fail('La clave de esta PC todavía no está autorizada en el launcher (pestaña «Administradores»).');
     await publicarLauncher();
+    await asegurarHuellaLauncher();
 
     fase('Preparando y firmando la lista de mods (consulta Modrinth)');
     const r = await run(process.execPath, ['generate-manifest.js'], { timeout: 600000 });
     log(r.out);
     if (r.code !== 0) throw new Error('No se pudo preparar la lista. Mira el detalle.');
+    await conservarFirmaSiNoCambio();
 
     fase('Subiendo a GitHub');
     const pack = readPack();

@@ -259,11 +259,17 @@ views.inicio = async () => {
   }
   gitBanner();
 };
+let autoTraido = false;
 async function gitBanner() {
   const el = $('#git-banner');
   el.innerHTML = '';
   try {
     const g = await api('/remoto');
+    if (g.git && g.atrasado > 0 && !autoTraido && !publishing && !dirty.size && !pendiente()) {
+      // Sin cambios propios sin publicar no hay nada que juntar: se trae solo (una vez por apertura).
+      autoTraido = true;
+      return runJob('/traer', '⬇ Trayendo lo que publicó otro administrador');
+    }
     if (g.git && g.atrasado > 0) {
       el.innerHTML = `<div class="note info">⬇ Otro administrador publicó cambios que no tienes en esta PC. <button class="btn" id="pull-btn">Traerlos ahora</button></div>`;
       $('#pull-btn').onclick = () => runJob('/traer', '⬇ Trayendo cambios');

@@ -292,15 +292,17 @@ async function main() {
     }
     const url = pack.launcher.url || `${baseUrl}/${pack.launcher.file.split('/').map(encodeURIComponent).join('/')}`;
     const full = pack.launcher.file ? path.join(ROOT, pack.launcher.file) : null;
-    if (full && fs.existsSync(full)) {
+    // Si pack.json ya trae la huella (la anota el panel a partir del archivo de GitHub Releases),
+    // manda esa: el instalador guardado en esta PC puede ser de otra versión.
+    if (pack.launcher.sha512 && pack.launcher.sha1 && pack.launcher.size) {
+      launcher = { version: pack.launcher.version, url, sha1: pack.launcher.sha1, sha512: pack.launcher.sha512, size: pack.launcher.size };
+    } else if (full && fs.existsSync(full)) {
       launcher = { version: pack.launcher.version, url, sha1: sha1(full), sha512: sha512(full), size: fs.statSync(full).size };
       if (pack.launcher.sha512 !== launcher.sha512 || pack.launcher.size !== launcher.size || pack.launcher.sha1 !== launcher.sha1) {
         const packJson = readJson('pack.json');
         packJson.launcher = { ...packJson.launcher, sha1: launcher.sha1, sha512: launcher.sha512, size: launcher.size };
         fs.writeFileSync(path.join(ROOT, 'pack.json'), JSON.stringify(packJson, null, 2) + '\n');
       }
-    } else if (pack.launcher.sha512 && pack.launcher.size) {
-      launcher = { version: pack.launcher.version, url, sha1: pack.launcher.sha1, sha512: pack.launcher.sha512, size: pack.launcher.size };
     } else {
       throw new Error(`No tengo el instalador del launcher ${pack.launcher.version} en esta PC ni su huella en pack.json. `
         + 'Pídele al dueño del servidor que publique una vez desde su panel (así queda anotada) y vuelve a intentarlo.');
