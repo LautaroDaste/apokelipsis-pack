@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.33",
+  "packVersion": "1.0.34",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -1017,9 +1017,9 @@
     },
     {
       "file": "proteccion-zonas-1.0.0.jar",
-      "sha1": "9dfee7e5b3be2a2b4e5ac4c434be3449fb6e01d6",
-      "sha512": "c22bb3f6195e5472b8a386524240dd4f377f34756d5289bdf6d62103fb1aa47db340c3390d8910184e2d056e6f1ce2e4cd6c68bba3cb56eda1143149cd191615",
-      "size": 237962,
+      "sha1": "a30fe58e0b7cfc4c10ae23838349fc38665b9400",
+      "sha512": "9415f0dd1eb20ef8b97f0dfb5b3d7a8bf48a32d8f8a748a8352edb43fe4cdd333f1e57868a476f93beeb9907feb365766dc4cf67c59b79818f058fa11dde976f",
+      "size": 269189,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.0.jar"
     },
     {
