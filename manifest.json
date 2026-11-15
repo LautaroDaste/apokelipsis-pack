@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.44",
+  "packVersion": "1.0.45",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -1408,10 +1408,10 @@
     },
     {
       "path": "resourcepacks/E19 Cobblemon Minimap Icons.zip",
-      "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/wb3yCVuz/E19%20Cobblemon%20Minimap%20Icons.zip",
-      "sha1": "015c8b74e9c652846792df552831210269365f62",
-      "sha512": "79904e038b93b040564b1e544f95121f8f6f2ff7f6fbed0421320e4eae66fb52a8394a4536ea91d1c48aee5e283002b1623aa9911e5d2b624442cb055d1daaa8",
-      "size": 53955450
+      "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/MAumPyhV/E19%20Cobblemon%20Minimap%20Icons.zip",
+      "sha1": "77813d38002b43c9c243d694728479bd3879cf86",
+      "sha512": "f9eff4c718818a2b030aa7b6b86b73f384f869cb39fe1e4c189c07f8feb7aedd717a33d966face570ae89b67ee0c28c35fb611883b882677eecf0fa041b9088f",
+      "size": 23270833
     },
     {
       "path": "resourcepacks/FireFitsforFireCats.v.13.zip",
