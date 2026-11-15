@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.38",
+  "packVersion": "1.0.39",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -85,11 +85,11 @@
   },
   "resetVersion": 3,
   "launcher": {
-    "version": "1.4.6",
-    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.6/Instalar-Apokelipsis.exe",
-    "sha1": "41e9c3f6615add3a8ff6db7efcbdba86e66d6a7c",
-    "sha512": "18fa418710749ff14d51c4b49e753b5f45dc3d125697f9c3dcdfdb98d945fc34207e311936050f438b6f20faf6f97b15d1488f9e100716bd1323261c8151a5a8",
-    "size": 113735780
+    "version": "1.4.7",
+    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.7/Instalar-Apokelipsis.exe",
+    "sha1": "c22990f47b242dfa23217abbadf01ebb3dd57fb7",
+    "sha512": "a1c88cc6c558a34f5fdd51c6d4fc41cf4d6cedb7ebd10132e1886e0432cf89a47e540a95fdeee4f70190bc2a7d20aa4ab2a724e652f9a18dd9c68d4ebd6e7194",
+    "size": 113736584
   },
   "defaultOptions": {
     "ao": "true",
@@ -603,11 +603,11 @@
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-ajustes-1.1.0.jar"
     },
     {
-      "file": "apokelipsis-menu-1.2.3.jar",
-      "sha1": "423c8a90549780df1d006faa8fd5fd230fa67d94",
-      "sha512": "11979e9856948b79047feaca82fc3794c5f1c9502749c42113c3fa599284dfd36770bde3287d293be6955f11857e9b7f6835bf150880dfc92f946167a1972735",
-      "size": 1139452,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.2.3.jar"
+      "file": "apokelipsis-menu-1.2.4.jar",
+      "sha1": "54a1141622799da73e306abb82a836ec9edc6742",
+      "sha512": "9791f345ccd5a36eda1109b631c1a2a1a2231bdafc9a2f115d0be1ad89b498ad136ae55b6fc754441082e0931f072274380ded40d3100895ee6b55d7fa550637",
+      "size": 1139852,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.2.4.jar"
     },
     {
       "file": "aps_trophies-1.21.1-fabric-1.2.0.jar",
