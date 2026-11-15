@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.32",
+  "packVersion": "1.0.33",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -83,7 +83,7 @@
     "name": "APOKÉLIPSIS SMP",
     "address": ""
   },
-  "resetVersion": 0,
+  "resetVersion": 1,
   "launcher": {
     "version": "1.4.5",
     "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.5/Instalar-Apokelipsis.exe",
