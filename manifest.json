@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.51",
+  "packVersion": "1.0.52",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -1223,7 +1223,7 @@
       "id": "explosiveenhancement",
       "name": "Explosive Enhancement",
       "description": "Explosiones con una animación más espectacular.",
-      "default": false,
+      "default": true,
       "requires": [],
       "file": "explosive-enhancement-1.3.2-1.21-1.21.1.jar",
       "url": "https://cdn.modrinth.com/data/OSQ8mw2r/versions/LEeJnb8j/explosive-enhancement-1.3.2-1.21-1.21.1.jar",

@@ -11,10 +11,7 @@
   "dynamic_fps": "Baja el consumo cuando el juego está en segundo plano o minimizado.",
   "enhancedblockentities": "Cofres, camas y carteles más livianos y con mejor aspecto. Más FPS.",
   "entityculling": "No dibuja las entidades que no estás viendo. Más FPS.",
-  "explosiveenhancement": {
-    "descripcion": "Explosiones con una animación más espectacular.",
-    "activado": false
-  },
+  "explosiveenhancement": "Explosiones con una animación más espectacular.",
   "fallingleaves": "Las hojas de los árboles caen con un efecto de partículas.",
   "fpsreducer": "Baja los FPS automáticamente cuando no estás tocando nada, para ahorrar recursos.",
   "gymbadges": "Agrega las medallas de gimnasio de Cobblemon (18 medallas y una Medalla Maestra).",
