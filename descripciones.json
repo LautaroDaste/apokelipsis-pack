@@ -19,7 +19,10 @@
   "indium": "Complemento de Sodium para que funcionen bien los mods con modelos especiales.",
   "iris": "Permite usar shaders (efectos de luz, sombras y agua realistas).",
   "justzoom": "Agrega zoom con una tecla y mejoras al catalejo.",
-  "litematica": "Muestra planos (schematics) de construcciones para copiarlas bloque a bloque.",
+  "litematica": {
+    "descripcion": "Muestra planos (schematics) de construcciones para copiarlas bloque a bloque.",
+    "activado": false
+  },
   "malilib": "Librería necesaria para Litematica.",
   "modmenu": "Agrega un menú para ver y configurar los mods instalados.",
   "mousetweaks": "Mejora el manejo del inventario con el mouse (arrastrar, mover rápido, etc.).",

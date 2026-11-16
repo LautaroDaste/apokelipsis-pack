@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.48",
+  "packVersion": "1.0.49",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -1259,7 +1259,7 @@
       "id": "litematica",
       "name": "Litematica",
       "description": "Muestra planos (schematics) de construcciones para copiarlas bloque a bloque.",
-      "default": true,
+      "default": false,
       "requires": [],
       "file": "litematica-fabric-1.21-0.19.61.jar",
       "url": "https://cdn.modrinth.com/data/bEpr0Arc/versions/o7i8oi1Z/litematica-fabric-1.21-0.19.61.jar",
