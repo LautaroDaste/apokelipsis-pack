@@ -17,6 +17,9 @@ const path = require('path');
 const crypto = require('crypto');
 const { modInfo } = require('./modinfo');
 
+// Partes de la configuración que el administrador puede reiniciar por separado.
+const RESET_PARTS = ['opcionales', 'opciones', 'controles', 'configs', 'packs'];
+
 const ROOT = __dirname;
 const UA = 'apokelipsis-pack-tool/1.0';
 const MODRINTH = 'https://api.modrinth.com/v2';
@@ -324,8 +327,17 @@ async function main() {
     fabricLoader: pack.fabricLoader,
     fabricProfile,
     server: pack.server,
-    // Sube cuando el administrador pide reiniciar la configuración de todos los jugadores.
+    // Reinicio de todo (lo usan los launchers anteriores a los reinicios por partes).
     resetVersion: Number.isInteger(pack.reinicioConfig) ? pack.reinicioConfig : 0,
+    // Reinicios por partes: cada número sube cuando el administrador pide reiniciar esa parte
+    // de la configuración de todos los jugadores (opcionales, opciones, controles, configs, packs).
+    resets: Object.fromEntries(
+      RESET_PARTS.map((k) => {
+        const base = Number.isInteger(pack.reinicioConfig) ? pack.reinicioConfig : 0;
+        const v = pack.reinicios?.[k];
+        return [k, Number.isInteger(v) && v > base ? v : base];
+      })
+    ),
     launcher,
     defaultOptions,
     mods: mods.map(clean),
@@ -350,6 +362,7 @@ async function main() {
     map.set('opciones predeterminadas', JSON.stringify(m?.defaultOptions || {}));
     map.set('servidor', JSON.stringify(m?.server || {}));
     map.set('reinicio de configuración', String(m?.resetVersion || 0));
+    for (const k of RESET_PARTS) map.set(`reinicio de ${k}`, String(m?.resets?.[k] ?? m?.resetVersion ?? 0));
     for (const o of m?.optional || []) map.set(`opcional ${o.id}`, JSON.stringify([o.name, o.description, o.default]));
     map.set('formato de la lista', String(m?.format || 1));
     map.set('perfil de Fabric', JSON.stringify(m?.fabricProfile || null));

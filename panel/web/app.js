@@ -57,7 +57,7 @@ function markDirty(key) {
   updateBar();
 }
 function pendiente(e = estado) {
-  return !!e && (e.pendientes.length > 0 || e.reinicio > e.reinicioPublicado || !!e.launcherNuevo || !!e.sinSubir);
+  return !!e && (e.pendientes.length > 0 || reiniciosPedidos(e).length > 0 || !!e.launcherNuevo || !!e.sinSubir);
 }
 function updateBar() {
   const bar = $('#savebar');
@@ -244,12 +244,12 @@ views.inicio = async () => {
     <div class="stat"><div class="k">Mods</div><div class="v">${e.totalJars}</div><div class="s">${m ? `${m.obligatorios} obligatorios · ${m.opcionales} opcionales` : 'Sin publicar'}</div></div>
     <div class="stat"><div class="k">Launcher</div><div class="v">${esc(e.launcher || '—')}</div><div class="s">${e.launcherNuevo ? `La ${esc(e.launcherNuevo)} se publica con el próximo «Publicar»` : 'Versión que reciben los jugadores'}</div></div>`;
   const pend = e.pendientes;
-  const reset = e.reinicio > e.reinicioPublicado;
+  const reset = reiniciosPedidos(e).length > 0;
   $('#key-warn')?.remove();
   $('#inicio-pend').innerHTML = pendiente(e)
     ? `<h3>📝 Cambios sin publicar</h3><p class="muted small">Están guardados en esta PC pero los jugadores todavía no los tienen.</p>
        <div class="list">${pend.slice(0, 12).map((x) => `<div class="mf">${esc(x)}</div>`).join('')}${pend.length > 12 ? `<div class="mf">…y ${pend.length - 12} más</div>` : ''}
-       ${reset ? '<div class="mf">♻️ Reinicio de configuración para todos los jugadores</div>' : ''}
+       ${reset ? `<div class="mf">♻️ Reiniciar a todos los jugadores: ${esc(nombresReinicio(reiniciosPedidos(e)))}</div>` : ''}
        ${e.launcherNuevo ? `<div class="mf">🚀 Launcher ${esc(e.launcherNuevo)}</div>` : ''}
        ${!pend.length && !reset && !e.launcherNuevo ? '<div class="mf">Archivos preparados que todavía no se subieron a GitHub</div>' : ''}</div>
        <p><button class="btn primary big" data-publish>🚀 Publicar ahora</button></p>`
@@ -1062,24 +1062,86 @@ savers.configs = async () => {
   cfg = null;
 };
 
-// Reiniciar a todos
+// Reiniciar a todos (por partes)
+const PARTES_REINICIO = {
+  opcionales: { icono: '🎚️', nombre: 'Mods opcionales', que: 'Vuelven a quedar encendidos o apagados como dice «Mods opcionales».' },
+  opciones: { icono: '🖥️', nombre: 'Configuración del juego', que: 'Video, sonido, idioma y el resto de la pestaña «Opciones».' },
+  controles: { icono: '🎮', nombre: 'Controles', que: 'Todas las teclas, también las de los mods.' },
+  configs: { icono: '🧩', nombre: 'Configs de mods', que: 'Los archivos de la pestaña «Configs de mods» se vuelven a copiar encima de los del jugador.' },
+  packs: { icono: '🎨', nombre: 'Packs de texturas', que: 'Qué packs están activados y en qué orden.' }
+};
+function reiniciosPedidos(e = estado) {
+  return Object.entries(e?.reinicios || {}).filter(([, r]) => r.pendiente).map(([k]) => k);
+}
+const nombresReinicio = (partes) => partes.map((k) => PARTES_REINICIO[k]?.nombre.toLowerCase() || k).join(', ');
+const resetSel = new Set();
+async function pedirReinicio(partes) {
+  const nombres = nombresReinicio(partes);
+  const ok = await confirmar(
+    partes.length === 1 ? `¿Reiniciar ${nombres} de todos?` : '¿Reiniciar estas partes a todos los jugadores?',
+    `Cuando publiques, cada jugador recibirá de nuevo lo predeterminado del servidor en: ${nombres}. Lo que haya cambiado ahí se pierde; el resto de su configuración no se toca. Pasa una sola vez.`,
+    { ok: 'Sí, reiniciar', danger: true }
+  );
+  if (!ok) return;
+  await api('/reiniciar', { method: 'POST', body: { partes } });
+  resetSel.clear();
+  toast('Reinicio pedido. Ahora publica.', 'ok');
+  renderReset();
+}
+async function cancelarReinicio(partes) {
+  await api('/reiniciar/cancelar', { method: 'POST', body: { partes } });
+  toast('Reinicio cancelado');
+  renderReset();
+}
 async function renderReset() {
   const e = await refreshEstado();
-  const pend = e.reinicio > e.reinicioPublicado;
-  $('#reset-state').innerHTML = pend
-    ? `<div class="note">⏳ Reinicio pedido. Se aplica cuando <b>publiques</b>. <button class="btn ghost" id="reset-cancel">Cancelar el reinicio</button></div>`
-    : `<p class="muted small">Reinicios hechos hasta ahora: ${e.reinicioPublicado}.</p><button class="btn danger" id="reset-go">♻️ Reiniciar la configuración de todos</button>`;
-  $('#reset-go') && ($('#reset-go').onclick = async () => {
-    if (!(await confirmar('¿Reiniciar a todos los jugadores?', 'Cuando publiques, cada jugador recibirá de nuevo toda la configuración inicial la próxima vez que abra el juego. Se pierden sus ajustes personales de opciones, controles, configs de mods y mods opcionales.', { ok: 'Sí, reiniciar a todos', danger: true }))) return;
-    await api('/reiniciar', { method: 'POST' });
-    toast('Reinicio pedido. Ahora publica.', 'ok');
-    renderReset();
-  });
-  $('#reset-cancel') && ($('#reset-cancel').onclick = async () => {
-    await api('/reiniciar/cancelar', { method: 'POST' });
-    toast('Reinicio cancelado');
-    renderReset();
-  });
+  const r = e.reinicios || {};
+  const libres = Object.keys(PARTES_REINICIO).filter((k) => !r[k]?.pendiente);
+  for (const k of [...resetSel]) if (!libres.includes(k)) resetSel.delete(k);
+  const pedidos = reiniciosPedidos(e);
+  const fila = ([k, p]) => {
+    const pend = r[k]?.pendiente;
+    return `<div class="row">
+        ${pend ? '<span style="width:16px;flex-shrink:0"></span>' : `<input type="checkbox" data-reset-sel="${k}" ${resetSel.has(k) ? 'checked' : ''} aria-label="Elegir ${esc(p.nombre)}">`}
+        <div class="mi">${p.icono}</div>
+        <div class="mt"><div class="mn">${esc(p.nombre)}</div><div class="mf">${esc(p.que)}${pend ? ' · <b>⏳ pedido, se aplica al publicar</b>' : ''}</div></div>
+        ${pend ? `<button class="btn ghost" data-reset-cancel="${k}">Cancelar</button>` : `<button class="btn danger" data-reset-one="${k}">♻️ Reiniciar</button>`}
+      </div>`;
+  };
+  const box = $('#reset-state');
+  box.innerHTML = `
+    ${pedidos.length ? `<div class="note">⏳ Reinicio pedido de <b>${esc(nombresReinicio(pedidos))}</b>. Se aplica cuando <b>publiques</b>.</div>` : ''}
+    <div class="list">${Object.entries(PARTES_REINICIO).map(fila).join('')}</div>
+    <div class="toolbar" style="margin-top:12px">
+      ${libres.length ? `<label class="check"><input type="checkbox" id="reset-all" ${libres.every((k) => resetSel.has(k)) ? 'checked' : ''}> Elegir todo</label>
+      <button class="btn danger" id="reset-go" ${resetSel.size ? '' : 'disabled'}>♻️ Reiniciar lo elegido (${resetSel.size})</button>` : ''}
+      ${pedidos.length > 1 ? '<button class="btn ghost" id="reset-cancel-all">Cancelar todos los reinicios</button>' : ''}
+    </div>`;
+  // Marcar casillas no vuelve a dibujar la lista: solo actualiza «Elegir todo» y el botón.
+  box.onchange = (ev) => {
+    const t = ev.target;
+    if (t.id === 'reset-all') {
+      libres.forEach((k) => (t.checked ? resetSel.add(k) : resetSel.delete(k)));
+      box.querySelectorAll('[data-reset-sel]').forEach((c) => (c.checked = t.checked));
+    } else if (t.dataset.resetSel) {
+      t.checked ? resetSel.add(t.dataset.resetSel) : resetSel.delete(t.dataset.resetSel);
+    } else return;
+    const all = box.querySelector('#reset-all');
+    if (all) all.checked = libres.every((k) => resetSel.has(k));
+    const go = box.querySelector('#reset-go');
+    if (go) {
+      go.disabled = !resetSel.size;
+      go.textContent = `♻️ Reiniciar lo elegido (${resetSel.size})`;
+    }
+  };
+  box.onclick = (ev) => {
+    const b = ev.target.closest('button');
+    if (!b || b.disabled) return;
+    if (b.dataset.resetOne) pedirReinicio([b.dataset.resetOne]);
+    else if (b.dataset.resetCancel) cancelarReinicio([b.dataset.resetCancel]);
+    else if (b.id === 'reset-go' && resetSel.size) pedirReinicio([...resetSel]);
+    else if (b.id === 'reset-cancel-all') cancelarReinicio(pedidos);
+  };
 }
 
 // ---------------- PUBLICAR (pestaña) ----------------

@@ -154,8 +154,7 @@ api['GET /estado'] = async () => {
     minecraft: pack.minecraft,
     fabric: pack.fabricLoader,
     launcher: pack.launcher?.version || null,
-    reinicio: Number.isInteger(pack.reinicioConfig) ? pack.reinicioConfig : 0,
-    reinicioPublicado: man?.resetVersion || 0,
+    reinicios: estadoReinicios(pack, man),
     mods: man ? { obligatorios: man.mods.length, opcionales: man.optional.length, archivos: (man.files || []).length } : null,
     totalJars: listJars(p('mods')).length,
     pendientes,
@@ -485,19 +484,45 @@ api['POST /inicial'] = async (q, req, res, body) => {
   return { ok: true, total: files.length };
 };
 
-// Reinicio de configuración para todos los jugadores
-api['POST /reiniciar'] = async () => {
+// Reinicio de configuración para todos los jugadores, por partes.
+// pack.reinicios[parte] es el número pedido; en el manifest publicado está en resets[parte].
+const RESET_PARTS = ['opcionales', 'opciones', 'controles', 'configs', 'packs'];
+const publicadoReinicio = (man, k) => (Number.isInteger(man?.resets?.[k]) ? man.resets[k] : man?.resetVersion || 0);
+function estadoReinicios(pack, man) {
+  const base = Number.isInteger(pack.reinicioConfig) ? pack.reinicioConfig : 0;
+  return Object.fromEntries(
+    RESET_PARTS.map((k) => {
+      const publicado = publicadoReinicio(man, k);
+      const v = pack.reinicios?.[k];
+      const pedido = Math.max(Number.isInteger(v) ? v : 0, base);
+      return [k, { publicado, pendiente: pedido > publicado }];
+    })
+  );
+}
+function partesPedidas(body) {
+  const { partes } = JSON.parse(body || '{}');
+  const ok = (Array.isArray(partes) ? partes : []).filter((k) => RESET_PARTS.includes(k));
+  if (!ok.length) fail('Elige qué quieres reiniciar');
+  return ok;
+}
+api['POST /reiniciar'] = async (q, req, res, body) => {
+  const partes = partesPedidas(body);
   const pack = readPack();
   const man = manifest();
-  const published = man?.resetVersion || 0;
+  pack.reinicios = { ...(pack.reinicios || {}) };
   // Siempre uno más que lo publicado: pulsar dos veces antes de publicar no pide dos reinicios.
-  pack.reinicioConfig = published + 1;
+  for (const k of partes) pack.reinicios[k] = publicadoReinicio(man, k) + 1;
   writePack(pack);
-  return { ok: true, reinicio: pack.reinicioConfig };
+  return { ok: true };
 };
-api['POST /reiniciar/cancelar'] = async () => {
+api['POST /reiniciar/cancelar'] = async (q, req, res, body) => {
+  const partes = partesPedidas(body);
   const pack = readPack();
-  pack.reinicioConfig = manifest()?.resetVersion || 0;
+  const man = manifest();
+  pack.reinicios = { ...(pack.reinicios || {}) };
+  for (const k of partes) pack.reinicios[k] = publicadoReinicio(man, k);
+  // El reinicio de todo (launchers viejos) tampoco puede quedar por encima de lo publicado.
+  if ((pack.reinicioConfig || 0) > (man?.resetVersion || 0)) pack.reinicioConfig = man?.resetVersion || 0;
   writePack(pack);
   return { ok: true };
 };
