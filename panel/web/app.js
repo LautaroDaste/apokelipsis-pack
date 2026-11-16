@@ -1070,7 +1070,7 @@ async function renderReset() {
     ? `<div class="note">⏳ Reinicio pedido. Se aplica cuando <b>publiques</b>. <button class="btn ghost" id="reset-cancel">Cancelar el reinicio</button></div>`
     : `<p class="muted small">Reinicios hechos hasta ahora: ${e.reinicioPublicado}.</p><button class="btn danger" id="reset-go">♻️ Reiniciar la configuración de todos</button>`;
   $('#reset-go') && ($('#reset-go').onclick = async () => {
-    if (!(await confirmar('¿Reiniciar a todos los jugadores?', 'Cuando publiques, cada jugador recibirá de nuevo toda la configuración inicial la próxima vez que abra el juego. Se pierden sus ajustes personales de opciones, controles y configs de mods.', { ok: 'Sí, reiniciar a todos', danger: true }))) return;
+    if (!(await confirmar('¿Reiniciar a todos los jugadores?', 'Cuando publiques, cada jugador recibirá de nuevo toda la configuración inicial la próxima vez que abra el juego. Se pierden sus ajustes personales de opciones, controles, configs de mods y mods opcionales.', { ok: 'Sí, reiniciar a todos', danger: true }))) return;
     await api('/reiniciar', { method: 'POST' });
     toast('Reinicio pedido. Ahora publica.', 'ok');
     renderReset();
