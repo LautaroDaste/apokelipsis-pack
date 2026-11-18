@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.54",
+  "packVersion": "1.0.55",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -430,11 +430,11 @@
       "url": "https://cdn.modrinth.com/data/AXY1OO9m/versions/54k31lEX/CobbleFurnies-fabric-1.2.jar"
     },
     {
-      "file": "Cobblemon-fabric-1.8.2+1.21.1.jar",
-      "sha1": "1a8ec812b2e7b392ac60801c910d3128d0bbb432",
-      "sha512": "fe0090aa00a010a2353b4da43693ef70b675d5255756541cd679d2cf1df077ffedb790e9de66b1bd69cc9f6336d58763aeb15f146d07420d466daaeb3d992386",
-      "size": 139317851,
-      "url": "https://cdn.modrinth.com/data/MdwFAVRL/versions/GJ2a1b8O/Cobblemon-fabric-1.8.2%2B1.21.1.jar"
+      "file": "Cobblemon-fabric-1.8.4+1.21.1.jar",
+      "sha1": "587973321ae6d0762b38a2e19632f5cfdce7c2df",
+      "sha512": "8ba3bc7eb0bb6d52309ca339dfc9fb11adcffebe36d183e0a8df7c8e741edbcbc436c60cc877fd2b42aa224670825cf4f55946676b58ecf0e998f9feae2173c2",
+      "size": 139966403,
+      "url": "https://cdn.modrinth.com/data/MdwFAVRL/versions/PdOzYHKU/Cobblemon-fabric-1.8.4%2B1.21.1.jar"
     },
     {
       "file": "Cobbreeding-fabric-2.4.1.jar",
@@ -591,11 +591,11 @@
       "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/Sj6w7O0I/OctoLib-FABRIC-0.6.2%2B1.21.jar"
     },
     {
-      "file": "PokeMisiones-1.5.4.jar",
-      "sha1": "ce2550ccbd95509cf77ec81a4c1515570545b7f5",
-      "sha512": "df1987d47d2eaad5a0daf67fb2385a7a8a378d8054f319c90cbc45202dfe661812f6a353b72499dca93df8488f9839c8bcf563c52cdcb5d0120f85583ac977d4",
-      "size": 1054014,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.4.jar"
+      "file": "PokeMisiones-1.5.8.jar",
+      "sha1": "ef2a89466dc571a9076c0eca18fc74a031d4599b",
+      "sha512": "4a2aecd637755c645d61bffde172e4bb6ff79ac8694ff71da126a4ff4d1012158daadd4c1412cc94c86291eb9b196ca9bfbb2f303f897d5e4889424b803210ec",
+      "size": 1171833,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.8.jar"
     },
     {
       "file": "Searchables-fabric-1.21.1-1.0.2.jar",
@@ -717,18 +717,18 @@
       "url": "https://cdn.modrinth.com/data/NPCfuUI4/versions/gy1AJCQB/cobblemonintegrations-fabric-1.21.1-1.1.8.jar"
     },
     {
-      "file": "cobblemonresearchtasks-2.0.jar",
-      "sha1": "a9768e7b8b25325f75b65c919b66bc8d7911d743",
-      "sha512": "80836ba68c6be86061f12651c01cf9af50937278173a08ee57f59d8a8ea6f9906e4d4cee31c4476fa582c7c564c391cfdfbf9be62aca3d74f0dabb1a3f1210ae",
-      "size": 1345922,
-      "url": "https://cdn.modrinth.com/data/zoP5qy7S/versions/BMbNXB3F/cobblemonresearchtasks-2.0.jar"
-    },
-    {
       "file": "cobweb-fabric-1.21-1.4.0.jar",
       "sha1": "d744244463b0bc0dc53137da28a89fea7474f82c",
       "sha512": "05007533a5d67284fd039b6a5e577e0eb2bd48b797d067e1f944142a2d69c75fd294ed5ba55b71a97bd1503da1205a1430430fdeb64032d9bd8998a011df4781",
       "size": 418604,
       "url": "https://cdn.modrinth.com/data/dQcfqGbl/versions/RDHSnisj/cobweb-fabric-1.21-1.4.0.jar"
+    },
+    {
+      "file": "collective-1.21.1-8.87.jar",
+      "sha1": "c202e2894c366b8203db435acc83ea225fb20bb2",
+      "sha512": "2741b4b42def6f5f8bbfa9d73c1548e606017173ca7b045d507fa050d2d56dc6cda979d7a5ec9946eb2d5ba7a7f5a8c8dee0949fe389ae1989c1b086d609a856",
+      "size": 1634586,
+      "url": "https://cdn.modrinth.com/data/e0M1UDsY/versions/MvfIbC5P/collective-1.21.1-8.87.jar"
     },
     {
       "file": "comforts-fabric-9.0.5+1.21.1.jar",
@@ -1026,9 +1026,9 @@
     },
     {
       "file": "proteccion-zonas-1.0.0.jar",
-      "sha1": "a30fe58e0b7cfc4c10ae23838349fc38665b9400",
-      "sha512": "9415f0dd1eb20ef8b97f0dfb5b3d7a8bf48a32d8f8a748a8352edb43fe4cdd333f1e57868a476f93beeb9907feb365766dc4cf67c59b79818f058fa11dde976f",
-      "size": 269189,
+      "sha1": "708f1d572044d5b884022560f1f5762bf6fc2cec",
+      "sha512": "d654a8904a9769d046b05df95ce312f7e6366d0b5dbf44611bccc5549cb7170ea9e419f25350528085049d4c96019dfdbbf4f41b9ea5707f1bb32a04ecc1c0ab",
+      "size": 278097,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.0.jar"
     },
     {
@@ -1287,6 +1287,18 @@
       "size": 1878473
     },
     {
+      "id": "punchy_moves",
+      "name": "Punchy! Moves",
+      "description": "Animaciones del personaje en tercera persona, cámara sobre el hombro, expresiones y gestos.",
+      "default": true,
+      "requires": [],
+      "file": "punchy-moves-1.0.9-fabric-1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/mzgtK8pY/versions/aKvgyts5/punchy-moves-1.0.9-fabric-1.21.1.jar",
+      "sha1": "597ce670e17478cc6663c34d4fac125a45c03e17",
+      "sha512": "35275b6117ac21a6f9c6ede5970bd64cafae835bd94ff2a4b92f2e7dc071b97bcb3fbc71c4b9de44275a3a57a32c7b76b28f3350b08d2fa0734825f6f6a02f6b",
+      "size": 1891072
+    },
+    {
       "id": "tidal",
       "name": "Tidal",
       "description": "Agrega olas en playas y océanos.",
@@ -1488,9 +1500,9 @@
   ],
   "initial": {
     "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/inicial.zip",
-    "sha1": "abb488b37c64cf0010676ef4831e3af3cd2d6112",
-    "sha512": "68d69b061f781a7ce3104170e57ae8ae866a1c77416985674f25f36b10eed774abb73d26a5b5b7633dd82415a905d73eb0054900b52028e9314072d5b06e76cc",
-    "size": 2329069
+    "sha1": "4d5cc8d0486cdbd401ffe5b0e0a73b77bd5b392a",
+    "sha512": "1c1c63a3b87c5bdd900201d2e4aee5a18e9527484ff303a695c9d2a66d6c89596ce628951d0a6d1af2fd38c9a32ffab98b6f4974aa11b85d38db0ae6e11b716f",
+    "size": 2168734
   },
   "serverOnly": [
     {
@@ -1569,6 +1581,13 @@
       "sha1": "e88e3167ea203fae1b084360fc8242bdfff63128",
       "sha512": "a1fc557b9985954258f30fa32d4134867d6cd1d045147171a89a711d63b1b94f5dd58564aa3060ce10e8d81c2be1d8bae7ff828ee9c24a1c1b9f8398564936a9",
       "size": 14791
+    },
+    {
+      "file": "treeharvester-1.21.1-11.1.jar",
+      "url": "https://cdn.modrinth.com/data/abooMhox/versions/JIklejIe/treeharvester-1.21.1-11.1.jar",
+      "sha1": "866193022f3849d220c38bb638bd2aa6ce2893b4",
+      "sha512": "175b11956851eb5cb482b9d0909b1dc8fe27d44a5ae7d2f9a479f5dc88591292d6b157dfbe6865ad9096419821b23699378eff4acbbe54fd73d813551c7cc210",
+      "size": 167589
     },
     {
       "file": "zfastnoise-1.0.14+1.21.jar",
