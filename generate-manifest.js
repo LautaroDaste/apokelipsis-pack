@@ -409,8 +409,12 @@ async function main() {
   const ignored = [
     ...jarsIn('mods').map((f) => `mods/${f}`).filter((p) => !hostedPaths.has(p)),
     ...files.filter((f) => !f.url.startsWith(baseUrl)).map((f) => `files/${f.path}`),
-    ...(launcher && !launcher.url.startsWith(baseUrl) ? [pack.launcher.file] : [])
-  ];
+    ...(launcher && !launcher.url.startsWith(baseUrl) ? [pack.launcher.file] : []),
+    // Cualquier instalador en launcher/ (el nombre cambió entre versiones): siempre va a GitHub Releases.
+    ...(fs.existsSync(path.join(ROOT, 'launcher'))
+      ? fs.readdirSync(path.join(ROOT, 'launcher')).filter((f) => /\.exe$/i.test(f)).map((f) => `launcher/${f}`)
+      : [])
+  ].filter((p, i, all) => p && all.indexOf(p) === i);
   const gitignorePath = path.join(ROOT, '.gitignore');
   const MARK = '# --- generado por el .bat (no editar debajo de esta línea) ---';
   const head = fs.existsSync(gitignorePath) ? fs.readFileSync(gitignorePath, 'utf8').split(MARK)[0].trimEnd() : '';

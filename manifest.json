@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.58",
+  "packVersion": "1.0.59",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -627,6 +627,13 @@
       "sha512": "9791f345ccd5a36eda1109b631c1a2a1a2231bdafc9a2f115d0be1ad89b498ad136ae55b6fc754441082e0931f072274380ded40d3100895ee6b55d7fa550637",
       "size": 1139852,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.2.4.jar"
+    },
+    {
+      "file": "apokelipsis-skins-1.0.0.jar",
+      "sha1": "252be0e2dfff5d80dfc894fb23d1729e14b730b8",
+      "sha512": "c92d06f631abaaf76090af2a880c531ec46b4beca52e4a810b765bc46b496750bfea40c88888ba3945a6c4d70e70c4424830540e1434514c27170d027f3cacbe",
+      "size": 19866,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-skins-1.0.0.jar"
     },
     {
       "file": "aps_trophies-1.21.1-fabric-1.2.0.jar",
@@ -1394,6 +1401,545 @@
       "sha1": "745089b07d1a659cd85bcde47655b1d7badd8767",
       "sha512": "c618d06fcfb476d3aa6b2ea0ec819ff6436ca8b4d915fb7a2b7cee46e619444dcef91a9e7898edd8f4a2b6684b2bf562856ce2293067283fdc655047562390d0",
       "size": 1495468
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/2020_02_02_pokemon-drayden-13834316.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/2020_02_02_pokemon-drayden-13834316.png",
+      "sha1": "783b782a50ebafc9b98c7488db460a53318fc3ba",
+      "sha512": "3837bebd1c651f1e0627f410e1b784de877801cf81566ac9f470fe050a75a078772317f373068ad2aceb711f74af2fecf316121144561ac5438c80556660d839",
+      "size": 2620
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/2020_11_06_jasmine-mmo-15692029.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/2020_11_06_jasmine-mmo-15692029.png",
+      "sha1": "4b74b908450f6e7818e827a9bcf8901143b06043",
+      "sha512": "497a377de76aa1937526ac1f7ab1042819390646e3a431498ef815cf355ea23fa0da5c6f95568da5cf5ab8b74560bbf4812fc52295a45c7b43d9f63397fbb65a",
+      "size": 5416
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/2022_07_11_grant-pokemon-20561547.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/2022_07_11_grant-pokemon-20561547.png",
+      "sha1": "5c3606a1eafe70f92a344935b0c997b5ffe47116",
+      "sha512": "3f84b2f3a986f618cbb98e69ee7601eadfcedd48c3ddfbd37bd95b729feeb39de793bccedbdb86efe725a9217f8dee0261d55bcf9cc71f4faa5ef6b41cf91982",
+      "size": 1632
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/2023_12_13_thenonstopplays-archeology-skin-22179324.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/2023_12_13_thenonstopplays-archeology-skin-22179324.png",
+      "sha1": "bf2defbc0a4a0430d956463ba0ba3584a5a34cbf",
+      "sha512": "5bb6d9efa59dbd1857ad3d1113c8a04c5913b3e22be2fe7e77070048e87cbdf5141457269545ed88ea366600b6b6563e9ffd9919f638ad85bcd8004befae1d09",
+      "size": 2476
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/2024_03_02_blackjack-dealer-22372811.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/2024_03_02_blackjack-dealer-22372811.png",
+      "sha1": "56f5e6794c2997e2eed878a8a59ca547e8104f04",
+      "sha512": "720a890d58902751c8e6139ff4f25c7295afb3031341c70246362b1000a4a8361c74168943fac542ddab7bcfb50d176e1b7ad97286765324410168b3d23e8f08",
+      "size": 3703
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/2025_04_30_block-city---pro-wreslterashley-23235830 (2).png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/2025_04_30_block-city---pro-wreslterashley-23235830%20(2).png",
+      "sha1": "df1d4d86d7a7c4ccfe730c1539e683733be32635",
+      "sha512": "a5db95d6de8d1b71ea61ffcb72b8de3aeca5b09c3104346f4b85f25fd71e89b8ecc7ca858c5e3d03d1980ca3794fdb68dcfee332ae16815995e711f3a54f3092",
+      "size": 2101
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/2025_06_30_casino-skin-23368919.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/2025_06_30_casino-skin-23368919.png",
+      "sha1": "b3ace1f223efa9c5b5d21fce5d3b9040a16e98d8",
+      "sha512": "4da38216709c20cf2de5c2be59f4ece8211a961d5fc94356fe4dfc9203257230a75a5e848e0d9cea0d10496ba15519a4321ea4afa71c5b478bb7098966c0976e",
+      "size": 1471
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/2026_08_22_eusine--hgss--24291721.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/2026_08_22_eusine--hgss--24291721.png",
+      "sha1": "71006b9253155ffdc26c9c3d7be076cba8de0f5e",
+      "sha512": "2a19431095a069f72d38db774cc46d162e5d1ffa53f840895ea29a222e3d91868e11a243f4dd1f8e232afcccd7e83fc3cf77811ecd930f1cddcaee8617b0ebcd",
+      "size": 1916
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/4d2c2dcbc8e26451.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/4d2c2dcbc8e26451.png",
+      "sha1": "919e3ab4c7291b07e26f82413a3219e77a7d9aec",
+      "sha512": "9cfcf5643677050e9243a467f0dc8b50b198225a7271ab65e2f8557895a3bb29594b30abffc39957baf7ab975064dd2d8cda599f2deb9aefbd1fb76061dea7c4",
+      "size": 1599
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/bilo.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/bilo.png",
+      "sha1": "5025a521f330ecdedcb89034cb970f778229fb29",
+      "sha512": "792aeb2ca804eeffed17c0dfca785ab1f7be0f18d59d39054805e17e7bcb2099fb6dff6db492ae436b860f55b9c7fa22ea50c27c42b4eeadd8e5afa986bcaef8",
+      "size": 1091
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/Bolifacio.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/Bolifacio.png",
+      "sha1": "79eff2ed48c69e60781778d7e4f6fd463fd64401",
+      "sha512": "ef03dba114a206a1b0533de2fd3f0c509765a68481bed2240dc79fb8ed1d53a1abdaba5ec5a8c1acee74a891bb7baf1cf6e063067424c7d729c5a5fa693d7e4d",
+      "size": 816
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/cazadir.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/cazadir.png",
+      "sha1": "f2bc67a0f3de679aa83114f027758047a4ef7b85",
+      "sha512": "1caadeb0cee8aaa896808ed90bb55bec870e0e47925df54880412a09972d4fd8e04fe46aa65f7ca4eb0ddeaadaf3dae1b39473a07609fb8e765e96b06128085f",
+      "size": 4324
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/chefmurdock.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/chefmurdock.png",
+      "sha1": "85a0679f08a61a486a72a57781766a87df99a343",
+      "sha512": "e1e335db975c23181d8322717424af4b1f0f8c3d004bb194dce6bdcfe61c92efa339698bb1220bfe3d72bfb572a1c02840bef5533a7c45058e56fa7a83f8d367",
+      "size": 4166
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/cientificosteve.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/cientificosteve.png",
+      "sha1": "da2c0c60cb00cacf7f635b7a0d9910396706b7df",
+      "sha512": "c75e5986017bd896f658e88afe72f3585106e17978b3e173798ebcb8184c9f0fc9b6df22edb7f03fe4a1b57ceae8ed5b000a122487cd9429922f4c027867fc6a",
+      "size": 3782
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/ec1c482659ece6a8.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/ec1c482659ece6a8.png",
+      "sha1": "776110eae46699ef9f40129a71f4f5a54cd2f966",
+      "sha512": "e1bca09946302db98777bae48b1aaff2431294874196278b73f1ad96721486219626cb8ce839a264257635e76d19b28a1a4269ad895a092b2f5c86bec53b30c9",
+      "size": 2241
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/f4584a144d96a04a.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/f4584a144d96a04a.png",
+      "sha1": "66f0c0cf778daa2f109736263640cbc1814fc3eb",
+      "sha512": "93b931a1bcb45654c6b0d1bf887003a1de50ce6762d85f2b2fd7b7d9bf38f4b2255bb5d49cdbea2feea81f142ebed8f20715cab8e0d42e72f15669886fac3f98",
+      "size": 922
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/jenkinsloco.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/jenkinsloco.png",
+      "sha1": "0a685d2ebab327a6019e00644b89af7a42e79e6a",
+      "sha512": "286487ca3dc6c347e16eeb590c8231fad9e1f0a6fff7e78c6e475faa78582d818488bca124873a598938b2905ffa85107ef94fdd63b30fa04e0c1c00cc8bd62d",
+      "size": 1209
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/oak.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/oak.png",
+      "sha1": "62c630e886e2f6a10b5a7819cfc349df24d65390",
+      "sha512": "cc770f8d586cc949b83ae3f084a3841d9aff8de13940d92771e4c8caae840b0e1ec7467657b1a537e8b2758e52ed04ad426a1f293f3d56f23cfed76c9eebbbc9",
+      "size": 914
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/0216724699384757.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/0216724699384757.png",
+      "sha1": "1deee4edc1f55444619424586ed9fd6724151ab0",
+      "sha512": "3fc1dc0efb202ac623d1885e420789003cb57602d369ed01e06b2d08c499b80ed805a219b168992f7d79a1aa95ea6f27a7f56c546e281544457ca69a62025109",
+      "size": 1614
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/0ac2a1ab74ab33af.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/0ac2a1ab74ab33af.png",
+      "sha1": "c52cce31d0dfd69ca902701c1f0349a017b40a3a",
+      "sha512": "10a0751b06224041da4f0eb773ed8c2f7aa05ba200b95d558e4d5c0d59d2b50cfe6e2c1e9ec7b1bdd174fc805c5c59f564439fd80aedda8c2b1fdab0b98428af",
+      "size": 1812
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/104d028a355427f4.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/104d028a355427f4.png",
+      "sha1": "7683c90805bc1e1e83ac593b6bfcdb8c02d49858",
+      "sha512": "57c688137d5f066eabf6a81c78d59f9f3346fcfc89b023f4cf3bcf9c11134f0b0be7f2c069f539be11363be7d9ee229099b86ec65657b503aad3aa39f7d4cf11",
+      "size": 659
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/13aadfe034c8b9ed.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/13aadfe034c8b9ed.png",
+      "sha1": "5ff59ab0c0e2495a54ae8832682e30b2e3ed08a3",
+      "sha512": "22ebc0f0a1a98b982f7404c444b08caac3ede9c623fc11bcdc9bcc524c02f669ceacdadc13fa97157d4a264d94bebdbf39226a614e6c9a9dbc1c57fb503747ff",
+      "size": 1212
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2020_09_17_dylan-dacron-15298185.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2020_09_17_dylan-dacron-15298185.png",
+      "sha1": "c9a1876f46b658132c1a4e09c0dae17e6eae1407",
+      "sha512": "6fbe7845c60c9baead0a3839b54228edc4ec80aa7a36e5422894a49e098e340f941576d1212400f14f0c83964899e0ac09b6415857e2ccadf1459d39224ee167",
+      "size": 1898
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2020_11_26_pegaso-15867263.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2020_11_26_pegaso-15867263.png",
+      "sha1": "666fe2fb44e8a2c8d778132861d34432752de1a0",
+      "sha512": "4c35a1b61c33853f3b6839e7e6fc50db1a1823a89a93354e2205bf78a0cedf263433f6c9acda2cf3af294667685a6dc2a70200d45dfa8b607e53cba180b1f9d9",
+      "size": 2105
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2021_06_23_dawn-2-0-18199425.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2021_06_23_dawn-2-0-18199425.png",
+      "sha1": "0aa382820862e291f6cd00e480d60c2306bc9652",
+      "sha512": "429e7c4b95cad698345abf1ff4c472829897238f928be5e479834ee85d1c481842acbdfafb06bb131a042d9f4fde9e8fc64ad7fa7e601012b1b6d0a5fb467535",
+      "size": 2651
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2022_03_12_--iris---20031550.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2022_03_12_--iris---20031550.png",
+      "sha1": "dfdb37b0cfc92f69c11e643b54273e7534fcc5ea",
+      "sha512": "44b669cc14645bd7365f5a21a88d83b38b671ac8e1a3c8b4bada2ad4c804be63bc1a68b173d2da4b46782b64fe00c66c1512db4e7730394f2ad26d3b653e59fb",
+      "size": 1893
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2022_03_23_professor-elm-20088352.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2022_03_23_professor-elm-20088352.png",
+      "sha1": "d4a815cc4180c92fd5f42db1e63e5f4c424116fe",
+      "sha512": "2bac18b8ad727c8596cd2762739abe97d05b82852024401089ac6c15998f175f78b4e50da4d929cb251a356f4c21c044e9e8d359a0f11d84452b60537f5b4714",
+      "size": 2188
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2022_12_31_gamble---rce-21193024.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2022_12_31_gamble---rce-21193024.png",
+      "sha1": "4ecb4be247d9c4adbde5a3bbc8e2d99abd8719e4",
+      "sha512": "71350e230583420c65c3ca902185b7f0d12a00c15652fe3763b494ac733f0577055a0594d373d5a5afde247498271bb1ce603e47adc7b554601bc47205047be7",
+      "size": 1928
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2023_12_24_gym-guy-22206281.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2023_12_24_gym-guy-22206281.png",
+      "sha1": "2fa0128872cc5aab0da382f38a1c2a5788433b0d",
+      "sha512": "ce803064db8630b5794d5e190b30b9efe6c5e46fbaec15f52e8b82fd6308ea5f26fb75128cc5d6630d4669e4fd6ace265c7282ab7f32e5f5aca4c990d1f5cc49",
+      "size": 3863
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2025_01_21_mina-----23010881.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2025_01_21_mina-----23010881.png",
+      "sha1": "41825a45898d1a4808d639503d786dc59b8fd2ce",
+      "sha512": "768ef45e4039e00dca6860549e5c0b47842eea3d442bb3e88df47a0b21b9283893b219d48ed0270a8d638984b9789422419f3f9756d0d6251260d96e0dc77744",
+      "size": 2609
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2025_02_22_professor-burnet-23078325.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2025_02_22_professor-burnet-23078325.png",
+      "sha1": "ef607c45e9b9fdb3b27d08d20ed4b7d47ecd7c33",
+      "sha512": "fa28623649937a6fcc0b1a420e8c07f2d9a58ac0f4d9c5529d35a3d051b12014dda61671e2853a3587fc3bd7d83d34c4aafb34f1311fcfbc91b0a0b02500235e",
+      "size": 2487
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2026_01_13_furret--te--23789900.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2026_01_13_furret--te--23789900.png",
+      "sha1": "2b70d5f07c198ba4a16fe865aadba7c72cc49229",
+      "sha512": "e64d56ebc3bd8ba48c56b6992b5f06739db05727bac7878f221d21b40a8e7a85ceba826e64b9bafcbe4ea9fbc353a3cad68bcde69d2f06fac94a7743e5f1e7c8",
+      "size": 2219
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2026_03_14_pokemon-dppt-bug-catcher-23924161.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2026_03_14_pokemon-dppt-bug-catcher-23924161.png",
+      "sha1": "cac4f4da0c68954e86b43aea62ecd603430cf648",
+      "sha512": "c8dae1d3d15f234abd9a6ffa13b93438aecc556924693fe46112d6fb5ecc45d9babadf9bd4bfd74f22abfec32e2cc51df99000243e81c38aa983e8c23592360b",
+      "size": 1578
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2026_08_25_v-gambling-24297113.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2026_08_25_v-gambling-24297113.png",
+      "sha1": "edb50a483992c78cdd0aee44b6edde7fecb1b71d",
+      "sha512": "76c43635512421e62b84353d80d9e96ddc0a7e0a0357a321f7da6c35e586c3e5afa738f2f828ae733082c7e8bf79d5760a486726fa1244013c3cac245b50b471",
+      "size": 3111
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/31983ba1b9a93618.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/31983ba1b9a93618.png",
+      "sha1": "2efb41200a7b89a33bfd33d65f8fc181ee7bf58e",
+      "sha512": "89cc8cce017659b92b663c8d014830562610d2c9bb310d3682e5a428965d7d2409f6890075afb1bdefe7ede6a385c35b2eacd8b9ebcd10ede0e70e1091428ce2",
+      "size": 1048
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/3219c48b7b8507a8.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/3219c48b7b8507a8.png",
+      "sha1": "da584bdb0e4fdc46f034faf5a883b369f27770d7",
+      "sha512": "f33174847e1cd99bd65a1baf0b5e2f96e6b61cd521455e6a267f8353a43ebe174c78bbd0b7654867eb74b1cf497ad7d63c0e9dbd9fb7e7745a70eca1d8ec015e",
+      "size": 1019
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/3ad81a38e948be4b.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/3ad81a38e948be4b.png",
+      "sha1": "768215d3409d539e3475d0c0c2a7e705e7c0eb90",
+      "sha512": "fff43081c6713e1808693f55bbde9fe8efcc3d0b4b37935aebc8c2f5a744f5ffe34c4f49fea11d61dd587c8129389f2421edad59721ff65795864a47223b9f2c",
+      "size": 2840
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/3ec8c7c36e55277b.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/3ec8c7c36e55277b.png",
+      "sha1": "e2e300ba055b49b3d8025d795b19b3491750ab89",
+      "sha512": "852137019e034bbdaf7508b30a6879b6f69ab3f039e05359a2f7da4cabe71bcbea0c099eda84aac650d7610aec927912befd1f82a8b6925b11d99bbe3b45dcb9",
+      "size": 997
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/526b3897cbe49992.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/526b3897cbe49992.png",
+      "sha1": "f940f484c615c98341a1319bfa5d687e6d403acf",
+      "sha512": "0ee64fbac035d4a377a1f588a18427ebf84b7c5f767d0874460556b3bea257a5c11cf996fa4ce939ad767e7f43dcd4bb62c5d4c0d7a912602c2fadc25fe6bc6c",
+      "size": 711
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/53dc19d0dfeb989b.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/53dc19d0dfeb989b.png",
+      "sha1": "4a8473ff827ea2fc2e16b94354de72bf89548707",
+      "sha512": "acfe1e244b9a54930809f522757d2081684d55dd675490285bdda35fe250f6b07e18ca698a02aff7ead3f9a95dc47edefd55085b1aa42e5511c9757b5e4c9e31",
+      "size": 1175
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/5f6b07de99df415c.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/5f6b07de99df415c.png",
+      "sha1": "fa43bc75ac0dc52a92a3e3a5734f62acfaed6cae",
+      "sha512": "62dd8a144e5a738c4acf0114f3ba433ef199d45f05a25a1432f0f48b196f5d4bb83cdad0f1fa63712b02d39668477bead337479b65901adc7ef1ca61649c9327",
+      "size": 1138
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/633e98eaa5bccbcd.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/633e98eaa5bccbcd.png",
+      "sha1": "36652b6df622b4a58612f0940fc0c28ac303de0b",
+      "sha512": "0c93525e4378aed9933125deb1daa1b38bc18559d9732856ffa8954ee1e051040c353d73dd20b29409777471aee5e35cdda7cd778ddfdceaaea512358488463b",
+      "size": 2189
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/653e836b3ae945ea.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/653e836b3ae945ea.png",
+      "sha1": "3d86aeb1ad3c83590fe7fa53c58c51db26d91819",
+      "sha512": "45e90182889d8f0cd3c1607b6cf75bae481c7b194df547e211e229cdff0ca00d6f6955482714fe46bebd641b28758387c6f30d816074f2e7f094a95aabe91b22",
+      "size": 931
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/77f260db0f1aa5b8.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/77f260db0f1aa5b8.png",
+      "sha1": "455b7f207d72b00f060e32364011f7f87fc9ea94",
+      "sha512": "64de2f2bbdb52f179eb43d17da075ed5cf12812c8f61154de4df9748be0d64e3914c0960390388a40316d1e19ad1ab73600f35965844d69427dd754b95322344",
+      "size": 1190
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/8f053e9f5a39be00.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/8f053e9f5a39be00.png",
+      "sha1": "bf0b501fdc1d7d3ecaad0c12d73174a630e7e8b4",
+      "sha512": "d60130de3e25af4c8bf2606c9eec50792893506f30e4b73e1318f0eb9b5081ef8bed2489060248b0bc89a941709bb6fad2fe3c3de9e823ac31bff8a8539e80cc",
+      "size": 1646
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/954a97b614db8a4e.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/954a97b614db8a4e.png",
+      "sha1": "ce380d647c0beca91149fef1e8f8e45ae0dd5e9c",
+      "sha512": "03b5b606d3bb007d4fa85f42587e39d1fdb0f2a73cca001544d0406cf1550518c8f5498c88fdfcd2efabae2e5968bee527f97a7e0424621be8132b012f637c73",
+      "size": 1826
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/9a57ee5c536aa492.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/9a57ee5c536aa492.png",
+      "sha1": "a096107b0461e9b99a218ff6f317d69ed2c122b7",
+      "sha512": "0ace24ba58d2230d8274f1e7be224c3da431f0dc27fff10e2a1701c31738a39ce2236530a16c701ef4ac374116f3ef39a6d8072209a92a19d1a55fd75926b85d",
+      "size": 2414
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/a687a89788ed1c66.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/a687a89788ed1c66.png",
+      "sha1": "cf7572fab57a45ec6f1dc4273b150c46249bfcc1",
+      "sha512": "140fc7558001dd0fac7e29b69ed418e33e09b81cfef5495f68fcb7c99dbd1ae09e8c85f3a9ae348c62e5d00f7d75d0fd19c3af7c52f41cd622a56ebc2318f319",
+      "size": 1024
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/AARON.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/AARON.png",
+      "sha1": "06f7c4888b9c4ace87da40f3b14a1a37b1d6bb36",
+      "sha512": "b81341e0774e9944ef792f66c0bdbd81ccbcfba828a54824b2612fba030607d390075eec8069d2b36a48b6f603703ad4f758d76eb39b0ac47bbe904ee5bd5778",
+      "size": 971
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/acromo.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/acromo.png",
+      "sha1": "c6f5ea1751a5c687bb45fb553e3bc4931c46b2b2",
+      "sha512": "74d9dda7b7d0781f4f3ade3c781e9583059f397ee561c48e58700d7515ed2c6c71bc0e109576a43125665ba9cbcd373c81becc4ed2a03d0da94dab486dc57951",
+      "size": 2752
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/ad4adbfc28d172c7.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/ad4adbfc28d172c7.png",
+      "sha1": "a0ab1fae4e9750dd5540b79d1d5a6b7b28f6d1a2",
+      "sha512": "1616234efdd8c94c4907f34ec744fde560f6cc2a4c1c7b1b8cd579bf20db087a32b2dcb5adc33c325dd59d05a9604386b00cf2da16205431600637bf234f2ea3",
+      "size": 2808
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/aurelio guarderia.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/aurelio%20guarderia.png",
+      "sha1": "a7f850eeb874b3009081b4b03dac60b81e016ba5",
+      "sha512": "0f9bc2900794b3cb4546e1eaa1c2bbbb56d60348b03a9dac9023243f1e78089f493c6741e52dd1437dba5ccf55e325cb5cffa6e5004368300735a260cdc67502",
+      "size": 995
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/b55828f79138ad49.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/b55828f79138ad49.png",
+      "sha1": "994971a1ee9ccf97fa5125834b4e11fdc8e2c6dd",
+      "sha512": "f567e33a2e008017b35eda442f45fbc1f39dcfde54f16fe695cb1719f3a52e29281e643195d09496ad4a06e4ec529b4103a4d5981bbbca185743c6df8747a94d",
+      "size": 1047
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/b63c8778cecebe6b (1).png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/b63c8778cecebe6b%20(1).png",
+      "sha1": "03cf16ae4267aaf894d8b25d97e0eae6281892c6",
+      "sha512": "f596a185cbb36340e27a79f2eaf78ecca9892585e3f3938660ee69b81ea6f1557c0c72edb3228efae3f0e360a498fe51a876593bbcde2a0c1dbf069a8ca38755",
+      "size": 1628
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/b70497596691a140.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/b70497596691a140.png",
+      "sha1": "2f27066f129eb8f9c5f21c9a0ff826fc8e3c941e",
+      "sha512": "4886177696928a1f304f92d4238d4258007f27b9129502749a4fc76dee96c33f7c9f83227a2c3334be8843d64fec9f61c51765a58ae7215da606cff783ab1015",
+      "size": 1354
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/b80ee86d74d0c59d.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/b80ee86d74d0c59d.png",
+      "sha1": "84116f6781ed666799e18bda76978bfa2bf60073",
+      "sha512": "55acba31df296b76d25f0769c00b0a926ce9b465480dad7f804933010d749d09e2e7667faf96295f51a15d2a8aae222e72443a6bdaceb456d951bc497cbda865",
+      "size": 876
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/b967b02bffdba6ba.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/b967b02bffdba6ba.png",
+      "sha1": "8c29c5d06869941cc5dc3c27c571ffd8b9e4aefd",
+      "sha512": "9b8e97d7dfea45220abe1e5b316235dea42b951f99f97225d402607e03a88a29aed80985fe3fc1008cc07c1ee8cf7b1e941e07a0f22dd088f73d1036f1363908",
+      "size": 1457
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/Bill-on-planetminecraft-com.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/Bill-on-planetminecraft-com.png",
+      "sha1": "3a6bfa3ad8c58fa1320575d177b9442c1ff4e120",
+      "sha512": "78ffe14290a3434bcd5148474feec1ac256d9c427739e5af460ee441d07cc63d9fc3c293a70bdfda09b320438b4b59f7568dd9e287d28db96412bf63721e5575",
+      "size": 850
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/c87345077af2fd36.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/c87345077af2fd36.png",
+      "sha1": "e6b8e6fc0631af94d485d6d4f900c82acb8778aa",
+      "sha512": "e754aa245a7629e924e942fc4ccafd02620b4f4ec9b53bdfeffb86da71480322ca56b3ff10d99048e007ec6d3cc644fb99bbf8bbabf1bec1a507f6a50726dab0",
+      "size": 768
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/cd5ea0a9b2f4dc60.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/cd5ea0a9b2f4dc60.png",
+      "sha1": "1e49c0422fea6a0fe0cec55ee6b173aceb7aeba6",
+      "sha512": "2a0e094fcb62e78fde9931054d7f4574a78fa183d95933502a5ed9254f7089d969f1054d030e1ed9b5767e96ca0d97c7d9dd311f96bb9f2f4ad60f01c32a1edc",
+      "size": 1019
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/cientificoslim.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/cientificoslim.png",
+      "sha1": "a1163c9cd7b022cdc45b4079ff6e613c5cf72ab4",
+      "sha512": "b199032c13a7eef3699f11000595083c3871f63093934b76a4d6913090b424c3494446d095b20e9331b0247842119752e7a6345cb148c7974c5bd70e2cad43c2",
+      "size": 1302
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/d4de0487dfd38055.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/d4de0487dfd38055.png",
+      "sha1": "a6afcdcb0848ff777ae68756e2bec91df0e13e26",
+      "sha512": "027665fc97c441041d1e4bc99e6b974728b0268a2fc3b8cb5aa120f6953e4e6dbcf3774a7082cfc8adc7cb6338316f0d0ddfdd3ddcb01687e062af35bc39fa3c",
+      "size": 1132
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/d769e618677da98e.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/d769e618677da98e.png",
+      "sha1": "f0005f49c14108e8f94eb1b90bcab713c87b1cda",
+      "sha512": "45763a42a66bf7fccfb46b116ba48043f125e0763c9bb96e712d401e675bb3c4d8f5a5a135ba2c5e912cab5be19c7827a48cc1c461e909ecb82b18329690d989",
+      "size": 1611
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/df4270200003b792.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/df4270200003b792.png",
+      "sha1": "863d5868f75580858bfed7224398808c61efbaa6",
+      "sha512": "f1f02a2d443caafa6328a1c362d2e45d6e8a663675ab20e8b1224340dd71630f71b3bae55032633f64d73f8769c5f81face9f60240f9cfa7a456d65f37cfe18e",
+      "size": 1426
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/dianthacmapeona.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/dianthacmapeona.png",
+      "sha1": "9d185610088b22f10bd58305f6d23f0fee92f52f",
+      "sha512": "3569a0188160ab10cb553b2b5a68ed63d517336087f8f33acfb8bcf297dbebcf13329427efd89b8ca32ca356ea3ef7c95043a1f6408b5424b7bf6b13bc43d6d8",
+      "size": 5477
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/e1a92ee4f5b9067f.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/e1a92ee4f5b9067f.png",
+      "sha1": "0a2338209c6a1d3c68e167245e5bedb734753a14",
+      "sha512": "8f8c85de31f3bc204bbe8c53caa70adfc3e38c9a8d690dadc0864d3284c2db04d40b57978782f856c6732a9b605ab9e32f04195c33d07a3c235986abfe6cf0cf",
+      "size": 1368
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/enfermerajoy.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/enfermerajoy.png",
+      "sha1": "9bd9c081821b4e30cdb31a24ab9dc684afb674b4",
+      "sha512": "1cafb5cea356095f829114d423ba37e27bf118fe3e1f5d200a4824d4bc2cd6218127a633acad48d1292bd13a80a7ec1629fee3878f7ad7d690ea667cfdbafb29",
+      "size": 2448
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/Lira.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/Lira.png",
+      "sha1": "850638d0f8c7615c203e140deff1ccb75edbea09",
+      "sha512": "11ab35364f7c2341c3502c9340dc4bae29e14e973997ebd5b086194f00869c108e712c67ccb268b0e57e51c64a1d1931b1f05bdd4064678580af4bf89527b149",
+      "size": 1591
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/miriam.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/miriam.png",
+      "sha1": "99921c164d67e2ce658e28a4b309e31091e8e9bc",
+      "sha512": "482ff6bef64e65cf97ac001ba938148ecdb523904956c637f88a23b6800ebd1fd25e671755a340f5ecc93131083434b4620e5764b60fe01c29b07bf3ff4dea5d",
+      "size": 930
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/monicaguarderia.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/monicaguarderia.png",
+      "sha1": "92c8963b1c32c62b101881c9f20830b703cbcd75",
+      "sha512": "c1969c5e04d1827dca2ab4687013b863b55b28e1dd1fa0947686aac1ac134bf20433dc58c0cd7a5a17f0ec898b33b5c2d02d9e3da9a27a2c9a37f94cb792cecf",
+      "size": 1591
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/peluquera.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/peluquera.png",
+      "sha1": "89df44a25d270c108f6d5c3b717c7c5d96642ab7",
+      "sha512": "0cf68d75d8ec199f25e0878df72872690a7e519000ff50e991a988408d0ce88250050129cb6ad2f0685aa330cee94d050fd99c81717f369b66db8972b7cc252a",
+      "size": 1009
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/sERENA.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/sERENA.png",
+      "sha1": "0124c922ef53759cb05ca35f543966062c1ede1c",
+      "sha512": "cc27ba2412d34968c59e2db2ae8d8854086e867e9116ec61346fc5bbefcd162d15492efc32b736af6d84e4684abb70e79a8747e37846c6416c2074794f448631",
+      "size": 1116
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/Silvia.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/Silvia.png",
+      "sha1": "89aa61b23d71b6672b21219a5a4dd407bf3ce816",
+      "sha512": "e7a2ecb3863849c85e52b33d47aa67b95e256644ecfa49d6a843866f3cb3b40ea14fba48ba3794c3b1048b721914f6e22c8951c12db6cffb80e740f7d85591fc",
+      "size": 5856
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/skin_Koon_Khunaa_07ef4b1166b3f026ac35f15e5db081da.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/skin_Koon_Khunaa_07ef4b1166b3f026ac35f15e5db081da.png",
+      "sha1": "4e420dbd8dee4422ef485ef56a422d3719f57d5b",
+      "sha512": "c1af007f8f026f823b5feacaddb124cf5adfe2c04bd2def4b7a119a1d826c539a4575b7970430d01e339a7ce666bf11b1d7b8424bfab9e8d9a6e3068fefa5ff7",
+      "size": 1133
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/Steven-Stone-Pokemon-on-planetminecraft-com.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/Steven-Stone-Pokemon-on-planetminecraft-com.png",
+      "sha1": "34c15b258b1e188c808b6859353f73f68f69498f",
+      "sha512": "f1d2b7ea2af66e058d1199a72aaa57070db055c398a081881bbe7096c5974bf721e4498f9957f5e054e5b6b0154861cd2a6ca6b98ed3ed8bc1e927799ff895c8",
+      "size": 1007
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/violeta.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/violeta.png",
+      "sha1": "10179b1f63c33776eac7b3279e9f6a8c6b09d87c",
+      "sha512": "00b95db9f4148ff2712aeac7f6e4f53379e54ca7842c134ac9575fc4ad2113678050142ced4b434e7521e2da4c6add75c5c0276164bac3f701b70d35e901042c",
+      "size": 2664
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/volus.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/volus.png",
+      "sha1": "bc058f7a5e6aa3a482c6f713cc1b71bef1ee7b3a",
+      "sha512": "e02973b36658b263a5c8d4b1ec6a6ddbab1a31564a637d64bd1c657fe9a4acf7e1cbf2b802dd13291a911eb7107647ccc485000d6ca4ba300ebce56c2adb78c2",
+      "size": 970
     },
     {
       "path": "resourcepacks/Better Caps! [v1.2].zip",

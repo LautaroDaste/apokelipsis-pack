@@ -279,7 +279,12 @@ module.exports = function crearPublicador(ctx) {
     const version = launcherNuevo();
     if (!version) return;
     const pack = readPack();
-    const file = pack.launcher?.file || 'launcher/Instalar Apokelipsis.exe';
+    let file = pack.launcher?.file || 'launcher/Instalar Apokelipsis.exe';
+    // El nombre del instalador cambió con las versiones: si no está el anotado, sirve cualquier .exe de launcher/.
+    if (!exists(p(file))) {
+      const exe = fs.existsSync(p('launcher')) ? fs.readdirSync(p('launcher')).filter((f) => /\.exe$/i.test(f)) : [];
+      if (exe.length === 1) file = `launcher/${exe[0]}`;
+    }
     if (!exists(p(file))) fail(`Falta el instalador del launcher (${file}).`);
     const data = fs.readFileSync(p(file));
     // version.json anota la huella del instalador al compilarlo: así nunca se sube un instalador
@@ -429,7 +434,10 @@ module.exports = function crearPublicador(ctx) {
     }
     const push = await git(['push', '--quiet'], { env: await authEnv(), timeout: 900000 });
     if (push.code !== 0) {
-      if (/rejected|fetch first|non-fast-forward/i.test(push.out)) {
+      if (/GH001|large file|exceeds GitHub|pre-receive hook declined/i.test(push.out)) {
+        throw new Error(`GitHub rechazó un archivo demasiado grande (más de 100 MB). No se publicó nada.\n${push.out}`);
+      }
+      if (/fetch first|non-fast-forward/i.test(push.out)) {
         fail('Otro administrador publicó justo al mismo tiempo. Vuelve a tocar «Publicar»: el panel juntará sus cambios con los tuyos.');
       }
       throw new Error(`GitHub no aceptó la subida.\n${push.out}`);
