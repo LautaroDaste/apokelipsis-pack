@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.56",
+  "packVersion": "1.0.57",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -36,17 +36,25 @@
     "malilib"
   ],
   "launcher": {
-    "version": "1.4.12",
+    "version": "1.4.13",
     "file": "launcher/Instalar Apokelipsis.exe",
-    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.12/Instalar-Apokelipsis.exe",
-    "sha1": "71212841c2dd2e38459f23a0ed97f8f663e75ad5",
-    "sha256": "4f5358b0340493543801b1e06b8406f587b792f5fb1dff4004dac2f8697fe0b3",
-    "sha512": "a4c2f771fbcddd616299cfda658a8e676a423017ce1f444d24babc780263d49f591e1869052f64c1db804278e51accbbf13a8e499200e37634174f59e23cde96",
-    "size": 113746786
+    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.13/Instalar-Apokelipsis.exe",
+    "sha1": "fd9dfe6ccfd35f8f10179c1aa859e8afb73db020",
+    "sha256": "54ea4fc1b031b771289703ef94240ec4b8b88db43088b74c5b4af3cb595b88de",
+    "sha512": "8e673a08a168eba5f34a6b19e1d49f09659081966e0094064300223077c113528c3abca6eb4bcbaaba660dc0b463b651ada5939d955e5c4f187f0dac5389dd04",
+    "size": 113748376
   },
   "baseUrl": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main",
   "reinicioConfig": 4,
   "reinicios": {
-    "opcionales": 5
-  }
+    "opcionales": 5,
+    "controles": 5,
+    "packs": 5
+  },
+  "archivosQuitados": [
+    {
+      "path": "shaderpacks/Visual-Vibrance-v0.3.5a.zip",
+      "sha1": "e60e5c1ea1243bf93798ddd34b4a70202781cab8"
+    }
+  ]
 }

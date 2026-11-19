@@ -274,6 +274,12 @@ async function main() {
     }
   }
 
+  // Archivos que se sacaron del pack (pack.json "archivosQuitados": [{ path, sha1 }]): el launcher
+  // los borra de la carpeta del juego solo si siguen siendo exactamente los que publicamos.
+  const removeFiles = (Array.isArray(pack.archivosQuitados) ? pack.archivosQuitados : [])
+    .filter((f) => f && typeof f.path === 'string' && /^[0-9a-f]{40}$/.test(f.sha1))
+    .map((f) => ({ path: f.path, sha1: f.sha1 }));
+
   // Configuración inicial: inicial.zip se descomprime en la carpeta del juego la primera vez
   // (solo crea los archivos que falten; nunca pisa lo que el jugador ya tiene).
   let initial = null;
@@ -343,6 +349,7 @@ async function main() {
     mods: mods.map(clean),
     optional: optional.map(clean),
     files,
+    removeFiles,
     initial,
     // Mods solo de servidor: los launchers no los usan; sirven para que el panel de otro
     // administrador pueda bajarlos y tener la carpeta mods completa.
