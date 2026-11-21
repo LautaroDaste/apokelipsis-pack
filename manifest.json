@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.60",
+  "packVersion": "1.0.61",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -489,11 +489,11 @@
       "url": "https://cdn.modrinth.com/data/9hx3AbJM/versions/LLLfoeWJ/EasyMagic-v21.1.4-1.21.1-Fabric.jar"
     },
     {
-      "file": "EntrenadoresPokemon-1.2.1.jar",
-      "sha1": "d21fd727da9aeaeea494eb96f9b93c175e0eb4a9",
-      "sha512": "a09a04804a8221cabf976f4a783d0dd112007f2ecd3859a74a0f962e51e4806861abdf578844d9f78f7b142c358b4da6c8bf14b0c640ccb4e9b98b11d3ac41b9",
-      "size": 716676,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/EntrenadoresPokemon-1.2.1.jar"
+      "file": "EntrenadoresPokemon-1.2.2.jar",
+      "sha1": "415ae119e0297c3f01d7495d4ffee8dd1d7fb1be",
+      "sha512": "3655abee8a6d894303a906669c37c35eb910426bc212a355ff8687c67a36e44036beddf98f1d720d018ba61763a88944372b5c0bf29e1053f2e6308f35381df9",
+      "size": 717330,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/EntrenadoresPokemon-1.2.2.jar"
     },
     {
       "file": "ExplorersCompass-1.21.1-2.6.0-fabric.jar",
@@ -601,11 +601,11 @@
       "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/Sj6w7O0I/OctoLib-FABRIC-0.6.2%2B1.21.jar"
     },
     {
-      "file": "PokeMisiones-1.5.10.jar",
-      "sha1": "ef013312ce5c2f12cf7a3520bac101e9cb92e36e",
-      "sha512": "f0c9d75b4b67e6d19c4756c3a8f50c702102be8957843a662f4ccd7c4472a92ee9c6fbd8a3326628739ed6dab1eeef04b1093808c63c68a6b1e6c119ed5d82f4",
-      "size": 1185375,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.10.jar"
+      "file": "PokeMisiones-1.5.11.jar",
+      "sha1": "aa70637c26fb8771d8876fd422078ab68354ea36",
+      "sha512": "5e6ca7d977d6d444d481e3a6046196dfd2defec95e550e8a48d729cf79739f27588a7714a92457554f1d021cd44cb35d5a3b26b403ea4fee35791e7fd4d19d7f",
+      "size": 1182364,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.11.jar"
     },
     {
       "file": "Searchables-fabric-1.21.1-1.0.2.jar",
@@ -678,11 +678,11 @@
       "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/EghJxg4h/balm-fabric-1.21.1-21.0.66.jar"
     },
     {
-      "file": "batalla-final-end-1.0.0.jar",
-      "sha1": "46ed2ffc8aa582bc04e57283eb43bcd75cd8c19f",
-      "sha512": "e7a40473070d63d22af22163f312243056b67ba6bb1ff62c1f7cb26ee03465656290849a03303d596a33b4f38872f0135c76513cf0b36f12aad9a0e48b342906",
-      "size": 295327,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/batalla-final-end-1.0.0.jar"
+      "file": "batalla-final-end-1.0.1.jar",
+      "sha1": "1fe334a3707d074804c033b0f1c487f70fbb20ae",
+      "sha512": "734def07bab3261c193db44f02a75603589bb43d2a46374ed3e20c7b1d9b581051fc1bfcd2472d6e0370a487ba347145f5a51100dbf673e062ec96531f69de6c",
+      "size": 297041,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/batalla-final-end-1.0.1.jar"
     },
     {
       "file": "chat_heads-0.15.7-fabric-1.21.jar",
@@ -1021,11 +1021,11 @@
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokeframes-1.1.0.jar"
     },
     {
-      "file": "pokegambling-1.0.0.jar",
-      "sha1": "8b259b2977673f52617bb6c51561d3d088360609",
-      "sha512": "236dca01efd310d6f0cad704ac6e6d012a67c795e75ac134c873e6dff550f2937d21c3d94362bfbb7f155173e2ada9c06b95fd0d9ecd0ba3896f7979a7002706",
-      "size": 3130710,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokegambling-1.0.0.jar"
+      "file": "pokegambling-1.0.1.jar",
+      "sha1": "35389d3892c96fa2da76fb4549356aa24ce4568e",
+      "sha512": "9d24ded73aadae5378130bd47c0f7696cf871abc04d42983f6034f55047be54b83fac0e0eee38de0dacb46be63a055f2985c14e7aef93576b386181c6e7da55e",
+      "size": 2638878,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokegambling-1.0.1.jar"
     },
     {
       "file": "polymer-bundled-0.9.19+1.21.1.jar",
@@ -1042,11 +1042,11 @@
       "url": "https://cdn.modrinth.com/data/tagwiZkJ/versions/Ng5Y6KVo/polymorph-fabric-1.1.0%2B1.21.1.jar"
     },
     {
-      "file": "proteccion-zonas-1.0.0.jar",
-      "sha1": "8ab221acacada4284eb33835319f56c7b70f33b4",
-      "sha512": "1812df98db6db1d18807bee3aecf0c05adfaa72e9bb4e23c1026dae39c2bc4e8689ab3cc009ec3a28ea03d66c9704250605a7b50b0a0e78c5ef11e99b0153c0c",
-      "size": 293084,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.0.jar"
+      "file": "proteccion-zonas-1.0.1.jar",
+      "sha1": "f6dc909b325c97d73ef21291f5485b610e799f1b",
+      "sha512": "ab173d4360c0b3d3759cafe165c2194a3fbc50065ca9c5d4e6e8db4f6473c77821cec3a81f8401faa92211cd8d76aa5d4854b21dd6441eb3bba1c5ad93a0734f",
+      "size": 294652,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.1.jar"
     },
     {
       "file": "puzzleslib-v21.1.64-mc1.21.1+fabric.jar",
@@ -2055,9 +2055,9 @@
   ],
   "initial": {
     "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/inicial.zip",
-    "sha1": "a0e429863b796938fa55003cce3772388e259b5f",
-    "sha512": "5ef18b399c191071662e77183783ce8b187c4a7b64807ad9249ce9b944505dbfc09f52e3b100b3ea0c8b8535e2795fcceb73d1499211103ab4618863847e2f88",
-    "size": 2168740
+    "sha1": "69e75e51666da60d33ade5dfa4b89683b5f03611",
+    "sha512": "bf200d73ccd91308e8d88a0cdc8aa699f40d721253f5074415d3bcb4bab49e3929ae3dabda0c02614ff16f8816096d3cb9cd7d18af9e11499230ffeb6b57cef6",
+    "size": 2128824
   },
   "serverOnly": []
 }
