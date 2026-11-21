@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.63",
+  "packVersion": "1.0.64",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -36,13 +36,13 @@
     "malilib"
   ],
   "launcher": {
-    "version": "1.4.14",
+    "version": "1.4.15",
     "file": "launcher/Instalar Apokelipsis.exe",
-    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.14/Instalar-Apokelipsis.exe",
-    "sha1": "e1e4ee91946c94d32634b9174673d0fbe7bfe383",
-    "sha256": "9e1a68617f742a956e85a53b1be365a87f38a3440bd3eb3a960ead2d62195893",
-    "sha512": "de0f22583b79d6748a8465b5f268b406e19e3a9cb2498e09f252ceabb3ec656bc1e43476e80e5ef0482f77747ba6843e2b61ce82012a32355d0f5dee2f846493",
-    "size": 113750462
+    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.15/Instalar-Apokelipsis.exe",
+    "sha1": "53d7980c608de316eeb31338568df612da518cf0",
+    "sha256": "2b92cfdc6d946537c0fdc4558ea496a2783940c4e5f31cea57dc68df755a9c63",
+    "sha512": "27c56022fa50ad26b7049e2a8ffcf4bcc0694f0a9956bc0fbf1ed17183ebdbf7040fdcfc475bd60e0436239d76d34ea5cc01edeb96f2b1e3a67dfe4dbb14c206",
+    "size": 113756504
   },
   "baseUrl": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main",
   "reinicioConfig": 4,
