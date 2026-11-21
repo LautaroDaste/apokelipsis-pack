@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.61",
+  "packVersion": "1.0.62",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -1022,9 +1022,9 @@
     },
     {
       "file": "pokegambling-1.0.1.jar",
-      "sha1": "35389d3892c96fa2da76fb4549356aa24ce4568e",
-      "sha512": "9d24ded73aadae5378130bd47c0f7696cf871abc04d42983f6034f55047be54b83fac0e0eee38de0dacb46be63a055f2985c14e7aef93576b386181c6e7da55e",
-      "size": 2638878,
+      "sha1": "58106b082f9efbc871f09669586452cbd2481f26",
+      "sha512": "fa15e29f712f4ce4abed017500346bfbf74bd8bec9cbc50a2b17e47cdad31031928abecb855e2863e3754c7bc335e2632b089ee396612c0d4b884e07e6623fe8",
+      "size": 2640509,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokegambling-1.0.1.jar"
     },
     {
