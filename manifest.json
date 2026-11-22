@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.64",
+  "packVersion": "1.0.65",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -1403,6 +1403,55 @@
       "size": 1495468
     },
     {
+      "path": "config/easy_npc/skin/allay/allay_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/allay/allay_template.png",
+      "sha1": "1151704465feb6c1a7bd61f0ff8494e704df3926",
+      "sha512": "85a60bea62fa6e3f0b5b8d1d40af4f285743258d5c455be69aaa849b8795d8075319618251eea4450e0668b872a92c83a1bba62cc24ba73d2cf490b5c1db0875",
+      "size": 246
+    },
+    {
+      "path": "config/easy_npc/skin/cat/cat_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/cat/cat_template.png",
+      "sha1": "f981ae83c4147058677a8cf18e108c6d9a55b157",
+      "sha512": "8f04e065ea20e40ce32bc9f1cc823bcd0d1f405f85e5177a83fe9a3455ca3cc82591b4f7a750ea62acb229997764f76819917c3ce49861fbf4bca0e717243146",
+      "size": 283
+    },
+    {
+      "path": "config/easy_npc/skin/chicken/chicken_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/chicken/chicken_template.png",
+      "sha1": "de1a6a0b5a157df1d58d00f8ce4ba5306272631b",
+      "sha512": "0bba182a48a6021bdd88d5f3a89854448762579cac6c0a0333c1f4bf1677abb4cb6ecb10bf01f009cbb298ab8b479b954a37a1fc170506aac2fa0691da2dcfbd",
+      "size": 287
+    },
+    {
+      "path": "config/easy_npc/skin/creeper/creeper_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/creeper/creeper_template.png",
+      "sha1": "1bd7ae2462edc3b96764f0790162f87961ee6d2e",
+      "sha512": "0a87a98101c76e118fb14c5ebdefc018938547f54e46d6916257e2d4c4df5119c9cc54746f55e84eba467659af6509cd8b7f0eebc401498762b53add67a825d7",
+      "size": 255
+    },
+    {
+      "path": "config/easy_npc/skin/ender_man/ender_man_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/ender_man/ender_man_template.png",
+      "sha1": "624941707c02dc7b46282c2a411cbded82b77dd1",
+      "sha512": "0cdc553dc91d877e4bbf7ac2a5573b890317d7ac5c531be5296b6c4dcc94d893fc1f43bc7d09b5ffeb6bcf0db2128f83925345dba41bf99e283b69c3fc1c0abc",
+      "size": 276
+    },
+    {
+      "path": "config/easy_npc/skin/fairy/fairy_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/fairy/fairy_template.png",
+      "sha1": "dedd04b716203978bcdbcebfb901f0b753f912e7",
+      "sha512": "8abcb221ebbef44a688d967c98c74c4e4bf91bf546cce452808c22aa03de3dde65610351641adb53fbce176dd5eae9bbc7301666f19711d7adcbe57755b7e52d",
+      "size": 434
+    },
+    {
+      "path": "config/easy_npc/skin/fox/fox_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/fox/fox_template.png",
+      "sha1": "6d042f9a9b7969386b634f9aa9320abf389f8f13",
+      "sha512": "445d2e0ada6695822195fee79084317702b25230ad68222f96f354a577ceab8a6a19db273a811644b06883d73ed6f5f255060583ab409a0a48626510ff31d1d6",
+      "size": 335
+    },
+    {
       "path": "config/easy_npc/skin/humanoid/2020_02_02_pokemon-drayden-13834316.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/2020_02_02_pokemon-drayden-13834316.png",
       "sha1": "783b782a50ebafc9b98c7488db460a53318fc3ba",
@@ -1487,6 +1536,13 @@
       "size": 4324
     },
     {
+      "path": "config/easy_npc/skin/humanoid/cc023faa8c5fd329.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/cc023faa8c5fd329.png",
+      "sha1": "5c696d25e23b74d39fef9b6645856b62e5375a02",
+      "sha512": "f09840f6f594000aa7750cd4815ba496a70066eaf8a50e453c6b442b9bdd496650298e35efbcecac943e0324bea19b6a93ae11d84a961decc92f70eac1461225",
+      "size": 1529
+    },
+    {
       "path": "config/easy_npc/skin/humanoid/chefmurdock.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/chefmurdock.png",
       "sha1": "85a0679f08a61a486a72a57781766a87df99a343",
@@ -1513,6 +1569,13 @@
       "sha1": "66f0c0cf778daa2f109736263640cbc1814fc3eb",
       "sha512": "93b931a1bcb45654c6b0d1bf887003a1de50ce6762d85f2b2fd7b7d9bf38f4b2255bb5d49cdbea2feea81f142ebed8f20715cab8e0d42e72f15669886fac3f98",
       "size": 922
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid/humanoid_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid/humanoid_template.png",
+      "sha1": "87c4ab5f89cbefc8680e76aabf68582c66b5698b",
+      "sha512": "ed54c0bad8ef5dd1e6db952bc53a4a10f8ae021a543b4c0e5ab3b096ed60dfa6a89adf6bde45dcfc6204a1c0f2547078edac0ed3295a8bdc890415f26939daee",
+      "size": 360
     },
     {
       "path": "config/easy_npc/skin/humanoid/jenkinsloco.png",
@@ -1639,6 +1702,13 @@
       "sha1": "edb50a483992c78cdd0aee44b6edde7fecb1b71d",
       "sha512": "76c43635512421e62b84353d80d9e96ddc0a7e0a0357a321f7da6c35e586c3e5afa738f2f828ae733082c7e8bf79d5760a486726fa1244013c3cac245b50b471",
       "size": 3111
+    },
+    {
+      "path": "config/easy_npc/skin/humanoid_slim/2026_08_27_scout-leader-machew-24302504.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/2026_08_27_scout-leader-machew-24302504.png",
+      "sha1": "906c011fcad79d156ec8844a6eaaf0b40597908e",
+      "sha512": "e82e5777a588762a129cc2b6a151f6610d7218a8209411c226df944d7c3c4916dcf972dcadef37c76c1aa3e05acbdc4ae244d9c10e2186a089de512500ae57c9",
+      "size": 4452
     },
     {
       "path": "config/easy_npc/skin/humanoid_slim/31983ba1b9a93618.png",
@@ -1872,6 +1942,13 @@
       "size": 2448
     },
     {
+      "path": "config/easy_npc/skin/humanoid_slim/humanoid_slim_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/humanoid_slim_template.png",
+      "sha1": "0cffa4769a12c1f8e83a40e0216572e2320e8b12",
+      "sha512": "f280e81621d60e1d5ac91341309761a741e4aaa259eb2ee85194d1fca4307ff621665ec6989f441bfeadd921b7f82341df0d8562ca3f08442bee761d0a15088e",
+      "size": 384
+    },
+    {
       "path": "config/easy_npc/skin/humanoid_slim/Lira.png",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/humanoid_slim/Lira.png",
       "sha1": "850638d0f8c7615c203e140deff1ccb75edbea09",
@@ -1940,6 +2017,118 @@
       "sha1": "bc058f7a5e6aa3a482c6f713cc1b71bef1ee7b3a",
       "sha512": "e02973b36658b263a5c8d4b1ec6a6ddbab1a31564a637d64bd1c657fe9a4acf7e1cbf2b802dd13291a911eb7107647ccc485000d6ca4ba300ebce56c2adb78c2",
       "size": 970
+    },
+    {
+      "path": "config/easy_npc/skin/husk/husk_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/husk/husk_template.png",
+      "sha1": "fa8b868467e44763e80eadad2b40532ccd333119",
+      "sha512": "0daea994b4c5f0bf13f4a6873288d26cc9463ca1fc26efef84b91df6c0647f593035eda46542338d03239caf1e2e08ecab2219bc4b1d8cb236640fbdb17d2e33",
+      "size": 531
+    },
+    {
+      "path": "config/easy_npc/skin/illager/illager_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/illager/illager_template.png",
+      "sha1": "9c5cf8d7b514c33e6c4d1ae99a0223b2733aff2e",
+      "sha512": "230a17a3976a2b8112e98e58cca2f292f7dfd294058e0e1bf00eb7557828cba5ef72034384233101ac1674302050df564178aad528f81e86fb1c2f8fd91c4385",
+      "size": 300
+    },
+    {
+      "path": "config/easy_npc/skin/iron_golem/iron_golem_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/iron_golem/iron_golem_template.png",
+      "sha1": "5fbc0225ac05828ab84aca26548e872be296e186",
+      "sha512": "93a969e2eb1651959f19345b8b27a61ca04dbe4b31f2f6174e761ba31b73bab21f971ec8784fc9de6a1085897933a87502de0d65d46c135e3044efe0346464d9",
+      "size": 451
+    },
+    {
+      "path": "config/easy_npc/skin/orc/orc_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/orc/orc_template.png",
+      "sha1": "b494c4efeff9a3e6f3118dbb2e5780975f40b986",
+      "sha512": "ae750350739a15c0c66c04f4c84a8dc4af48dd85ea747e31139d94cc17b9283d2a105cb7cb0a100db988210600182fc442dcdc726078b67b685f4d5502fb9e8f",
+      "size": 521
+    },
+    {
+      "path": "config/easy_npc/skin/pig/pig_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/pig/pig_template.png",
+      "sha1": "5c3a096c8cad3612f63cdf2f8875a785970de9cb",
+      "sha512": "324c2b4c4f66f9b3cf5d483e5e801fbb827ef51e204c7f81e9c19dade9a787f1bf74c5185d6e0be5a446b0730a572b3efb59356961c30825945d6760994cf0cc",
+      "size": 270
+    },
+    {
+      "path": "config/easy_npc/skin/piglin/piglin_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/piglin/piglin_template.png",
+      "sha1": "4d412fe70936217cf0c212dcf165c47290a12bc9",
+      "sha512": "f793bd1c4dfff6c97cd5f2bab2ec592b020d258e6187eb88d439e119da79a0861478db39510d822c5ca1e56885f4901513116986c29ce3276a90958b787d34e2",
+      "size": 361
+    },
+    {
+      "path": "config/easy_npc/skin/skeleton/skeleton_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/skeleton/skeleton_template.png",
+      "sha1": "7046abde4ca1fec60b6825974ba1cff520586c26",
+      "sha512": "a64370055cece452db6d1b45cf4417b64e5b036ba18e916c3d55204f9f6469459988f6d5793139abac259163c25e1efc477ac5b4284c32a68214969cde6196b3",
+      "size": 259
+    },
+    {
+      "path": "config/easy_npc/skin/spider/spider_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/spider/spider_template.png",
+      "sha1": "885cba971843e569bbeced599d59f2c67e8af629",
+      "sha512": "9ce79d6f37b77b557bb5186757fe5f72611abc64ab3aaadf4337840e621ae0603d3a4b676f01a9c359e5e2a9485d7c8783f61d2c58a17d941b3d569d1e61232d",
+      "size": 308
+    },
+    {
+      "path": "config/easy_npc/skin/stray/stray_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/stray/stray_template.png",
+      "sha1": "fa8b868467e44763e80eadad2b40532ccd333119",
+      "sha512": "0daea994b4c5f0bf13f4a6873288d26cc9463ca1fc26efef84b91df6c0647f593035eda46542338d03239caf1e2e08ecab2219bc4b1d8cb236640fbdb17d2e33",
+      "size": 531
+    },
+    {
+      "path": "config/easy_npc/skin/vex/vex_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/vex/vex_template.png",
+      "sha1": "c2b16be9372168b1e9687b0a3f70ce576787f571",
+      "sha512": "e2a4c650147d98ec7b3df0557c0784c2d0ca9828d351a538341e8147cec1e1179e06673565f1cb52f18cd03927470c771193e00c624018add70dae6b237ef37a",
+      "size": 247
+    },
+    {
+      "path": "config/easy_npc/skin/villager/villager_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/villager/villager_template.png",
+      "sha1": "15dba09fac0d202181e73bb319b423498da8abff",
+      "sha512": "828deccb185ef3488fb188756365e873fd4bf9749dd05a79cabd000c714ecd1349ebe16115a07f1446ed8b513b44a6e3f331c8f882427318fb02e2c21f08247f",
+      "size": 357
+    },
+    {
+      "path": "config/easy_npc/skin/villager/villager_without_hat_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/villager/villager_without_hat_template.png",
+      "sha1": "0a2bb149580640d4f38e56ba665862a550abc6a7",
+      "sha512": "2d7364da3a3045932f09c829e5bd95e336f3135d98c4aeaa2c86cdea6520889a895eb8fbbf4a19320f65cbb91725c8cdff5a8590027844ed4ab0f697303c1ecc",
+      "size": 331
+    },
+    {
+      "path": "config/easy_npc/skin/witch/witch_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/witch/witch_template.png",
+      "sha1": "e73ef43416ca972aa3438cb2f29128ce86c65d55",
+      "sha512": "b0fa7a8338e33d5c85e9c81b3fa3b3e908f7601dcb0f4f685270ed208089904936c7caa0778c55fd6378b1d010022eff4de5a6235b500a6ac4d7de69cda0e40f",
+      "size": 431
+    },
+    {
+      "path": "config/easy_npc/skin/wolf/wolf_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/wolf/wolf_template.png",
+      "sha1": "06f7e51f5c125d869f6fe85b626b9ec14d1039b1",
+      "sha512": "2ca2db2db1f1d4313b06a1080b10d1267013e0005d23636366198aefa7e818e02d3f096ec52f435542a4c6aaf5208b227d878fd2c9b00c00c703bf2d4c4f4c93",
+      "size": 321
+    },
+    {
+      "path": "config/easy_npc/skin/zombie/zombie_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/zombie/zombie_template.png",
+      "sha1": "77daf16b4c1284869ab5d7bb3d1e0afb369f7937",
+      "sha512": "cd0f1e4ba513ca0274b6c094e65365db973515d580024a4baa4506b50a814c45ebe77869770f2ef81cb352040774aff273b45e16f392cc06a3a04df464a5bba1",
+      "size": 292
+    },
+    {
+      "path": "config/easy_npc/skin/zombie_villager/zombie_villager_template.png",
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/easy_npc/skin/zombie_villager/zombie_villager_template.png",
+      "sha1": "423c2f3c668b7aff01b292fc7939cdaa61966e35",
+      "sha512": "3b583d1575718ea345aebd3f9b27e92a291823c0aca91a21e11f97a7a345965b8a283d7a3a5d0b15cba1341f4e156ef877b81d3e5d7ea65ed8646a16ecb09eaa",
+      "size": 356
     },
     {
       "path": "resourcepacks/Better Caps! [v1.2].zip",
