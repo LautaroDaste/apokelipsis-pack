@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.66",
+  "packVersion": "1.0.67",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -1021,11 +1021,11 @@
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokeframes-1.1.0.jar"
     },
     {
-      "file": "pokegambling-1.0.1.jar",
-      "sha1": "58106b082f9efbc871f09669586452cbd2481f26",
-      "sha512": "fa15e29f712f4ce4abed017500346bfbf74bd8bec9cbc50a2b17e47cdad31031928abecb855e2863e3754c7bc335e2632b089ee396612c0d4b884e07e6623fe8",
-      "size": 2640509,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokegambling-1.0.1.jar"
+      "file": "pokegambling-1.0.4.jar",
+      "sha1": "32cbf866c8958c4947424991a62c4b57a2a03458",
+      "sha512": "1e34a95b16e9b215628ba5c9c4b0965e142408d70ef3e115d43a06ffa3a15ed161f01511d8d3943ab46a043a6b40217f11b2cbfdd4592f2852cbb59a05bb619c",
+      "size": 2740369,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokegambling-1.0.4.jar"
     },
     {
       "file": "polymer-bundled-0.9.19+1.21.1.jar",
@@ -1042,11 +1042,11 @@
       "url": "https://cdn.modrinth.com/data/tagwiZkJ/versions/Ng5Y6KVo/polymorph-fabric-1.1.0%2B1.21.1.jar"
     },
     {
-      "file": "proteccion-zonas-1.0.1.jar",
-      "sha1": "f6dc909b325c97d73ef21291f5485b610e799f1b",
-      "sha512": "ab173d4360c0b3d3759cafe165c2194a3fbc50065ca9c5d4e6e8db4f6473c77821cec3a81f8401faa92211cd8d76aa5d4854b21dd6441eb3bba1c5ad93a0734f",
-      "size": 294652,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.1.jar"
+      "file": "proteccion-zonas-1.0.2.jar",
+      "sha1": "c468a8c30c4986f7dd99d0860b9b3ed31e6fcbe6",
+      "sha512": "b86c57d2b84715e381aad753db9b97c67649d578dcbbb8dbe5e0ca15c2cb84ab6d8e1cc0bc19f1acf3822e532e6e46749057b70f065fb7ecfcd7f59a6d8533f0",
+      "size": 301324,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.2.jar"
     },
     {
       "file": "puzzleslib-v21.1.64-mc1.21.1+fabric.jar",
@@ -2244,9 +2244,9 @@
   ],
   "initial": {
     "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/inicial.zip",
-    "sha1": "69e75e51666da60d33ade5dfa4b89683b5f03611",
-    "sha512": "bf200d73ccd91308e8d88a0cdc8aa699f40d721253f5074415d3bcb4bab49e3929ae3dabda0c02614ff16f8816096d3cb9cd7d18af9e11499230ffeb6b57cef6",
-    "size": 2128824
+    "sha1": "5da06ebb1fe6769bc7d4633f0075c8f64dc0725b",
+    "sha512": "25ed254d13d86953eaa3c0779ea829a7aa73ae188d60f5d08c10da485250ba3939dc55b24a132e3e42837136961d0532bdbdd92a641fbc70d5bcb68fab4d504f",
+    "size": 1250314
   },
   "serverOnly": []
 }
