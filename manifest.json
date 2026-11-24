@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.67",
+  "packVersion": "1.0.68",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -94,11 +94,11 @@
     "packs": 5
   },
   "launcher": {
-    "version": "1.4.15",
-    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.15/Instalar-Apokelipsis.exe",
-    "sha1": "53d7980c608de316eeb31338568df612da518cf0",
-    "sha512": "27c56022fa50ad26b7049e2a8ffcf4bcc0694f0a9956bc0fbf1ed17183ebdbf7040fdcfc475bd60e0436239d76d34ea5cc01edeb96f2b1e3a67dfe4dbb14c206",
-    "size": 113756504
+    "version": "1.4.17",
+    "url": "https://github.com/LautaroDaste/apokelipsis-pack/releases/download/v1.4.17/Instalar-Apokelipsis.exe",
+    "sha1": "ced7b87f411c82d715c730134263f6db93fcca47",
+    "sha512": "6a896bf6c6c4294bfcd40e2c55d5d5dc61cf64e376ffaed98e8494da2f18d48e139af5a94f245e0bffbae716511003a6f621b85d17d2cdd3ce5e9d84027af325",
+    "size": 113758762
   },
   "defaultOptions": {
     "ao": "true",
@@ -601,11 +601,11 @@
       "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/Sj6w7O0I/OctoLib-FABRIC-0.6.2%2B1.21.jar"
     },
     {
-      "file": "PokeMisiones-1.5.12.jar",
-      "sha1": "40cc404c38fa27acea8247fdfc7c1baa7eb7d4e5",
-      "sha512": "cba0826ebb42a05e57a4d5c9c827d74eadb893921a4ae9190eb861432301a135ec9faf2149fafbea4652986cc1e2dc9fd288554f717f6fe602ae525f9e697e1c",
-      "size": 1184195,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.12.jar"
+      "file": "PokeMisiones-1.5.13.jar",
+      "sha1": "883113eb6693e42fb71ec9ed192939045462b756",
+      "sha512": "0eeb0dbb89dda14aa7a3eead021b64be175b6c1dac5d2bf70652387144a70cd6b85bbd16672c4f8fe8223bd94c88b207b15c3a25b66882dd1d8e1bde4d1ff916",
+      "size": 1188922,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.13.jar"
     },
     {
       "file": "Searchables-fabric-1.21.1-1.0.2.jar",
@@ -1014,11 +1014,11 @@
       "url": "https://cdn.modrinth.com/data/hnOfcjSq/versions/qlp66lU8/pokeblocks-1.5.0-1.21.1.jar"
     },
     {
-      "file": "pokeframes-1.1.0.jar",
-      "sha1": "2f21742e069a709cc23a45b7789287ca80d47c6e",
-      "sha512": "1bf6a353977e63fe4ba8dfcaa837bec7f00c55cd3620bd97fc610761d4d266c2978ffb82cbf4fac7ce79490bea33b369f3819369b36d883937d85cc57149ebd2",
-      "size": 3169446,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokeframes-1.1.0.jar"
+      "file": "pokeframes-1.1.1.jar",
+      "sha1": "5169beec2731e646c78c892e3ea7e2d2321f8822",
+      "sha512": "51591999e003c732119a70eba352b5e6cbe4bbf39253f7211df0cd8573ed37aa75ed7c1b3327271a50416d1ef7a5f4e47031990e54e677d2e414277c0e51aa29",
+      "size": 3170004,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokeframes-1.1.1.jar"
     },
     {
       "file": "pokegambling-1.0.4.jar",
