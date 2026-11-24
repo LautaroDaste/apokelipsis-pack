@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.65",
+  "packVersion": "1.0.66",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -83,7 +83,7 @@
   },
   "server": {
     "name": "APOKÉLIPSIS SMP",
-    "address": ""
+    "address": "gs-04.baires.host:25662"
   },
   "resetVersion": 4,
   "resets": {
