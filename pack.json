@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.69",
+  "packVersion": "1.0.70",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -47,9 +47,11 @@
   "baseUrl": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main",
   "reinicioConfig": 4,
   "reinicios": {
-    "opcionales": 5,
-    "controles": 5,
-    "packs": 5
+    "opcionales": 6,
+    "controles": 6,
+    "packs": 6,
+    "opciones": 5,
+    "configs": 5
   },
   "archivosQuitados": [
     {
