@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.70",
+  "packVersion": "1.0.71",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -57,6 +57,14 @@
     {
       "path": "shaderpacks/Visual-Vibrance-v0.3.5a.zip",
       "sha1": "e60e5c1ea1243bf93798ddd34b4a70202781cab8"
+    },
+    {
+      "path": "resourcepacks/Cobblemotion_v1.5.1.zip",
+      "sha1": "b683791ddfbbde25c0450133f789ebc6fa9f2c7d"
+    },
+    {
+      "path": "resourcepacks/Wood Cosmetic Rillaboom.zip",
+      "sha1": "96e8d9949fa22469e8f236e9094998b99eb4fd41"
     }
   ]
 }

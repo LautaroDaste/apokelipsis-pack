@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.70",
+  "packVersion": "1.0.71",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -148,7 +148,7 @@
     "damageTiltStrength": "1.0",
     "highContrast": "false",
     "narratorHotkey": "true",
-    "resourcePacks": "[\"serilum_mod_translations\",\"vanilla\",\"cobbreeding:pasturefix\",\"fabric\",\"moonlight:merged_pack\",\"file/pokopia-1.1.zip\",\"file/fresh_waystones.zip\",\"punchy:punchy\",\"file/Better-Leaves-9.6.zip\",\"cobblemon:uniqueshinyforms\",\"cobbreeding:coloredeggs\",\"file/Better Caps! [v1.2].zip\",\"file/CobbleSounds[Complete]_v1.4.1.zip\",\"file/CobblemonCosplay.zip\",\"file/Cobblemotion_v1.5.1.zip\",\"file/FireFitsforFireCats.v.13.zip\",\"file/PokeCostume v.3.3.zip\",\"file/StylesUponStyles.v.1.6.1.zip\",\"file/Wood Cosmetic Rillaboom.zip\",\"file/muddiescosmetics (4).zip\",\"cobblemon:gyaradosjump\",\"cobblemon:regionbiasforms\",\"file/E19 Cobblemon Minimap Icons.zip\",\"file/[Chilli´s] punchy! cobblemon.zip\",\"file/Fluid & Foolish 1.0.1.zip\"]",
+    "resourcePacks": "[\"serilum_mod_translations\",\"vanilla\",\"cobbreeding:pasturefix\",\"fabric\",\"moonlight:merged_pack\",\"file/pokopia-1.1.zip\",\"file/fresh_waystones.zip\",\"punchy:punchy\",\"file/Better-Leaves-9.6.zip\",\"cobblemon:uniqueshinyforms\",\"cobbreeding:coloredeggs\",\"file/Better Caps! [v1.2].zip\",\"file/CobbleSounds[Complete]_v1.4.1.zip\",\"file/CobblemonCosplay.zip\",\"file/FireFitsforFireCats.v.13.zip\",\"file/PokeCostume v.3.3.zip\",\"file/StylesUponStyles.v.1.6.1.zip\",\"file/muddiescosmetics (4).zip\",\"cobblemon:gyaradosjump\",\"cobblemon:regionbiasforms\",\"file/E19 Cobblemon Minimap Icons.zip\",\"file/[Chilli´s] punchy! cobblemon.zip\",\"file/Fluid & Foolish 1.0.1.zip\"]",
     "incompatibleResourcePacks": "[\"aci\",\"ali\",\"ambientenvironment\",\"backpacked\",\"badoptimizations\",\"balm\",\"collective\",\"comforts\",\"connectivity\",\"controlling\",\"cullleaves\",\"easy_npc\",\"easy_npc_config_ui\",\"framework\",\"jade\",\"jadeaddons\",\"konkrete\",\"modernfix\",\"pokegambling\",\"polymorph\",\"punchy\",\"searchables\",\"smoothchunk\",\"spark\",\"spectrelib\",\"trashslot\",\"waystones\",\"xaerolib\",\"xaerominimap\",\"xaeroworldmap\",\"yet_another_config_lib_v3\",\"file/CobblemonLoadingBackgrounds-[1.0.2].zip\"]",
     "lang": "es_mx",
     "chatVisibility": "0",
@@ -601,11 +601,11 @@
       "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/Sj6w7O0I/OctoLib-FABRIC-0.6.2%2B1.21.jar"
     },
     {
-      "file": "PokeMisiones-1.5.14.jar",
-      "sha1": "bd47f3c72cb06eae180bdd39b456e641425dc897",
-      "sha512": "25a65c4e2744da9a306db05757051d7c24b1fd9793843e81ca8a566e0737db79bde68f7d51fef1c0b090ed3eb0f67c3f8fef7fdf8a6747cade5df8acff4326b5",
-      "size": 1190994,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.14.jar"
+      "file": "PokeMisiones-1.5.16.jar",
+      "sha1": "b7eb3a796139279141ee44f265e4468ecb16da58",
+      "sha512": "e6329d83ea03021b0ceddba0dc3b5507906ba51e1b169b65a3b3068c2bdb9d249eb4026a55c0e6e0b7f6f652d355e860ea867f1935c6da85595ce793b272df08",
+      "size": 1191593,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.16.jar"
     },
     {
       "file": "Searchables-fabric-1.21.1-1.0.2.jar",
@@ -622,18 +622,18 @@
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-ajustes-1.1.0.jar"
     },
     {
-      "file": "apokelipsis-menu-1.2.4.jar",
-      "sha1": "54a1141622799da73e306abb82a836ec9edc6742",
-      "sha512": "9791f345ccd5a36eda1109b631c1a2a1a2231bdafc9a2f115d0be1ad89b498ad136ae55b6fc754441082e0931f072274380ded40d3100895ee6b55d7fa550637",
-      "size": 1139852,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.2.4.jar"
+      "file": "apokelipsis-menu-1.2.5.jar",
+      "sha1": "70acb701981ccd83f7620ffe51307d36d7256ffc",
+      "sha512": "b5a01b214534e4f246dd1501e44c1052ae7d5259b874f7c2b736b24993192ac960d3b91badf65091f72c8ca32292b94f8718a8319ea0f6a5c62aef2654cbd7ca",
+      "size": 1139867,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.2.5.jar"
     },
     {
-      "file": "apokelipsis-skins-1.0.0.jar",
-      "sha1": "252be0e2dfff5d80dfc894fb23d1729e14b730b8",
-      "sha512": "c92d06f631abaaf76090af2a880c531ec46b4beca52e4a810b765bc46b496750bfea40c88888ba3945a6c4d70e70c4424830540e1434514c27170d027f3cacbe",
-      "size": 19866,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-skins-1.0.0.jar"
+      "file": "apokelipsis-skins-1.1.0.jar",
+      "sha1": "32cdfe117e1e969f029034c14f5692c6eb1cd1d5",
+      "sha512": "233d070497561758e1b1421a085c16a80ecb4380032ed55ec42f452b201fcc053deca7e9c743fd4edac60ee4246d50be8714306423402094ba42e503778dd654",
+      "size": 22469,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-skins-1.1.0.jar"
     },
     {
       "file": "aps_trophies-1.21.1-fabric-1.2.0.jar",
@@ -1014,11 +1014,11 @@
       "url": "https://cdn.modrinth.com/data/hnOfcjSq/versions/qlp66lU8/pokeblocks-1.5.0-1.21.1.jar"
     },
     {
-      "file": "pokeframes-1.1.1.jar",
-      "sha1": "5169beec2731e646c78c892e3ea7e2d2321f8822",
-      "sha512": "51591999e003c732119a70eba352b5e6cbe4bbf39253f7211df0cd8573ed37aa75ed7c1b3327271a50416d1ef7a5f4e47031990e54e677d2e414277c0e51aa29",
-      "size": 3170004,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokeframes-1.1.1.jar"
+      "file": "pokeframes-1.1.2.jar",
+      "sha1": "5fcd8b0be6bb41b0dd7bbef1d0488cb22a15f3e2",
+      "sha512": "1bc4cdab8aef99bb6150b13fd7af5097179dc23b80907232fe24cdb0ba5fe0acdceebcf3e61bc2806ffcfa0d19f1de6665b67ec3e7d742c399ba866b511f76fa",
+      "size": 3170571,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/pokeframes-1.1.2.jar"
     },
     {
       "file": "pokegambling-1.0.4.jar",
@@ -2240,6 +2240,14 @@
     {
       "path": "shaderpacks/Visual-Vibrance-v0.3.5a.zip",
       "sha1": "e60e5c1ea1243bf93798ddd34b4a70202781cab8"
+    },
+    {
+      "path": "resourcepacks/Cobblemotion_v1.5.1.zip",
+      "sha1": "b683791ddfbbde25c0450133f789ebc6fa9f2c7d"
+    },
+    {
+      "path": "resourcepacks/Wood Cosmetic Rillaboom.zip",
+      "sha1": "96e8d9949fa22469e8f236e9094998b99eb4fd41"
     }
   ],
   "initial": {
