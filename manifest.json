@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.68",
+  "packVersion": "1.0.69",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -601,11 +601,11 @@
       "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/Sj6w7O0I/OctoLib-FABRIC-0.6.2%2B1.21.jar"
     },
     {
-      "file": "PokeMisiones-1.5.13.jar",
-      "sha1": "883113eb6693e42fb71ec9ed192939045462b756",
-      "sha512": "0eeb0dbb89dda14aa7a3eead021b64be175b6c1dac5d2bf70652387144a70cd6b85bbd16672c4f8fe8223bd94c88b207b15c3a25b66882dd1d8e1bde4d1ff916",
-      "size": 1188922,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.13.jar"
+      "file": "PokeMisiones-1.5.14.jar",
+      "sha1": "bd47f3c72cb06eae180bdd39b456e641425dc897",
+      "sha512": "25a65c4e2744da9a306db05757051d7c24b1fd9793843e81ca8a566e0737db79bde68f7d51fef1c0b090ed3eb0f67c3f8fef7fdf8a6747cade5df8acff4326b5",
+      "size": 1190994,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.14.jar"
     },
     {
       "file": "Searchables-fabric-1.21.1-1.0.2.jar",
@@ -1042,11 +1042,11 @@
       "url": "https://cdn.modrinth.com/data/tagwiZkJ/versions/Ng5Y6KVo/polymorph-fabric-1.1.0%2B1.21.1.jar"
     },
     {
-      "file": "proteccion-zonas-1.0.2.jar",
-      "sha1": "c468a8c30c4986f7dd99d0860b9b3ed31e6fcbe6",
-      "sha512": "b86c57d2b84715e381aad753db9b97c67649d578dcbbb8dbe5e0ca15c2cb84ab6d8e1cc0bc19f1acf3822e532e6e46749057b70f065fb7ecfcd7f59a6d8533f0",
-      "size": 301324,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.2.jar"
+      "file": "proteccion-zonas-1.0.3.jar",
+      "sha1": "4124005c95f925afcc006597d88dbece910531bc",
+      "sha512": "49e94b2b50bd599e1583d778e687d0dc54d17c74f84cf1c4675e8b2a60cc3d553a495a97ea927468c7aebc96e4750045638fc9e8e22d665d96e3684f16075fbe",
+      "size": 301400,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/proteccion-zonas-1.0.3.jar"
     },
     {
       "file": "puzzleslib-v21.1.64-mc1.21.1+fabric.jar",
