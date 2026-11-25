@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.73",
+  "packVersion": "1.0.74",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -1356,9 +1356,9 @@
     {
       "path": "config/apokelipsis/frases.json",
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/files/config/apokelipsis/frases.json",
-      "sha1": "d866cf5253ddc55ff5ad6832c007035410712883",
-      "sha512": "88c4bf08dde6928dbffbcc4282e85dc8b06af8a79b602b8576dc322d40551a491a0efeb8154002cfad26426dd49016e15ece0365ea6d2c58af8d64f84dada766",
-      "size": 1528
+      "sha1": "5f9a5f008364088d5c0772497c4c555de9a767e1",
+      "sha512": "110a7a9cb56c1b1ccc36426e0f4f921c712df92927dd952b28c4575e648e35e32b7c13a92dd6aa72ad5fb506f8df11fb9f8089a840fa3af9d4876aa468b31796",
+      "size": 1574
     },
     {
       "path": "config/apokelipsis/panorama_0.png",
@@ -2160,10 +2160,10 @@
     },
     {
       "path": "resourcepacks/E19 Cobblemon Minimap Icons.zip",
-      "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/wb3yCVuz/E19%20Cobblemon%20Minimap%20Icons.zip",
-      "sha1": "015c8b74e9c652846792df552831210269365f62",
-      "sha512": "79904e038b93b040564b1e544f95121f8f6f2ff7f6fbed0421320e4eae66fb52a8394a4536ea91d1c48aee5e283002b1623aa9911e5d2b624442cb055d1daaa8",
-      "size": 53955450
+      "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/MAumPyhV/E19%20Cobblemon%20Minimap%20Icons.zip",
+      "sha1": "77813d38002b43c9c243d694728479bd3879cf86",
+      "sha512": "f9eff4c718818a2b030aa7b6b86b73f384f869cb39fe1e4c189c07f8feb7aedd717a33d966face570ae89b67ee0c28c35fb611883b882677eecf0fa041b9088f",
+      "size": 23270833
     },
     {
       "path": "resourcepacks/FireFitsforFireCats.v.13.zip",
