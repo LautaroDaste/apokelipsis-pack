@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.71",
+  "packVersion": "1.0.72",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -91,7 +91,7 @@
     "opciones": 5,
     "controles": 6,
     "configs": 5,
-    "packs": 6
+    "packs": 7
   },
   "launcher": {
     "version": "1.4.17",

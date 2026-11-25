@@ -1,5 +1,5 @@
 {
-  "packVersion": "1.0.71",
+  "packVersion": "1.0.72",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "server": {
@@ -49,7 +49,7 @@
   "reinicios": {
     "opcionales": 6,
     "controles": 6,
-    "packs": 6,
+    "packs": 7,
     "opciones": 5,
     "configs": 5
   },
