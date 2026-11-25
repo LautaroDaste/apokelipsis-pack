@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.74",
+  "packVersion": "1.0.75",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -627,6 +627,13 @@
       "sha512": "b5a01b214534e4f246dd1501e44c1052ae7d5259b874f7c2b736b24993192ac960d3b91badf65091f72c8ca32292b94f8718a8319ea0f6a5c62aef2654cbd7ca",
       "size": 1139867,
       "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-menu-1.2.5.jar"
+    },
+    {
+      "file": "apokelipsis-pantallas-1.0.0.jar",
+      "sha1": "ec4ce9389cf99a26b629bdac56da5e535402c5b8",
+      "sha512": "8e389fd554bd020459e0ae2e18d14d4a31459e08ec82a9a4426557710d70351b6e3424d65eb88241256513664b4d861cae4106c129deca06cdec84f6ee558c73",
+      "size": 184499,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/apokelipsis-pantallas-1.0.0.jar"
     },
     {
       "file": "apokelipsis-skins-1.1.0.jar",
@@ -2160,10 +2167,10 @@
     },
     {
       "path": "resourcepacks/E19 Cobblemon Minimap Icons.zip",
-      "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/MAumPyhV/E19%20Cobblemon%20Minimap%20Icons.zip",
-      "sha1": "77813d38002b43c9c243d694728479bd3879cf86",
-      "sha512": "f9eff4c718818a2b030aa7b6b86b73f384f869cb39fe1e4c189c07f8feb7aedd717a33d966face570ae89b67ee0c28c35fb611883b882677eecf0fa041b9088f",
-      "size": 23270833
+      "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/wb3yCVuz/E19%20Cobblemon%20Minimap%20Icons.zip",
+      "sha1": "015c8b74e9c652846792df552831210269365f62",
+      "sha512": "79904e038b93b040564b1e544f95121f8f6f2ff7f6fbed0421320e4eae66fb52a8394a4536ea91d1c48aee5e283002b1623aa9911e5d2b624442cb055d1daaa8",
+      "size": 53955450
     },
     {
       "path": "resourcepacks/FireFitsforFireCats.v.13.zip",
