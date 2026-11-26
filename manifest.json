@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.75",
+  "packVersion": "1.0.76",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -685,11 +685,11 @@
       "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/EghJxg4h/balm-fabric-1.21.1-21.0.66.jar"
     },
     {
-      "file": "batalla-final-end-1.0.1.jar",
-      "sha1": "1fe334a3707d074804c033b0f1c487f70fbb20ae",
-      "sha512": "734def07bab3261c193db44f02a75603589bb43d2a46374ed3e20c7b1d9b581051fc1bfcd2472d6e0370a487ba347145f5a51100dbf673e062ec96531f69de6c",
-      "size": 297041,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/batalla-final-end-1.0.1.jar"
+      "file": "batalla-final-end-1.0.2.jar",
+      "sha1": "b5ebff079a6ab916bbcb587214b5678ab60c1b0b",
+      "sha512": "4830e5417af641fca3687cfa60cb18ebe36a979f86197ca34bb2b8640b41ba078dd16bd521bc2103d0d67f3fd4e95758e676e7cef154fc1e6c183563a25c95e8",
+      "size": 293406,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/batalla-final-end-1.0.2.jar"
     },
     {
       "file": "chat_heads-0.15.7-fabric-1.21.jar",
