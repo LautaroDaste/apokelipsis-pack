@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "packVersion": "1.0.77",
+  "packVersion": "1.0.78",
   "minecraft": "1.21.1",
   "fabricLoader": "0.19.5",
   "fabricProfile": {
@@ -601,11 +601,11 @@
       "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/Sj6w7O0I/OctoLib-FABRIC-0.6.2%2B1.21.jar"
     },
     {
-      "file": "PokeMisiones-1.5.17.jar",
-      "sha1": "bda718334ede686cc97c580edea85530ed4c1bae",
-      "sha512": "c191935e5ac01c759a5a7acedb6c73956d8df9ce03cc06d2d4c18a639422e9f72ed39438a64e5da158288621e5459bc9c96a5a67e110cc0790a626816668aaab",
-      "size": 1188679,
-      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.17.jar"
+      "file": "PokeMisiones-1.5.18.jar",
+      "sha1": "6df4e2d9cc73c8482edcc66a26a0fc934045bfd6",
+      "sha512": "a8ef6191b8361e3bdfd3e114765de047d4e938a6bacdb9d124c79afb669524b8a007c1941b614ceff968c51b7adfa53726b98be03e111b53514fc0f3629a2df5",
+      "size": 1189309,
+      "url": "https://raw.githubusercontent.com/LautaroDaste/apokelipsis-pack/main/mods/PokeMisiones-1.5.18.jar"
     },
     {
       "file": "Searchables-fabric-1.21.1-1.0.2.jar",
